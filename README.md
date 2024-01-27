@@ -1,4 +1,4 @@
 # With ❤️ গূঢ়লেখক কর্মিদল
 
 # WorkFlow 
-![Techfest](https://github.com/TechFiesta2024/arrakis/assets/50258639/cede1229-014a-4d4e-af5d-28b0f9b46129)
+![TechFestWhite](https://github.com/TechFiesta2024/arrakis/assets/50258639/e1088f65-c091-418c-86b3-e9fa87f4600c)
