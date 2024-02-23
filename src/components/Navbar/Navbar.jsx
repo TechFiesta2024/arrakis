@@ -11,7 +11,7 @@ export default function Navbar() {
         <>
 
 
-            <div className='navbar__container px-0 md:px-20 md:h-24 w-full flex justify-center items-center gap-5 text-yellowish text-base border-b-[1px]'>
+            <div className='navbar__container px-0 md:px-20 md:h-20 w-full flex justify-center items-center gap-5 text-yellowish text-base border-b-[1px]'>
 
                 <div className="navbar__left flex items-center justify-evenly w-1/3 h-full">
 

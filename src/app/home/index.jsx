@@ -1,10 +1,15 @@
 'use client'
 
-export default function HomeScreen() {
+import { HeroSection, Marquee, UnleashSkills } from "@/components/index "
+
+
+export default function Homescreen() {
     return (
         <>
-            <div className='flex justify-center items-center py-40'>
-                <h1 className='text-xl text-red-600 '>From Home Page</h1>
+            <div className="h-[100%]">
+                <HeroSection />
+                <Marquee />
+                <UnleashSkills />
             </div>
         </>
     )
