@@ -9,10 +9,7 @@ export default function Navbar() {
 
     return (
         <>
-
-
             <div className='navbar__container px-0 md:px-20 md:h-20 w-full flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px]'>
-
                 <div className="navbar__left flex items-center justify-evenly w-1/3 h-full">
 
                     <Link href='/' className='border-x-[0.5px] h-full w-1/3 flex justify-center items-center' >Home</Link>
