@@ -1,4 +1,4 @@
-import LogoAot from './LogoAot.png'
+import LogoAot from './AotLogo.svg'
 
 const Images = {
     logoAot: LogoAot
