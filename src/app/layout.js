@@ -1,7 +1,6 @@
-import Navbar from "@/components/Navbar/Navbar";
-import "./globals.css";
-import Footer from "@/components/Footer/Footer";
 
+import { Footer, Navbar } from "@/components/index ";
+import "./globals.css";
 
 export const metadata = {
   title: "TechFiesta'24",
