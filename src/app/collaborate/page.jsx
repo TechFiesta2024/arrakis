@@ -1,7 +1,12 @@
 "use client";
 
-import { CampusAmbassador, CommunityPartner } from "@/components/index ";
+import { SuccessToast } from "@/components/index ";
+import Image from "next/image";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Images from "../../../public/assets";
+
 
 export default function CollaboratePage() {
   const [showCampusAmbassador, setShowCampusAmbassador] = useState(true);
@@ -16,6 +21,178 @@ export default function CollaboratePage() {
     setShowCommunityPartner(true);
     setShowCampusAmbassador(false);
   };
+
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateContactNumber = (contactNumber) => {
+
+    const contactNumberRegex = /^\d{10}$/;
+    return contactNumberRegex.test(contactNumber);
+  };
+
+  const validateLinkedInURL = (linkedinURL) => {
+
+    const linkedinURLRegex = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$/;
+    return linkedinURLRegex.test(linkedinURL);
+  };
+
+
+
+  const [ambassorDetails, setAmbassadorDetails] = useState({
+    ambassador_name: "",
+    ambassador_contact: "",
+    ambassador_college: "",
+    ambassador_email: "",
+    ambassador_description: "",
+    ambassador_linkedin: "",
+  });
+
+
+  const resetAmbassadorDetails = () => {
+    setAmbassadorDetails
+      ({
+        ambassador_name: "",
+        ambassador_contact: "",
+        ambassador_college: "",
+        ambassador_email: "",
+        ambassador_description: "",
+        ambassador_linkedin: "",
+      });
+  }
+
+
+
+  const handleInputChangeCampusAmbassador = (e) => {
+    const { id, value } = e.target;
+    setAmbassadorDetails((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+
+
+  const handleSubmitCampusAmbassador = async (e) => {
+    e.preventDefault();
+
+    if (ambassorDetails.ambassador_name === "" && ambassorDetails.ambassador_contact === "" && ambassorDetails.ambassador_college === "" && ambassorDetails.ambassador_email === "" && ambassorDetails.ambassador_description === "" && ambassorDetails.ambassador_linkedin === "") {
+      toast.error(`Please fill in all required fields with valid information.`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateContactNumber(ambassorDetails.ambassador_contact)) {
+      toast.error(`Please enter a valid 10 digit contact number`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+
+    if (!validateContactNumber(ambassorDetails.ambassador_contact)) {
+      toast.error(`Please enter a valid 10 digit contact number`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+
+    if (!validateLinkedInURL(ambassorDetails.ambassador_linkedin)) {
+      toast.error(`Please enter a valid LinkedIn URL`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!ambassorDetails.ambassador_name) {
+      // Show error toast for the desired field(s)
+      toast.error(`Please fill in all required fields with valid information.`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return; // Prevent form submission if validation fails
+    }
+
+
+
+    toast.success(`Campus Ambassador registered successfully`, {
+      autoClose: 3000,
+      position: "top-right",
+      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+      hideProgressBar: true,
+      style: { color: "#010100", backgroundColor: "#FFF3B0", font: "generalsans", fontSize: '14px', border: "1px solid #010100" },
+    });
+
+    const ambassador_JSON_Details = JSON.stringify(ambassorDetails);
+    console.log(ambassador_JSON_Details);
+    resetAmbassadorDetails();
+  }
+
+
+
+  const [communityPartnerDetails, setCommunityPartnerDetails] = useState({
+    community_name: "",
+    community_contact: "",
+    community_college: "",
+    community_lead_name: "",
+    community_email: "",
+    community_linkedin: "",
+  });
+
+  const resetCommunityPartnerDetails = () => {
+    setCommunityPartnerDetails
+      ({
+        community_name: "",
+        community_contact: "",
+        community_college: "",
+        community_lead_name: "",
+        community_email: "",
+        community_linkedin: "",
+      });
+  }
+  const handleInputChangeCommunityPartner = (e) => {
+    const { id, value } = e.target;
+    setCommunityPartnerDetails((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmitCommunityPartner = async (e) => {
+
+    e.preventDefault();
+    toast.success(`Community Partner registered successfully`, {
+      autoClose: 3000,
+      position: "top-right",
+      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+      hideProgressBar: true,
+      style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+    });
+    const communityPartner_JSON_Details = JSON.stringify(communityPartnerDetails);
+    console.log(communityPartner_JSON_Details);
+
+    resetCommunityPartnerDetails();
+  }
 
   return (
     <>
@@ -70,8 +247,10 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>Name</label>
                   <input
-                    id='name'
+                    id='ambassador_name'
                     type='text'
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_name}
                     placeholder='Enter your full name'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
@@ -79,8 +258,10 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col'>
                   <label className='text-[24px] pb-4'>Contact No.</label>
                   <input
-                    id='contact'
-                    type='number'
+                    id='ambassador_contact'
+                    type='text'
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_contact}
                     placeholder='Enter your contact no.'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
@@ -92,7 +273,9 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>Community Name</label>
                   <input
-                    id='name'
+                    id="community_name"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_name}
                     type='text'
                     placeholder='Enter the community name'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
@@ -103,7 +286,9 @@ export default function CollaboratePage() {
                     Community Contact No.
                   </label>
                   <input
-                    id='contact'
+                    id="community_contact"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_contact}
                     type='number'
                     placeholder='Enter the community contact no.'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
@@ -121,8 +306,11 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>College Name</label>
                   <input
-                    id='college'
+
+                    id='ambassador_college'
                     type='text'
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_college}
                     placeholder='Enter your College Name'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
@@ -130,8 +318,10 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>Email ID</label>
                   <input
-                    id='email'
+                    id='ambassador_email'
                     type='email'
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_email}
                     placeholder='Enter your email id'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
@@ -141,23 +331,28 @@ export default function CollaboratePage() {
                     How will you contribute in event success?
                   </label>
                   <textarea
-                    id='description'
+                    id="ambassador_description"
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_description}
                     placeholder='Describe within 200 words'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
                 <div className='input_name flex flex-col pb-8'>
-                  <label className='text-[24px] pb-4'>Twitter Profile</label>
+                  <label className='text-[24px] pb-4'>LinkedIn Profile</label>
                   <input
-                    id='twitter'
+                    id="ambassador_linkedin"
                     type='url'
-                    placeholder='https://x.com/username'
+                    onChange={handleInputChangeCampusAmbassador}
+                    value={ambassorDetails.ambassador_linkedin}
+                    placeholder='https://linkedin.com/username'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] '>
+                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCampusAmbassador}>
                   Submit
                 </button>
+                <ToastContainer />
               </div>
             </>
           )}
@@ -167,10 +362,25 @@ export default function CollaboratePage() {
               <div className='collab__right_input h-auto flex px-[90px] flex-col w-full justify-evenly'>
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>
+                    Community Lead Name
+                  </label>
+                  <input
+                    id="community_lead_name"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_lead_name}
+                    type='text'
+                    placeholder='Enter the name of the Community lead'
+                    className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
+                  />
+                </div>
+                <div className='input_name flex flex-col pb-8'>
+                  <label className='text-[24px] pb-4'>
                     Community College Name
                   </label>
                   <input
-                    id='college'
+                    id="community_college"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_college}
                     type='text'
                     placeholder='Enter name of the College'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
@@ -179,24 +389,29 @@ export default function CollaboratePage() {
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>Community Email ID</label>
                   <input
-                    id='email'
+                    id="community_email"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_email}
                     type='email'
                     placeholder='Enter the community email id'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
                 <div className='input_name flex flex-col pb-8'>
-                  <label className='text-[24px] pb-4'>Twitter Profile</label>
+                  <label className='text-[24px] pb-4'>LinkedIn Profile</label>
                   <input
-                    id='twitter'
+                    id="community_linkedin"
+                    onChange={handleInputChangeCommunityPartner}
+                    value={communityPartnerDetails.community_linkedin}
                     type='url'
-                    placeholder='https://x.com/username'
+                    placeholder='https://linkedin.com/username'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] '>
+                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCommunityPartner}>
                   Submit
                 </button>
+                <ToastContainer />
               </div>
             </>
           )}
