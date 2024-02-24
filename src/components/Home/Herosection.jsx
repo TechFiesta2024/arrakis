@@ -1,3 +1,6 @@
+import FloatingCapsules from "./FloatingCapsules"
+import ParticipateBadge from "./ParticipateBadge"
+import PrizePoolBadge from "./PrizePoolBadge"
 
 
 const Herosection = () => {
@@ -6,15 +9,13 @@ const Herosection = () => {
             <div className="w-full h-screen px-20 ">
                 <div className="row-1 grid md:grid-cols-3 h-[30%]">
                     <div className="col-span-1 border-x-[0.5px] text-yellowish">
-                        <h1>participate</h1>
+                        <ParticipateBadge />
                     </div>
                     <div className="col-span-1 border-r-[0.5px] text-yellowish">
-                        <h1>floating button</h1>
+                        <FloatingCapsules />
                     </div>
                     <div className="col-span-1 border-r-[0.5px] text-yellowish">
-                        <h1>
-                            prizepool
-                        </h1>
+                        <PrizePoolBadge />
                     </div>
                 </div>
                 <div className="row-2 grid md:grid-cols-1 h-[40%]">
