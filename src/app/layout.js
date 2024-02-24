@@ -1,7 +1,6 @@
-import Navbar from "@/components/Navbar/Navbar";
-import "./globals.css";
-import Footer from "@/components/Footer/Footer";
 
+import { Footer, Navbar } from "@/components/index ";
+import "./globals.css";
 
 export const metadata = {
   title: "TechFiesta'24",
@@ -15,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="px-3" style={{ backgroundColor: '#ffffff' }}>
+      <body className="body__container font-generalsans bg-black text-red border-yellowish">
         <Navbar />
         {children}
         <Footer />

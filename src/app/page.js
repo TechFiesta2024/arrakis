@@ -1,10 +1,11 @@
 'use client'
 
-import HomeScreen from "@/app/home/index.jsx";
+import Homescreen from "@/app/home/index.jsx";
+
 export default function Home() {
   return (
     <>
-      <HomeScreen />
+      <Homescreen />
     </>
   );
 }

@@ -13,6 +13,18 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      'anton': ['Anton', 'sans-serif'],
+      'generalsans': ['GeneralSans', 'sans-serif'],
+    },
+
+    colors:
+    {
+      'black': ' #010100',
+      'red': '#FF002B',
+      'yellowish': '#FEFAE0',
+      'white': '#FFFFFF'
+    }
   },
   plugins: [],
 };
