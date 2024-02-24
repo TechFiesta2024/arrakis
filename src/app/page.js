@@ -1,11 +1,16 @@
 'use client'
 
-import Homescreen from "@/app/home/index.jsx";
+import { HeroSection, Marquee, UnleashSkills } from "@/components/index ";
+
 
 export default function Home() {
   return (
     <>
-      <Homescreen />
+      <div className="h-[100%]">
+        <HeroSection />
+        <Marquee />
+        <UnleashSkills />
+      </div>
     </>
   );
 }
