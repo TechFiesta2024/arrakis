@@ -1,4 +1,5 @@
 import FloatingCapsules from "./FloatingCapsules"
+import FocusImage from "./FocusImage"
 import ParticipateBadge from "./ParticipateBadge"
 import PrizePoolBadge from "./PrizePoolBadge"
 
@@ -20,7 +21,7 @@ const Herosection = () => {
                 </div>
                 <div className="row-2 grid md:grid-cols-1 h-[40%]">
                     <div className="col-span-1 border text-yellowish">
-                        <h1>image</h1>
+                        <FocusImage />
                     </div>
                 </div>
                 <div className="row-3 grid md:grid-cols-3 h-[30%] border-b-[0.5px] border-yellowish">
