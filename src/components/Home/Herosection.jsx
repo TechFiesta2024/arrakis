@@ -1,7 +1,9 @@
+import EventDate from "./EventDate"
 import FloatingCapsules from "./FloatingCapsules"
 import FocusImage from "./FocusImage"
 import ParticipateBadge from "./ParticipateBadge"
 import PrizePoolBadge from "./PrizePoolBadge"
+import TimerMockup from "./TimerMockup"
 
 
 const Herosection = () => {
@@ -26,10 +28,10 @@ const Herosection = () => {
                 </div>
                 <div className="row-3 grid md:grid-cols-3 h-[30%] border-b-[0.5px] border-yellowish">
                     <div className="col-span-1 border-x-[0.5px]  border-yellowish">
-                        <h1>prizepool</h1>
+                        <EventDate />
                     </div>
                     <div className="col-span-1 border-r-[0.5px]  border-yellowish">
-                        <h1>prizepool</h1>
+                        <TimerMockup />
                     </div>
                     <div className="col-span-1 border-r-[0.5px]  border-yellowish">
                         <h1>prizepool</h1>

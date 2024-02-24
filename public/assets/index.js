@@ -16,6 +16,8 @@ import Star2 from './Star 2.svg'
 import Star3 from './Star 3.svg'
 import Diamond1 from './diamond1.svg'
 import Diamond2 from './diamond2.svg'
+import Calender from './calendar.svg'
+import Mockup from './mockup.svg'
 
 const Images = {
     logoAot: LogoAot,
@@ -32,6 +34,8 @@ const Images = {
     Star3: Star3,
     Diamond1: Diamond1,
     Diamond2: Diamond2,
+    Calender: Calender,
+    Mockup: Mockup
 };
 
 export default Images;
