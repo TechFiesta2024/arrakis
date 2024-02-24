@@ -16,9 +16,7 @@ const Images = {
     logoLinkedIn: LogoLinkedIn,
     logoX: LogoX,
     logoInstagram: LogoInstagram,
-
-    logoVerify: LogoVerify
-
+    logoVerify: LogoVerify,
     logoLinkedInBlack: LogoLinkedInBlack,
     logoXBlack: LogoXBlack
 
