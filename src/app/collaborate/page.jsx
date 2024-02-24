@@ -1,6 +1,5 @@
 "use client";
 
-import { SuccessToast } from "@/components/index ";
 import Image from "next/image";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -79,6 +78,9 @@ export default function CollaboratePage() {
   const handleSubmitCampusAmbassador = async (e) => {
     e.preventDefault();
 
+
+
+
     if (ambassorDetails.ambassador_name === "" && ambassorDetails.ambassador_contact === "" && ambassorDetails.ambassador_college === "" && ambassorDetails.ambassador_email === "" && ambassorDetails.ambassador_description === "" && ambassorDetails.ambassador_linkedin === "") {
       toast.error(`Please fill in all required fields with valid information.`, {
         autoClose: 3000,
@@ -99,9 +101,8 @@ export default function CollaboratePage() {
       });
       return;
     }
-
-    if (!validateContactNumber(ambassorDetails.ambassador_contact)) {
-      toast.error(`Please enter a valid 10 digit contact number`, {
+    if (!validateEmail(ambassorDetails.ambassador_email)) {
+      toast.error(`Please enter a valid email address`, {
         autoClose: 3000,
         position: "top-right",
         hideProgressBar: true,
@@ -135,17 +136,45 @@ export default function CollaboratePage() {
 
 
 
-    toast.success(`Campus Ambassador registered successfully`, {
-      autoClose: 3000,
-      position: "top-right",
-      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-      hideProgressBar: true,
-      style: { color: "#010100", backgroundColor: "#FFF3B0", font: "generalsans", fontSize: '14px', border: "1px solid #010100" },
-    });
+
 
     const ambassador_JSON_Details = JSON.stringify(ambassorDetails);
     console.log(ambassador_JSON_Details);
-    resetAmbassadorDetails();
+
+    try {
+      const response = await fetch("https://messiah.fly.dev/community/ambassador",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: ambassador_JSON_Details,
+        });
+
+
+
+      if (response.ok) {
+        toast.success(`Campus Ambassador registered successfully`, {
+          autoClose: 3000,
+          position: "top-right",
+          icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+          hideProgressBar: true,
+          style: { color: "#010100", backgroundColor: "#FFF3B0", font: "generalsans", fontSize: '14px', border: "1px solid #010100" },
+        });
+        resetAmbassadorDetails();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(`Form not submitted successfully`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      resetAmbassadorDetails();
+    }
   }
 
 
@@ -181,17 +210,86 @@ export default function CollaboratePage() {
   const handleSubmitCommunityPartner = async (e) => {
 
     e.preventDefault();
-    toast.success(`Community Partner registered successfully`, {
-      autoClose: 3000,
-      position: "top-right",
-      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-      hideProgressBar: true,
-      style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-    });
+
+
+    if (communityPartnerDetails.community_name === "" && communityPartnerDetails.community_contact === "" && communityPartnerDetails.community_college === "" && communityPartnerDetails.community_lead_name === "" &&
+      communityPartnerDetails.community_email === "" && communityPartnerDetails.community_linkedin === "") {
+      toast.error(`Please fill in all required fields with valid information.`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateContactNumber(communityPartnerDetails.community_contact)) {
+      toast.error(`Please enter a valid 10 digit contact number`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateEmail(communityPartnerDetails.community_email)) {
+      toast.error(`Please enter a valid email address`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateLinkedInURL(communityPartnerDetails.community_linkedin)) {
+      toast.error(`Please enter a valid LinkedIn URL`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+
+
+
     const communityPartner_JSON_Details = JSON.stringify(communityPartnerDetails);
     console.log(communityPartner_JSON_Details);
+    try {
+      const response = await fetch("https://messiah.fly.dev/community/collab",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: communityPartner_JSON_Details,
+        });
 
-    resetCommunityPartnerDetails();
+      if (response.ok) {
+        toast.success(`Community Partner registered successfully`, {
+          autoClose: 3000,
+          position: "top-right",
+          icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+          hideProgressBar: true,
+          style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+        });
+        resetCommunityPartnerDetails();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(`Form not submitted successfully`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      resetCommunityPartnerDetails();
+    }
   }
 
   return (
@@ -289,7 +387,7 @@ export default function CollaboratePage() {
                     id="community_contact"
                     onChange={handleInputChangeCommunityPartner}
                     value={communityPartnerDetails.community_contact}
-                    type='number'
+                    type='string'
                     placeholder='Enter the community contact no.'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
