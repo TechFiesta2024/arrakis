@@ -1,5 +1,3 @@
-'use client'
-
 import { HeroSection, Marquee, UnleashSkills } from "@/components/index ";
 
 
