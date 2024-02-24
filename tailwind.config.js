@@ -24,7 +24,11 @@ module.exports = {
       'red': '#FF002B',
       'yellowish': '#FEFAE0',
       'white': '#FFFFFF',
+
+      'grey':'#ACACAC'
+
       'yellowish28': 'rgba(254,250,224,28%)',
+
     }
   },
   plugins: [],
