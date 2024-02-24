@@ -1,6 +1,32 @@
+'use client'
 import Image from "next/image";
 import Images from "../../../public/assets/index.js";
-const CommunityPartner = ({ partners }) => {
+import { useState, useEffect } from 'react'
+const CommunityPartner = () => {
+  // const [partnersData, setPartnersData] = useState([]);
+    
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       const response = await fetch('/api/'); 
+    //       const data = await response.json();
+    //       setPartnersData(data);
+    //     };
+    
+    //     fetchData();
+    //   }, []);
+  const [partnersData, setPartnersData] = useState([
+    { name: "Partner 1", description: "Description of Partner 1" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+    { name: "Partner 2", description: "Description of Partner 2" },
+  ]);
+  if (partnersData.length < 0){
+    return null
+  }
+  else{
   return (
     <>
       <div className="communityparter__mainContainer border-y-[0.5px] border-yellowish  ">
@@ -21,7 +47,7 @@ const CommunityPartner = ({ partners }) => {
                     </div>
             </div> */}
               <div className="boxgrid grid md:grid-cols-3 ">
-                {partners.map((item, index) => (
+                {partnersData.map((item, index) => (
                   <div
                     key={index}
                     className="partners col-span-1 flex justify-center py-20 border-x-[0.5px] border-b-[0.5px] text-yellowish"
@@ -38,5 +64,6 @@ const CommunityPartner = ({ partners }) => {
     </>
   );
 };
+}
 
 export default CommunityPartner;
