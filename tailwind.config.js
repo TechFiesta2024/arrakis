@@ -23,7 +23,8 @@ module.exports = {
       'black': ' #010100',
       'red': '#FF002B',
       'yellowish': '#FEFAE0',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'yellowish28': 'rgba(254,250,224,28%)',
     }
   },
   plugins: [],
