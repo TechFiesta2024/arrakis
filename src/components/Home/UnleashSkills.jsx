@@ -28,7 +28,7 @@ const UnleashSkills = () => {
                       <h1 className='font-anton pb-4 text-[128px]'>Unleash Skills</h1>
                       <button className='bg-red px-10 flex text-white rounded-[8px] '>
                         <div className="buttoncontent flex py-2">
-                          Check Workshops<Image src={Images.Arrow}/>
+                          Check Workshops
                         </div>
                       </button>
                 </div> 
