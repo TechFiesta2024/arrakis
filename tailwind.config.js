@@ -25,7 +25,7 @@ module.exports = {
       'yellowish': '#FEFAE0',
       'white': '#FFFFFF',
 
-      'grey':'#ACACAC'
+      'grey':'#ACACAC',
 
       'yellowish28': 'rgba(254,250,224,28%)',
 

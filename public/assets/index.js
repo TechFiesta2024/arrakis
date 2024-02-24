@@ -23,7 +23,7 @@ const Images = {
     logoInstagram: LogoInstagram,
 
     Rectangle9: Rectangle9,
-    CommImg: CommImg
+    CommImg: CommImg,
 
     logoVerify: LogoVerify,
     logoLinkedInBlack: LogoLinkedInBlack,
