@@ -9,10 +9,10 @@ export default function Homescreen() {
     return (
         <>
             <div className="">
-                <CommunityPartner/>
                 <HeroSection />
                 <Marquee />
                 <UnleashSkills />
+                <CommunityPartner/>
                 
             </div>
         </>

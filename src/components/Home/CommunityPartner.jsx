@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
 import Images from "../../../public/assets/index.js";
+import { useState, useEffect } from "react"
+
 const CommunityPartner = () => {
+  // import React from "react";
   // const [partnersData, setPartnersData] = useState([]);
+
 
   // useEffect(() => {
   //     const fetchData = async () => {
