@@ -4,9 +4,14 @@
 
 @font-face
 {
+
     font-family: Anton;
     src: url(../../public/fonts/Anton-Regular.ttf);
-
-    font-family: GeneralSans;
-    src: url(../../public/fonts/GeneralSans-Regular.ttf);
 }
+
+@font-face
+{
+    font-family: GeneralSans;
+    src: url(../../public/fonts/GeneralSans-Regular.ttf);  
+}
+

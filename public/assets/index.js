@@ -14,6 +14,17 @@ import IconGlobal from './global.svg'
 import IconClock from './clock.svg'
 import IconCalendar from './calendar.svg'
 
+import Rectangle9 from './Rectangle_9.svg'
+import CommImg from './communityimage.svg'
+
+
+import LogoVerify from './Verify.svg'
+
+import LogoLinkedInBlack from './logoLinkedinBlack.svg'
+import LogoXBlack from './logoXblack.svg'
+
+
+
 const Images = {
     logoAot: LogoAot,
     logoWhatsapp: LogoWhatsapp,
@@ -30,6 +41,12 @@ const Images = {
     iconClock: IconClock,
     iconCalendar:IconCalendar,
     iconGlobal: IconGlobal,
+    Rectangle9: Rectangle9,
+    CommImg: CommImg,
+    logoVerify: LogoVerify,
+    logoLinkedInBlack: LogoLinkedInBlack,
+    logoXBlack: LogoXBlack
+
 };
 
 export default Images;
