@@ -25,7 +25,7 @@ const UnleashSkills = () => {
             <div className="unleashskills__mainContainer border-y-[0.5px] border-yellowish  ">
               <div className=" uleashskills__container items-center justify-center w-full px-20" style={{height:428}}>
                 <div className="unleashtext__container flex justify-center items-center flex-col border-x-[0.5px] text-yellowish  h-[100%] ">
-                      <h1 className='font-anton pb-4 text-[128px]'>Unleash Skills</h1>
+                      <h1 className='font-anton pb-4 md:text-[128px]'>Unleash Skills</h1>
                       <button className='bg-red px-10 flex text-white rounded-[8px] '>
                         <div className="buttoncontent flex py-2">
                           Check Workshops

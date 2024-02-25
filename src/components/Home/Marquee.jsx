@@ -2,22 +2,24 @@
 // Data
 // -----------------------------------------------------
 import MarqueeData from "./MarqueeData"
+import Marquee from "react-fast-marquee";
 // -----------------------------------------------------
 // Images
 // -----------------------------------------------------
 import Image from "next/image";
 import Images from "../../../public/assets/index.js";
 
-const Marquee = () => {
+const MarqueeComponent = () => {
 
   const flexStylesStart = "flex justify-start items-center";
   const flexStylesCenter = "flex justify-center items-center";
 
   return (
     <>
+    <Marquee>
       <div className="slide_container border-b-[0.5px] text-yellowish overflow-hidden ">
-        <div className={`slide_section w-[2080px] px-20 py-8 my-16 md:my-20 text-yellowish border-[0.5px] bg-yellowish slide-section`}>
-          <div className={`slider_wrapper ${flexStylesCenter} gap-6 marquee-scroll transition-transform`}>
+        <div className={`slide_section w-auto px-4 py-8 my-16 md:my-20 text-yellowish border-[0.5px] bg-yellowish slide-section`}>
+          <div className={`slider_wrapper ${flexStylesCenter} gap-6 `}>
             {
               MarqueeData.map((data) => {
                 return (
@@ -31,8 +33,9 @@ const Marquee = () => {
           </div>
         </div>
       </div>
+      </Marquee>
     </>
   )
 }
 
-export default Marquee
+export default MarqueeComponent
