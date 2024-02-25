@@ -18,9 +18,10 @@ export default function TeamPage() {
 
     const btnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish'
     const selectedBtnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish bg-yellowish28'
+    
     return (
         <>
-            <div className="md:px-20 w-full">
+            <div className="md:px-20">
                 <div className="border-x-[.5px] border-yellowish">
                     <div className="flex justify-center items-center pt-20">
                         <div className="grid grid-cols-1">
