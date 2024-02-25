@@ -11,20 +11,28 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "grid-pattern": "url('../../public/assets/GridBox.svg')",  
+        "mockup": "url('../../public/assets/mockup2.svg')",
+        "map": "url('../../public/assets/Basemap.svg')",
       },
     },
     fontFamily: {
       'anton': ['Anton', 'sans-serif'],
       'generalsans': ['GeneralSans', 'sans-serif'],
+      'generalsans-semibold': ['GeneralSans-SemiBold', 'sans-serif'],
     },
 
     colors:
     {
-      'black': ' #010100',
+      'black': '#010100',
       'red': '#FF002B',
       'yellowish': '#FEFAE0',
       'white': '#FFFFFF',
+
+      'grey':'#ACACAC',
+
       'yellowish28': 'rgba(254,250,224,28%)',
+
     }
   },
   plugins: [],

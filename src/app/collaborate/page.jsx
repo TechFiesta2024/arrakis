@@ -1,11 +1,11 @@
 "use client";
 
-import { SuccessToast } from "@/components/index ";
 import Image from "next/image";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "../../../public/assets";
+import SmartShapes from "@/components/Global/SmartShapes";
 
 
 export default function CollaboratePage() {
@@ -15,11 +15,13 @@ export default function CollaboratePage() {
   const handleCampusAmbassadorClick = () => {
     setShowCampusAmbassador(true);
     setShowCommunityPartner(false);
+    setSelectedButton('Campus Ambassador');
   };
 
   const handleCommunityPartnerClick = () => {
     setShowCommunityPartner(true);
     setShowCampusAmbassador(false);
+    setSelectedButton('Community Partner');
   };
 
 
@@ -79,6 +81,9 @@ export default function CollaboratePage() {
   const handleSubmitCampusAmbassador = async (e) => {
     e.preventDefault();
 
+
+
+
     if (ambassorDetails.ambassador_name === "" && ambassorDetails.ambassador_contact === "" && ambassorDetails.ambassador_college === "" && ambassorDetails.ambassador_email === "" && ambassorDetails.ambassador_description === "" && ambassorDetails.ambassador_linkedin === "") {
       toast.error(`Please fill in all required fields with valid information.`, {
         autoClose: 3000,
@@ -99,9 +104,8 @@ export default function CollaboratePage() {
       });
       return;
     }
-
-    if (!validateContactNumber(ambassorDetails.ambassador_contact)) {
-      toast.error(`Please enter a valid 10 digit contact number`, {
+    if (!validateEmail(ambassorDetails.ambassador_email)) {
+      toast.error(`Please enter a valid email address`, {
         autoClose: 3000,
         position: "top-right",
         hideProgressBar: true,
@@ -135,17 +139,45 @@ export default function CollaboratePage() {
 
 
 
-    toast.success(`Campus Ambassador registered successfully`, {
-      autoClose: 3000,
-      position: "top-right",
-      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-      hideProgressBar: true,
-      style: { color: "#010100", backgroundColor: "#FFF3B0", font: "generalsans", fontSize: '14px', border: "1px solid #010100" },
-    });
+
 
     const ambassador_JSON_Details = JSON.stringify(ambassorDetails);
     console.log(ambassador_JSON_Details);
-    resetAmbassadorDetails();
+
+    try {
+      const response = await fetch("https://messiah.fly.dev/community/ambassador",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: ambassador_JSON_Details,
+        });
+
+
+
+      if (response.ok) {
+        toast.success(`Campus Ambassador registered successfully`, {
+          autoClose: 3000,
+          position: "top-right",
+          icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+          hideProgressBar: true,
+          style: { color: "#010100", backgroundColor: "#FFF3B0", font: "generalsans", fontSize: '14px', border: "1px solid #010100" },
+        });
+        resetAmbassadorDetails();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(`Form not submitted successfully`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      resetAmbassadorDetails();
+    }
   }
 
 
@@ -181,39 +213,119 @@ export default function CollaboratePage() {
   const handleSubmitCommunityPartner = async (e) => {
 
     e.preventDefault();
-    toast.success(`Community Partner registered successfully`, {
-      autoClose: 3000,
-      position: "top-right",
-      icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-      hideProgressBar: true,
-      style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-    });
+
+
+    if (communityPartnerDetails.community_name === "" && communityPartnerDetails.community_contact === "" && communityPartnerDetails.community_college === "" && communityPartnerDetails.community_lead_name === "" &&
+      communityPartnerDetails.community_email === "" && communityPartnerDetails.community_linkedin === "") {
+      toast.error(`Please fill in all required fields with valid information.`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateContactNumber(communityPartnerDetails.community_contact)) {
+      toast.error(`Please enter a valid 10 digit contact number`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateEmail(communityPartnerDetails.community_email)) {
+      toast.error(`Please enter a valid email address`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+    if (!validateLinkedInURL(communityPartnerDetails.community_linkedin)) {
+      toast.error(`Please enter a valid LinkedIn URL`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      return;
+    }
+
+
+
     const communityPartner_JSON_Details = JSON.stringify(communityPartnerDetails);
     console.log(communityPartner_JSON_Details);
+    try {
+      const response = await fetch("https://messiah.fly.dev/community/collab",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: communityPartner_JSON_Details,
+        });
 
-    resetCommunityPartnerDetails();
+      if (response.ok) {
+        toast.success(`Community Partner registered successfully`, {
+          autoClose: 3000,
+          position: "top-right",
+          icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+          hideProgressBar: true,
+          style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+        });
+        resetCommunityPartnerDetails();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(`Form not submitted successfully`, {
+        autoClose: 3000,
+        position: "top-right",
+        hideProgressBar: true,
+        icon: false,
+        style: { color: "#FFFFFF", backgroundColor: "#FF002B", fontSize: '14px', border: "1px solid #FFFFFF " },
+      });
+      resetCommunityPartnerDetails();
+    }
   }
+
+
+  const [selectedButton, setSelectedButton] = useState('Campus Ambassador');
+
+  const collaborateButtonClass = "border-x-[0.5px] h-full w-1/2 flex justify-center items-center";
+  const selectedCollaborateButtonClass = "border-x-[0.5px] h-full w-1/2 flex justify-center items-center bg-yellowish28";
+
+
+
 
   return (
     <>
-      <div className='collab__container flex w-full px-0 md:px-20  border-yellowish text-yellowish'>
-        <div className='collab__left flex w-1/2 border-x-[0.5px] flex-col'>
+      <div className='collab__container flex flex-col md:flex-row w-full px-0 md:px-20  border-yellowish text-yellowish'>
+        <div className='collab__left flex w-full md:w-1/2 border-x-[0.5px] flex-col'>
           <div className='collab__buttons flex w-full h-16 border-b-[0.5px]'>
             <button
               onClick={handleCampusAmbassadorClick}
-              className='border-r-[0.5px] h-full w-1/2 flex justify-center items-center'
+
+              className={selectedButton === 'Campus Ambassador' ? selectedCollaborateButtonClass : collaborateButtonClass}
             >
               Campus Ambassador
             </button>
             <button
               onClick={handleCommunityPartnerClick}
-              className='h-full w-1/2 flex justify-center items-center'
+
+              className={selectedButton === 'Community Partner' ? selectedCollaborateButtonClass : collaborateButtonClass}
             >
               Community Partner
             </button>
           </div>
 
-          <div className='collab__title flex h-[312px] px-[90px] justify-center flex-col border-b-[0.5px]'>
+          <div className='collab__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px] overflow-hidden'>
             {showCampusAmbassador && (
               <>
                 <p className='text-xl'>join as</p>
@@ -225,6 +337,7 @@ export default function CollaboratePage() {
                   </a>{" "}
                   for positive collaboration
                 </p>
+                <SmartShapes />
               </>
             )}
             {showCommunityPartner && (
@@ -238,13 +351,14 @@ export default function CollaboratePage() {
                   </a>{" "}
                   for positive collaboration
                 </p>
+                <SmartShapes />
               </>
             )}
           </div>
-          <div className='collab__left_input h-[400px] flex px-[90px] flex-col justify-center'>
+          <div className='collab__left_input md:h-[400px] flex px-4 md:px-[90px] flex-col md:justify-center'>
             {showCampusAmbassador && (
               <>
-                <div className='input_name flex flex-col pb-8'>
+                <div className='input_name flex flex-col py-8 md:pb-8 md:pt-0'>
                   <label className='text-[24px] pb-4'>Name</label>
                   <input
                     id='ambassador_name'
@@ -255,7 +369,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <div className='input_name flex flex-col'>
+                <div className='input_name flex flex-col pb-8 md:pb-0'>
                   <label className='text-[24px] pb-4'>Contact No.</label>
                   <input
                     id='ambassador_contact'
@@ -270,7 +384,7 @@ export default function CollaboratePage() {
             )}
             {showCommunityPartner && (
               <>
-                <div className='input_name flex flex-col pb-8'>
+                <div className='input_name flex flex-col py-8 md:pb-8 md:pt-0'>
                   <label className='text-[24px] pb-4'>Community Name</label>
                   <input
                     id="community_name"
@@ -281,7 +395,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <div className='input_name flex flex-col'>
+                <div className='input_name flex flex-col pb-8 md:pb-0'>
                   <label className='text-[24px] pb-4'>
                     Community Contact No.
                   </label>
@@ -289,7 +403,7 @@ export default function CollaboratePage() {
                     id="community_contact"
                     onChange={handleInputChangeCommunityPartner}
                     value={communityPartnerDetails.community_contact}
-                    type='number'
+                    type='string'
                     placeholder='Enter the community contact no.'
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
@@ -299,10 +413,10 @@ export default function CollaboratePage() {
           </div>
         </div>
 
-        <div className='collab__right border-r-[0.5px] flex w-1/2 h-auto items-center py-8'>
+        <div className='collab__right border-x-[0.5px] md:border-r-[0.5px] flex w-full md:w-1/2 h-auto items-center md:py-8'>
           {showCampusAmbassador && (
             <>
-              <div className='collab__right_input h-full flex px-[90px] flex-col w-full justify-evenly'>
+              <div className='collab__right_input h-full flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>College Name</label>
                   <input
@@ -349,7 +463,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCampusAmbassador}>
+                <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0' onClick={handleSubmitCampusAmbassador}>
                   Submit
                 </button>
                 <ToastContainer />
@@ -359,7 +473,7 @@ export default function CollaboratePage() {
 
           {showCommunityPartner && (
             <>
-              <div className='collab__right_input h-auto flex px-[90px] flex-col w-full justify-evenly'>
+              <div className='collab__right_input h-auto flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>
                     Community Lead Name
@@ -408,7 +522,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCommunityPartner}>
+                <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0' onClick={handleSubmitCommunityPartner}>
                   Submit
                 </button>
                 <ToastContainer />

@@ -19,6 +19,8 @@ export default function TeamPage() {
     const btnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish'
     const selectedBtnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish bg-yellowish28'
     
+    }, [selectedButton])
+
     return (
         <>
             <div className="md:px-20">
@@ -49,7 +51,9 @@ export default function TeamPage() {
                                 </button>
                                 <button
                                     onClick={() => setSelectedButton('Content')}
+
                                     className={ selectedButton === 'Content' ? selectedBtnClass : btnClass}
+
                                 >
                                     Content
                                 </button>

@@ -2,15 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face
-{
-    font-family: GeneralSans;
-    src: url(../../public/fonts/GeneralSans-Regular.ttf);
-    
+
+
+  
     @font-face {
         font-family: Anton;
         src: url(../../public/fonts/Anton-Regular.ttf);
     }
     
+
+
+
+
+    @font-face {
+
+        font-family: GeneralSans;
+        src: url(../../public/fonts/GeneralSans-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: GeneralSans-semibold;
+        src: url(../../public/fonts/GeneralSans-Semibold.otf);
+    }
+
+   
+
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+.animate-rotate {
+    animation: rotate 5s infinite linear;
+}
+
+.animate-rotate-star2 {
+    animation: rotate 5s infinite linear;
+}
+
+.animate-rotate-diamond1 {
+    animation: rotate 5s infinite linear;
+}
+
+.animate-rotate-star3 {
+    animation: rotate 5s infinite linear;
+}
+
+.animate-rotate-diamond2 {
+    animation: rotate 5s infinite linear;
+}
+
+.marquee-scroll {
+    display: flex;
+    animation: marquee-scroll 20s linear infinite;
+  }
+  
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
 
