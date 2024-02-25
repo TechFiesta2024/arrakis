@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="footer__left flex items-center justify-evenly w-full md:w-1/2 h-full border-b-[0.5px] border-yellowish">
                 <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
 
-                    <p className="text-sm md:text-lg">©Techfiesta'24</p>
+                    <p className="text-sm md:text-lg">©Techfiesta&apos;24</p>
                 </div>
                 <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
                     <p className="text-sm md:text-lg">Help Desk </p>
