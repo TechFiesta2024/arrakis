@@ -41,15 +41,14 @@ import CommImg from './communityimage.svg'
 
 
 import LogoVerify from './Verify.svg'
-import ArrowRight from './arrow-right.svg'
+// import ArrowRight from './arrow-right.svg'
 import ArrowLeft from './arrow-left.svg'
 import Calendar from './calendar-search.svg'
 import Map from './map.svg'
 import Register from './register.svg'
 import ArrowRightYellowish from './arrowrightYellowish.svg'
 
-import LogoLinkedInBlack from './logoLinkedinBlack.svg'
-import LogoXBlack from './logoXblack.svg'
+// import LogoLinkedInBlack from './logoLinkedinBlack.svg'
 
 
 
@@ -71,7 +70,7 @@ const Images = {
     arrowRightYellowish: ArrowRightYellowish,
 
 
-    GridBox:GridBox,
+    GridBox: GridBox,
     Coin: Coin,
     Capsule: [Capsule, Capsule1, Capsule2, Capsule3, Capsule4, Capsule5],
     ArrowRight: ArrowRight,
@@ -91,7 +90,7 @@ const Images = {
     iconMonitorMobile: IconMonitorMobile,
     iconLink2: IconLink2,
     iconClock: IconClock,
-    iconCalendar:IconCalendar,
+    iconCalendar: IconCalendar,
     iconGlobal: IconGlobal,
     Rectangle9: Rectangle9,
     CommImg: CommImg,
