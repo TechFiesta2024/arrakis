@@ -14,12 +14,11 @@ export default function TeamPage() {
     useEffect(() => {
         const filtered = teamData.filter(member => member.department === selectedButton)
         setFilteredData(filtered)
-    },[selectedButton])
+    }, [selectedButton])
 
     const btnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish'
     const selectedBtnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish bg-yellowish28'
-    
-    }, [selectedButton])
+
 
     return (
         <>
@@ -52,7 +51,7 @@ export default function TeamPage() {
                                 <button
                                     onClick={() => setSelectedButton('Content')}
 
-                                    className={ selectedButton === 'Content' ? selectedBtnClass : btnClass}
+                                    className={selectedButton === 'Content' ? selectedBtnClass : btnClass}
 
                                 >
                                     Content
