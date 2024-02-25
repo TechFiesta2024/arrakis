@@ -11,6 +11,7 @@ const TeamCard = ({ member }) => {
             <div className='border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish'>
                 <div className='h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
                     <img className='object-cover' src={image_url} />
+                    {/* if I use next Image in that case I am not able to load image from cloudinary as src */}
                 </div>
                 <div className='h-[40%] '>
                     <div className='lg:pt-6 pt-4 h-[30%]'>

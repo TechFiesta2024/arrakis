@@ -1,4 +1,6 @@
+import Image from "next/image"
 import Link from "next/link"
+import Images from "../../../public/assets"
 
 
 const BootcampInfo = ({ bootcamp }) => {
@@ -17,8 +19,9 @@ const BootcampInfo = ({ bootcamp }) => {
                         <p className='text-yellowish font-generalsans text-sm lg:pt-3 py-1'>{description}</p>
                     </div>
                     <div className='h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish'>
-                        <Link href={`/bootcamp/${id}`} className='border-r-[.5px] border-black flex justify-center items-center'>
-                            <h1 className="text-black text-[14px] font-extrabold ">VIEW DETAILS & REGISTER</h1>
+                        <Link href={`/bootcamp/${id}`} className='border-r-[.5px] border-black flex justify-center items-center gap-2'>
+                            <h1 className="text-black text-[14px] font-generalsans font-bold ">VIEW DETAILS & REGISTER</h1>
+                            <Image src={ Images.arrowRight}/>
                         </Link>
 
                     </div>
