@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 export default function BootcampPage() {
 
 
-    const [selectedButton, setSelectedButton] = useState('Software')
+    const [selectedButton, setSelectedButton] = useState('All')
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
@@ -20,8 +20,8 @@ export default function BootcampPage() {
     }, [selectedButton])
 
 
-    const btnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish'
-    const selectedBtnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-t-[.5px] border-yellowish font-generalsans text-yellowish bg-yellowish28'
+    const btnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-y-[.5px] border-yellowish font-generalsans text-yellowish'
+    const selectedBtnClass = 'px-5 py-3 md:w-[147px] border-x-[.5px] border-y-[.5px] border-yellowish font-generalsans text-yellowish bg-yellowish28'
 
 
     return (
