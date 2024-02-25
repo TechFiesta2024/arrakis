@@ -17,7 +17,9 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
     const runnerRef = useRef();
 
     const WIDTH = canvasWidth || 426;
+    // const WIDTH = canvasWidth;
     const HEIGHT = canvasHeight || 244;
+    // const HEIGHT = canvasHeight;
 
     useEffect(() => {
         if (runnerRef.current) {
@@ -129,8 +131,8 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
 
     return (
         <>
-            <div className="floating-capsules_container flex flex-col items-center justify-center">
-                <canvas className="capsules_div" ref={canvas} />
+            <div className="floating-capsules_container flex flex-col items-center justify-center w-[100%]">
+                <canvas className="capsules_div w-[94%] h-[100%] border-none overflow-hidden" ref={canvas} />
             </div>
         </>
     )
