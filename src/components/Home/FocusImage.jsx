@@ -10,17 +10,17 @@ const FocusImage = () => {
 
     return (
         <>
-            <div className={`participate-badge_container h-[100%] w-[100%] flex-col ${flexStylesStart} overflow-hidden`}>
+            <div className={`participate-badge_container h-[100%] w-[96vw] md:w-[100%] flex-col ${flexStylesCenter} md:${flexStylesStart} overflow-hidden`}>
                 {/* -------------------------Mid Text----------------------------- */}
                 <div className="relative">
-                    <p className="techfiesta_text font-anton text-[180px] text-yellowish">TECHFIESTA</p>
-                    <div className="humatronics_tags font-anton text-4xl bg-red text-black w-fit px-1 rounded border absolute bottom-14 right-0">
+                    <p className="techfiesta_text font-anton text-[80px] md:text-[180px] text-yellowish">TECHFIESTA</p>
+                    <div className="humatronics_tags font-anton text-xl md:text-4xl bg-red text-black w-fit px-1 rounded border absolute bottom-6 md:bottom-14 right-0">
                         & HUMATRONICS
                     </div>
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
-                <button className={`${flexStylesCenter} bg-red px-2 py-1 mt-[-30px] w-[280px] z-20 rounded gap-x-3 transition-transform hover:scale-x-110`}>
-                    <p>Regester</p>
+                <button className={`${flexStylesCenter} bg-red px-2 py-1 md:mt-[-30px] w-[200px] md:w-[280px] z-20 rounded gap-x-3 transition-transform hover:scale-x-110`}>
+                    <p>Register</p>
                     <Image src={Images.ArrowRight} alt='arrow-right' />
                 </button>
                 {/* ------------------------- Smart Shapes ----------------------------- */}
