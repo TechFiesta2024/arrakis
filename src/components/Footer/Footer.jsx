@@ -11,7 +11,6 @@ export default function Footer() {
                     <p className="">© Techfiesta'24</p>
                 </div>
                 <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
-
                     <p >Help Desk </p>
                 </div>
             </div>
