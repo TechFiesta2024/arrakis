@@ -1,36 +1,41 @@
+import EventDate from "./EventDate"
+import FloatingCapsules from "./FloatingCapsules"
+import FocusImage from "./FocusImage"
+import MapDirection from "./MapDirection"
+import ParticipateBadge from "./ParticipateBadge"
+import PrizePoolBadge from "./PrizePoolBadge"
+import TimerMockup from "./TimerMockup"
 
 
 const Herosection = () => {
     return (
         <>
-            <div className="w-full h-screen px-20 ">
-                <div className="row-1 grid md:grid-cols-3 h-[30%]">
+            <div className="w-full h-[834px] px-20 border-b text-yellowish">
+                <div className="row-1 grid md:grid-cols-3 h-[242px]">
                     <div className="col-span-1 border-x-[0.5px] text-yellowish">
-                        <h1>participate</h1>
+                        <ParticipateBadge />
                     </div>
                     <div className="col-span-1 border-r-[0.5px] text-yellowish">
-                        <h1>floating button</h1>
+                        <FloatingCapsules />
                     </div>
                     <div className="col-span-1 border-r-[0.5px] text-yellowish">
-                        <h1>
-                            prizepool
-                        </h1>
+                        <PrizePoolBadge />
                     </div>
                 </div>
-                <div className="row-2 grid md:grid-cols-1 h-[40%]">
+                <div className="row-2 grid md:grid-cols-1 h-[350px]">
                     <div className="col-span-1 border text-yellowish">
-                        <h1>image</h1>
+                        <FocusImage />
                     </div>
                 </div>
-                <div className="row-3 grid md:grid-cols-3 h-[30%] border-b-[0.5px] border-yellowish">
+                <div className="row-3 grid md:grid-cols-3 h-[242px] border-b-[0.5px] border-yellowish">
                     <div className="col-span-1 border-x-[0.5px]  border-yellowish">
-                        <h1>prizepool</h1>
+                        <EventDate />
                     </div>
                     <div className="col-span-1 border-r-[0.5px]  border-yellowish">
-                        <h1>prizepool</h1>
+                        <TimerMockup />
                     </div>
                     <div className="col-span-1 border-r-[0.5px]  border-yellowish">
-                        <h1>prizepool</h1>
+                        <MapDirection />
                     </div>
                 </div>
             </div>
