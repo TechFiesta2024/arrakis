@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "../../../public/assets";
+import SmartShapes from "@/components/Global/SmartShapes";
 
 
 export default function CollaboratePage() {
@@ -324,7 +325,7 @@ export default function CollaboratePage() {
             </button>
           </div>
 
-          <div className='collab__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px]'>
+          <div className='collab__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px] overflow-hidden'>
             {showCampusAmbassador && (
               <>
                 <p className='text-xl'>join as</p>
@@ -336,6 +337,7 @@ export default function CollaboratePage() {
                   </a>{" "}
                   for positive collaboration
                 </p>
+                <SmartShapes />
               </>
             )}
             {showCommunityPartner && (
@@ -349,6 +351,7 @@ export default function CollaboratePage() {
                   </a>{" "}
                   for positive collaboration
                 </p>
+                <SmartShapes />
               </>
             )}
           </div>

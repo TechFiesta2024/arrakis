@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import Images from '../../../public/assets'
+import SmartShapes from '../Global/SmartShapes'
 
 export const EmptyState = () => {
     return (
         <>
-            <div className="emptyState flex justify-center items-center text-yellowish">
+            <div className="emptyState flex justify-center items-center text-yellowish overflow-hidden">
                 <div className="">
                     <Image className="-translate-y-40" src={Images.iconRectangle} alt="Rectangle Icon" />
                 </div>
@@ -22,7 +23,7 @@ export const EmptyState = () => {
                     <Image className="translate-y-20" src={Images.iconStar} alt="Star Icon" />
                 </div>
             </div>
-
+            <SmartShapes />
         </>
     )
 }
