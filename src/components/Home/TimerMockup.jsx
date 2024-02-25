@@ -57,8 +57,8 @@ const TimerMockup = () => {
 
     return (
         <>
-            <div className={`prizeool-Badge_container h-[100%] w-[100%] ${flexStylesCenter} overflow-hidden`}>
-                <div className={`bg-mockup bg-no-repeat h-[100%] w-[100%] whitespace-nowrap bg-contain object-cover`}>
+            <div className={`prizeool-Badge_container h-[242px] w-[100%] ${flexStylesCenter} overflow-hidden`}>
+                <div className={`bg-mockup bg-no-repeat h-[600px] w-[300px] whitespace-nowrap bg-contain object-cover mt-[450px] md:mt-96`}>
                     <div className={`mt-16 ${flexStylesCenter}`}>
                         <div className={``}>
                             <p className="text-3xl font-generalsans text-black ">

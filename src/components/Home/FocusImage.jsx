@@ -10,7 +10,7 @@ const FocusImage = () => {
 
     return (
         <>
-            <div className={`participate-badge_container h-[100%] w-[96vw] md:w-[100%] flex-col ${flexStylesCenter} md:${flexStylesStart} overflow-hidden`}>
+            <div className={`participate-badge_container h-[100%] w-[100%] pt-6 pb-8 flex-col ${flexStylesCenter} md:${flexStylesStart} overflow-hidden`}>
                 {/* -------------------------Mid Text----------------------------- */}
                 <div className="relative">
                     <p className="techfiesta_text font-anton text-[80px] md:text-[180px] text-yellowish">TECHFIESTA</p>

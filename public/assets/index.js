@@ -18,7 +18,7 @@ import Star3 from './Star 3.svg'
 import Diamond1 from './diamond1.svg'
 import Diamond2 from './diamond2.svg'
 import Calender from './calendar.svg'
-import Mockup from './mockup.svg'
+import Mockup from './mockup2.svg'
 
 import IconRectangle from './rectangle.svg'
 import IconStar from './star.svg'

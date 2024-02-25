@@ -10,8 +10,30 @@ import TimerMockup from "./TimerMockup"
 const Herosection = () => {
     return (
         <>
-            <div className="w-full h-[834px] md:px-20 border-b text-yellowish">
-                <div className="row-1 grid md:grid-cols-3 h-[205px] md:h-[242px]">
+            {/* <div className="w-full h-[834px] md:px-20 border-b text-yellowish"> */}
+            <div className=" grid grid-cols-3 w-full md:px-20 border-b text-yellowish">
+                <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <ParticipateBadge />
+                </div>
+                <div className="col-span-3 md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <FloatingCapsules />
+                </div>
+                <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <PrizePoolBadge />
+                </div>
+                <div className="col-span-3 bg-black border-[0.5px] text-yellowish">
+                    <FocusImage />
+                </div>
+                <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <EventDate />
+                </div>
+                <div className="col-span-3 md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <TimerMockup />
+                </div>
+                <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
+                    <MapDirection />
+                </div>
+                {/* <div className="row-1 grid md:grid-cols-3 h-[205px] md:h-[242px]">
                     <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
                         <ParticipateBadge />
                     </div>
@@ -37,7 +59,7 @@ const Herosection = () => {
                     <div className="hidden md:block md:col-span-1 border-r-[0.5px]  border-yellowish">
                         <MapDirection />
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )
