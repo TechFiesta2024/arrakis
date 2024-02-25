@@ -27,19 +27,32 @@
     animation: rotate 5s infinite linear;
 }
 
-/* Adjust the delay and other styles for each shape as needed */
 .animate-rotate-star2 {
-    animation: rotate 5s infinite linear; /* 1s delay */
+    animation: rotate 5s infinite linear;
 }
 
 .animate-rotate-diamond1 {
-    animation: rotate 5s infinite linear; /* 2s delay */
+    animation: rotate 5s infinite linear;
 }
 
 .animate-rotate-star3 {
-    animation: rotate 5s infinite linear; /* 3s delay */
+    animation: rotate 5s infinite linear;
 }
 
 .animate-rotate-diamond2 {
-    animation: rotate 5s infinite linear; /* 4s delay */
+    animation: rotate 5s infinite linear;
 }
+
+.marquee-scroll {
+    display: flex;
+    animation: marquee-scroll 20s linear infinite;
+  }
+  
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

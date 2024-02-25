@@ -41,14 +41,18 @@ const TimerMockup = () => {
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
     useEffect(() => {
-        const timerInterval = setInterval(() => {
+        const calculateAndSetTimeRemaining = () => {
             setTimeRemaining(calculateTimeRemaining());
-        }, 1000);
-
+        };
+        calculateAndSetTimeRemaining();
+        const timerInterval = setInterval(calculateAndSetTimeRemaining, 1000);
         return () => clearInterval(timerInterval);
     }, []);
 
-    const flexStylesStart = "flex justify-start items-center";
+    const formatTimeValue = (value) => {
+        return value < 10 ? `0${value}` : value;
+    };
+
     const flexStylesCenter = "flex justify-center items-center";
 
     return (
@@ -57,7 +61,9 @@ const TimerMockup = () => {
                 <div className={`bg-mockup bg-no-repeat h-[100%] w-[68%] mt-8`}>
                     <div className={`mt-12 ${flexStylesCenter}`}>
                         <div className="">
-                            <p className="text-3xl font-generalsans text-black ">{timeRemaining.days}:{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</p>
+                            <p className="text-3xl font-generalsans text-black ">
+                                {`${formatTimeValue(timeRemaining.days)}:${formatTimeValue(timeRemaining.hours)}:${formatTimeValue(timeRemaining.minutes)}:${formatTimeValue(timeRemaining.seconds)}`}
+                            </p>
                             <p className="font-generalsans text-md text-center text-black">Days left</p>
                         </div>
                     </div>
