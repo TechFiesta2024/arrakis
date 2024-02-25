@@ -14,11 +14,13 @@ export default function CollaboratePage() {
   const handleCampusAmbassadorClick = () => {
     setShowCampusAmbassador(true);
     setShowCommunityPartner(false);
+    setSelectedButton('Campus Ambassador');
   };
 
   const handleCommunityPartnerClick = () => {
     setShowCommunityPartner(true);
     setShowCampusAmbassador(false);
+    setSelectedButton('Community Partner');
   };
 
 
@@ -292,26 +294,37 @@ export default function CollaboratePage() {
     }
   }
 
+
+  const [selectedButton, setSelectedButton] = useState('Campus Ambassador');
+
+  const collaborateButtonClass = "border-x-[0.5px] h-full w-1/2 flex justify-center items-center";
+  const selectedCollaborateButtonClass = "border-x-[0.5px] h-full w-1/2 flex justify-center items-center bg-yellowish28";
+
+
+
+
   return (
     <>
-      <div className='collab__container flex w-full px-0 md:px-20  border-yellowish text-yellowish'>
-        <div className='collab__left flex w-1/2 border-x-[0.5px] flex-col'>
+      <div className='collab__container flex flex-col md:flex-row w-full px-0 md:px-20  border-yellowish text-yellowish'>
+        <div className='collab__left flex w-full md:w-1/2 border-x-[0.5px] flex-col'>
           <div className='collab__buttons flex w-full h-16 border-b-[0.5px]'>
             <button
               onClick={handleCampusAmbassadorClick}
-              className='border-r-[0.5px] h-full w-1/2 flex justify-center items-center'
+
+              className={selectedButton === 'Campus Ambassador' ? selectedCollaborateButtonClass : collaborateButtonClass}
             >
               Campus Ambassador
             </button>
             <button
               onClick={handleCommunityPartnerClick}
-              className='h-full w-1/2 flex justify-center items-center'
+
+              className={selectedButton === 'Community Partner' ? selectedCollaborateButtonClass : collaborateButtonClass}
             >
               Community Partner
             </button>
           </div>
 
-          <div className='collab__title flex h-[312px] px-[90px] justify-center flex-col border-b-[0.5px]'>
+          <div className='collab__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px]'>
             {showCampusAmbassador && (
               <>
                 <p className='text-xl'>join as</p>
@@ -339,10 +352,10 @@ export default function CollaboratePage() {
               </>
             )}
           </div>
-          <div className='collab__left_input h-[400px] flex px-[90px] flex-col justify-center'>
+          <div className='collab__left_input md:h-[400px] flex px-4 md:px-[90px] flex-col md:justify-center'>
             {showCampusAmbassador && (
               <>
-                <div className='input_name flex flex-col pb-8'>
+                <div className='input_name flex flex-col py-8 md:pb-8 md:pt-0'>
                   <label className='text-[24px] pb-4'>Name</label>
                   <input
                     id='ambassador_name'
@@ -353,7 +366,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <div className='input_name flex flex-col'>
+                <div className='input_name flex flex-col pb-8 md:pb-0'>
                   <label className='text-[24px] pb-4'>Contact No.</label>
                   <input
                     id='ambassador_contact'
@@ -368,7 +381,7 @@ export default function CollaboratePage() {
             )}
             {showCommunityPartner && (
               <>
-                <div className='input_name flex flex-col pb-8'>
+                <div className='input_name flex flex-col py-8 md:pb-8 md:pt-0'>
                   <label className='text-[24px] pb-4'>Community Name</label>
                   <input
                     id="community_name"
@@ -379,7 +392,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <div className='input_name flex flex-col'>
+                <div className='input_name flex flex-col pb-8 md:pb-0'>
                   <label className='text-[24px] pb-4'>
                     Community Contact No.
                   </label>
@@ -397,10 +410,10 @@ export default function CollaboratePage() {
           </div>
         </div>
 
-        <div className='collab__right border-r-[0.5px] flex w-1/2 h-auto items-center py-8'>
+        <div className='collab__right border-x-[0.5px] md:border-r-[0.5px] flex w-full md:w-1/2 h-auto items-center md:py-8'>
           {showCampusAmbassador && (
             <>
-              <div className='collab__right_input h-full flex px-[90px] flex-col w-full justify-evenly'>
+              <div className='collab__right_input h-full flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>College Name</label>
                   <input
@@ -447,7 +460,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCampusAmbassador}>
+                <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0' onClick={handleSubmitCampusAmbassador}>
                   Submit
                 </button>
                 <ToastContainer />
@@ -457,7 +470,7 @@ export default function CollaboratePage() {
 
           {showCommunityPartner && (
             <>
-              <div className='collab__right_input h-auto flex px-[90px] flex-col w-full justify-evenly'>
+              <div className='collab__right_input h-auto flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
                 <div className='input_name flex flex-col pb-8'>
                   <label className='text-[24px] pb-4'>
                     Community Lead Name
@@ -506,7 +519,7 @@ export default function CollaboratePage() {
                     className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                   />
                 </div>
-                <button className='bg-red p-4 text-white rounded-[8px] ' onClick={handleSubmitCommunityPartner}>
+                <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0' onClick={handleSubmitCommunityPartner}>
                   Submit
                 </button>
                 <ToastContainer />
