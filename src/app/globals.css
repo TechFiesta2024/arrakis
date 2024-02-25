@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+
+
+@font-face
+{
+
     font-family: Anton;
     src: url(../../public/fonts/Anton-Regular.ttf);
+}
 
     @font-face {
 
@@ -16,7 +21,7 @@
         font-family: GeneralSans-semibold;
         src: url(../../public/fonts/GeneralSans-SemiBold.otf);
     }
-}
+
 
 @keyframes rotate {
     0% { transform: rotate(0deg); }
@@ -56,3 +61,4 @@
       transform: translateX(-100%);
     }
   }
+
