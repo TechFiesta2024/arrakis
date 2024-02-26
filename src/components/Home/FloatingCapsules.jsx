@@ -20,6 +20,7 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight }) => {
     const WIDTH = canvasWidth ?? 500;
     const HEIGHT = canvasHeight ?? 300;
 
+
     useEffect(() => {
         if (runnerRef.current) {
             Runner.stop(runnerRef.current);

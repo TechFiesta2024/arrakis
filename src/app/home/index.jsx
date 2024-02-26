@@ -1,5 +1,5 @@
 'use client'
-import { HeroSection, Marquee, UnleashSkills, CommunityPartner } from "@/components/index "
+import { HeroSection, MarqueeComponent, UnleashSkills, CommunityPartner } from "@/components/index "
 
 
 export default function Homescreen() {
@@ -10,7 +10,7 @@ export default function Homescreen() {
         <>
             <div className="">
                 <HeroSection />
-                <Marquee />
+                <MarqueeComponent />
                 <UnleashSkills />
                 <CommunityPartner/>
                 

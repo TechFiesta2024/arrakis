@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Images from "../../../public/assets";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -8,25 +9,25 @@ export default function Footer() {
             <div className="footer__left flex items-center justify-evenly w-full md:w-1/2 h-full border-b-[0.5px] border-yellowish">
                 <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
 
-                    <p className="">© Techfiesta'24</p>
+                    <p className="text-sm md:text-lg">©Techfiesta&apos;24</p>
                 </div>
                 <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
-                    <p >Help Desk </p>
+                    <p className="text-sm md:text-lg">Help Desk </p>
                 </div>
             </div>
             <div className="footer__right flex items-center justify-evenly w-full md:w-1/2 h-full">
-                <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
-                    <Image src={Images.logoWhatsapp} />
-                </div>
-                <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
-                    <Image src={Images.logoInstagram} />
-                </div>
-                <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
-                    <Image src={Images.logoX} />
-                </div>
-                <div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
-                    <Image src={Images.logoLinkedIn} />
-                </div>
+                <Link href="" className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
+                    <Image src={Images.logoWhatsapp} className="h-8 w-8" alt="whatsapp-logo" />
+                </Link>
+                <Link href="" className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
+                    <Image src={Images.logoInstagram} className="h-8 w-8" alt="instagram-logo" />
+                </Link>
+                <Link href="" className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
+                    <Image src={Images.logoX} className="h-8 w-8" alt="x-logo" />
+                </Link>
+                <Link href="" className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4">
+                    <Image src={Images.logoLinkedIn} className="h-8 w-8" alt="linkedin-logo" />
+                </Link>
             </div>
         </div>
     )

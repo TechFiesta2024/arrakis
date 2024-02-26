@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "type": "Software",
+    "title": "Product Development",
+    "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+    "description": "This workshop is about the product development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "timing": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "link": "https://meet.google.com/abc-xyz",
+    "destination": "Aot Campus",
+    "coordinator": [
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "John Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "Jane Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Software",
+    "title": "Web Development",
+    "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+    "description": "This workshop is about the web development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "timing": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "link": "https://meet.google.com/abc-xyz",
+    "destination": "",
+    "coordinator": [
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "John Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "Jane Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "Software",
+    "title": "App Development",
+    "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+    "description": "This workshop is about the app development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "timing": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "link": "https://meet.google.com/abc-xyz",
+    "destination": "",
+    "coordinator": [
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "John Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "Jane Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "Hardware",
+    "title": "Game Development",
+    "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+    "description": "This workshop is about the game development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "timing": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "link": "https://meet.google.com/abc-xyz",
+    "destination": "",
+    "coordinator": [
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "John Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "https://res.cloudinary.com/dgo2lycse/image/upload/v1708759287/tcailqh3sy1fnooi19ud.jpg",
+        "name": "Jane Doe",
+         "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  }
+]
