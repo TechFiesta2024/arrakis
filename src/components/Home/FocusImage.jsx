@@ -23,7 +23,7 @@ const FocusImage = () => {
                     </div>
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
-                <Link href='/register' className={`${flexStylesCenter} bg-red px-2 py-1 mt-[-30px] w-[280px] z-20 rounded gap-x-3 transition-transform hover:scale-x-110`}>
+                <Link href='/register' className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-1 transition-transform hover:scale-x-110`}>
                     <p>Register</p>
                     <Image src={Images.ArrowRight} alt='arrow-right' />
                 </Link>
