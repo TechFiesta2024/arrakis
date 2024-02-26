@@ -37,6 +37,8 @@ import IconCalendar from './calendar.svg'
 
 import Rectangle9 from './Rectangle_9.svg'
 import CommImg from './communityimage.svg'
+import hamburger from './hamburger.svg'
+import close from './ri-close-fill.svg'
 
 
 
@@ -96,8 +98,9 @@ const Images = {
     CommImg: CommImg,
     logoVerify: LogoVerify,
     logoLinkedInBlack: LogoLinkedInBlack,
-    logoXBlack: LogoXBlack
-
+    logoXBlack: LogoXBlack,
+    hamburger,
+    close
 };
 
 export default Images;

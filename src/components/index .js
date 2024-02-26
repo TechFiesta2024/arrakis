@@ -1,4 +1,4 @@
-export { default as Navbar } from './Navbar/Navbar.jsx'
+export { default as Navbar } from './Navbar/index.jsx'
 export { default as Footer } from './Footer/Footer.jsx'
 export { default as HeroSection } from './Home/Herosection.jsx'
 export { default as MarqueeComponent } from './Home/Marquee.jsx'

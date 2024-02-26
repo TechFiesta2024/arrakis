@@ -3,10 +3,13 @@
 import Link from "next/link"
 import Images from '../../../public/assets/index.js'
 import Image from "next/image"
-export default function Navbar() {
+
+
+export default function DesktopNavbar() {
 
     const isAuthenticated = false
     const isLoggedIn = true
+
     return (
         <>
             <div className='navbar__container px-0 md:px-20 md:h-20 w-full flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px]'>
@@ -38,13 +41,8 @@ export default function Navbar() {
                     ) : (
                         <Link href='/register' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center '>Register</Link>
                     )}
-
-
+                    
                 </div>
-
-
-
-
             </div>
         </>
     )

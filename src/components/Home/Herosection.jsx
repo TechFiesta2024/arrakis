@@ -15,7 +15,7 @@ const Herosection = () => {
                     <ParticipateBadge />
                 </div>
                 <div className="col-span-3 md:col-span-1 border-x-[0.5px] text-yellowish">
-                    <FloatingCapsules />
+                    <FloatingCapsules canvasWidth={426} canvasHeight={244} />
                 </div>
                 <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
                     <PrizePoolBadge />
