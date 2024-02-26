@@ -15,8 +15,8 @@ const Herosection = () => {
                     <div className="col-span-1 border-x-[0.5px] text-yellowish">
                         <ParticipateBadge />
                     </div>
-                    <div className="col-span-1 border-r-[0.5px] text-yellowish">
-                        <FloatingCapsules />
+                    <div className="col-span-1 border-r-[0.5px]">
+                        <FloatingCapsules canvasWidth={426} canvasHeight={244} />
                     </div>
                     <div className="col-span-1 border-r-[0.5px] text-yellowish">
                         <PrizePoolBadge />

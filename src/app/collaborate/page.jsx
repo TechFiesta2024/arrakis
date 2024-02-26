@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link"
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -318,9 +319,9 @@ export default function CollaboratePage() {
                 <h1 className='font-anton text-[56px]'>Campus Ambassador</h1>
                 <p className='text-xl'>
                   Go through the{" "}
-                  <a href='' className='underline'>
+                  <Link href='' className='underline'>
                     norms
-                  </a>{" "}
+                  </Link>{" "}
                   for positive collaboration
                 </p>
               </>
@@ -331,9 +332,9 @@ export default function CollaboratePage() {
                 <h1 className='font-anton text-[56px]'>Community Partner</h1>
                 <p className='text-xl'>
                   Go through the{" "}
-                  <a href='' className='underline'>
+                  <Link href='' className='underline'>
                     norms
-                  </a>{" "}
+                  </Link>{" "}
                   for positive collaboration
                 </p>
               </>

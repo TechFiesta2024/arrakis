@@ -3,6 +3,7 @@
 // -----------------------------------------------------
 import Image from 'next/image';
 import Images from '../../../public/assets/index.js';
+import Link from 'next/link';
 
 const FocusImage = () => {
     const flexStylesStart = "flex justify-start items-center";
@@ -19,10 +20,10 @@ const FocusImage = () => {
                     </div>
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
-                <button className={`${flexStylesCenter} bg-red px-2 py-1 mt-[-30px] w-[280px] z-20 rounded gap-x-3 transition-transform hover:scale-x-110`}>
-                    <p>Regester</p>
+                <Link href='/register' className={`${flexStylesCenter} bg-red px-2 py-1 mt-[-30px] w-[280px] z-20 rounded gap-x-3 transition-transform hover:scale-x-110`}>
+                    <p>Register</p>
                     <Image src={Images.ArrowRight} alt='arrow-right' />
-                </button>
+                </Link>
                 {/* ------------------------- Smart Shapes ----------------------------- */}
                 <div className="w-full">
                     <div className={`mt-[-150px] flex justify-start items-start animate-rotate-star2`}>

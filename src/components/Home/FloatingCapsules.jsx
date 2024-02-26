@@ -1,25 +1,24 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
-import Images from "../../../public/assets/index.js";
 
-const { Bodies, Engine, Mouse, MouseConstraint, Render, Runner, World } =
-    Matter;
+const { Bodies, Composite, Engine, Mouse, MouseConstraint, Render, Runner, World } = Matter;
 
 const randRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
-    const canvas = useRef(null);
-    const world = useRef();
-    const engineRef = useRef();
-    const runnerRef = useRef();
+const menu = ['Swags', 'Events', 'Activity', 'Workshop', 'Prizepool', 'Peer Networking']
 
-    const WIDTH = canvasWidth || 426;
-    // const WIDTH = canvasWidth;
-    const HEIGHT = canvasHeight || 244;
-    // const HEIGHT = canvasHeight;
+
+const FloatingCapsules = ({ canvasWidth, canvasHeight }) => {
+    const canvas = useRef(null)
+    const world = useRef()
+    const engineRef = useRef()
+    const runnerRef = useRef()
+
+    const WIDTH = canvasWidth ?? 500;
+    const HEIGHT = canvasHeight ?? 300;
 
     useEffect(() => {
         if (runnerRef.current) {
@@ -30,21 +29,17 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
         createWorld();
 
         return () => {
-            console.log("clear");
             Runner.stop(runnerRef.current);
             Engine.clear(engineRef.current);
-            // router.reload();
         };
     }, [canvas, world]);
 
+
     function createWorld() {
-        const engine = Engine.create();
+        const engine = Engine.create()
         engineRef.current = engine;
         world.current = engine.world;
 
-        console.log("createWorld");
-
-        // create a renderer
         const render = Render.create({
             canvas: canvas.current || undefined,
             engine,
@@ -52,49 +47,26 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
                 width: WIDTH,
                 height: HEIGHT,
                 background: "#010100",
-                showCollisions: false,
-                showVelocity: false,
-                showAxes: false,
-                wireframes: false,
-            },
-        });
+                wireframes: false
+            }
+        })
 
-        // add walls
+        // Add walls
         World.add(engine.world, [
-            Bodies.rectangle(WIDTH / 2, -10, WIDTH, 20, { isStatic: true }),
-            Bodies.rectangle(-10, HEIGHT / 2, 20, HEIGHT, { isStatic: true }),
-            Bodies.rectangle(WIDTH / 2, HEIGHT + 10, WIDTH, 20, { isStatic: true }),
-            Bodies.rectangle(WIDTH + 10, HEIGHT / 2, 20, HEIGHT, { isStatic: true }),
-        ]);
+            Wall(WIDTH / 2, 0, WIDTH, 5), // Top
+            Wall(0, HEIGHT / 2, 5, HEIGHT), // Right
+            Wall(WIDTH / 2, HEIGHT, WIDTH, 5), // Bottom
+            Wall(WIDTH, HEIGHT / 2, 5, HEIGHT) // Left
+        ])
 
-        // add rects
-        // Hotfix for text inside shape for Matter.js
-        const rect = Bodies.rectangle(WIDTH / 2, HEIGHT / 2, 100, 50, {
-            render: {
-                sprite: {
-                    texture: Images.Capsule[0],
-                },
-            },
-        });
 
-        const allCapsules = Object.values(Images.Capsule).map((cap) => {
-            return Bodies.rectangle(
-                WIDTH / 2 + randRange(-300, 300),
-                HEIGHT / 2,
-                cap.width,
-                cap.height,
-                {
-                    render: {
-                        sprite: {
-                            texture: cap.src,
-                        },
-                    },
-                    angle: randRange(0, 360),
-                }
-            );
-        });
+        // App capsules
+        const capsules = menu.map((item) => Capsule(item))
+        World.add(engine.world, capsules)
 
-        World.add(engine.world, allCapsules);
+        capsules.map((capsule, idx) => {
+            
+        })
 
         // MOUSE
         const mouse = Mouse.create(render.canvas);
@@ -104,7 +76,7 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
             constraint: {
                 stiffness: 0.5,
                 render: {
-                    visible: true,
+                    visible: false,
                 },
             },
         });
@@ -131,11 +103,43 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight, elements }) => {
 
     return (
         <>
-            <div className="floating-capsules_container flex flex-col items-center justify-center w-[100%]">
-                <canvas className="capsules_div w-[94%] h-[100%] border-none overflow-hidden" ref={canvas} />
+            <div className="floating-capsules_container flex items-center justify-center">
+                <canvas className="capsules_div" ref={canvas} />
             </div>
         </>
     )
 }
+
+const Capsule = (text, width = 140, height = 33) => {
+    const body = Bodies.rectangle(
+        width / 2 + randRange(30, 80),
+        height / 2,
+        width,
+        height,
+        {
+            render: {
+                fillStyle: "red",
+                strokeStyle: "#010100",
+                lineWidth: 2
+            },
+            angle: randRange(0, 180),
+            chamfer: {
+                radius: [15, 15, 15, 15]
+            }
+        }
+    )
+    body.name = text
+    return body
+}
+
+const Wall = (x, y, width, height) => {
+    return Bodies.rectangle(x, y, width, height, {
+        isStatic: true,
+        render: {
+            fillStyle: "#010100"
+        }
+    })
+}
+
 
 export default FloatingCapsules;

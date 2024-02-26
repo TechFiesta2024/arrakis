@@ -55,7 +55,7 @@ const CommunityPartner = () => {
                     className="partners col-span-1 flex justify-center py-20 border-x-[0.5px] border-b-[0.5px] text-yellowish"
                     style={{ height: 200 }}
                   >
-                    <Image src={Images.CommImg} width={64} height={64} />
+                    <Image src={Images.CommImg} alt={index} width={64} height={64} />
                   </div>
                 ))}
               </div>
