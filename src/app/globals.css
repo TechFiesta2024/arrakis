@@ -2,30 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
-@font-face
-{
+@font-face {
 
     font-family: Anton;
     src: url(../../public/fonts/Anton-Regular.ttf);
 }
 
-    @font-face {
+@font-face {
 
-        font-family: GeneralSans;
-        src: url(../../public/fonts/GeneralSans-Regular.ttf);
-    }
+    font-family: GeneralSans;
+    src: url(../../public/fonts/GeneralSans-Regular.ttf);
+}
 
-    @font-face {
-        font-family: GeneralSans-semibold;
-        src: url(../../public/fonts/GeneralSans-SemiBold.otf);
-    }
+@font-face {
+    font-family: GeneralSans-semibold;
+    src: url(../../public/fonts/GeneralSans-SemiBold.otf);
+}
 
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .animate-rotate {
@@ -51,14 +60,14 @@
 .marquee-scroll {
     display: flex;
     animation: marquee-scroll 20s linear infinite;
-  }
-  
-  @keyframes marquee-scroll {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
+}
 
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
