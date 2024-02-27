@@ -4,7 +4,7 @@ import Link from "next/link"
 import Images from '../../../public/assets/index.js'
 import Image from "next/image"
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation.js";
+import { usePathname } from "next/navigation";
 
 
 const LINKS = [
@@ -12,7 +12,8 @@ const LINKS = [
     { name: 'About', href: '/about' },
     { name: 'Team', href: '/team' },
     { name: 'Collaborate', href: '/collaborate' },
-    { name: 'Bootcamp', href: '/bootcamp' }
+    { name: 'Bootcamp', href: '/bootcamp' },
+    { name: 'Dashboard', href: '/dashboard' },
 ]
 
 
@@ -45,14 +46,16 @@ export default function MobileNavbar() {
         setIsOpen(false)
     }, [urlPathname])
 
+    
 
     return (
         <>
-            <div className='navbar__container flex flex-col w-full h-[100vh]'>
+            <div className='navbar__container flex flex-col w-full static'>
                 <div className="navbar__top h-[80px] flex justify-between px-4 py-2 border-yellowish border-b-[0.5px]">
                     <Image src={Images.logoAot} width={60} height={30} alt="aot" />
                     <Image
                         src={isOpen ? Images.close : Images.hamburger}
+                        className="hamburger__icon"
                         width={30}
                         height={30}
                         alt="hamburger"
@@ -61,80 +64,56 @@ export default function MobileNavbar() {
                     />
                 </div>
 
-                <div className="navbar__body flex flex-col">
-                    <div className="navbar__register__login flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/register' className="bg-red flex text-yellowish px-20 py-2 rounded-xl gap-4">
+                <div className="navbar__body top-[80.5px] absolute bg-black z-50 overscroll-y-none flex flex-col" data-is-open={isOpen}>
+                    <div
+                        className="navbar__register__login flex items-center justify-center w-full h-[88px] border-yellowish border-b-[0.5px]"
+                        data-active={'/register' == urlPathname}
+                    >
+                        <Link href='/register' onClick={() => setIsOpen(false)} className="bg-red flex text-yellowish px-20 py-2 rounded-xl gap-4">
                             <p>Register</p>
-                            <Image src={Images.ArrowRight} alt='arrow-right' />
+                            <Image src={Images.arrowRightYellowish} alt='arrow-right' />
                         </Link>
                     </div>
 
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/home' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>Home</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
-
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/about' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>About</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
-
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/team' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>Team</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
-
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/collaborate' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>Collaborate</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
-
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/bootcamp' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>Bootcamp</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
-
-                    <div className="navbar__home flex items-center justify-center w-full h-[94px] border-yellowish border-b-[0.5px]">
-                        <Link href='/dashboard' className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-3xl">
-                            <p>Dashboard</p>
-                            <Image src={Images.ArrowRight} width={30} height={30} alt='arrow-right' />
-                        </Link>
-                    </div>
+                    {LINKS.map((l, id) => (
+                        <div
+                            key={id}
+                            className="flex items-center justify-center w-full h-[88px] border-yellowish border-b-[0.5px]"
+                            data-active={l.href == urlPathname}
+                            onClick={() => l.href == urlPathname && setIsOpen(false)}
+                        >
+                            <Link href={l.href} className="flex justify-between text-yellowish px-10 py-2 rounded-xl gap-4 w-full text-2xl">
+                                <p>{l.name}</p>
+                                <Image src={Images.arrowRightYellowish} width={25} height={25} alt='arrow-right' />
+                            </Link>
+                        </div>
+                    ))}
                 </div>
-
-
             </div>
-        </>
-    )
-}
 
 
-const Profile = () => {
-    return (
-        <>
-            
-        </>
-    )
-}
 
-{/* {
-                        isLoggedIn && (
-                            <Link href='/dashboard' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center '>Dashboard</Link>
-                        )
+            <style>
+                {`
+                    .navbar__body{
+                        height: 100vh;
+                        width: 100vw;
                     }
 
-                    {isAuthenticated ? (
-                        <Link href='/login' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center'>Login</Link>
-                    ) : (
-                        <Link href='/register' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center '>Register</Link>
-                    )} */}
+                    .navbar__body[data-is-open=false] {
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 300ms;
+                    }
+                    
+                    .navbar__body[data-is-open=true] {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: all 300ms;
+                    }
+                `}
+            </style>
+        </>
+    )
+}
+

@@ -1,13 +1,7 @@
 "use client";
-// -----------------------------------------------------
-// Dependencies
-// -----------------------------------------------------
+
 import { useState, useEffect } from "react";
-// -----------------------------------------------------
-// Images
-// -----------------------------------------------------
-import Image from "next/image";
-import Images from "../../../public/assets/index.js";
+
 
 const TimerMockup = () => {
     const targetDate = new Date('April 1, 2024 00:00:00').getTime();
@@ -40,10 +34,9 @@ const TimerMockup = () => {
 
     const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
+    const calculateAndSetTimeRemaining = () => setTimeRemaining(calculateTimeRemaining());
+
     useEffect(() => {
-        const calculateAndSetTimeRemaining = () => {
-            setTimeRemaining(calculateTimeRemaining());
-        };
         calculateAndSetTimeRemaining();
         const timerInterval = setInterval(calculateAndSetTimeRemaining, 1000);
         return () => clearInterval(timerInterval);
