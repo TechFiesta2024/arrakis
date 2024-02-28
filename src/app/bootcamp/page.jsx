@@ -1,6 +1,5 @@
 'use client'
 import BootcampCard from "@/components/Bootcamp/BootcampCard"
-import BootcampInfo from "@/components/Bootcamp/BootcampInfo"
 import bootcampData from "@/components/Bootcamp/bootcampData.json"
 
 
@@ -9,8 +8,6 @@ import { useEffect, useState } from "react"
 
 
 export default function BootcampPage() {
-
-
     const [selectedButton, setSelectedButton] = useState('All')
     const [filteredData, setFilteredData] = useState([]);
 

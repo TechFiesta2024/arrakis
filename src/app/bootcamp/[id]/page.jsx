@@ -15,7 +15,6 @@ export default function BootcampPageById({ params }) {
         setBootcamp(selectedBootcamp);
     }, []);
 
-    console.log(bootcamp)
 
 
     return (

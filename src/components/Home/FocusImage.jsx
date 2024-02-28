@@ -1,16 +1,30 @@
-// -----------------------------------------------------
-// Images
-// -----------------------------------------------------
+'use client'
 import Image from 'next/image';
 import Images from '../../../public/assets/index.js';
-import Link from 'next/link';
 
 import SmartShapes from "../Global/SmartShapes.jsx";
+import { useAuthState } from '@/context/AuthContext.js';
+import { signInWithGoogle } from '@/services/auth/firebase/googleAuth.service.js';
+import Cookies from 'js-cookie';
 
 
-const FocusImage = () => {
+export default function FocusImage() {
     const flexStylesStart = "flex justify-start items-center";
     const flexStylesCenter = "flex justify-center items-center";
+
+    const { setUser, isAuthenticated, setIsAuthenticated } = useAuthState()
+
+    async function signIn() {
+        if (isAuthenticated) return
+        const { email, avatar } = await signInWithGoogle()
+        Cookies.set('email', email)
+        Cookies.set('avatar', avatar)
+        Cookies.set('isAuthenticated', true)
+        setUser({ email, avatar })
+        setIsAuthenticated(true)
+    }
+
+
 
     return (
         <>
@@ -23,15 +37,16 @@ const FocusImage = () => {
                     </div>
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
-                <Link href='/register' className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-1 transition-transform hover:scale-x-110`}>
-                    <p>Register</p>
-                    <Image src={Images.arrowRightYellowish} alt='arrow-right' />
-                </Link>
+                {!isAuthenticated &&
+                    <div className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-1 transition-transform hover:scale-x-110`} onClick={signIn}>
+                        <p>Register</p>
+                        <Image src={Images.arrowRightYellowish} alt='arrow-right' />
+                    </div>
+                }
+
                 {/* ------------------------- Smart Shapes ----------------------------- */}
                 <SmartShapes />
             </div>
         </>
     )
 }
-
-export default FocusImage;
