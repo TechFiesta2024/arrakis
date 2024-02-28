@@ -46,11 +46,11 @@ export default function MobileNavbar() {
         setIsOpen(false)
     }, [urlPathname])
 
-    
+
 
     return (
         <>
-            <div className='navbar__container flex flex-col w-full static'>
+            <div className='navbar__container flex flex-col w-full static overflow-hidden z-[1000]'>
                 <div className="navbar__top h-[80px] flex justify-between px-4 py-2 border-yellowish border-b-[0.5px]">
                     <Image src={Images.logoAot} width={60} height={30} alt="aot" />
                     <Image
