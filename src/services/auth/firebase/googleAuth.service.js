@@ -6,11 +6,10 @@ export async function signInWithGoogle() {
     const auth = getAuth(app);
 
     try {
-        const result = await signInWithPopup(auth, new GoogleAuthProvider());
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        console.log(user);
+        const { user } = await signInWithPopup(auth, new GoogleAuthProvider());
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
+        return { email: user.email, avatar: user.photoURL }
     } catch (error) {
         console.error(error);
     }
