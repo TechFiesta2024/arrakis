@@ -1,30 +1,18 @@
-"use client";
 import Image from "next/image";
 import Images from "../../../public/assets/index.js";
-import { useState, useEffect } from "react"
-
-const CommunityPartner = () => {
-  // import React from "react";
-  // const [partnersData, setPartnersData] = useState([]);
 
 
-  // useEffect(() => {
-  //     const fetchData = async () => {
-  //       const response = await fetch('/api/');
-  //       const data = await response.json();
-  //       setPartnersData(data);
-  //     };
+const partnersData = [
+  { name: "Partner 1", description: "Description of Partner 1" },
+  { name: "Partner 2", description: "Description of Partner 2" },
+  { name: "Partner 2", description: "Description of Partner 2" },
+  { name: "Partner 2", description: "Description of Partner 2" },
+  { name: "Partner 2", description: "Description of Partner 2" },
+  { name: "Partner 2", description: "Description of Partner 2" },
+]
 
-  //     fetchData();
-  //   }, []);
-  const [partnersData, setPartnersData] = useState([
-    { name: "Partner 1", description: "Description of Partner 1" },
-    { name: "Partner 2", description: "Description of Partner 2" },
-    { name: "Partner 2", description: "Description of Partner 2" },
-    { name: "Partner 2", description: "Description of Partner 2" },
-    { name: "Partner 2", description: "Description of Partner 2" },
-    { name: "Partner 2", description: "Description of Partner 2" },
-  ]);
+
+export default function CommunityPartner() {
   if (partnersData.length < 0) {
     return null;
   } else {
@@ -59,5 +47,3 @@ const CommunityPartner = () => {
     );
   }
 };
-
-export default CommunityPartner;

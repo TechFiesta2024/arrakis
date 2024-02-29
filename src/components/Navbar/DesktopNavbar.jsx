@@ -17,12 +17,17 @@ export default function DesktopNavbar() {
 
     async function signIn() {
         if (isAuthenticated) return
-        const { email, avatar, firebase_token } = await signInWithGoogle()
-        Cookies.set('email', email)
-        Cookies.set('avatar', avatar)
+        const result = await signInWithGoogle()
+        if(result === undefined) return
+        Cookies.set('email', result.email)
+        Cookies.set('avatar', result.avatar)
         Cookies.set('isAuthenticated', true)
-        Cookies.set('firebase_token', firebase_token)
-        setUser({ email, avatar, firebase_token })
+        Cookies.set('firebase_token', result.firebase_token)
+        setUser({
+            email: result.email,
+            avatar: result.avatar,
+            firebase_token: result.firebase_token
+        })
         setIsAuthenticated(true)
     }
 

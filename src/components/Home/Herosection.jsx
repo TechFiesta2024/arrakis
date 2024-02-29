@@ -1,13 +1,16 @@
+import dynamic from "next/dynamic"
 import EventDate from "./EventDate"
-import FloatingCapsules from "./FloatingCapsules"
-import FocusImage from "./FocusImage"
 import MapDirection from "./MapDirection"
 import ParticipateBadge from "./ParticipateBadge"
 import PrizePoolBadge from "./PrizePoolBadge"
-import TimerMockup from "./TimerMockup"
+
+// Client components
+const FloatingCapsules = dynamic(() => import('./FloatingCapsules'))
+const FocusImage = dynamic(() => import('./FocusImage'))
+const TimerMockup = dynamic(() => import('./TimerMockup'), { ssr: false })
 
 
-const Herosection = () => {
+export default function Herosection() {
     return (
         <>
             <div className=" grid grid-cols-3 w-full md:px-20 border-b text-yellowish">
@@ -15,7 +18,7 @@ const Herosection = () => {
                     <ParticipateBadge />
                 </div>
                 <div className="col-span-3 md:col-span-1 border-x-[0.5px] text-yellowish">
-                    <FloatingCapsules  />
+                    <FloatingCapsules />
                 </div>
                 <div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
                     <PrizePoolBadge />
@@ -36,5 +39,3 @@ const Herosection = () => {
         </>
     )
 }
-
-export default Herosection
