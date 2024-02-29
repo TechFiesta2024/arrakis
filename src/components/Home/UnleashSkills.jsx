@@ -16,7 +16,7 @@ const UnleashSkills = () => {
               <div className="buttoncontent flex py-2">
                 Check Workshops
               </div>
-              <Image src={Images.ArrowRight} alt="arrow-right" />
+              <Image src={Images.arrowRightYellowish} alt="arrow-right" />
             </Link>
             <SmartShapes />
           </div>

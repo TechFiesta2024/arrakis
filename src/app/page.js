@@ -1,10 +1,13 @@
-import Homescreen from "@/app/home/index.jsx";
+import { CommunityPartner, HeroSection, MarqueeComponent, UnleashSkills } from "@/components/index ";
 
 
 export default function Home() {
   return (
     <>
-      <Homescreen/>
+      <HeroSection />
+      <MarqueeComponent />
+      <UnleashSkills />
+      <CommunityPartner />
     </>
   );
 }

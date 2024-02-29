@@ -74,7 +74,7 @@ const Images = {
 
     GridBox,
     Coin,
-    Capsule: [Capsule, Capsule1, Capsule2, Capsule3, Capsule4, Capsule5],
+    capsule: [Capsule, Capsule1, Capsule2, Capsule3, Capsule4, Capsule5],
     arrowRight,
     // smart shapes
     Star2,

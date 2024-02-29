@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Team',
-    description: 'Meet the team'
+    title: 'Profile',
+    description: ''
 }
 
 export default function Layout({ children }) {
