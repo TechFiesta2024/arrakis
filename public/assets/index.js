@@ -51,6 +51,7 @@ import arrowRightYellowish from './arrowrightYellowish.svg'
 
 import profile from './profile.svg'
 import logout from './logout.svg'
+import userIcon from './profile_yellow.svg'
 
 
 
@@ -100,6 +101,7 @@ const Images = {
     hamburger,
     close,
     profile,
+    userIcon,
     logout
 };
 

@@ -6,6 +6,7 @@ import SmartShapes from "../Global/SmartShapes.jsx";
 import { useAuthState } from '@/context/AuthContext.js';
 import { signInWithGoogle } from '@/services/auth/firebase/googleAuth.service.js';
 import Cookies from 'js-cookie';
+import Link from 'next/link';
 
 
 export default function FocusImage() {
@@ -43,12 +44,12 @@ export default function FocusImage() {
                     </div>
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
-                {!isAuthenticated &&
-                    <div className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`} onClick={signIn}>
-                        <p>Register</p>
+              
+                    <Link href={`${!isAuthenticated?'/register':'/bootcamp'}`} className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`} onClick={signIn}>
+                        <p>{`${!isAuthenticated?'Register':'Bootcamps'}`}</p>
                         <Image src={Images.arrowRightYellowish} alt='arrow-right' />
-                    </div>
-                }
+                    </Link>
+                
 
                 {/* ------------------------- Smart Shapes ----------------------------- */}
                 <SmartShapes />
