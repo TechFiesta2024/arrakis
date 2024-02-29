@@ -1,6 +1,6 @@
 
 import "../styles/globals.css";
-import { Suspense } from "react";
+import { Fragment, Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/index ";
 import AuthContextProvider from "@/context/AuthContext";
@@ -23,9 +23,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="body__container font-generalsans bg-black text-red border-yellowish">
         <AuthContextProvider>
-            <Navbar />
+          <Navbar />
+          <div className="pt-[80px] md:pt-0">
             {children}
-            <Footer />
+          </div>
+          <Footer />
         </AuthContextProvider>
       </body>
     </html>

@@ -50,7 +50,7 @@ export default function MobileNavbar() {
 
     return (
         <>
-            <div className='navbar__container flex flex-col w-full static overflow-hidden z-[1000]'>
+            <div className='navbar__container flex flex-col w-full z-[1000] fixed bg-black'>
                 <div className="navbar__top h-[80px] flex justify-between px-4 py-2 border-yellowish border-b-[0.5px]">
                     <Image src={Images.logoAot} width={60} height={30} alt="aot" />
                     <Image
@@ -64,7 +64,7 @@ export default function MobileNavbar() {
                     />
                 </div>
 
-                <div className="navbar__body top-[80.5px] absolute bg-black z-50 overscroll-y-none flex flex-col" data-is-open={isOpen}>
+                <div className="navbar__body top-[80.5px] fixed bg-black z-50 flex flex-col" data-is-open={isOpen}>
                     <div
                         className="navbar__register__login flex items-center justify-center w-full h-[88px] border-yellowish border-b-[0.5px]"
                         data-active={'/register' == urlPathname}
