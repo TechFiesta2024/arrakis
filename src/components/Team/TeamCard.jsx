@@ -20,10 +20,10 @@ const TeamCard = ({ member }) => {
                     <div className='h-[40%]'></div>
                     <div className='h-[30%] grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish'>
                         <Link href={x_url} className='border-r-[.5px] border-black flex justify-center items-center'>
-                            <Image src={Images.logoXBlack} className='lg:w-6 h-5' />
+                            <Image src={Images.logoXBlack} alt='twitter' className='lg:w-6 h-5' />
                         </Link>
                         <Link href={linkedin} className='flex justify-center items-center'>
-                            <Image src={Images.logoLinkedInBlack} className='lg:w-7 h-6' />
+                            <Image src={Images.logoLinkedInBlack} alt='linkedIn' className='lg:w-7 h-6' />
                         </Link>
                     </div>
                 </div>
