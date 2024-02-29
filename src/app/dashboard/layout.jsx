@@ -1,4 +1,4 @@
-import ProtectedRoute from "@/services/protected/protectedRoute"
+// import ProtectedRoute from "@/services/protected/protectedRoute"
 
 export const metadata = {
     title: 'Dashboard',
