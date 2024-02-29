@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Images from "../../../public/assets";
+import { rgbDataURL } from "@/utils/blurryImage";
 
 export default function Profile() {
 
@@ -31,7 +32,6 @@ export default function Profile() {
         stream: '',
         year: ''
     })
-    console.log(userDetails);
     const handleInputChangeUserProfile = (e) => {
         const { id, value } = e.target;
         setUserDetails(([prevData]) => ({
@@ -46,7 +46,6 @@ export default function Profile() {
 
 
         const user_JSON_Details = JSON.stringify(userDetails);
-        console.log(user_JSON_Details);
 
 
         try {
@@ -86,8 +85,15 @@ export default function Profile() {
                     <div className='profile__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px] overflow-hidden'>
 
                         <div className="flex flex-row items-center gap-6 md:gap-4">
-
-                            <Image src={user?.avatar} className="border-yellowish rounded-[12px] border-[0.5px] z-[20]" alt="avatar" height={80} width={80} />
+                            <Image
+                                src={user.avatar}
+                                className="border-yellowish rounded-[12px] border-[0.5px] z-[20]"
+                                alt="avatar"
+                                width={80}
+                                height={80}
+                                placeholder="blur"
+                                blurDataURL={rgbDataURL(128, 128, 128)}
+                            />
                             <h1 className='font-anton text-[36px] md:text-[56px]'>Setup Completion</h1>
 
                         </div>
@@ -106,7 +112,7 @@ export default function Profile() {
                                 className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                             />
                         </div>
-                        <div className='input_name flex flex-col pb-8 md:pb-0'>
+                        <div className='input_contact flex flex-col pb-8 md:pb-0'>
                             <label className='text-[24px] pb-4'>Contact No.</label>
                             <input
                                 id='contact'
@@ -126,7 +132,7 @@ export default function Profile() {
                     <div className='collab__right_input h-full flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
 
 
-                        <div className='input_name flex flex-col pb-8'>
+                        <div className='input_college flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>College Name</label>
                             <input
 
@@ -141,7 +147,7 @@ export default function Profile() {
 
 
 
-                        <div className='input_name flex flex-col pb-8'>
+                        <div className='input_email flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>Email ID</label>
                             <input
                                 id='email'
@@ -153,7 +159,7 @@ export default function Profile() {
                             />
                         </div>
 
-                        <div className='input_name flex flex-col pb-8'>
+                        <div className='input_stream flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>Stream</label>
                             <input
                                 id='stream'
@@ -164,7 +170,7 @@ export default function Profile() {
                             />
                         </div>
 
-                        <div className='input_name flex flex-col pb-8'>
+                        <div className='input_year flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>Year</label>
                             <select
                                 id='year'
@@ -177,8 +183,7 @@ export default function Profile() {
                             </select>
 
                         </div>
-                        <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0'
-                        >
+                        <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0'>
                             Submit
                         </button>
                         <ToastContainer />

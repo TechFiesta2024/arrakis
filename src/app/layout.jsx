@@ -1,12 +1,10 @@
 
 import "../styles/globals.css";
-import { Fragment, Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/index ";
 import AuthContextProvider from "@/context/AuthContext";
-import Loading from "./loading";
 
-const Navbar = dynamic(() => import('@/components/Navbar/index'), { ssr: false })
+const Navbar = dynamic(() => import('@/components/Navbar/Navbar'))
 
 
 export const metadata = {

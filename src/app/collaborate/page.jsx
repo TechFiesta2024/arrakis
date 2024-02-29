@@ -143,7 +143,6 @@ export default function CollaboratePage() {
 
 
     const ambassador_JSON_Details = JSON.stringify(ambassorDetails);
-    console.log(ambassador_JSON_Details);
 
     try {
       const response = await fetch("https://messiah.fly.dev/community/ambassador",
@@ -261,7 +260,6 @@ export default function CollaboratePage() {
 
 
     const communityPartner_JSON_Details = JSON.stringify(communityPartnerDetails);
-    console.log(communityPartner_JSON_Details);
     try {
       const response = await fetch("https://messiah.fly.dev/community/collab",
         {
