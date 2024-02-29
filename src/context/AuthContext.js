@@ -1,6 +1,6 @@
 'use client'
 import { createContext, useContext, useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
+
 import Cookies from "js-cookie"
 
 
@@ -12,8 +12,8 @@ export const useAuthState = () => {
 
 const AuthContextProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [user, setUser] = useState({ email: null, avatar: null, firebase_token: null })
-    const urlPathname = usePathname()
+    const [user, setUser] = useState({ email: "", avatar: "", firebase_token: "" })
+
 
     useEffect(() => {
         const email = Cookies.get('email')
@@ -25,7 +25,7 @@ const AuthContextProvider = ({ children }) => {
         setIsAuthenticated(isAuthenticated)
 
         // show modal if no cookies
-    }, [urlPathname])
+    }, [])
 
     return (
         <AuthContext.Provider value={{ user, setUser, isAuthenticated, setIsAuthenticated }}>
