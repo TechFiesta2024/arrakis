@@ -11,7 +11,7 @@ const BootcampInfo = ({ bootcamp }) => {
         <>
             <div className='border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish'>
                 <div className='h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
-                    <img className='object-cover' src={image_url} alt="" srcset="" />
+                    <img className='object-cover' src={image_url} alt="cover_img" />
                 </div>
                 <div className='h-[40%] '>
                     <div className='px-6 lg:pt-6 pt-4 h-3/4'>
@@ -21,7 +21,7 @@ const BootcampInfo = ({ bootcamp }) => {
                     <div className='h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish'>
                         <Link href={`/bootcamp/${id}`} className='border-r-[.5px] border-black flex justify-center items-center gap-2'>
                             <h1 className="text-black text-[14px] font-generalsans font-bold ">VIEW DETAILS & REGISTER</h1>
-                            <Image src={Images.arrowRight} />
+                            <Image src={Images.arrowRight} alt="arrow_right" />
                         </Link>
 
                     </div>
