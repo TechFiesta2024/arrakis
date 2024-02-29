@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-  
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 @font-face {
     font-family: Anton;
     src: url(../../public/fonts/Anton-Regular.ttf);
@@ -28,7 +36,7 @@ body {
 }
 
 
-   
+
 
 
 @keyframes rotate {

@@ -12,18 +12,19 @@ export const useAuthState = () => {
 
 const AuthContextProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [user, setUser] = useState({ email: null, avatar: null })
+    const [user, setUser] = useState({ email: null, avatar: null, firebase_token: null })
     const urlPathname = usePathname()
 
     useEffect(() => {
         const email = Cookies.get('email')
         const avatar = Cookies.get('avatar')
         const isAuthenticated = Cookies.get('isAuthenticated')
+        const firebase_token = Cookies.get('firebase_token')
 
-        setUser({ email, avatar })
+        setUser({ email, avatar, firebase_token })
         setIsAuthenticated(isAuthenticated)
 
-        // show modal if not user
+        // show modal if no cookies
     }, [urlPathname])
 
     return (

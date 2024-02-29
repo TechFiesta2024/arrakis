@@ -17,11 +17,12 @@ export default function DesktopNavbar() {
 
     async function signIn() {
         if (isAuthenticated) return
-        const { email, avatar } = await signInWithGoogle()
+        const { email, avatar, firebase_token } = await signInWithGoogle()
         Cookies.set('email', email)
         Cookies.set('avatar', avatar)
         Cookies.set('isAuthenticated', true)
-        setUser({ email, avatar })
+        Cookies.set('firebase_token', firebase_token)
+        setUser({ email, avatar, firebase_token })
         setIsAuthenticated(true)
     }
 
@@ -69,18 +70,24 @@ export default function DesktopNavbar() {
 
 
 function ProfileHolder() {
+    function logout() {
+        Cookies.remove('email')
+        Cookies.remove('avatar')
+        Cookies.remove('isAuthenticated')
+        Cookies.remove('firebase_token')
+        window.location.href = '/'
+    }
+
     return (
         <>
             <div className="hidden group-hover:block">
-                <div className="profile__menu flex flex-col w-28 rounded-md border-yellowish border-[0.5px] bg-black mt-4 mr-2 z-[99999]">
-                    <div className="profile__page flex justify-center gap-3 border-b-[0.5px]">
+                <div className="profile__menu flex flex-col absolute translate-x-2 translate-y-[-8px] w-32 rounded-md border-yellowish border-[0.5px] bg-black z-[99999]">
+                    <Link href='/profile' className="profile__page hover:cursor-pointer flex justify-center gap-3 border-b-[0.5px] pt-2 pb-2">
                         <Image src={Images.profile} alt="profile" />
                         <p>Profile</p>
-                    </div>
+                    </Link>
                     <div className="logout flex">
-
-                        <div className="flex justify-center gap-3 p-2 m-1 bg-red rounded-[10px] w-full">
-
+                        <div className="hover:cursor-pointer flex justify-center gap-2.5 p-2 m-1.5 bg-red rounded-[10px] w-full" onClick={logout}>
                             <Image src={Images.logout} alt="logout" />
                             <p className="text-yellowish text-sm ">Logout</p>
                         </div>

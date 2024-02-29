@@ -16,11 +16,12 @@ export default function FocusImage() {
 
     async function signIn() {
         if (isAuthenticated) return
-        const { email, avatar } = await signInWithGoogle()
+        const { email, avatar, firebase_token } = await signInWithGoogle()
         Cookies.set('email', email)
         Cookies.set('avatar', avatar)
         Cookies.set('isAuthenticated', true)
-        setUser({ email, avatar })
+        Cookies.set('firebase_token', firebase_token)
+        setUser({ email, avatar, firebase_token })
         setIsAuthenticated(true)
     }
 
@@ -38,7 +39,7 @@ export default function FocusImage() {
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
                 {!isAuthenticated &&
-                    <div className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-1 transition-transform hover:scale-x-110`} onClick={signIn}>
+                    <div className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`} onClick={signIn}>
                         <p>Register</p>
                         <Image src={Images.arrowRightYellowish} alt='arrow-right' />
                     </div>
