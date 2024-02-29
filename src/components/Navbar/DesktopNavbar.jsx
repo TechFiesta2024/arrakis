@@ -6,6 +6,7 @@ import Image from "next/image"
 import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js"
 import { useAuthState } from "@/context/AuthContext.js"
 import Cookies from "js-cookie"
+import { useEffect, useState } from "react"
 
 
 
@@ -14,11 +15,22 @@ import Cookies from "js-cookie"
 export default function DesktopNavbar() {
 
     const { user, setUser, setIsAuthenticated, isAuthenticated } = useAuthState()
+    const [isOpen, setIsOpen] = useState(false);
+
+    const flexStylesCenter = "flex justify-center items-center";
+
+    // useEffect(() => {
+    //     if (isOpen) {
+    //         document.body.style.overflow = "hidden";
+    //     } else {
+    //         document.body.style.overflow = "auto";
+    //     }
+    // }, [isOpen]);
 
     async function signIn() {
         if (isAuthenticated) return
         const result = await signInWithGoogle()
-        if(result === undefined) return
+        if (result === undefined) return
         Cookies.set('email', result.email)
         Cookies.set('avatar', result.avatar)
         Cookies.set('isAuthenticated', true)
@@ -31,18 +43,21 @@ export default function DesktopNavbar() {
         setIsAuthenticated(true)
     }
 
+    const tooggleNavbar = () => { 
+        setIsOpen(!isOpen)
+    }
 
     return (
         <>
-            <div className='navbar__container px-0 md:px-20 md:h-20 w-full flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px]'>
+            <div className='navbar__container px-0 md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px]'>
 
-                <div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full hidden">
+                <div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
                     <Link href='/' className='border-x-[0.5px] h-full w-1/3 flex justify-center items-center' >Home</Link>
                     <Link href='/about' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center'>About</Link>
                     <Link href='/team' className='border-r-[0.5px] h-full w-1/3 flex justify-center items-center'>Team</Link>
                 </div>
 
-                <div className="navbar__middle flex justify-evenly w-full md:w-1/3">
+                <div className="navbar__middle md:flex justify-evenly w-full md:w-1/3">
                     <Link href='/' className=''><Image src={Images.logoAot} alt="aot" /></Link>
                 </div>
 
@@ -68,6 +83,42 @@ export default function DesktopNavbar() {
                     }
 
                 </div>
+            </div>
+            <div className="block lg:hidden">
+                <div className={`flex justify-between items-center px-6 py-6`}>
+                    <Image src={Images.logoAot} height={27} />
+                    <Image onClick={tooggleNavbar} src={isOpen ? (Images.hamburger) : (Images.close)} height={27} />
+                </div>
+                {!isOpen && (
+                    <div className={`flex flex-col left-0 right-0 z-50 bg-black h-screen fixed`}>
+                        <div className="px-14 border-t-[.5px] border-yellowish py-6">
+                            <div className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`}>
+                                <p className="text-yellowish font-generalsans font-medium">Register</p>
+                                <Image src={Images.arrowRightYellowish} />
+                            </div>
+                        </div>
+                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
+                            <Link href="" className="text-yellowish text-3xl font-generalsans">Home</Link>
+                            <Image src={Images.arrowRightYellowish} height={40} />
+                        </div>
+                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
+                            <Link href="" className="text-yellowish text-3xl font-generalsans">About</Link>
+                            <Image src={Images.arrowRightYellowish} height={40} />
+                        </div>
+                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
+                            <Link href="" className="text-yellowish text-3xl font-generalsans">Team</Link>
+                            <Image src={Images.arrowRightYellowish} height={40} />
+                        </div>
+                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
+                            <Link href="" className="text-yellowish text-3xl font-generalsans">Collaborate</Link>
+                            <Image src={Images.arrowRightYellowish} height={40} />
+                        </div>
+                        <div className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish py-6">
+                            <Link href="" className="text-yellowish text-3xl font-generalsans">Bootcamps</Link>
+                            <Image src={Images.arrowRightYellowish} height={40} />
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     )
