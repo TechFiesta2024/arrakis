@@ -7,25 +7,15 @@ import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js
 import { useAuthState } from "@/context/AuthContext.js"
 import Cookies from "js-cookie"
 import { useEffect, useState } from "react"
-
-
-
-
+import { useRouter } from "next/navigation";
 
 export default function DesktopNavbar() {
 
     const { user, setUser, setIsAuthenticated, isAuthenticated } = useAuthState()
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     const flexStylesCenter = "flex justify-center items-center";
-
-    // useEffect(() => {
-    //     if (isOpen) {
-    //         document.body.style.overflow = "hidden";
-    //     } else {
-    //         document.body.style.overflow = "auto";
-    //     }
-    // }, [isOpen]);
 
     async function signIn() {
         if (isAuthenticated) return
@@ -43,9 +33,26 @@ export default function DesktopNavbar() {
         setIsAuthenticated(true)
     }
 
-    const tooggleNavbar = () => { 
-        setIsOpen(!isOpen)
-    }
+    const tooggleNavbar = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const closeNavbar = () => {
+        setIsOpen(false);
+    };
+
+    useEffect(() => {
+        const handleDocumentClick = () => {
+            if (isOpen) {
+                closeNavbar();
+            }
+        };
+
+        document.addEventListener('click', handleDocumentClick);
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, [isOpen]);
 
     return (
         <>
@@ -85,37 +92,64 @@ export default function DesktopNavbar() {
                 </div>
             </div>
             <div className="block lg:hidden">
-                <div className={`flex justify-between items-center px-6 py-6`}>
+                <div className={`flex justify-between items-center px-6 py-6 border text-yellowish`}>
                     <Image src={Images.logoAot} height={27} />
-                    <Image onClick={tooggleNavbar} src={isOpen ? (Images.hamburger) : (Images.close)} height={27} />
+                    <Image onClick={tooggleNavbar} src={isOpen ? Images.close : Images.hamburger} height={27} />
                 </div>
-                {!isOpen && (
-                    <div className={`flex flex-col left-0 right-0 z-50 bg-black h-screen fixed`}>
-                        <div className="px-14 border-t-[.5px] border-yellowish py-6">
-                            <div className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`}>
-                                <p className="text-yellowish font-generalsans font-medium">Register</p>
-                                <Image src={Images.arrowRightYellowish} />
+                {isOpen && (
+                    <div className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed`}>
+                        <div className={`flex justify-between items-center px-6 py-6`}>
+                            <Image src={Images.logoAot} height={27} />
+                            <Image onClick={tooggleNavbar} src={isOpen ? Images.close : Images.hamburger} height={27} />
+                        </div>
+                        <div className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed `}>
+                            <div className="px-6 border-t-[.5px] border-yellowish py-6">
+                                {
+                                    !isAuthenticated ? (
+                                        <div className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`} onClick={signIn}>
+                                            <p className="text-yellowish font-generalsans font-medium">Register</p>
+                                            <Image src={Images.arrowRightYellowish} />
+                                        </div>
+                                    ) : (
+                                        <Link href='/profile' onClick={closeNavbar} className="group h-full w-full z-[1000]">
+                                            <div className='h-full flex justify-between items-center hover:cursor-pointer'>
+                                                <div className="flex flex-col">
+                                                    <p className=" font-generalsans text-lg text-wrap text-yellowish ">{user.email}</p>
+                                                    <div className="flex flex-row gap-3">
+                                                        <p className=" text-grey">Go to profile </p>
+                                                        <Image src={Images.arrowRightYellowish} height={10} />
+                                                    </div>
+                                                </div>
+                                                <Image src={user.avatar} className="avatar__image rounded-[50%] border-yellowish" width={44} height={44} alt="avatar" />
+                                            </div>
+                                        </Link>
+                                    )
+                                }
                             </div>
-                        </div>
-                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
-                            <Link href="" className="text-yellowish text-3xl font-generalsans">Home</Link>
-                            <Image src={Images.arrowRightYellowish} height={40} />
-                        </div>
-                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
-                            <Link href="" className="text-yellowish text-3xl font-generalsans">About</Link>
-                            <Image src={Images.arrowRightYellowish} height={40} />
-                        </div>
-                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
-                            <Link href="" className="text-yellowish text-3xl font-generalsans">Team</Link>
-                            <Image src={Images.arrowRightYellowish} height={40} />
-                        </div>
-                        <div className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish py-6">
-                            <Link href="" className="text-yellowish text-3xl font-generalsans">Collaborate</Link>
-                            <Image src={Images.arrowRightYellowish} height={40} />
-                        </div>
-                        <div className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish py-6">
-                            <Link href="" className="text-yellowish text-3xl font-generalsans">Bootcamps</Link>
-                            <Image src={Images.arrowRightYellowish} height={40} />
+                            <Link href='/' onClick={closeNavbar} className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">Home</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
+                            <Link href='/about' onClick={closeNavbar} className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">About</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
+                            <Link href='/team' onClick={closeNavbar} className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">Team</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
+                            <Link href='/collaborate' onClick={closeNavbar} className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">Collaborate</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
+                            <Link href='/bootcamp' onClick={closeNavbar} className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">Bootcamps</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
+                            <Link href='/dashboard' onClick={closeNavbar} className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-6">
+                                <p className="text-yellowish text-3xl font-generalsans">Dashboard</p>
+                                <Image src={Images.arrowRightYellowish} height={40} />
+                            </Link>
                         </div>
                     </div>
                 )}

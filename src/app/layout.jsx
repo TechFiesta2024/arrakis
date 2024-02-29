@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className="body__container font-generalsans bg-black text-red border-yellowish">
         <AuthContextProvider>
           <Navbar />
-          <div className="pt-[80px] md:pt-0">
+          <div className="pt-0">
             {children}
           </div>
           <Footer />
