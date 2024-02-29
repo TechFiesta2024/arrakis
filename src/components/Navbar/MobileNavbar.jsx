@@ -5,6 +5,9 @@ import Images from '../../../public/assets/index.js'
 import Image from "next/image"
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useAuthState } from "@/context/AuthContext.js";
+import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js";
+import Cookies from "js-cookie";
 
 
 const LINKS = [
@@ -22,8 +25,28 @@ export default function MobileNavbar() {
     const [isOpen, setIsOpen] = useState(false)
     const [shouldMorph, setMorph] = useState(false)
     const urlPathname = usePathname()
-    const isAuthenticated = false
-    const isLoggedIn = true
+
+
+    const { user, isAuthenticated } = useAuthState()
+
+    async function signIn() {
+        if (isAuthenticated) return
+        const result = await signInWithGoogle()
+        if (result === undefined) return
+        Cookies.set('email', result.email)
+        Cookies.set('avatar', result.avatar)
+        Cookies.set('isAuthenticated', true)
+        Cookies.set('firebase_token', result.firebase_token)
+        window.location.reload()
+    }
+
+    function logout() {
+        Cookies.remove('email')
+        Cookies.remove('avatar')
+        Cookies.remove('isAuthenticated')
+        Cookies.remove('firebase_token')
+        window.location.href = '/'
+    }
 
 
     useEffect(() => {
@@ -65,14 +88,24 @@ export default function MobileNavbar() {
                 </div>
 
                 <div className="navbar__body top-[80.5px] fixed bg-black z-50 flex flex-col" data-is-open={isOpen}>
-                    <div
-                        className="navbar__register__login flex items-center justify-center w-full h-[88px] border-yellowish border-b-[0.5px]"
-                        data-active={'/register' == urlPathname}
-                    >
-                        <Link href='/register' onClick={() => setIsOpen(false)} className="bg-red flex text-yellowish px-20 py-2 rounded-xl gap-4">
-                            <p>Register</p>
-                            <Image src={Images.arrowRightYellowish} alt='arrow-right' />
-                        </Link>
+                    <div className="navbar__register__login flex items-center justify-center w-full h-[88px] border-yellowish border-b-[0.5px]">
+                        {
+                            !isAuthenticated ? (
+                                <div className="bg-red flex text-yellowish px-20 py-2 rounded-xl gap-4" onClick={signIn}>
+                                    <p>Register</p>
+                                    <Image src={Images.arrowRightYellowish} alt='arrow-right' />
+                                </div>
+                            ) : (
+                                <div className="flex justify-between w-full px-9">
+                                    <div className="flex flex-col gap-2">
+                                        <Link href='/profile' className="text-white text-lg">Go to profile →</Link>
+                                        <p className="text-red" onClick={logout}>Logout</p>
+                                    </div>
+                                    <Image src={user.avatar} alt="avatar" className="avatar__image rounded-[50%]" width={50} height={50} />
+                                </div>
+                            )
+                        }
+
                     </div>
 
                     {LINKS.map((l, id) => (

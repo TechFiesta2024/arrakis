@@ -23,8 +23,6 @@ const AuthContextProvider = ({ children }) => {
 
         setUser({ email, avatar, firebase_token })
         setIsAuthenticated(isAuthenticated)
-
-        // show modal if no cookies
     }, [])
 
     return (
