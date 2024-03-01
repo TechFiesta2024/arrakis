@@ -2,7 +2,7 @@
 
 import Card from "@/components/Team/Card"
 import TeamCard from "@/components/Team/TeamCard"
-import teamData from '@/components/Team/team.json'
+import teamData from '/public/data/team.json'
 
 import { useEffect, useState } from "react"
 

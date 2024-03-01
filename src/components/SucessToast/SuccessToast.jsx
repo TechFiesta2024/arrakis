@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Images from "../../../public/assets"
+import Images from "/public/assets"
 
 
 const SuccessToast = ({ closeToast, message }) => {

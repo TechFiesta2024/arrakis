@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 // Images
 // -----------------------------------------------------
 import Image from "next/image";
-import Images from "../../../public/assets/index.js";
+import Images from "/public/assets";
 
 const MarqueeComponent = () => {
 

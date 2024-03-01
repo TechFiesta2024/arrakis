@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Images from '../../../public/assets'
+import Images from '/public/assets'
 import SmartShapes from '../Global/SmartShapes'
 
 export const EmptyState = () => {

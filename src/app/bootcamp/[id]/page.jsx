@@ -1,8 +1,8 @@
 'use client'
-import bootcampData from '@/components/Bootcamp/bootcampData.json'
+import bootcampData from '/public/data/bootcampData.json'
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Images from '../../../../public/assets';
+import Images from '/public/assets';
 import Link from 'next/link';
 
 export default function BootcampPageById({ params }) {

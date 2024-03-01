@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import Images from '../../../public/assets/index.js';
+import Images from '/public/assets';
 
 import SmartShapes from "../Global/SmartShapes.jsx";
 import { useAuthState } from '@/context/AuthContext.js';
@@ -45,8 +45,8 @@ export default function FocusImage() {
                 </div>
                 {/* ------------------------- Register button----------------------------- */}
               
-                    <Link href={`${!isAuthenticated?'/register':'/bootcamp'}`} className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`} onClick={signIn}>
-                        <p>{`${!isAuthenticated?'Register':'Bootcamps'}`}</p>
+                    <Link href='/bootcamp' className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`}>
+                        <p>Bootcamp</p>
                         <Image src={Images.arrowRightYellowish} alt='arrow-right' />
                     </Link>
                 

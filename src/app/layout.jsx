@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Footer } from "@/components/index ";
 import AuthContextProvider from "@/context/AuthContext";
 
-const Navbar = dynamic(() => import('@/components/Navbar/Navbar'))
+const Navbar = dynamic(() => import('@/components/Navbar'))
 
 
 export const metadata = {

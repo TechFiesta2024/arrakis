@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Images from "../../../public/assets/index.js";
+import Images from "/public/assets";
 
 
 const partnersData = [
