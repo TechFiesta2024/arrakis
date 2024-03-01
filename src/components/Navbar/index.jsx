@@ -10,7 +10,6 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation.js"
 import axios from "axios"
 
-axios.defaults.withCredentials = true
 
 
 const LINKS = [

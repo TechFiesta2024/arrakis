@@ -9,7 +9,6 @@ import { rgbDataURL } from "@/utils/blurryImage";
 import isAllowed from "@/services/RouteProtector";
 import axios from "axios";
 
-axios.defaults.withCredentials = true
 
 
 export default function Profile() {
