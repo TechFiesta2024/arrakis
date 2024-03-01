@@ -1,7 +1,7 @@
 'use client'
 import { EmptyState } from "@/components/dashboard/EmptyState";
 import { DataState } from "@/components/dashboard/DataState";
-import isAllowed from "@/services/RouteProtector";
+import isProfileCompleted from "@/services/RouteProtector/ProfileCompleted";
 
 
 const workshopArray = [
@@ -56,4 +56,4 @@ async function DashboardPage() {
 }
 
 
-export default isAllowed(DashboardPage)
+export default isProfileCompleted(DashboardPage)

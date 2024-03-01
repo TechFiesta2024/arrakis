@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Images from "../../../public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
-import isAllowed from "@/services/RouteProtector";
+import isAllowed from "@/services/RouteProtector/Authenticated";
 
 
 async function Profile() {
