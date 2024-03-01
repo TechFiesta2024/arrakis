@@ -7,7 +7,9 @@ import { ToastContainer, toast } from "react-toastify";
 import Images from "/public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
 import isAllowed from "@/services/RouteProtector";
+import axios from "axios";
 
+axios.defaults.withCredentials = true
 
 
 export default function Profile() {
@@ -41,21 +43,11 @@ export default function Profile() {
     const handleSubmitChangeUserProfile = async (e) => {
         e.preventDefault();
         userDetails.email = user.email
-        console.log(userDetails)
         const user_JSON_Details = JSON.stringify(userDetails)
 
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Headers': '*'
-                },
-                credentials: 'include',
-                body: user_JSON_Details
-            })
-
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/login`, userDetails)
 
             console.log(response)
             // if (response.ok) {
