@@ -31,6 +31,7 @@ export default function DesktopNavbar() {
         if (isAuthenticated) return
         const result = await signInWithGoogle()
         if (result === undefined) return
+        // Get user uuid from messiah endpoint by email
         Cookies.set('email', result.email)
         Cookies.set('avatar', result.avatar)
         Cookies.set('isAuthenticated', true)
