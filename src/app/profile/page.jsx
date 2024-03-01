@@ -7,8 +7,10 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Images from "../../../public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
+import isAllowed from "@/services/RouteProtector";
 
-export default function Profile() {
+
+async function Profile() {
 
 
     const year = ['1st', '2nd', '3rd', '4th'];
@@ -193,3 +195,5 @@ export default function Profile() {
         </>
     )
 }
+
+export default isAllowed(Profile)

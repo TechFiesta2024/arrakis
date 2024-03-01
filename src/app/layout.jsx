@@ -9,11 +9,7 @@ const Navbar = dynamic(() => import('@/components/Navbar/Navbar'))
 
 export const metadata = {
   title: "TechFiesta'24",
-  description: "Something great awaits",
-  icons:
-  {
-    icon: "favicon.ico",
-  }
+  description: "Something great awaits"
 };
 
 export default function RootLayout({ children }) {
