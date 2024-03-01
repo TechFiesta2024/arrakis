@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Images from "../../../public/assets"
 import Link from "next/link"
+import Image from "next/image"
+import Images from "/public/assets"
 
 const ProfileUpdateToast = () => {
     return (

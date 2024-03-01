@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Images from '../../../public/assets'
+import Images from '/public/assets'
 import Link from 'next/link'
 
 const TeamCard = ({ member }) => {

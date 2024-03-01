@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import Images from "../../../public/assets"
+import Images from "/public/assets"
 
 
 const BootcampInfo = ({ bootcamp }) => {

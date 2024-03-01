@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-import Images from '../../../public/assets';
+import Images from '/public/assets';
 import Link from 'next/link';
 
 export const DataState = ({ workshopArray }) => {
@@ -41,7 +41,7 @@ export const DataState = ({ workshopArray }) => {
                                          </div>
                                          <div className="flex items-center gap-1 md:gap-3">
                                              <Image className="w-4 sm:w-6 md:w-8" src={Images.iconCalendar} alt="Link2 Icon"></Image>
-                                             {data.isOnline}
+                                             {data.isOnline ? "Online" : "Offline"}
                                          </div>
                                      </div>
                                      <div className="italic text-xs md:text-sm">

@@ -1,6 +1,6 @@
 'use client'
 import BootcampCard from "@/components/Bootcamp/BootcampCard"
-import bootcampData from "@/components/Bootcamp/bootcampData.json"
+import bootcampData from "/public/data/bootcampData.json"
 
 
 import { useEffect, useState } from "react"

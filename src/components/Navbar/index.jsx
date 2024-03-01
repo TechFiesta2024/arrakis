@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import Images from '../../../public/assets/index.js'
+import Images from '/public/assets'
 import Image from "next/image"
 import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js"
 import { useAuthState } from "@/context/AuthContext.js"
@@ -32,6 +32,23 @@ export default function DesktopNavbar() {
         const result = await signInWithGoogle()
         if (result === undefined) return
         // Get user uuid from messiah endpoint by email
+        try {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/checkEmail`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: result.email
+                })
+            })
+            console.log(res)
+        }
+        catch (err) {
+            console.error(err)
+        }
+
+
         Cookies.set('email', result.email)
         Cookies.set('avatar', result.avatar)
         Cookies.set('isAuthenticated', true)
@@ -44,11 +61,14 @@ export default function DesktopNavbar() {
         setIsAuthenticated(true)
     }
 
-    function logout() {
+    async function logout() {
         Cookies.remove('email')
         Cookies.remove('avatar')
         Cookies.remove('isAuthenticated')
         Cookies.remove('firebase_token')
+        await fetch(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/logout`, {
+            method: 'POST'
+        })
         window.location.href = '/'
     }
 
@@ -89,7 +109,7 @@ export default function DesktopNavbar() {
                         :
                         <div className="group h-full w-1/3 z-[1000]">
                             <div className='border-r-[0.5px] h-full flex justify-center items-center hover:cursor-pointer'>
-                                <Image src={user.avatar} className="avatar__image rounded-[50%]" width={44} height={44} alt="avatar" />
+                                <Image src={user.avatar} className="avatar__image rounded-[50%]" width={44} height={44} alt="avatar" unoptimized />
                             </div>
                             <ProfileHolder onclick={logout} />
                         </div>
@@ -129,7 +149,7 @@ export default function DesktopNavbar() {
                                                     </Link>
                                                     <p className="text-red" onClick={logout}>Logout</p>
                                                 </div>
-                                                <Image src={user.avatar} className="avatar__image rounded-[50%] border-yellowish" width={74} height={74} alt="avatar" />
+                                                <Image src={user.avatar} className="avatar__image rounded-[50%] border-yellowish" width={74} height={74} alt="avatar" unoptimized />
                                             </div>
                                         </div>
                                     )
