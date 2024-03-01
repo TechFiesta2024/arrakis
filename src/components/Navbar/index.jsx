@@ -8,6 +8,9 @@ import { useAuthState } from "@/context/AuthContext.js"
 import Cookies from "js-cookie"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation.js"
+import axios from "axios"
+
+axios.defaults.withCredentials = true
 
 
 const LINKS = [
@@ -33,16 +36,8 @@ export default function DesktopNavbar() {
         if (result === undefined) return
         // Get user uuid from messiah endpoint by email
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/checkEmail`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: result.email
-                })
-            })
-            console.log(res)
+            const { data } = await axios.post(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/checkEmail`, { email: result.email })
+            console.log(data)
         }
         catch (err) {
             console.error(err)
@@ -66,9 +61,7 @@ export default function DesktopNavbar() {
         Cookies.remove('avatar')
         Cookies.remove('isAuthenticated')
         Cookies.remove('firebase_token')
-        await fetch(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/logout`, {
-            method: 'POST'
-        })
+        await axios.post(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/logout`)
         window.location.href = '/'
     }
 
