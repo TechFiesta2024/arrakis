@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Images from "/public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
-import isAllowed from "@/services/RouteProtector";
-import axios from "axios";
+import axiosInstance from "@/utils/axiosInstance";
 
 
 
@@ -42,11 +41,9 @@ export default function Profile() {
     const handleSubmitChangeUserProfile = async (e) => {
         e.preventDefault();
         userDetails.email = user.email
-        const user_JSON_Details = JSON.stringify(userDetails)
-
 
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_MESSIAH_URL}/user/login`, userDetails)
+            const response = await axiosInstance.post('/user/login', userDetails)
 
             console.log(response)
             // if (response.ok) {
