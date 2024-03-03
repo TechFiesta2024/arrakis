@@ -3,6 +3,6 @@ export const metadata = {
     description: 'Meet the team'
 }
 
-export default function Layout({ children }) {
+export default function TeamLayout({ children }) {
     return <>{children}</>
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import Card from "@/components/Team/Card"
-import TeamCard from "@/components/Team/TeamCard"
 import teamData from '/public/data/team.json'
 
 import { useEffect, useState } from "react"
@@ -50,9 +49,7 @@ export default function TeamPage() {
                                 </button>
                                 <button
                                     onClick={() => setSelectedButton('Content')}
-
                                     className={selectedButton === 'Content' ? selectedBtnClass : btnClass}
-
                                 >
                                     Content
                                 </button>

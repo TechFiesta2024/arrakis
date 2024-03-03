@@ -3,7 +3,7 @@ export const metadata = {
     description: ''
 }
 
-export default function Layout({ children }) {
+export default function DashboardLayout({ children }) {
     return <>{children}</>
 
 }

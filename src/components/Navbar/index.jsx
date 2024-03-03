@@ -43,10 +43,10 @@ export default function Navbar() {
         }
 
 
-        Cookies.set('email', result.email)
-        Cookies.set('avatar', result.avatar)
-        Cookies.set('isAuthenticated', true)
-        Cookies.set('firebase_token', result.firebase_token)
+        Cookies.set('email', result.email, { expires: 7 })
+        Cookies.set('avatar', result.avatar, { expires: 7 })
+        Cookies.set('isAuthenticated', true, { expires: 7 })
+        Cookies.set('firebase_token', result.firebase_token, { expires: 7 })
         setUser({
             email: result.email,
             avatar: result.avatar,

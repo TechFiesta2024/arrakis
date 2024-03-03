@@ -3,6 +3,6 @@ export const metadata = {
     description: ''
 }
 
-export default function Layout({ children }) {
+export default function ProfileLayout({ children }) {
     return <>{children}</>
 }

@@ -9,8 +9,8 @@ const TeamCard = ({ member }) => {
     return (
         <>
             <div className='border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish'>
-                <div className='h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
-                    <img className='object-cover' src={image_url} alt="team_image" />
+                <div className='flex justify-center h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
+                    <Image className='object-cover' src={image_url} alt="team_image" width={300} height={200} />
                 </div>
                 <div className='h-[40%] '>
                     <div className='lg:pt-6 pt-4 h-[30%]'>
@@ -33,5 +33,3 @@ const TeamCard = ({ member }) => {
 }
 
 export default TeamCard
-
-// individual card design

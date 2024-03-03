@@ -10,8 +10,8 @@ const BootcampInfo = ({ bootcamp }) => {
     return (
         <>
             <div className='border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish'>
-                <div className='h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
-                    <img className='object-cover' src={image_url} alt="cover_img" />
+                <div className='flex justify-center h-[60%] border-b-[.5px] border-yellowish overflow-hidden '>
+                    <Image className='object-cover' src={image_url} alt="cover_img" width={300} height={200} />
                 </div>
                 <div className='h-[40%] '>
                     <div className='px-6 lg:pt-6 pt-4 h-3/4'>

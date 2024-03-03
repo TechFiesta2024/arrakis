@@ -1,9 +1,9 @@
 'use client'
-import bootcampData from '/public/data/bootcampData.json'
 import Image from 'next/image';
+import Link from 'next/link';
+import bootcampData from '/public/data/bootcampData.json'
 import { useEffect, useState } from 'react';
 import Images from '/public/assets';
-import Link from 'next/link';
 
 export default function BootcampPageById({ params }) {
 
@@ -41,20 +41,22 @@ export default function BootcampPageById({ params }) {
             <div className='md:px-20'>
                 <div className="border-x-[.5px] border-yellowish">
                     <div className='pl-4 md:pl-14 py-4 md:py-6'>
-                        <div className='inline-flex gap-2'>
-                            <Image src={Images.arrowLeft} alt='arrow_left' />
-                            <h1 className='text-yellowish font-generalsans font-medium'> back to bootcamps</h1>
+                        <div className='inline-flex items-center text-lg gap-3'>
+                            <Link href='/bootcamp'>
+                                <Image src={Images.arrowLeft} alt='arrow_left' />
+                            </Link>
+                            <h1 className='text-yellowish font-generalsans font-medium'> Back to Bootcamps</h1>
                         </div>
                     </div>
                     <div className='border-y-[.5px] border-yellowish'>
-                        <img src={bootcamp.image_url} alt='bootcamp' className='object-cover md:h-96 w-full'/>
+                        <img src={bootcamp.image_url} alt='bootcamp' className='object-cover md:h-96 w-full' />
                     </div>
                     <div>
                         <div className=' pl-4 md:pl-14 py-7 md:py-10'>
-                            <h1 className='text-yellowish text-3xl md:text-6xl font-generalsans font-bold'>{ bootcamp.title }</h1>
+                            <h1 className='text-yellowish text-3xl md:text-6xl font-generalsans font-bold'>{bootcamp.title}</h1>
                         </div>
                     </div>
-                    <div className='border-y-[.5px]  border-yellowish '> 
+                    <div className='border-y-[.5px]  border-yellowish '>
                         <div className='grid grid-cols-2 md:grid-cols-3 '>
                             <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-yellowish">
                                 <div className='inline-flex gap-0 md:gap-2 py-4'>
@@ -96,7 +98,7 @@ export default function BootcampPageById({ params }) {
                             <h1 className='text-yellowish font-generalsans font-semibold text-3xl md:text-5xl'>Description</h1>
                         </div>
                         <div className='pl-4 md:pl-14 py-8'>
-                            <h1 className='text-yellowish font-generalsans font-normal text-xl md:text-2xl'>{ bootcamp.body }</h1>
+                            <h1 className='text-yellowish font-generalsans font-normal text-xl md:text-2xl'>{bootcamp.body}</h1>
                         </div>
                     </div>
                     <div className='pl-4 md:pl-14 border-y-[.5px] border-yellowish'>
@@ -114,7 +116,7 @@ export default function BootcampPageById({ params }) {
                                             <div>
                                                 <div className='inline-flex gap-16 md:gap-20'>
                                                     <h1 className='text-yellowish font-generalsans font-semibold text-xl md:text-3xl'>{coordinator.name}</h1>
-                                                    <Image src={Images.arrowRightYellowish} alt='arrow_yellow' className='text-yellowish'/>
+                                                    <Image src={Images.arrowRightYellowish} alt='arrow_yellow' className='text-yellowish' />
                                                 </div>
                                                 <h1 className='text-yellowish font-generalsans font-normal text-sm md:text-base pt-2'>{coordinator.designation}</h1>
                                             </div>

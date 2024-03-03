@@ -15,23 +15,6 @@ export default function FocusImage() {
 
     const { setUser, isAuthenticated, setIsAuthenticated } = useAuthState()
 
-    async function signIn() {
-        if (isAuthenticated) return
-        const result = await signInWithGoogle()
-        if (result === undefined) return
-        Cookies.set('email', result.email)
-        Cookies.set('avatar', result.avatar)
-        Cookies.set('isAuthenticated', true)
-        Cookies.set('firebase_token', result.firebase_token)
-        setUser({
-            email: result.email,
-            avatar: result.avatar,
-            firebase_token: result.firebase_token
-        })
-        setIsAuthenticated(true)
-    }
-
-
 
     return (
         <>

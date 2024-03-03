@@ -3,7 +3,7 @@
     "name": "John Doe",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/johndoe",
     "x_url": "https://example.com/johndoe"
   },
@@ -11,7 +11,7 @@
     "name": "Jane Smith",
     "role": "Product Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/janesmith",
     "x_url": "https://example.com/janesmith"
   },
@@ -19,7 +19,7 @@
     "name": "Michael Johnson",
     "role": "Content Writer",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/michaeljohnson",
     "x_url": "https://example.com/michaeljohnson"
   },
@@ -27,7 +27,7 @@
     "name": "Alice Brown",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/alicebrown",
     "x_url": "https://example.com/alicebrown"
   },
@@ -35,7 +35,7 @@
     "name": "Robert Lee",
     "role": "Project Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/robertlee",
     "x_url": "https://example.com/robertlee"
   },
@@ -43,7 +43,7 @@
     "name": "Emily Taylor",
     "role": "Content Creator",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/emilytaylor",
     "x_url": "https://example.com/emilytaylor"
   },
@@ -51,7 +51,7 @@
     "name": "David Clark",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/davidclark",
     "x_url": "https://example.com/davidclark"
   },
@@ -59,7 +59,7 @@
     "name": "Sarah White",
     "role": "HR Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
@@ -67,7 +67,7 @@
     "name": "Mark Davis",
     "role": "Content Editor",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/markdavis",
     "x_url": "https://example.com/markdavis"
   },
@@ -75,7 +75,7 @@
     "name": "Jennifer Green",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/jennifergreen",
     "x_url": "https://example.com/jennifergreen"
   },
@@ -83,7 +83,7 @@
     "name": "William Baker",
     "role": "Finance Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/williambaker",
     "x_url": "https://example.com/williambaker"
   },
@@ -91,7 +91,7 @@
     "name": "Laura Martinez",
     "role": "Content Strategist",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/lauramartinez",
     "x_url": "https://example.com/lauramartinez"
   },
@@ -99,7 +99,7 @@
     "name": "Daniel Taylor",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/danieltaylor",
     "x_url": "https://example.com/danieltaylor"
   },
@@ -107,7 +107,7 @@
     "name": "Amanda Johnson",
     "role": "Operations Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/amandajohnson",
     "x_url": "https://example.com/amandajohnson"
   },
@@ -115,7 +115,7 @@
     "name": "Christopher Adams",
     "role": "Content Writer",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/christopheradams",
     "x_url": "https://example.com/christopheradams"
   },
@@ -123,7 +123,7 @@
     "name": "Olivia Thomas",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/oliviathomas",
     "x_url": "https://example.com/oliviathomas"
   },
@@ -131,7 +131,7 @@
     "name": "George Wilson",
     "role": "Marketing Manager",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/georgewilson",
     "x_url": "https://example.com/georgewilson"
   },
@@ -139,7 +139,7 @@
     "name": "Victoria Rodriguez",
     "role": "Content Manager",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/victoriarodriguez",
     "x_url": "https://example.com/victoriarodriguez"
   },
@@ -147,7 +147,7 @@
     "name": "Matthew Kelly",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/matthewkelly",
     "x_url": "https://example.com/matthewkelly"
   },
@@ -155,7 +155,7 @@
     "name": "Sophia Martinez",
     "role": "HR Coordinator",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/sophiamartinez",
     "x_url": "https://example.com/sophiamartinez"
   },
@@ -163,7 +163,7 @@
     "name": "Alexander Brown",
     "role": "Content Specialist",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/alexanderbrown",
     "x_url": "https://example.com/alexanderbrown"
   },
@@ -171,7 +171,7 @@
     "name": "Grace Evans",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/graceevans",
     "x_url": "https://example.com/graceevans"
   },
@@ -179,7 +179,7 @@
     "name": "Nathan Flores",
     "role": "Marketing Coordinator",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/nathanflores",
     "x_url": "https://example.com/nathanflores"
   },
@@ -187,7 +187,7 @@
     "name": "Isabella Hernandez",
     "role": "Content Analyst",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/isabellahernandez",
     "x_url": "https://example.com/isabellahernandez"
   },
@@ -195,7 +195,7 @@
     "name": "Ethan Rivera",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/ethanrivera",
     "x_url": "https://example.com/ethanrivera"
   },
@@ -203,7 +203,7 @@
     "name": "Madison Sullivan",
     "role": "Marketing Specialist",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/madisonsullivan",
     "x_url": "https://example.com/madisonsullivan"
   },
@@ -211,7 +211,7 @@
     "name": "Jacob Nguyen",
     "role": "Content Coordinator",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/jacobnguyen",
     "x_url": "https://example.com/jacobnguyen"
   },
@@ -219,7 +219,7 @@
     "name": "Ava Kim",
     "role": "Software Engineer",
     "department": "Techies",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/avakim",
     "x_url": "https://example.com/avakim"
   },
@@ -227,7 +227,7 @@
     "name": "Liam Patel",
     "role": "Marketing Analyst",
     "department": "Management",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/liampatel",
     "x_url": "https://example.com/liampatel"
   },
@@ -235,7 +235,7 @@
     "name": "Chloe Kim",
     "role": "Content Strategist",
     "department": "Content",
-    "image_url": "/assets/johndoe.jpg",
+    "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/chloekim",
     "x_url": "https://example.com/chloekim"
   }
