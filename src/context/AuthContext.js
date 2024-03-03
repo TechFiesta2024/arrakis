@@ -1,6 +1,5 @@
 'use client'
 import { createContext, useContext, useEffect, useState } from "react"
-
 import Cookies from "js-cookie"
 
 
@@ -12,7 +11,7 @@ export const useAuthState = () => {
 
 const AuthContextProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [user, setUser] = useState({ email: "", avatar: "", firebase_token: "" })
+    const [user, setUser] = useState({ email: "", avatar: "", firebase_token: "", UUID: "" })
 
 
     useEffect(() => {
@@ -20,11 +19,10 @@ const AuthContextProvider = ({ children }) => {
         const avatar = Cookies.get('avatar')
         const isAuthenticated = Cookies.get('isAuthenticated')
         const firebase_token = Cookies.get('firebase_token')
+        const UUID = Cookies.get('UUID')
 
-        setUser({ email, avatar, firebase_token })
+        setUser({ email, avatar, firebase_token, UUID })
         setIsAuthenticated(isAuthenticated)
-
-        // show modal if no cookies
     }, [])
 
     return (

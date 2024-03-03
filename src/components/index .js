@@ -5,5 +5,5 @@ export { default as UnleashSkills } from './Home/UnleashSkills.jsx'
 
 export { default as CommunityPartner } from './Home/CommunityPartner.jsx'
 
-export { default as SuccessToast } from './SucessToast/SuccessToast.jsx'
+export { default as SuccessToast } from './Global/SuccessToast.jsx'
 

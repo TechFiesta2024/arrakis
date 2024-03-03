@@ -13,13 +13,7 @@ import axiosInstance from "@/utils/axiosInstance";
 export default function Profile() {
     const year = ['1st', '2nd', '3rd', '4th'];
 
-    const { user } = useAuthState();
-
-
-    // useEffect(() => {
-    // }, [])
-
-
+    const { user } = useAuthState()
 
 
     const [userDetails, setUserDetails] = useState({
@@ -29,6 +23,33 @@ export default function Profile() {
         stream: '',
         year: ''
     })
+
+    /* Get user info when navigating to /profile */
+    useEffect(() => {
+        async function getMe() {
+            try {
+                const { data } = await axiosInstance.get('/user/me', {
+                    headers: {
+                        userid: user.UUID
+                    }
+                })
+                
+                setUserDetails({
+                    name: data[0].name,
+                    contact: '1234567890',
+                    college: data[0].college,
+                    stream: data[0].stream,
+                    year: data[0].year
+                })
+            }
+            catch (err) {
+                console.error(err)
+            }
+        }
+        getMe()
+    }, [])
+
+
     const handleInputChangeUserProfile = (e) => {
         const { id, value } = e.target
         setUserDetails(prevData => ({
@@ -37,9 +58,8 @@ export default function Profile() {
         }))
     }
 
-
     const handleSubmitChangeUserProfile = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
         userDetails.email = user.email
 
         try {

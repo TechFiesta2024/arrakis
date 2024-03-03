@@ -35,24 +35,25 @@ export default function Navbar() {
         if (result === undefined) return
         // Get user uuid from messiah endpoint by email
         try {
-            const { data } = await axiosInstance.post('/user/checkEmail', { email: result.email })
-            console.log(data)
+            const { data } = await axiosInstance.post('/user/checkemail', { email: result.email })
+            console.log(data.message)
+
+            Cookies.set('email', result.email, { expires: 7 })
+            Cookies.set('avatar', result.avatar, { expires: 7 })
+            Cookies.set('isAuthenticated', true, { expires: 7 })
+            Cookies.set('firebase_token', result.firebase_token, { expires: 7 })
+            Cookies.set('UUID', data.userid, { expires: 7 })
+            setUser({
+                email: result.email,
+                avatar: result.avatar,
+                firebase_token: result.firebase_token,
+                UUID: data.userid
+            })
+            setIsAuthenticated(true)
         }
         catch (err) {
             console.error(err)
         }
-
-
-        Cookies.set('email', result.email, { expires: 7 })
-        Cookies.set('avatar', result.avatar, { expires: 7 })
-        Cookies.set('isAuthenticated', true, { expires: 7 })
-        Cookies.set('firebase_token', result.firebase_token, { expires: 7 })
-        setUser({
-            email: result.email,
-            avatar: result.avatar,
-            firebase_token: result.firebase_token
-        })
-        setIsAuthenticated(true)
     }
 
     async function logout() {
@@ -60,7 +61,7 @@ export default function Navbar() {
         Cookies.remove('avatar')
         Cookies.remove('isAuthenticated')
         Cookies.remove('firebase_token')
-        await axiosInstance.post('/user/logout')
+        Cookies.remove('UUID')
         window.location.href = '/'
     }
 
