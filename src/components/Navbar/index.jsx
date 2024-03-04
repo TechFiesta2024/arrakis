@@ -80,7 +80,7 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar */}
-            <div className='navbar__container px-0 md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px]'>
+            <div className='navbar__container px-0 md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px] bg-black'>
 
                 <div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
                     <Link href='/' className='border-x-[0.5px] h-full w-1/3 flex justify-center items-center' >Home</Link>
