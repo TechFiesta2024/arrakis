@@ -3,12 +3,13 @@ import EventDate from "./EventDate"
 import MapDirection from "./MapDirection"
 import ParticipateBadge from "./ParticipateBadge"
 import PrizePoolBadge from "./PrizePoolBadge"
-import ProfileUpdateReminder from "../Global/ProfileUpdateReminder"
+import Preloader from "../Global/Preloader"
 
 // Client components
 const FloatingCapsules = dynamic(() => import('./FloatingCapsules'))
 const FocusImage = dynamic(() => import('./FocusImage'))
-const TimerMockup = dynamic(() => import('./TimerMockup'), { ssr: false })
+const TimerMockup = dynamic(() => import('./TimerMockup'), { ssr: false, loading: () => <Preloader bgHeight='15.1rem' width='3rem' height='3rem' color='red' /> })
+const ProfileUpdateReminder = dynamic(() => import('../Global/ProfileUpdateReminder'))
 
 
 export default function Herosection() {

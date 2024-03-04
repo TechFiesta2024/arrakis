@@ -1,12 +1,17 @@
-import styles from '@/styles/Preloader.css';
-
-export default function Preloader ({ width, height }) {
+export default function Preloader({ bgWidth, bgHeight, width, height, color }) {
     return (
-        <div className={styles.spinnerContainer}>
+        <div className='spinnerContainer' style={{ width: `${bgWidth}`, height: `${bgHeight}` }}>
             <div
-                className={styles.loadingSpinner}
-                style={{ width: `${width}`, height: `${height}` }}
-            ></div>
+                className='loadingSpinner'
+                style={{
+                    width: `${width}`,
+                    height: `${height}`,
+                    borderTop: `2px solid ${color}`,
+                    borderRight: `2px solid ${color}`,
+                }}
+            >
+
+            </div>
         </div>
     );
 };
