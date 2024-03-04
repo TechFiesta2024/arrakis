@@ -37,7 +37,7 @@ export default function Profile() {
 
                 setUserDetails({
                     name: data[0].name,
-                    contact: '1234567890',
+                    contact: data[0].contact,
                     college: data[0].college,
                     stream: data[0].stream,
                     year: data[0].year
@@ -66,14 +66,19 @@ export default function Profile() {
 
         try {
             setSubmitting(true)
-            const response = await axiosInstance.post('/user/login', userDetails)
+            const res = await axiosInstance.post('/user/login', userDetails)
 
-            console.log(response)
-            // if (response.ok) {
-            //     toast.success(`User profile completed`, {
+            Cookies.set('UUID', res.data.userid, { expires: 7 })
+            setUser((user) => ({
+                ...user,
+                UUID: res.data.userid
+            }))
+
+            // if (res.status === 200) {
+            //     toast.success(`${res.data.message}`, {
             //         autoClose: 3000,
             //         position: "top-right",
-            //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+            //         icon: <Image src={Images.logoVerify} alt="verify" />,
             //         hideProgressBar: true,
             //         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
             //     });
