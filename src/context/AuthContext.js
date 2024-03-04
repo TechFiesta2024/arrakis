@@ -11,7 +11,7 @@ export const useAuthState = () => {
 
 const AuthContextProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [user, setUser] = useState({ email: "", avatar: "", firebase_token: "", UUID: "" })
+    const [user, setUser] = useState({ email: undefined, avatar: undefined, firebase_token: undefined, UUID: undefined })
 
 
     useEffect(() => {
