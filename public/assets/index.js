@@ -6,7 +6,7 @@ import logoInstagram from './instagram.svg'
 
 import logoLinkedInBlack from './logoLinkedinBlack.svg'
 import logoXBlack from './logoXblack.svg'
-
+import logoPhoneWhite from './logoPhoneWhite.svg'
 
 import GridBox from './GridBox.svg'
 import Coin from './coin.svg'
@@ -33,6 +33,9 @@ import iconLink2 from './link2.svg'
 import iconGlobal from './global.svg'
 import iconClock from './clock.svg'
 import iconCalendar from './calendar.svg'
+import iconEmail from './mail.svg'
+import iconLinkedinWhite from './linkedinWhite.svg'
+import iconXWhite from './iconXWhite.svg' 
 
 import Rectangle9 from './Rectangle_9.svg'
 import CommImg from './communityimage.svg'
@@ -65,6 +68,7 @@ const Images = {
     logoLinkedInBlack,
     logoXBlack,
     logoVerify,
+    logoPhoneWhite,
     arrowRight,
     arrowLeft,
     calendar,
@@ -94,6 +98,9 @@ const Images = {
     iconClock,
     iconCalendar,
     iconGlobal,
+    iconEmail,
+    iconLinkedinWhite,
+    iconXWhite,
     Rectangle9,
     CommImg,
     logoLinkedInBlack,
