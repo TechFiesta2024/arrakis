@@ -33,7 +33,8 @@ export default function Profile() {
                         userid: user.UUID
                     }
                 })
-                
+                console.log(data[0]);
+
                 setUserDetails({
                     name: data[0].name,
                     contact: '1234567890',
@@ -58,11 +59,13 @@ export default function Profile() {
         }))
     }
 
+    const [submitting, setSubmitting] = useState(false)
     const handleSubmitChangeUserProfile = async (e) => {
         e.preventDefault()
         userDetails.email = user.email
 
         try {
+            setSubmitting(true)
             const response = await axiosInstance.post('/user/login', userDetails)
 
             console.log(response)
@@ -79,13 +82,16 @@ export default function Profile() {
         catch (err) {
             console.error(err)
         }
+        finally {
+            setSubmitting(false)
+        }
     }
 
 
 
     return (
         <>
-            <div className='profile__container flex flex-col md:flex-row w-full px-0 md:px-20  border-yellowish text-yellowish'>
+            <div className='profile__container flex flex-col md:flex-row w-full h-[100vh] px-0 md:px-20  border-yellowish text-yellowish'>
                 <div className='profile__left flex w-full md:w-1/2 border-x-[0.5px] flex-col'>
                     <div className='profile__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px] overflow-hidden'>
 
@@ -117,6 +123,7 @@ export default function Profile() {
                                 className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                             />
                         </div>
+
                         <div className='input_contact flex flex-col pb-8 md:pb-0'>
                             <label className='text-[24px] pb-4'>Contact No.</label>
                             <input
@@ -137,7 +144,6 @@ export default function Profile() {
                 <div className='profile__right border-x-[0.5px] md:border-r-[0.5px] flex w-full md:w-1/2 h-auto items-center md:py-8'>
                     <div className='collab__right_input h-full flex px-4 md:px-[90px] flex-col w-full justify-evenly'>
 
-
                         <div className='input_college flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>College Name</label>
                             <input
@@ -150,9 +156,6 @@ export default function Profile() {
                                 className='bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]'
                             />
                         </div>
-
-
-
 
                         <div className='input_email flex flex-col pb-8'>
                             <label className='text-[24px] pb-4'>Email ID</label>
@@ -187,7 +190,13 @@ export default function Profile() {
                             </select>
 
                         </div>
-                        <button className='bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0' type="submit" onClick={handleSubmitChangeUserProfile}>
+
+                        <button
+                            className={`${submitting ? 'bg-red-faded' : 'bg-red'} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
+                            type="submit"
+                            onClick={handleSubmitChangeUserProfile}
+                            disabled={submitting}
+                        >
                             Submit
                         </button>
                         <ToastContainer />

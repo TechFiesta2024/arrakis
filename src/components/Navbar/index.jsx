@@ -33,23 +33,28 @@ export default function Navbar() {
         if (isAuthenticated) return
         const result = await signInWithGoogle()
         if (result === undefined) return
+
+        Cookies.set('email', result.email, { expires: 7 })
+        Cookies.set('avatar', result.avatar, { expires: 7 })
+        Cookies.set('isAuthenticated', true, { expires: 7 })
+        Cookies.set('firebase_token', result.firebase_token, { expires: 7 })
+        setUser({
+            email: result.email,
+            avatar: result.avatar,
+            firebase_token: result.firebase_token
+        })
+        setIsAuthenticated(true)
+
+
         // Get user uuid from messiah endpoint by email
         try {
             const { data } = await axiosInstance.post('/user/checkemail', { email: result.email })
-            console.log(data.message)
 
-            Cookies.set('email', result.email, { expires: 7 })
-            Cookies.set('avatar', result.avatar, { expires: 7 })
-            Cookies.set('isAuthenticated', true, { expires: 7 })
-            Cookies.set('firebase_token', result.firebase_token, { expires: 7 })
             Cookies.set('UUID', data.userid, { expires: 7 })
-            setUser({
-                email: result.email,
-                avatar: result.avatar,
-                firebase_token: result.firebase_token,
+            setUser((user) => ({
+                ...user,
                 UUID: data.userid
-            })
-            setIsAuthenticated(true)
+            }))
         }
         catch (err) {
             console.error(err)

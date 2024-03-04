@@ -1,10 +1,7 @@
-// -----------------------------------------------------
-// Images
-// -----------------------------------------------------
 import Image from 'next/image';
 import Images from '/public/assets';
 
-const SmartShapes = () => {
+export default function SmartShapes() {
     return (
         <>
             <div className="w-full">
@@ -24,5 +21,3 @@ const SmartShapes = () => {
         </>
     );
 }
-
-export default SmartShapes;
