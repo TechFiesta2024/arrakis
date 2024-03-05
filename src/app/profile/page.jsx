@@ -1,14 +1,11 @@
-'use client'
-import dynamic from "next/dynamic"
-import isAllowed from "@/services/RouteProtector"
+"use client";
+import dynamic from "next/dynamic";
+import isAllowed from "@/services/RouteProtector";
 
-const Profile = dynamic(() => import('@/components/Profile'))
+const Profile = dynamic(() => import("@/components/Profile"));
 
 async function ProfilePage() {
-    return (
-        <Profile />
-    )
+	return <Profile />;
 }
 
-
-export default isAllowed(ProfilePage)
+export default isAllowed(ProfilePage);

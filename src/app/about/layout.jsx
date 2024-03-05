@@ -1,8 +1,8 @@
 export const metadata = {
-    title: 'About',
-    description: ''
-}
+	title: "About",
+	description: "",
+};
 
 export default function AboutLayout({ children }) {
-    return <>{children}</>
+	return <>{children}</>;
 }
