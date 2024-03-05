@@ -12,13 +12,14 @@ export default function ProfileUpdateReminder() {
     const [profileUpdateReminder, setProfileUpdateReminder] = useState(false)
 
     useEffect(() => {
-        const timeout = setTimeout(() => setProfileUpdateReminder(isAuthenticated ^ parseBool(user.UUID)), 5000)
+        const timeout = setTimeout(() => setProfileUpdateReminder(isAuthenticated &&  !parseBool(user.UUID)), 1500)
 
         return () => clearTimeout(timeout)
     }, [isAuthenticated, user.UUID])
 
 
     return (
+        // TODO make it responsive
         <div className={`w-full h-[20%] md:px-20 absolute ${!profileUpdateReminder ? 'translate-y-[-4.8rem] z-[-1000]' : 'translate-y-0 transition-all duration-700 ease-linear'}`}>
             <Link href='/profile' className={`profile_update_toast_container bg-yellowish py-3 flex justify-between items-center px-4 overflow-hidden`}>
                 <div className="profile_svg-container flex justify-center items-center gap-4">
