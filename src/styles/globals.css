@@ -99,7 +99,6 @@ body {
     border-top: 2px solid #363636;
     border-radius: 50%;
     animation: spinner 1.5s linear infinite;
-    height: 90%;
 }
 
 @keyframes spinner {

@@ -11,7 +11,7 @@ import axiosInstance from "@/utils/axiosInstance";
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
 
-	const { user } = useAuthState();
+	const { user, setUser } = useAuthState();
 
 	const [userDetails, setUserDetails] = useState({
 		name: "",
@@ -30,7 +30,6 @@ export default function Profile() {
 						userid: user.UUID,
 					},
 				});
-				console.log(data[0]);
 
 				setUserDetails({
 					name: data[0].name,
@@ -63,7 +62,7 @@ export default function Profile() {
 			setSubmitting(true);
 			const res = await axiosInstance.post("/user/login", userDetails);
 
-			Cookies.set("UUID", res.data.userid, { expires: 7 });
+			Cookies.set("studentId", res.data.userid, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: res.data.userid,
@@ -87,7 +86,7 @@ export default function Profile() {
 
 	return (
 		<>
-			<div className="profile__container flex flex-col md:flex-row w-full h-[100vh] px-0 md:px-20  border-yellowish text-yellowish">
+			<div className="profile__container flex flex-col md:flex-row w-full px-0 md:px-20  border-yellowish text-yellowish">
 				<div className="profile__left flex w-full md:w-1/2 border-x-[0.5px] flex-col">
 					<div className="profile__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col border-b-[0.5px] overflow-hidden">
 						<div className="flex flex-row items-center gap-6 md:gap-4">
@@ -181,24 +180,23 @@ export default function Profile() {
 								onChange={handleInputChangeUserProfile}
 							>
 								{year.map((option) => (
-									<option className="hover:bg-red" key={option} value={option}>
-										{option}
+									<option className="hover:bg-red" key={option} value={userDetails.year !== '' ? userDetails.year : option}>
+										{userDetails.year !== '' ? userDetails.year : option}
 									</option>
 								))}
 							</select>
 						</div>
 
 						<button
-							className={`${
-								submitting ? "bg-red-faded" : "bg-red"
-							} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
+							className={`${submitting ? "bg-red-faded" : "bg-red"
+								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
 							onClick={handleSubmitChangeUserProfile}
 							disabled={submitting}
 						>
 							Submit
 						</button>
-						<ToastContainer />
+						{/* <ToastContainer /> */}
 					</div>
 				</div>
 			</div>
