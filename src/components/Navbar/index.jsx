@@ -48,7 +48,7 @@ export default function Navbar() {
 				email: result.email,
 			});
 
-			Cookies.set("UUID", data.userid, { expires: 7 });
+			Cookies.set("studentId", data.userid, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: data.userid,
@@ -63,7 +63,7 @@ export default function Navbar() {
 		Cookies.remove("avatar");
 		Cookies.remove("isAuthenticated");
 		Cookies.remove("firebase_token");
-		Cookies.remove("UUID");
+		Cookies.remove("studentId");
 		window.location.href = "/";
 	}
 

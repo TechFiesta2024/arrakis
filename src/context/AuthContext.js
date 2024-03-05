@@ -22,7 +22,7 @@ const AuthContextProvider = ({ children }) => {
 		const avatar = Cookies.get("avatar");
 		const isAuthenticated = Cookies.get("isAuthenticated");
 		const firebase_token = Cookies.get("firebase_token");
-		const UUID = Cookies.get("UUID");
+		const UUID = Cookies.get("studentId");
 
 		setUser({ email, avatar, firebase_token, UUID });
 		setIsAuthenticated(isAuthenticated);
