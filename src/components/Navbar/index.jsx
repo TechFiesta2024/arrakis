@@ -77,12 +77,29 @@ export default function Navbar() {
 			{/* Desktop Navbar */}
 			<div className="navbar__container px-0 md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px] bg-black">
 				<div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
-					<Link
-						href="/"
-						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
-					>
-						Home
-					</Link>
+					{!isAuthenticated ? (
+						<div
+							className="border-r-[0.5px] bg-red h-full w-1/3 flex justify-center items-center hover:cursor-pointer"
+							onClick={signIn}
+						>
+							Register
+						</div>
+					) : (
+						<div className="group h-full w-1/3 z-[1000]">
+							<div className="border-r-[0.5px] h-full flex justify-center items-center hover:cursor-pointer">
+								<Image
+									src={user.avatar}
+									className="avatar__image rounded-[50%]"
+									width={44}
+									height={44}
+									alt="avatar"
+									unoptimized
+								/>
+							</div>
+							<ProfileHolder onclick={logout} />
+						</div>
+					)}
+
 					<Link
 						href="/about"
 						className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
@@ -125,28 +142,13 @@ export default function Navbar() {
 						Dashboard
 					</Link>
 
-					{!isAuthenticated ? (
-						<div
-							className="border-r-[0.5px] bg-red h-full w-1/3 flex justify-center items-center hover:cursor-pointer"
-							onClick={signIn}
-						>
-							Register
-						</div>
-					) : (
-						<div className="group h-full w-1/3 z-[1000]">
-							<div className="border-r-[0.5px] h-full flex justify-center items-center hover:cursor-pointer">
-								<Image
-									src={user.avatar}
-									className="avatar__image rounded-[50%]"
-									width={44}
-									height={44}
-									alt="avatar"
-									unoptimized
-								/>
-							</div>
-							<ProfileHolder onclick={logout} />
-						</div>
-					)}
+					<Link
+						href="/"
+						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
+					>
+						Events
+					</Link>
+					
 				</div>
 			</div>
 
