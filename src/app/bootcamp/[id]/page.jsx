@@ -29,25 +29,6 @@ export default function BootcampPageById({ params }) {
 
 	return (
 		<>
-			{/* <div>
-
-                <h1>{bootcamp.title}</h1>
-                <img src={bootcamp.image_url} />
-                <p>Venue: {bootcamp.venue}</p>
-                <p>Timing: {bootcamp.timing}</p>
-                <p>{bootcamp.body}</p>
-                {
-
-                    bootcamp.coordinator.map((coordinator, index) => (
-
-                        <div key={index}>
-                            <p>{coordinator.name}</p>
-                            <img src={coordinator.image_url} />
-                            <p>{coordinator.contact}</p>
-                        </div>
-                    ))
-                }
-            </div> */}
 			<div className="md:px-20">
 				<div className="border-x-[.5px] border-yellowish">
 					<div className="pl-4 md:pl-14 py-4 md:py-6">
