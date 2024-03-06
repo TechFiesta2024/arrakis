@@ -3,7 +3,7 @@ import Link from "next/link";
 import Images from "/public/assets";
 
 const BootcampInfo = ({ bootcamp }) => {
-	const { id, title, description, image_url } = bootcamp;
+	const { id, workshopName, description, image_url } = bootcamp;
 
 	return (
 		<>
@@ -20,7 +20,7 @@ const BootcampInfo = ({ bootcamp }) => {
 				<div className="h-[40%] ">
 					<div className="px-6 lg:pt-6 pt-4 h-3/4">
 						<p className="text-yellowish font-generalsans font-bold text-2xl">
-							{title}
+							{workshopName}
 						</p>
 						<p className="text-yellowish font-generalsans text-sm lg:pt-3 py-1">
 							{description}
