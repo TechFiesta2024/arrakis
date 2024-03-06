@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Images from "/public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
 
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
@@ -181,16 +181,21 @@ export default function Profile() {
 								onChange={handleInputChangeUserProfile}
 							>
 								{year.map((option) => (
-									<option className="hover:bg-red" key={option} value={userDetails.year !== '' ? userDetails.year : option}>
-										{userDetails.year !== '' ? userDetails.year : option}
+									<option
+										className="hover:bg-red"
+										key={option}
+										value={userDetails.year !== "" ? userDetails.year : option}
+									>
+										{userDetails.year !== "" ? userDetails.year : option}
 									</option>
 								))}
 							</select>
 						</div>
 
 						<button
-							className={`${submitting ? "bg-red-faded" : "bg-red"
-								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
+							className={`${
+								submitting ? "bg-red-faded" : "bg-red"
+							} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
 							onClick={handleSubmitChangeUserProfile}
 							disabled={submitting}
