@@ -11,12 +11,12 @@ import { usePathname } from "next/navigation.js";
 import axiosInstance from "@/utils/axiosInstance";
 
 const LINKS = [
-	{ name: "Home", href: "/" },
+	{ name: "Events", href: "/events" },
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
-	{ name: "Collaborate", href: "/collaborate" },
-	{ name: "Bootcamp", href: "/bootcamp" },
+	{ name: "Workshop", href: "/workshop" },
 	{ name: "Dashboard", href: "/dashboard" },
+	{ name: "Contact", href: "/" },
 ];
 
 export default function Navbar() {
@@ -106,7 +106,7 @@ export default function Navbar() {
 
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
-						href="/bootcamp"
+						href="/workshop"
 						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
 					>
 						Workshop

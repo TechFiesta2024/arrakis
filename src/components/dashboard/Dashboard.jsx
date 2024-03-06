@@ -1,18 +1,17 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useAuthState } from "@/context/AuthContext";
-import { DataState } from "./DataState";
-import { EmptyState } from "./EmptyState";
-import { workshop } from "/public/data/workshop_data";
+import DataState from "./DataState";
+import EmptyState from "./EmptyState";
+import workshops from "/public/data/workshop.json";
 import axiosInstance from "@/utils/axiosInstance";
 
-const ProfileUpdateReminder = dynamic(
-	() => import("../Global/ProfileUpdateReminder"),
-);
+const ProfileUpdateReminder = dynamic(() => import("../Global/ProfileUpdateReminder"));
+
 
 export default function Dashboard() {
 	const { user } = useAuthState();
-	const [workshops, setWorkshops] = useState([]);
+	const [workshop, setWorkshop] = useState([]);
 
 	useEffect(() => {
 		async function getMe() {
@@ -23,26 +22,24 @@ export default function Dashboard() {
 					},
 				});
 
-				setWorkshops(
-					workshop.filter((obj) => data[0].workshops.includes(obj.id)),
-				);
-			} catch (err) {
+				setWorkshop(workshops.filter((obj) => data[0].workshops.toString().includes(obj.id)))
+			}
+			catch (err) {
 				console.error(err);
 			}
 		}
 		getMe();
 	}, []);
 
-	console.log(workshops);
 
 	return (
 		<>
 			<ProfileUpdateReminder />
 			<div className="flex justify-center items-start min-h-screen mx-2 md:mx-20 border-x-[0.5px] border-yellowish text-white">
-				{workshops.length === 0 ? (
+				{workshop.length === 0 ? (
 					<EmptyState />
 				) : (
-					<DataState workshopArray={workshops} />
+					<DataState workshopArray={workshop} />
 				)}
 			</div>
 		</>

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import bootcampData from "/public/data/bootcampData.json";
+import eventData from "/public/data/events.json";
 import { useEffect, useState } from "react";
 import Images from "/public/assets";
 
@@ -9,10 +9,10 @@ export default function EventPageById({ params }) {
     const [event, setEvent] = useState({ coordinator: [] });
 
     useEffect(() => {
-        const selectedBootcamp = bootcampData.find(
+        const selectedEvent = eventData.find(
             (bootcamp) => "" + bootcamp.id === params.id,
         );
-        setEvent(selectedBootcamp);
+        setEvent(selectedEvent);
     }, []);
 
     return (

@@ -1,34 +1,35 @@
 import Image from "next/image";
-import React from "react";
-import Images from "/public/assets";
 import Link from "next/link";
+import Images from "/public/assets";
 
-export const DataState = ({ workshopArray }) => {
+export default function DataState({ workshopArray }) {
+	console.log(workshopArray[0].workshopName);
 	const softwareWorkshops = workshopArray.filter(
 		(workshop) => workshop.type === "Software",
 	);
 	const hardwareWorkshops = workshopArray.filter(
 		(workshop) => workshop.type === "Hardware",
 	);
+
 	return (
 		<>
 			<div className="dataState flex justify-start items-start flex-col w-full">
 				<div className="flex justify-start items-center flex-col w-full h-72">
 					<div className="flex items-center justify-evenly text-xs lg:text-sm w-full md:w-1/3 h-20 border-b-[0.5px] border-yellowish top-20">
 						<Link
-							href="/dashboard"
+							href="/"
 							className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
 						>
 							Your Workshops
 						</Link>
 						<Link
-							href="/dashboard"
+							href="/"
 							className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
 						>
 							Your Events
 						</Link>
 						<Link
-							href="/dashboard"
+							href="/"
 							className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
 						>
 							Your Teams
@@ -41,11 +42,8 @@ export const DataState = ({ workshopArray }) => {
 				<div className="w-full">
 					<div className="flex flex-col md:flex-row flex-wrap w-full justify-start items-start">
 						<div className="software__side flex items-center flex-col w-full lg:w-1/2 justify-center ">
-							<div className="flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-yellowish">
-								<Image
-									src={Images.iconMonitorMobile}
-									alt="Monitor Mobile Icon"
-								></Image>
+							<div className="flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-yellowish cursor-pointer">
+								<Image src={Images.iconMonitorMobile} alt="Monitor Mobile Icon" />
 								Software Workshops
 							</div>
 							{softwareWorkshops.map((data, index) => (
@@ -74,33 +72,24 @@ export const DataState = ({ workshopArray }) => {
 												></Image>
 												{data.time}
 											</div>
-											<div className="flex items-center gap-1 md:gap-3">
-												<Image
-													className="w-4 sm:w-6 md:w-8"
-													src={Images.iconCalendar}
-													alt="Link2 Icon"
-												></Image>
-												{data.isOnline ? "Online" : "Offline"}
-											</div>
 										</div>
 										<div className="italic text-xs md:text-sm">
 											*view details from{" "}
 											<span className="underline">
-												<Link href="/">workshop page</Link>
+												<Link href="/workshop">workshop page</Link>
 											</span>
 										</div>
 									</div>
-									<Link
-										href={data.link}
+									<div
 										className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish"
 									>
 										<Image src={Images.iconLink2} alt="Link2 Icon"></Image>
-									</Link>
+									</div>
 								</div>
 							))}
 						</div>
 						<div className="hardware__side flex items-center flex-col w-full lg:w-1/2 justify-center">
-							<div className="hardware__heading flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-l-[0.5px] border-yellowish">
+							<div className="hardware__heading flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-l-[0.5px] border-yellowish cursor-pointer">
 								<Image
 									src={Images.iconMonitorMobile}
 									alt="Monitor Mobile Icon"
@@ -133,19 +122,11 @@ export const DataState = ({ workshopArray }) => {
 												></Image>
 												{data.time}
 											</div>
-											<div className="flex items-center gap-1 md:gap-3">
-												<Image
-													className="w-4 sm:w-6 md:w-8"
-													src={Images.iconCalendar}
-													alt="Link2 Icon"
-												></Image>
-												{data.isOnline}
-											</div>
 										</div>
 										<div className="italic text-xs md:text-sm">
 											*view details from{" "}
 											<span className="underline">
-												<Link href="/">workshop page</Link>
+												<Link href="/workshop">workshop page</Link>
 											</span>
 										</div>
 									</div>

@@ -1,18 +1,13 @@
-"use client";
+import Link from "next/link";
 import Image from "next/image";
 import Images from "/public/assets";
-
 import SmartShapes from "../Global/SmartShapes.jsx";
-import { useAuthState } from "@/context/AuthContext.js";
-import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js";
-import Cookies from "js-cookie";
-import Link from "next/link";
+
 
 export default function FocusImage() {
 	const flexStylesStart = "flex justify-start items-center";
 	const flexStylesCenter = "flex justify-center items-center";
 
-	const { setUser, isAuthenticated, setIsAuthenticated } = useAuthState();
 
 	return (
 		<>
@@ -28,13 +23,13 @@ export default function FocusImage() {
 						& HUMATRONICS
 					</div>
 				</div>
-				{/* ------------------------- Register button----------------------------- */}
+				
 
 				<Link
-					href="/bootcamp"
+					href="/events"
 					className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`}
 				>
-					<p>Bootcamp</p>
+					<p>Events</p>
 					<Image src={Images.arrowRightYellowish} alt="arrow-right" />
 				</Link>
 

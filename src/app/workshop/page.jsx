@@ -1,19 +1,18 @@
 "use client";
-import BootcampCard from "@/components/Bootcamp/BootcampCard";
-// import bootcampData from "/public/data/bootcampData.json";
-import {workshop} from '/public/data/workshop_data'
-
-
 import { useEffect, useState } from "react";
+import WorkshopCard from "@/components/Workshop/WorkshopCard";
+import workshops from "/public/data/workshop.json";
 
-export default function BootcampPage() {
+
+
+export default function WorkshopPage() {
 	const [selectedButton, setSelectedButton] = useState("All");
 	const [filteredData, setFilteredData] = useState([]);
 
 	useEffect(() => {
-		const filtered = workshop.filter(
-			(bootcamp) =>
-				selectedButton === "All" || bootcamp.type === selectedButton,
+		const filtered = workshops.filter(
+			(workshop) =>
+				selectedButton === "All" || workshop.type === selectedButton,
 		);
 		setFilteredData(filtered);
 	}, [selectedButton]);
@@ -72,7 +71,7 @@ export default function BootcampPage() {
 							</div>
 						</div>
 					</div>
-					<BootcampCard filteredData={filteredData} />
+					<WorkshopCard filteredData={filteredData} />
 				</div>
 			</div>
 		</>

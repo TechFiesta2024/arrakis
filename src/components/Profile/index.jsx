@@ -185,8 +185,9 @@ export default function Profile() {
 										className="hover:bg-red"
 										key={option}
 										value={userDetails.year !== "" ? userDetails.year : option}
+										selected={userDetails.year === option}
 									>
-										{userDetails.year !== "" ? userDetails.year : option}
+										{option}
 									</option>
 								))}
 							</select>

@@ -14,7 +14,7 @@ const UnleashSkills = () => {
 							Unleash Skills
 						</h1>
 						<Link
-							href="/bootcamp"
+							href="/workshop"
 							className={` ${flexStylesCenter} bg-red px-10 flex z-20 text-white rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`}
 						>
 							<div className="buttoncontent flex py-2">Check Workshops</div>

@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import BootcampCard from "@/components/Bootcamp/BootcampCard";
-import bootcampData from "/public/data/bootcampData.json";
+import eventData from "/public/data/events.json";
 import EventCard from "@/components/Events/EventCard";
 
 export default function EventsPage() {
@@ -10,9 +9,9 @@ export default function EventsPage() {
 	const [filteredData, setFilteredData] = useState([]);
 
 	useEffect(() => {
-		const filtered = bootcampData.filter(
-			(bootcamp) =>
-				selectedButton === "All" || bootcamp.type === selectedButton,
+		const filtered = eventData.filter(
+			(event) =>
+				selectedButton === "All" || event.type === selectedButton,
 		);
 		setFilteredData(filtered);
 	}, [selectedButton]);
@@ -33,7 +32,7 @@ export default function EventsPage() {
 									:
 								</span>
 								<span className="text-yellowish font-anton md:text-8xl px-2 mt-4 text-5xl">
-									WORKSHOPS
+									EVENTS
 								</span>
 								<span className="text-yellowish font-generalsans font-semibold md:text-8xl text-5xl">
 									:

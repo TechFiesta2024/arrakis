@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Images from "/public/assets";
 
-const BootcampInfo = ({ bootcamp }) => {
-	const { id, workshopName, description, image_url } = bootcamp;
+export default function WorkshopInfo({ workshop }) {
+	const { id, workshopName, description, image_url } = workshop;
 
 	return (
 		<>
@@ -28,7 +28,7 @@ const BootcampInfo = ({ bootcamp }) => {
 					</div>
 					<div className="h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish">
 						<Link
-							href={`/bootcamp/${id}`}
+							href={`/workshop/${id}`}
 							className="border-r-[.5px] border-black flex justify-center items-center gap-2"
 						>
 							<h1 className="text-black text-[14px] font-generalsans font-bold ">
@@ -42,5 +42,3 @@ const BootcampInfo = ({ bootcamp }) => {
 		</>
 	);
 };
-
-export default BootcampInfo;
