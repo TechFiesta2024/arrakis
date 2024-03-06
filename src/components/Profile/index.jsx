@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Images from "/public/assets";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
+import Cookies from 'js-cookie'
 
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
