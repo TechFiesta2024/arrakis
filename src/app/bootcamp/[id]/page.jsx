@@ -1,19 +1,31 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import bootcampData from "/public/data/bootcampData.json";
+import {workshop} from '/public/data/workshop_data'
 import { useEffect, useState } from "react";
 import Images from "/public/assets";
+import Cookies from "js-cookie";
+import axiosInstance from '@/utils/axiosInstance'
 
 export default function BootcampPageById({ params }) {
 	const [bootcamp, setBootcamp] = useState({ coordinator: [] });
 
 	useEffect(() => {
-		const selectedBootcamp = bootcampData.find(
+		const selectedBootcamp = workshop.find(
 			(bootcamp) => "" + bootcamp.id === params.id,
 		);
 		setBootcamp(selectedBootcamp);
 	}, []);
+
+	const register = async () => {
+		const userid = Cookies.get("studentId");
+		const {data} = await axiosInstance.post(`/workshop/join/${bootcamp.id}`,{}, {
+					headers: {
+						userid: `${userid}`,
+					},
+		})
+		console.log(data)
+	}
 
 	return (
 		<>
@@ -79,7 +91,7 @@ export default function BootcampPageById({ params }) {
 											Date & Time
 										</h1>
 										<h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-											{bootcamp.timing}
+											{`${bootcamp.date} | ${bootcamp.time}`} 
 										</h1>
 									</div>
 								</div>
@@ -94,12 +106,12 @@ export default function BootcampPageById({ params }) {
 											Mode
 										</h1>
 										<h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-											{bootcamp.mode} . {bootcamp.destination}
+											{`${bootcamp.mode} | ${bootcamp.destination}`}
 										</h1>
 									</div>
 								</div>
 							</div>
-							<div className="col-span-2 md:col-span-1 flex justify-center items-center bg-red">
+							<div className="col-span-2 md:col-span-1 flex justify-center items-center bg-red" onClick={register}>
 								<div className="inline-flex gap-2 py-4">
 									<div className="flex justify-center items-center">
 										<Image
