@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export const DataState = ({ workshopArray }) => {
 	const softwareWorkshops = workshopArray.filter(
-		(workshop) => workshop.ware === "software",
+		(workshop) => workshop.type === "software",
 	);
 	const hardwareWorkshops = workshopArray.filter(
-		(workshop) => workshop.ware === "hardware",
+		(workshop) => workshop.type === "hardware",
 	);
 	return (
 		<>
