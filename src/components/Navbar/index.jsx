@@ -79,14 +79,14 @@ export default function Navbar() {
 				<div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
 					{!isAuthenticated ? (
 						<div
-							className="border-r-[0.5px] bg-red h-full w-1/3 flex justify-center items-center hover:cursor-pointer"
+							className="border-x-[0.5px] bg-red h-full w-1/3 flex justify-center items-center hover:cursor-pointer"
 							onClick={signIn}
 						>
 							Register
 						</div>
 					) : (
 						<div className="group h-full w-1/3 z-[1000]">
-							<div className="border-r-[0.5px] h-full flex justify-center items-center hover:cursor-pointer">
+							<div className="border-x-[0.5px] h-full flex justify-center items-center hover:cursor-pointer">
 								<Image
 									src={user.avatar}
 									className="avatar__image rounded-[50%]"
@@ -143,7 +143,7 @@ export default function Navbar() {
 					</Link>
 
 					<Link
-						href="/"
+						href="/events"
 						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
 					>
 						Events
