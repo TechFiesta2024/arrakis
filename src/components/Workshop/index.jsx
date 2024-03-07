@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import workshops from '/public/data/workshop.json'
 
-const EventWorkshopPage = dynamic(() => import('../Global/EventWorkshopPage'))
+const EventWorkshopPage = dynamic(() => import('../Global/CardContainer'))
 
 
 export default function Workshop() {
@@ -26,7 +26,6 @@ export default function Workshop() {
                         </div>
                     </div>
                 </div>
-
                 <EventWorkshopPage data={workshops} types={workshopType} />
             </div>
         </div>

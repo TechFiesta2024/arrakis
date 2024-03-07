@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import EventWorkshopCard from './EventWorkshopCard';
+import EventWorkshopCard from './Card';
 
 
 export default function EventWorkshopPage({ data, types }) {

@@ -14,7 +14,7 @@ const LINKS = [
 	{ name: "Events", href: "/events" },
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
-	{ name: "Workshop", href: "/workshop" },
+	{ name: "Workshop", href: "/workshops" },
 	{ name: "Dashboard", href: "/dashboard" },
 	{ name: "Contact", href: "/" },
 ];
@@ -85,7 +85,7 @@ export default function Navbar() {
 					</Link>
 
 					<Link
-						href="/workshop"
+						href="/workshops"
 						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
 					>
 						Workshop

@@ -9,6 +9,9 @@ export default function EventWorkshopCard({ workshop }) {
 
 	const { id, workshopName, description, image_url } = workshop
 
+	const flexStylesBetween = 'flex justify-between items-center'
+	const flexStylesCenter = 'flex justify-center items-center'
+
 	return (
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
@@ -28,11 +31,25 @@ export default function EventWorkshopCard({ workshop }) {
 							{description}
 						</p>
 					</div>
+					{
+						urlPathName === '/events' && (
+							<div className="py-8 px-6">
+								<div className={`badge w-[40%] h-10 py-4 pr-2 pl-4 ${flexStylesBetween} bg-yellowishopc rounded-full`}>
+									<div className="label">
+										<span className=" font-generalsans text-yellowish text-sm">Team Size</span>
+									</div>
+									<div className={`badge-value bg-yellowish rounded-full w-[40%] h-8 ${flexStylesCenter}`}>
+										<span className=" text-xs text-black font-generalsans-semibold">1 - 2</span>
+									</div>
+								</div>
+							</div>
+						)
+					}
 					<div className="py-4"></div>
 					<div className="h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish">
 						<Link
 							href={`${urlPathName}/${id}`}
-							className="border-r-[.5px] border-black flex justify-center items-center gap-2"
+							className="border-r-[.5px] border-black flex justify-center items-center gap-2 py-4"
 						>
 							<h1 className="text-black text-[14px] font-generalsans font-bold ">
 								VIEW DETAILS & REGISTER
