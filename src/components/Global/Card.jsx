@@ -12,6 +12,8 @@ export default function EventWorkshopCard({ workshop }) {
 	const flexStylesBetween = 'flex justify-between items-center'
 	const flexStylesCenter = 'flex justify-center items-center'
 
+	const checkRoute = urlPathName === '/events'
+
 	return (
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
@@ -32,7 +34,7 @@ export default function EventWorkshopCard({ workshop }) {
 						</p>
 					</div>
 					{
-						urlPathName === '/events' && (
+						checkRoute && (
 							<div className="py-8 px-6">
 								<div className={`badge w-[40%] h-10 py-4 pr-2 pl-4 ${flexStylesBetween} bg-yellowishopc rounded-full`}>
 									<div className="label">

@@ -99,9 +99,9 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				<div className="navbar__middle md:flex justify-evenly w-full md:w-1/3">
-					<Link href="/" className="">
-						<Image src={Images.logoAot} alt="aot" />
+				<div className="navbar__middle md:flex justify-evenly w-full md:w-1/3 mt-12">
+					<Link href="/" className="h-24 w-24">
+						<Image src={Images.ftest24} alt="festLogo" />
 					</Link>
 				</div>
 
@@ -153,31 +153,32 @@ export default function Navbar() {
 			</div>
 
 			{/* Mobile Navbar */}
-			<div className="block lg:hidden">
-				<div
+			<div className="block bg-black lg:hidden">
+				<Link
+					href='/'
 					className={`navbar__top flex justify-between items-center px-6 py-6 border text-yellowish`}
 				>
-					<Image src={Images.logoAot} height={27} alt="aot" />
+					<Image src={Images.ftest24} height={27} alt="aot" />
 					<Image
 						onClick={() => setIsOpen(!isOpen)}
 						src={isOpen ? Images.close : Images.hamburger}
 						height={27}
 						alt="hamburger_close"
 					/>
-				</div>
+				</Link>
 				{isOpen && (
 					<div
 						className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed`}
 					>
-						<div className={`flex justify-between items-center px-6 py-6`}>
-							<Image src={Images.logoAot} height={27} alt="aot" />
+						<Link href='/' className={`flex justify-between items-center px-6 py-6`}>
+							<Image src={Images.ftest24} height={27} alt="aot" />
 							<Image
 								onClick={() => setIsOpen(!isOpen)}
 								src={isOpen ? Images.close : Images.hamburger}
 								height={27}
 								alt="hamburger_close"
 							/>
-						</div>
+						</Link>
 						<div
 							className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed `}
 						>

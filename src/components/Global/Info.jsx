@@ -37,6 +37,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
         }
     }
 
+    const checkRoute = urlPathName === `/events/${params.id}`
+
     return (
         <>
             <div className="md:px-20">
@@ -126,14 +128,67 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     </div>
                     <div>
                         <div className="pl-4 md:pl-14 pt-7 md:pt-8">
-                            <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                                Description
-                            </h1>
+                            {
+                                checkRoute ? (
+                                    <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
+                                        Rules
+                                    </h1>
+                                ) : (
+                                    <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
+                                        Description
+                                    </h1>
+                                )
+                            }
+
                         </div>
+
                         <div className="pl-4 md:pl-14 py-8">
                             <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
                                 {data.body}
                             </h1>
+                        </div>
+                    </div>
+                    <div className=" ">
+                        <div className="grid grid-cols-2 md:grid-cols-3 ">
+                        <div
+                                className="col-span-2 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black"
+                            >
+                                <div className="inline-flex gap-0 md:gap-2 py-4">
+                                    <div>
+                                        <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
+                                            Winner
+                                        </h1>
+                                        <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
+                                            ₹6000
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-span-1 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black">
+                                <div className="inline-flex gap-0 md:gap-2 py-4">
+                                    <div>
+                                        <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
+                                            Winner
+                                        </h1>
+                                        <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
+                                            ₹6000
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-span-1 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black">
+                                <div className="inline-flex gap-0 md:gap-2 py-4">
+                                    <div>
+                                        <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
+                                            Winner
+                                        </h1>
+                                        <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
+                                            ₹6000
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
