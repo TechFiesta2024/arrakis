@@ -6,8 +6,9 @@ import EmptyState from "./EmptyState";
 import workshops from "/public/data/workshop.json";
 import axiosInstance from "@/utils/axiosInstance";
 
-const ProfileUpdateReminder = dynamic(() => import("../Global/ProfileUpdateReminder"));
-
+const ProfileUpdateReminder = dynamic(
+	() => import("../Global/ProfileUpdateReminder"),
+);
 
 export default function Dashboard() {
 	const { user } = useAuthState();
@@ -22,15 +23,17 @@ export default function Dashboard() {
 					},
 				});
 
-				setWorkshop(workshops.filter((obj) => data[0].workshops.toString().includes(obj.id)))
-			}
-			catch (err) {
+				setWorkshop(
+					workshops.filter((obj) =>
+						data[0].workshops.toString().includes(obj.id),
+					),
+				);
+			} catch (err) {
 				console.error(err);
 			}
 		}
 		getMe();
 	}, []);
-
 
 	return (
 		<>

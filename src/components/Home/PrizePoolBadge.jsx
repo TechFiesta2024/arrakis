@@ -10,9 +10,7 @@ const PrizePoolBadge = () => {
 						<Image src={Images.Coin} className="h-8 w-8" alt="coin" />
 					</div>
 					<div className="text-black font-generalsans-semibold text-2xl flex-col h-[100%]">
-						<span className="font-generalsans text-xs">
-							🎉 Prizepool worth
-						</span>
+						<span className="font-generalsans text-xs">🎉 Prizepool worth</span>
 						<p>A LOT...</p>
 					</div>
 				</div>

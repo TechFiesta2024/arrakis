@@ -14,7 +14,9 @@ const EventDate = () => {
 						/>
 					</div>
 					<div className="text-black font-generalsans-semibold text-2xl flex-col h-[100%]">
-						<span className="font-generalsans text-xs">stay tuned for details</span>
+						<span className="font-generalsans text-xs">
+							stay tuned for details
+						</span>
 						<p>TBD 🤗</p>
 					</div>
 				</div>

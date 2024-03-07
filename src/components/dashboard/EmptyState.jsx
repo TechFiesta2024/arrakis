@@ -17,7 +17,10 @@ export default function EmptyState() {
 				<div className="flex flex-col items-center font-bold text-5xl md:text-6xl ">
 					<div className="">Limited Seats,</div>
 					<div className="ml-5">Limited Possibilies.</div>
-					<Link href='/workshop' className="flex justify-center items-center h-12 md:h-16 bg-red text-xl w-80 gap-5 rounded-xl mt-20">
+					<Link
+						href="/workshop"
+						className="flex justify-center items-center h-12 md:h-16 bg-red text-xl w-80 gap-5 rounded-xl mt-20"
+					>
 						<Image src={Images.iconScreenMirror} alt="Screen Mirror Icon" />
 						<div className="">Register Workshops</div>
 						<Image src={Images.iconArrowRight} alt="Arrow Right Icon" />
@@ -34,4 +37,4 @@ export default function EmptyState() {
 			<SmartShapes />
 		</>
 	);
-};
+}

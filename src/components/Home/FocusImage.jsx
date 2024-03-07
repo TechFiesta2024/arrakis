@@ -3,11 +3,9 @@ import Image from "next/image";
 import Images from "/public/assets";
 import SmartShapes from "../Global/SmartShapes.jsx";
 
-
 export default function FocusImage() {
 	const flexStylesStart = "flex justify-start items-center";
 	const flexStylesCenter = "flex justify-center items-center";
-
 
 	return (
 		<>
@@ -23,7 +21,6 @@ export default function FocusImage() {
 						& HUMATRONICS
 					</div>
 				</div>
-				
 
 				<Link
 					href="/events"

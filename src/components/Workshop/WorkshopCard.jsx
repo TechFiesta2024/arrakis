@@ -10,4 +10,4 @@ export default function WorkshopCard({ filteredData }) {
 			</div>
 		</>
 	);
-};
+}

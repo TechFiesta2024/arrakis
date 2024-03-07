@@ -10,8 +10,7 @@ export default function EventsPage() {
 
 	useEffect(() => {
 		const filtered = eventData.filter(
-			(event) =>
-				selectedButton === "All" || event.type === selectedButton,
+			(event) => selectedButton === "All" || event.type === selectedButton,
 		);
 		setFilteredData(filtered);
 	}, [selectedButton]);

@@ -5,7 +5,7 @@ import workshops from "/public/data/workshop.json";
 import { useEffect, useState } from "react";
 import Images from "/public/assets";
 import Cookies from "js-cookie";
-import axiosInstance from '@/utils/axiosInstance'
+import axiosInstance from "@/utils/axiosInstance";
 
 export default function WorkshopPageById({ params }) {
 	const [workshop, setWorkshop] = useState({ coordinator: [] });
@@ -18,18 +18,21 @@ export default function WorkshopPageById({ params }) {
 	}, []);
 
 	async function register() {
-		const userid = Cookies.get("studentId")
+		const userid = Cookies.get("studentId");
 
 		try {
-			const { data } = await axiosInstance.post(`/workshop/join/${workshop.id}`, {}, {
-				headers: {
-					userid
-				}
-			})
-			console.log(data)
-		}
-		catch (err) {
-			console.error(err)
+			const { data } = await axiosInstance.post(
+				`/workshop/join/${workshop.id}`,
+				{},
+				{
+					headers: {
+						userid,
+					},
+				},
+			);
+			console.log(data);
+		} catch (err) {
+			console.error(err);
 		}
 	}
 
@@ -38,7 +41,10 @@ export default function WorkshopPageById({ params }) {
 			<div className="md:px-20">
 				<div className="border-x-[.5px] border-yellowish">
 					<div className="pl-4 md:pl-14 py-4 md:py-6">
-						<Link href='/workshop' className="inline-flex items-center text-lg gap-3">
+						<Link
+							href="/workshop"
+							className="inline-flex items-center text-lg gap-3"
+						>
 							<Image src={Images.arrowLeft} alt="arrow_left" />
 							<h1 className="text-yellowish font-generalsans font-medium">
 								{" "}
@@ -96,7 +102,10 @@ export default function WorkshopPageById({ params }) {
 									</div>
 								</div>
 							</div>
-							<button className="col-span-2 md:col-span-1 flex justify-center items-center bg-red" onClick={register}>
+							<button
+								className="col-span-2 md:col-span-1 flex justify-center items-center bg-red"
+								onClick={register}
+							>
 								<div className="inline-flex gap-2 py-4">
 									<div className="flex justify-center items-center">
 										<Image

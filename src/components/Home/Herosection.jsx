@@ -8,7 +8,9 @@ import FocusImage from "./FocusImage";
 
 // Client components
 const FloatingCapsules = dynamic(() => import("./FloatingCapsules"));
-const ProfileUpdateReminder = dynamic(() => import("../Global/ProfileUpdateReminder"));
+const ProfileUpdateReminder = dynamic(
+	() => import("../Global/ProfileUpdateReminder"),
+);
 const TimerMockup = dynamic(() => import("./TimerMockup"), {
 	ssr: false,
 	loading: () => (
