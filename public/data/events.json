@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "type": "Software",
+    "type": "School",
     "title": "Product Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the product development",
@@ -27,7 +27,7 @@
   },
   {
     "id": 2,
-    "type": "Software",
+    "type": "School",
     "title": "Web Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the web development",
@@ -53,7 +53,7 @@
   },
   {
     "id": 3,
-    "type": "Software",
+    "type": "School",
     "title": "App Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the app development",
@@ -79,8 +79,34 @@
   },
   {
     "id": 4,
-    "type": "Hardware",
+    "type": "Techfest",
     "title": "Game Development",
+    "image_url": "/assets/avatar.png",
+    "description": "This workshop is about the game development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "destination": "",
+    "coordinator": [
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "John Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "Jane Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "Humatronics",
+    "title": "Extempore",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the game development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
