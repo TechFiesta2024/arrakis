@@ -6,7 +6,8 @@
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the product development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "timing": "10:00 AM - 12:00 PM",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
     "destination": "Aot Campus",
     "coordinator": [
@@ -31,7 +32,8 @@
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the web development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "timing": "10:00 AM - 12:00 PM",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
     "destination": "",
     "coordinator": [
@@ -56,7 +58,8 @@
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the app development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "timing": "10:00 AM - 12:00 PM",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
     "destination": "",
     "coordinator": [
@@ -81,7 +84,8 @@
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the game development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "timing": "10:00 AM - 12:00 PM",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
     "destination": "",
     "coordinator": [

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Images from "/public/assets";
 
-const PrizePoolBadge = () => {
+export default function PrizePoolBadge() {
 	return (
 		<>
 			<div className="prizeool-Badge_container bg-grid-pattern h-[100%] w-[100%] flex justify-center items-center">
@@ -18,5 +18,3 @@ const PrizePoolBadge = () => {
 		</>
 	);
 };
-
-export default PrizePoolBadge;

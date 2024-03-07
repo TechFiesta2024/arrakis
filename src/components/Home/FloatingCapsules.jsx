@@ -4,7 +4,6 @@ import Matter from "matter-js";
 
 const {
 	Bodies,
-	Composite,
 	Engine,
 	Mouse,
 	MouseConstraint,
@@ -26,7 +25,7 @@ const menu = [
 	"Peer Networking",
 ];
 
-const FloatingCapsules = ({ canvasWidth, canvasHeight }) => {
+export default function FloatingCapsules({ canvasWidth, canvasHeight }) {
 	const canvas = useRef(null);
 	const world = useRef();
 	const engineRef = useRef();
@@ -77,7 +76,7 @@ const FloatingCapsules = ({ canvasWidth, canvasHeight }) => {
 		const capsules = menu.map((item) => Capsule(item));
 		World.add(engine.world, capsules);
 
-		capsules.map((capsule, idx) => {});
+		capsules.map((capsule, idx) => { });
 
 		// MOUSE
 		const mouse = Mouse.create(render.canvas);
@@ -154,5 +153,3 @@ const Wall = (x, y, width, height) => {
 		},
 	});
 };
-
-export default FloatingCapsules;

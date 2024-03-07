@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Images from "/public/assets";
 
-export default function WorkshopInfo({ workshop }) {
-	const { id, workshopName, description, image_url } = workshop;
+export default function EventWorkshopCard({ workshop }) {
+
+	const { id, workshopName, description, image_url } = workshop
 
 	return (
 		<>

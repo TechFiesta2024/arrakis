@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Images from "/public/assets";
 
-const EventDate = () => {
+export default function EventDate() {
 	return (
 		<>
 			<div className="eventDate_container bg-grid-pattern h-[100%] w-[100%] flex justify-center items-center">
@@ -24,5 +24,3 @@ const EventDate = () => {
 		</>
 	);
 };
-
-export default EventDate;

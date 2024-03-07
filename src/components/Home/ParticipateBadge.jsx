@@ -1,10 +1,4 @@
-const ParticipateBadge = () => {
-	// should be replaced with student images
-	// const imageUrls = [
-	// 	"https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-	// 	"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80",
-	// 	"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-	// ];
+export default function ParticipateBadge() {
 
 	return (
 		<>
@@ -13,20 +7,8 @@ const ParticipateBadge = () => {
 					<div className=" text-black font-generalsans-semibold text-lg">
 						300+ participating
 					</div>
-					{/* <div className="flex -space-x-2 overflow-hidden"> */}
-					{/* 	{imageUrls.map((url, index) => ( */}
-					{/* 		<img */}
-					{/* 			key={index} */}
-					{/* 			className="inline-block h-8 w-8 rounded-full ring-2 ring-white border text-red" */}
-					{/* 			src={url} */}
-					{/* 			alt="dps" */}
-					{/* 		/> */}
-					{/* 	))} */}
-					{/* </div> */}
 				</div>
 			</div>
 		</>
 	);
 };
-
-export default ParticipateBadge;

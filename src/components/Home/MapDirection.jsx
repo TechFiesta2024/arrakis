@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const MapDirection = () => {
+export default function MapDirection() {
 	const academyAddress =
 		"Grand Trunk Rd, Adisaptagram, Krishnapur Chandanpur, West Bengal 712502";
 
@@ -21,5 +21,3 @@ const MapDirection = () => {
 		</>
 	);
 };
-
-export default MapDirection;
