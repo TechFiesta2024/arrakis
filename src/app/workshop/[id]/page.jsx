@@ -21,7 +21,7 @@ export default function WorkshopPageById({ params }) {
 		const userid = Cookies.get("studentId")
 
 		try {
-			const { data } = await axiosInstance.post(`/workshop/join/${bootcamp.id}`, {}, {
+			const { data } = await axiosInstance.post(`/workshop/join/${workshop.id}`, {}, {
 				headers: {
 					userid
 				}
@@ -42,7 +42,7 @@ export default function WorkshopPageById({ params }) {
 							<Image src={Images.arrowLeft} alt="arrow_left" />
 							<h1 className="text-yellowish font-generalsans font-medium">
 								{" "}
-								Back to Bootcamps
+								Back to Workshops
 							</h1>
 						</Link>
 					</div>
@@ -73,7 +73,7 @@ export default function WorkshopPageById({ params }) {
 									</div>
 									<div>
 										<h1 className="text-yellowish text-sm md:text-xl font-generalsans font-semibold">
-											Date & Time
+											Date &amp; Time
 										</h1>
 										<h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
 											{`${workshop.date} | ${workshop.time}`}

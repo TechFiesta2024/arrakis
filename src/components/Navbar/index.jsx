@@ -85,16 +85,17 @@ export default function Navbar() {
 					</Link>
 
 					<Link
+						href="/workshop"
+						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
+					>
+						Workshop
+					</Link>
+
+					<Link
 						href="/about"
 						className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
 					>
 						About
-					</Link>
-					<Link
-						href="/team"
-						className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
-					>
-						Team
 					</Link>
 				</div>
 
@@ -106,10 +107,10 @@ export default function Navbar() {
 
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
-						href="/workshop"
+						href="/team"
 						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
 					>
-						Workshop
+						Team
 					</Link>
 
 					<Link
@@ -119,12 +120,12 @@ export default function Navbar() {
 						Dashboard
 					</Link>
 
-					<Link
-						href="/"
-						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
-					>
-						Contact
-					</Link>
+					{/* <Link */}
+					{/* 	href="/" */}
+					{/* 	className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center" */}
+					{/* > */}
+					{/* 	Contact */}
+					{/* </Link> */}
 
 					{!isAuthenticated ? (
 						<div

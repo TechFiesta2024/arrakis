@@ -11,9 +11,9 @@ const PrizePoolBadge = () => {
 					</div>
 					<div className="text-black font-generalsans-semibold text-2xl flex-col h-[100%]">
 						<span className="font-generalsans text-xs">
-							🎉 Prizepool worth of
+							🎉 Prizepool worth
 						</span>
-						<p>₹ 1,50,000</p>
+						<p>A LOT...</p>
 					</div>
 				</div>
 			</div>
