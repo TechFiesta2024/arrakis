@@ -14,8 +14,10 @@ const EventDate = () => {
 						/>
 					</div>
 					<div className="text-black font-generalsans-semibold text-2xl flex-col h-[100%]">
-						<span className="font-generalsans text-xs">on the morning of</span>
-						<p>April 01-02</p>
+						<span className="font-generalsans text-xs">
+							stay tuned for details
+						</span>
+						<p>TBD 🤗</p>
 					</div>
 				</div>
 			</div>

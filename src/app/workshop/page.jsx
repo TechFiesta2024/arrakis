@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import WorkshopCard from "@/components/Workshop/WorkshopCard";
 import workshops from "/public/data/workshop.json";
 
-
-
 export default function WorkshopPage() {
 	const [selectedButton, setSelectedButton] = useState("All");
 	const [filteredData, setFilteredData] = useState([]);

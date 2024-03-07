@@ -43,7 +43,10 @@ export default function DataState({ workshopArray }) {
 					<div className="flex flex-col md:flex-row flex-wrap w-full justify-start items-start">
 						<div className="software__side flex items-center flex-col w-full lg:w-1/2 justify-center ">
 							<div className="flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-yellowish cursor-pointer">
-								<Image src={Images.iconMonitorMobile} alt="Monitor Mobile Icon" />
+								<Image
+									src={Images.iconMonitorMobile}
+									alt="Monitor Mobile Icon"
+								/>
 								Software Workshops
 							</div>
 							{softwareWorkshops.map((data, index) => (
@@ -80,9 +83,7 @@ export default function DataState({ workshopArray }) {
 											</span>
 										</div>
 									</div>
-									<div
-										className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish"
-									>
+									<div className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish">
 										<Image src={Images.iconLink2} alt="Link2 Icon"></Image>
 									</div>
 								</div>
@@ -144,4 +145,4 @@ export default function DataState({ workshopArray }) {
 			</div>
 		</>
 	);
-};
+}

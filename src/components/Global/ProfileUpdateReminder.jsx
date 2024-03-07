@@ -12,7 +12,7 @@ export default function ProfileUpdateReminder() {
 	useEffect(() => {
 		const timeout = setTimeout(
 			() => setProfileUpdateReminder(isAuthenticated && !parseBool(user.UUID)),
-			4000,
+			1250,
 		);
 
 		return () => clearTimeout(timeout);
