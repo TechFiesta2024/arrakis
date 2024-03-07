@@ -8,17 +8,15 @@ const TeamCard = ({ member }) => {
 	return (
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
-				<div className="flex justify-center h-[60%] border-b-[.5px] border-yellowish overflow-hidden ">
-					<Image
+				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
+					<img
 						className="object-cover"
 						src={image_url}
 						alt="team_image"
-						width={300}
-						height={200}
 					/>
 				</div>
-				<div className="h-[40%] ">
-					<div className="lg:pt-6 pt-4 h-[30%]">
+				<div className="">
+					<div className="lg:pt-6 pt-4 ">
 						<p className="px-6 text-yellowish font-generalsans font-bold text-2xl">
 							{name}
 						</p>
@@ -26,11 +24,11 @@ const TeamCard = ({ member }) => {
 							{role}
 						</p>
 					</div>
-					<div className="h-[40%]"></div>
-					<div className="h-[30%] grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
+					<div className="py-3"></div>
+					<div className="grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
 						<Link
 							href={x_url}
-							className="border-r-[.5px] border-black flex justify-center items-center"
+							className="border-r-[.5px] border-black flex justify-center items-center py-4"
 						>
 							<Image
 								src={Images.logoXBlack}

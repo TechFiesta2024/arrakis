@@ -63,7 +63,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     <div>
                         <div className=" pl-4 md:pl-14 py-7 md:py-10">
                             <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans font-bold">
-                                {data.title}
+                                {data.workshopName}
                             </h1>
                         </div>
                     </div>

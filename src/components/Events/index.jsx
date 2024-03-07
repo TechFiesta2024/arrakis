@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import events from '/public/data/events.json'
 
-const EventWorkshopPage = dynamic(() => import('../Global/EventWorkshopPage'))
+const EventWorkshopPage = dynamic(() => import('../Global/CardContainer'))
 
 
 export default function Events() {
