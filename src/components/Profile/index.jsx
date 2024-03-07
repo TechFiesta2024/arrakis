@@ -184,7 +184,7 @@ export default function Profile() {
 									<option
 										className="hover:bg-red"
 										key={option}
-										value={userDetails.year !== "" ? userDetails.year : option}
+										value={option}
 										selected={userDetails.year === option}
 									>
 										{option}
