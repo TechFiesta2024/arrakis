@@ -2,7 +2,7 @@
   {
     "id": 1,
     "type": "School",
-    "title": "Product Development",
+    "workshopName": "Product Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the product development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -28,7 +28,7 @@
   {
     "id": 2,
     "type": "School",
-    "title": "Web Development",
+    "workshopName": "Web Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the web development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -54,7 +54,7 @@
   {
     "id": 3,
     "type": "School",
-    "title": "App Development",
+    "workshopName": "App Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the app development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -80,7 +80,7 @@
   {
     "id": 4,
     "type": "Techfest",
-    "title": "Game Development",
+    "workshopName": "Game Development",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the game development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -106,7 +106,7 @@
   {
     "id": 5,
     "type": "Humatronics",
-    "title": "Extempore",
+    "workshopName": "Extempore",
     "image_url": "/assets/avatar.png",
     "description": "This workshop is about the game development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

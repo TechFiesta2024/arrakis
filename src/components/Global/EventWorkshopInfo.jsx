@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 export default function EventWorkshopInfo({ pageData, params }) {
     const [data, setData] = useState({ coordinator: [] });
     const urlPathName = usePathname()
+    const path = urlPathName.split('/')[1]
 
     useEffect(() => {
         const selectedPageData = pageData.find((d) => "" + d.id === params.id)
@@ -22,7 +23,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
         try {
             const { data } = await axiosInstance.post(
-                `/workshop/join/${params.id}`,
+                `/${path}/join/${params.id}`,
                 {},
                 {
                     headers: {
@@ -42,13 +43,13 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 <div className="border-x-[.5px] border-yellowish">
                     <div className="pl-4 md:pl-14 py-4 md:py-6">
                         <Link
-                            href="/workshop"
+                            href={`/${path}`}
                             className="inline-flex items-center text-lg gap-3"
                         >
                             <Image src={Images.arrowLeft} alt="arrow_left" />
                             <h1 className="text-yellowish font-generalsans font-medium">
                                 {" "}
-                                {`Back to ${urlPathName.split('/')[1]}`}
+                                {`Back to ${path}`}
                             </h1>
                         </Link>
                     </div>
