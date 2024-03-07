@@ -14,7 +14,7 @@ export default function Footer() {
 						Contact
 					</Link>
 				</div>
-				<div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
+				<div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2 bg-red">
 					<Link href="/collaborate" className="text-sm md:text-lg">
 						Collaborate
 					</Link>
