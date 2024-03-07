@@ -8,15 +8,14 @@ import FocusImage from "./FocusImage";
 
 // Client components
 const FloatingCapsules = dynamic(() => import("./FloatingCapsules"));
-const ProfileUpdateReminder = dynamic(
-	() => import("../Global/ProfileUpdateReminder"),
-);
+const ProfileUpdateReminder = dynamic(() => import("../Global/ProfileUpdateReminder"));
 const TimerMockup = dynamic(() => import("./TimerMockup"), {
 	ssr: false,
 	loading: () => (
 		<Preloader bgHeight="15.1rem" width="3rem" height="3rem" color="red" />
 	),
 });
+
 
 export default function Herosection() {
 	return (

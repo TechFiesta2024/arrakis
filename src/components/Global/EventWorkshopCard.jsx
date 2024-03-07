@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Images from "/public/assets";
 
-export default function WorkshopInfo({ workshop }) {
-	const { id, workshopName, description, image_url } = workshop;
+export default function EventWorkshopCard({ workshop }) {
+
+	const urlPathName = usePathname()
+
+	const { id, workshopName, description, image_url } = workshop
 
 	return (
 		<>
@@ -27,8 +31,8 @@ export default function WorkshopInfo({ workshop }) {
 					<div className="py-4"></div>
 					<div className="h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish">
 						<Link
-							href={`/workshop/${id}`}
-							className="border-r-[.5px] border-black flex justify-center items-center gap-2 py-4"
+							href={`${urlPathName}/${id}`}
+							className="border-r-[.5px] border-black flex justify-center items-center gap-2"
 						>
 							<h1 className="text-black text-[14px] font-generalsans font-bold ">
 								VIEW DETAILS & REGISTER

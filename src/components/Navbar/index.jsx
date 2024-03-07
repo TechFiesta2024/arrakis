@@ -7,7 +7,7 @@ import { signInWithGoogle } from "@/services/auth/firebase/googleAuth.service.js
 import { useAuthState } from "@/context/AuthContext.js";
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation.js";
+import { usePathname } from "next/navigation";
 import axiosInstance from "@/utils/axiosInstance";
 
 const LINKS = [

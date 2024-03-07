@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const TimerMockup = () => {
+export default function TimerMockup() {
 	const targetDate = new Date("April 1, 2024 00:00:00").getTime();
 
 	const calculateTimeRemaining = () => {
@@ -79,5 +79,3 @@ const TimerMockup = () => {
 		</>
 	);
 };
-
-export default TimerMockup;
