@@ -29,11 +29,9 @@ module.exports = {
       'red-faded': '#DD6D71',
       'yellowish': '#FEFAE0',
       'white': '#FFFFFF',
-
       'grey':'#ACACAC',
-
       'yellowish28': 'rgba(254,250,224,28%)',
-
+      'yellowishopc': 'rgba(254,250,224,21%)'
     }
   },
   plugins: [],
