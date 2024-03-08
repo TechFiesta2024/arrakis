@@ -83,9 +83,9 @@ export default function DataState({ workshopArray }) {
 											</span>
 										</div>
 									</div>
-									<div className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish">
+									<Link href={data?.link} className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish">
 										<Image src={Images.iconLink2} alt="Link2 Icon"></Image>
-									</div>
+									</Link>
 								</div>
 							))}
 						</div>
@@ -132,7 +132,7 @@ export default function DataState({ workshopArray }) {
 										</div>
 									</div>
 									<Link
-										href={data.link}
+										href={data?.link}
 										className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish"
 									>
 										<Image src={Images.iconLink2} alt="Link2 Icon"></Image>
