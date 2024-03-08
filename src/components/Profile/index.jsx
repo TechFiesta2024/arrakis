@@ -123,7 +123,11 @@ export default function Profile() {
 								{/* <p className=" text-greyish font-generalsans text-sm pt-2 pb-1">Define your institute type</p> */}
 								<div className={`org_type ${flexStart} gap-4 py-2`}>
 									<div className={`badge bg-red h-14 w-14 rounded-md ${flexCenter}`}>
-										<Image src={Images.school} className="h-8 w-8" alt="school" />
+										{selectedUserType === "school" ? (
+											<Image src={Images.school} className="h-8 w-8" alt="school" />
+										):(
+											<Image src={Images.college} className="h-8 w-8" alt="school" />
+										)}
 									</div>
 									<div className="placeholder">
 										<p className=" font-anton text-2xl text-black">{selectedUserType.toUpperCase()}</p>
