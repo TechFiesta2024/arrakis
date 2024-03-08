@@ -23,17 +23,17 @@ export default function Herosection() {
 			{/* Show position conditionally */}
 			<ProfileUpdateReminder />
 
-			<div className=" grid grid-cols-3 w-full md:px-20 border-b text-yellowish">
+			<div className=" grid grid-cols-3 w-full px-[1px] md:px-20 border-b border-yellowish">
 				<div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
 					<ParticipateBadge />
 				</div>
-				<div className="col-span-3 md:col-span-1 border-x-[0.5px] text-yellowish">
+				<div className="col-span-3 md:col-span-1 sm:border-none lg:border-x-[0.5px] text-yellowish">
 					<FloatingCapsules />
 				</div>
 				<div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
 					<PrizePoolBadge />
 				</div>
-				<div className="col-span-3 bg-black border-[0.5px] text-yellowish">
+				<div className="col-span-3 bg-black border-b-[0.5px] border-x-[0.5px] text-yellowish">
 					<FocusImage />
 				</div>
 				<div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">

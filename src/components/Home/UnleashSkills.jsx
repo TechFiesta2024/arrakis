@@ -8,7 +8,7 @@ const UnleashSkills = () => {
 	return (
 		<>
 			<div className="unleashskills__mainContainer border-y-[0.5px] border-yellowish  ">
-				<div className=" uleashskills__container items-center justify-center w-full h-[428px] md:px-20">
+				<div className=" uleashskills__container items-center justify-center w-full h-[428px] px-[1px] md:px-20">
 					<div className="unleashtext__container flex justify-center items-center flex-col border-x-[0.5px] text-yellowish  h-[100%]  overflow-hidden">
 						<h1 className="font-anton pb-4 text-[60px] md:text-[100px] lg:text-[180px] text-center">
 							Unleash Skills
