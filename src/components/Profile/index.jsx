@@ -13,10 +13,14 @@ export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
 
 	const { user, setUser } = useAuthState();
+
+	const userType = ["school", "college"];
 	const [isChecked, setChecked] = useState(false);
+	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
 
 	const handleToggle = () => {
 		setChecked(!isChecked);
+  		setSelectedUserType(isChecked ? userType[0] : userType[1]);
 	};
 
 	const [userDetails, setUserDetails] = useState({
@@ -122,8 +126,8 @@ export default function Profile() {
 										<Image src={Images.school} className="h-8 w-8" alt="school" />
 									</div>
 									<div className="placeholder">
-										<p className=" font-anton text-2xl text-black">SCHOOL</p>
-										<p className="text-greyish font-generalsans text-xs">You are updating as school student</p>
+										<p className=" font-anton text-2xl text-black">{selectedUserType.toUpperCase()}</p>
+										<p className="text-greyish font-generalsans text-xs">{`You are updating as ${selectedUserType} student`}</p>
 									</div>
 								</div>
 							</div>
