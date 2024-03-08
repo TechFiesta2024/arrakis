@@ -23,7 +23,7 @@ export default function TeamPage() {
 
 	return (
 		<>
-			<div className="md:px-20">
+			<div className="px-[1px] md:px-20">
 				<div className="border-x-[.5px] border-yellowish">
 					<div className="flex justify-center items-center pt-20">
 						<div className="grid grid-cols-1">

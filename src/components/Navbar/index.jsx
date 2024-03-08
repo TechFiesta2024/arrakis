@@ -75,7 +75,7 @@ export default function Navbar() {
 	return (
 		<>
 			{/* Desktop Navbar */}
-			<div className="navbar__container px-0 md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px] bg-black">
+			<div className="navbar__container px-0  md:px-20 md:h-20 w-full hidden lg:flex justify-center items-center text-yellowish border-yellowish text-base border-b-[0.5px] bg-black">
 				<div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
 						href="/events"
@@ -153,10 +153,10 @@ export default function Navbar() {
 			</div>
 
 			{/* Mobile Navbar */}
-			<div className="block bg-black lg:hidden">
+			<div className="block px-[1px] bg-black lg:hidden pt-[1px]">
 				<Link
 					href='/'
-					className={`navbar__top flex justify-between items-center px-6 py-6 border text-yellowish`}
+					className={`navbar__top flex justify-between items-center px-6 py-6 border-x-[.5px] border-y-[.5px] text-yellowish`}
 				>
 					<Image src={Images.ftest24} height={27} alt="aot" />
 					<Image

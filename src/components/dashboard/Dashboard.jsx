@@ -38,7 +38,7 @@ export default function Dashboard() {
 	return (
 		<>
 			<ProfileUpdateReminder />
-			<div className="flex justify-center items-start min-h-screen mx-2 md:mx-20 border-x-[0.5px] border-yellowish text-white">
+			<div className="flex justify-center items-start min-h-screen px-[1px] md:mx-20 border-x-[0.5px] border-yellowish text-white">
 				{workshop.length === 0 ? (
 					<EmptyState />
 				) : (
