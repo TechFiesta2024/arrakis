@@ -51,7 +51,7 @@ export default function EventWorkshopCard({ workshop }) {
 					<div className="h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-yellowish">
 						<Link
 							href={`${urlPathName}/${id}`}
-							className="border-r-[.5px] border-black flex justify-center items-center gap-2 py-4"
+							className="border-r-[.5px] border-black flex justify-center items-center gap-2 py-4 btn-hover"
 						>
 							<h1 className="text-black text-[14px] font-generalsans font-bold ">
 								VIEW DETAILS & REGISTER
