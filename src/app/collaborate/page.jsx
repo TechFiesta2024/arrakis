@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "/public/assets";
 import SmartShapes from "@/components/Global/SmartShapes";
+import axiosInstance from "@/utils/axiosInstance";
 
 export default function CollaboratePage() {
 	const [showCampusAmbassador, setShowCampusAmbassador] = useState(true);
@@ -162,23 +163,13 @@ export default function CollaboratePage() {
 			return; // Prevent form submission if validation fails
 		}
 
-		const ambassador_JSON_Details = JSON.stringify(ambassorDetails);
 
 		try {
-			const response = await fetch(
-				"https://messiah.fly.dev/community/ambassador",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						"Access-Control-Allow-Origin": "*",
-					},
-					body: ambassador_JSON_Details,
-				},
-			);
 
-			if (response.ok) {
-				toast.success(`Campus Ambassador registered successfully`, {
+			const response = await axiosInstance.post("/community/ambassador", ambassorDetails);
+			console.log(response.data);
+			if (response.status === 200) {
+				toast.success(`${response.data.message}`, {
 					autoClose: 3000,
 					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
@@ -312,21 +303,12 @@ export default function CollaboratePage() {
 			return;
 		}
 
-		const communityPartner_JSON_Details = JSON.stringify(
-			communityPartnerDetails,
-		);
-		try {
-			const response = await fetch("https://messiah.fly.dev/community/collab", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					"Access-Control-Allow-Origin": "*",
-				},
-				body: communityPartner_JSON_Details,
-			});
 
-			if (response.ok) {
-				toast.success(`Community Partner registered successfully`, {
+		try {
+			const response = await axiosInstance.post("/community/collab", communityPartnerDetails)
+			console.log(response.data);
+			if (response.status === 200) {
+				toast.success(`${response.data.message}`, {
 					autoClose: 3000,
 					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
