@@ -167,89 +167,93 @@ export default function Navbar() {
 					/>
 				</Link>
 				{isOpen && (
-					<div
-						className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed`}
-					>
-						<Link href='/' className={`flex justify-between items-center px-6 py-6`}>
-							<Image src={Images.ftest24} height={27} alt="aot" />
-							<Image
-								onClick={() => setIsOpen(!isOpen)}
-								src={isOpen ? Images.close : Images.hamburger}
-								height={27}
-								alt="hamburger_close"
-							/>
-						</Link>
+					<div className="">
 						<div
-							className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed `}
+							className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed `}
 						>
-							<div className="px-6 border-t-[.5px] border-yellowish py-6">
-								{!isAuthenticated ? (
-									<div
-										className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`}
-										onClick={signIn}
-									>
-										<p className="text-yellowish font-generalsans font-medium">
-											Register
-										</p>
-										<Image src={Images.arrowRightYellowish} alt="arrow_right" />
-									</div>
-								) : (
-									<div className="group h-full w-full z-[1000]">
-										<div className="h-full flex justify-between items-center">
-											<div className="flex flex-col gap-2">
-												<p className=" font-generalsans text-lg text-wrap text-yellowish ">
-													{user.email}
-												</p>
-												<Link
-													href="/profile"
-													className="flex flex-row gap-2.5 hover:cursor-pointer"
-												>
-													<p className=" text-grey">Go to profile </p>
-													<Image
-														src={Images.arrowRightYellowish}
-														height={10}
-														alt="arrow_right"
-													/>
-												</Link>
-												<p className="text-red" onClick={logout}>
-													Logout
-												</p>
-											</div>
-											<Image
-												src={user.avatar}
-												className="avatar__image rounded-[50%] border-yellowish"
-												width={74}
-												height={74}
-												alt="avatar"
-												unoptimized
-											/>
+							<Link href='/' className={`flex justify-between items-center px-6 py-6 `}>
+								<Image src={Images.ftest24} height={27} alt="aot" />
+								<Image
+									onClick={() => setIsOpen(!isOpen)}
+									src={isOpen ? Images.close : Images.hamburger}
+									height={27}
+									alt="hamburger_close"
+								/>
+							</Link>
+							<div
+								className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed px-[1px]`}
+							>
+								<div className="px-6 border-y-[.5px] border-yellowish py-6">
+									{!isAuthenticated ? (
+										<div
+											className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`}
+											onClick={signIn}
+										>
+											<p className="text-yellowish font-generalsans font-medium">
+												Register
+											</p>
+											<Image src={Images.arrowRightYellowish} alt="arrow_right" />
 										</div>
-									</div>
-								)}
-							</div>
-
-							{LINKS.map((l, id) => (
-								<div
-									key={id}
-									className="flex justify-between items-center px-6 border-t-[.5px] border-yellowish bg-black py-5"
-									// Close navbar if requrl and href is same
-									onClick={() => l.href == urlPathName && setIsOpen(false)}
-								>
-									<Link
-										href={l.href}
-										className="flex justify-between text-yellowish px-5 py-1 rounded-xl gap-2 w-full text-2xl"
-									>
-										<p className="text-yellowish text-2xl font-generalsans">
-											{l.name}
-										</p>
-										<Image
-											src={Images.arrowRightYellowish}
-											height={30}
-											alt="arrow_right"
-										/>
-									</Link>
+									) : (
+										<div className="group h-full w-full z-[1000]">
+											<div className="h-full flex justify-between items-center">
+												<div className="flex flex-col gap-2">
+													<p className=" font-generalsans text-lg text-wrap text-yellowish ">
+														{user.email}
+													</p>
+													<Link
+														href="/profile"
+														className="flex flex-row gap-2.5 hover:cursor-pointer"
+													>
+														<p className=" text-grey">Go to profile </p>
+														<Image
+															src={Images.arrowRightYellowish}
+															height={10}
+															alt="arrow_right"
+														/>
+													</Link>
+													<p className="text-red" onClick={logout}>
+														Logout
+													</p>
+												</div>
+												<Image
+													src={user.avatar}
+													className="avatar__image rounded-[50%] border-yellowish"
+													width={74}
+													height={74}
+													alt="avatar"
+													unoptimized
+												/>
+											</div>
+										</div>
+									)}
 								</div>
-							))}
+
+								<div className="px-[1px]">
+									{LINKS.map((l, id) => (
+										<div
+											key={id}
+											className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-5"
+											// Close navbar if requrl and href is same
+											onClick={() => l.href == urlPathName && setIsOpen(false)}
+										>
+											<Link
+												href={l.href}
+												className="flex justify-between text-yellowish px-5 py-1 rounded-xl gap-2 w-full text-2xl"
+											>
+												<p className="text-yellowish text-2xl font-generalsans">
+													{l.name}
+												</p>
+												<Image
+													src={Images.arrowRightYellowish}
+													height={30}
+													alt="arrow_right"
+												/>
+											</Link>
+										</div>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 				)}
