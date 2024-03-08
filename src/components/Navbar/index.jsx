@@ -12,9 +12,9 @@ import axiosInstance from "@/utils/axiosInstance";
 
 const LINKS = [
 	{ name: "Events", href: "/events" },
+	{ name: "Workshop", href: "/workshop" },
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
-	{ name: "Workshop", href: "/workshop" },
 	{ name: "Dashboard", href: "/dashboard" },
 	{ name: "Contact", href: "/" },
 ];
