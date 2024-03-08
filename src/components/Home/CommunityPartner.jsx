@@ -26,7 +26,7 @@ export default function CommunityPartner() {
 					</div>
 				</div>
 				<div className="communityparter__gridcontainer border-t-[0.5px] border-yellowish  ">
-					<div className=" communitypartner__text  justify-center w-full md:px-20 text-grey">
+					<div className=" communitypartner__text  justify-center w-full px-[1px] md:px-20 text-grey">
 						<div className="boxcontainer  text-yellowish">
 							<div className="boxgrid grid grid-cols-2 md:grid-cols-3 ">
 								{partnersData.map((item, index) => (

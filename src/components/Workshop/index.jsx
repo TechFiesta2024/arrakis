@@ -9,7 +9,7 @@ export default function Workshop() {
     const workshopType = ["Software", "Hardware"]
 
     return (
-        <div className="md:px-20 w-full">
+        <div className="px-[1px] md:px-20 w-full">
             <div className="border-x-[.5px] border-yellowish">
                 <div className="flex justify-center items-center pt-20">
                     <div className="grid grid-cols-1">
