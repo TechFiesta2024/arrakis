@@ -16,6 +16,8 @@ export default function Profile() {
 	const { user, setUser } = useAuthState();
 
 	const userType = ["school", "college"];
+	// const userType = ["college", "school"];
+
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
 
@@ -35,6 +37,9 @@ export default function Profile() {
 		standard: "",
 		stream: "",
 		year: "",
+		standard: "",
+		guardian_name: "",
+		guardian_contact: "",
 	});
 
 	/* Get user info when navigating to /profile */
@@ -179,6 +184,7 @@ export default function Profile() {
 														className="hidden"
 														checked={isChecked}
 														onChange={handleToggle}
+														// value={selectedUserType}
 														disabled
 													/>
 													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
