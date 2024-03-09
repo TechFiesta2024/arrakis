@@ -16,6 +16,8 @@ export default function Profile() {
 	const { user, setUser } = useAuthState();
 
 	const userType = ["school", "college"];
+	// const userType = ["college", "school"];
+
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
 
@@ -84,9 +86,9 @@ export default function Profile() {
 		e.preventDefault();
 		userDetails.email = user.email;
 		const newErrors = {};
-		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardian name', 'guardian contact'].forEach(field => {
-			if (!userDetails[field].trim()) {
-				newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
+		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardian_name', 'guardian_contact'].forEach(field => {
+			if (!userDetails[field] || !userDetails[field].trim()) {
+				newErrors[field] = `${field.replace('_', ' ').charAt(0).toUpperCase() + field.replace('_', ' ').slice(1)} is required`;
 			}
 		});
 
@@ -179,6 +181,7 @@ export default function Profile() {
 														className="hidden"
 														checked={isChecked}
 														onChange={handleToggle}
+														// value={selectedUserType}
 														disabled
 													/>
 													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
@@ -203,7 +206,7 @@ export default function Profile() {
 						</div>
 					</div>
 					<div className="profile__left_input md:h-[400px] flex px-4 md:px-[90px] flex-col md:justify-center">
-						<div className="input_name flex flex-col py-8 md:pb-8 md:pt-4">
+						<div className="input_name flex flex-col py-8 md:pb-8 md:pt-0">
 							<label className="text-[24px] pb-4">Name</label>
 							<input
 								id="name"
@@ -344,7 +347,7 @@ export default function Profile() {
 									placeholder="Enter your guardian's name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 								/>
-								{errors.name && <span className="text-red pt-2 font-generalsans text-sm">*{errors.name}</span>}
+								{errors.guardian_name && <span className="text-red pt-2 font-generalsans text-sm">*{errors.guardian_name}</span>}
 							</div>
 						) : (
 							null
@@ -361,7 +364,7 @@ export default function Profile() {
 									placeholder="Enter your guardian's contact no."
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 								/>
-								{errors.name && <span className="text-red pt-2 font-generalsans text-sm">*{errors.name}</span>}
+								{errors.guardian_contact && <span className="text-red pt-2 font-generalsans text-sm">*{errors.guardian_contact}</span>}
 							</div>
 						) : (
 							null

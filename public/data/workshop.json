@@ -9,6 +9,7 @@
 		"date": "Mar 11-16",
 		"time": "10:00 AM - 12:00 PM",
 		"mode": "Online",
+		"link": "http://www.google.com",
 		"destination": "Home",
 		"coordinator": [
 			{
@@ -26,57 +27,59 @@
 		]
 	},
 	{
-		"id": "cad",
-		"type": "Software",
-		"workshopName": "Cad Design Workshop",
-		"image_url": "/assets/avatar.png",
-		"description": "This workshop is about the cad design",
-		"body": "In this workshop, we will learn about the cad design and how to use the cad software",
-		"date": "Mar 11-16",
-		"time": "10:00 AM - 12:00 PM",
-		"mode": "Online",
-		"destination": "Home",
-		"coordinator": [
-			{
-				"image_url": "/assets/avatar.png",
-				"name": "John Doe",
-				"designation": "Frontend Developer",
-				"contact": "https://www.linkedin.com/in/chirantan-das001"
-			},
-			{
-				"image_url": "/assets/avatar.png",
-				"name": "Jane Doe",
-				"designation": "Frontend Developer",
-				"contact": "https://www.linkedin.com/in/chirantan-das001"
-			}
-		]
-	},
+    "id": "cad",
+    "type": "Software",
+    "workshopName": "Cad Design Workshop",
+    "image_url": "/assets/avatar.png",
+    "description": "This workshop is about the cad design",
+    "body": "In this workshop, we will learn about the cad design and how to use the cad software",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "link": "http://www.google.com",
+    "destination": "Home",
+    "coordinator": [
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "John Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "Jane Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
 	{
-		"id": "ctf",
-		"type": "Software",
-		"workshopName": "Capture The Flag Workshop",
-		"image_url": "/assets/avatar.png",
-		"description": "This workshop is about the Capture The Flag",
-		"body": "This workshop is about the Capture The Flag and how to participate in it",
-		"date": "Mar 11-16",
-		"time": "10:00 AM - 12:00 PM",
-		"mode": "Mix",
-		"destination": "Home",
-		"coordinator": [
-			{
-				"image_url": "/assets/avatar.png",
-				"name": "John Doe",
-				"designation": "Frontend Developer",
-				"contact": "https://www.linkedin.com/in/chirantan-das001"
-			},
-			{
-				"image_url": "/assets/avatar.png",
-				"name": "Jane Doe",
-				"designation": "Frontend Developer",
-				"contact": "https://www.linkedin.com/in/chirantan-das001"
-			}
-		]
-	},
+    "id": "ctf",
+    "type": "Software",
+    "workshopName": "Capture The Flag Workshop",
+    "image_url": "/assets/avatar.png",
+    "description": "This workshop is about the Capture The Flag",
+    "body": "This workshop is about the Capture The Flag and how to participate in it",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Mix",
+    "link": "http://www.google.com",
+    "destination": "Home",
+    "coordinator": [
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "John Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      },
+      {
+        "image_url": "/assets/avatar.png",
+        "name": "Jane Doe",
+        "designation": "Frontend Developer",
+        "contact": "https://www.linkedin.com/in/chirantan-das001"
+      }
+    ]
+  },
 	{
 		"id": "hardware",
 		"type": "Hardware",
@@ -87,6 +90,7 @@
 		"date": "Mar 11-16",
 		"time": "10:00 AM - 12:00 PM",
 		"mode": "Mix",
+		"link": "",
 		"destination": "Home | College",
 		"coordinator": [
 			{
