@@ -11,11 +11,13 @@ import Cookies from "js-cookie";
 
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
-	const standard = ["9th", "10th", "11th", "12th"]
+	const standard = ["9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
 	const userType = ["school", "college"];
+	// const userType = ["college", "school"];
+
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
 
@@ -30,6 +32,9 @@ export default function Profile() {
 		contact: "",
 		college: "",
 		school: "",
+		gaurdianName: "",
+		gaurdianContact: "",
+		standard: "",
 		stream: "",
 		year: "",
 		standard: "",
@@ -52,11 +57,11 @@ export default function Profile() {
 					contact: data[0].contact,
 					college: data[0].college,
 					school: data[0].school,
-					stream: data[0]?.stream,
-					year: data[0]?.year,
-					standard: data[0]?.standard,
-					guardian_name: data[0]?.guardian_name,
-					guardian_contact: data[0]?.guardian_contact,
+					gaurdianName: data[0].gaurdianName,
+					gaurdianContact: data[0].gaurdianContact,
+					standard: data[0].standard,
+					stream: data[0].stream,
+					year: data[0].year,
 				});
 			} catch (err) {
 				console.error(err);
@@ -84,7 +89,7 @@ export default function Profile() {
 		e.preventDefault();
 		userDetails.email = user.email;
 		const newErrors = {};
-		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardian name', 'guardian contact'].forEach(field => {
+		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
 			if (!userDetails[field].trim()) {
 				newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
 			}
@@ -179,6 +184,7 @@ export default function Profile() {
 														className="hidden"
 														checked={isChecked}
 														onChange={handleToggle}
+														// value={selectedUserType}
 														disabled
 													/>
 													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
@@ -203,7 +209,7 @@ export default function Profile() {
 						</div>
 					</div>
 					<div className="profile__left_input md:h-[400px] flex px-4 md:px-[90px] flex-col md:justify-center">
-						<div className="input_name flex flex-col py-8 md:pb-8 md:pt-4">
+						<div className="input_name flex flex-col py-8 md:pb-8 md:pt-0">
 							<label className="text-[24px] pb-4">Name</label>
 							<input
 								id="name"
@@ -236,7 +242,7 @@ export default function Profile() {
 							<div className="input_college flex flex-col pb-8">
 								<label className="text-[24px] pb-4">School Name</label>
 								<input
-									id="college"
+									id="school"
 									type="text"
 									value={userDetails?.school}
 									onChange={handleInputChangeUserProfile}
@@ -272,100 +278,96 @@ export default function Profile() {
 								disabled
 							/>
 						</div>
+						{
+							userCheck ? (
+								null
+							) : (
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Stream</label>
+									<input
+										id="stream"
+										type="text"
+										value={userDetails.stream}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>}
+								</div>
 
-						{!userCheck ? (
-							<div className="input_stream flex flex-col pb-8">
-								<label className="text-[24px] pb-4">Stream</label>
-								<input
-									id="stream"
-									type="text"
-									value={userDetails.stream}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your stream"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>}
-							</div>
-						) : (
-							null
-						)
+							)
+						}
+						{
+							userCheck ? (
+								<>
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Gaurdian Name</label>
+									<input
+										id="gaurdianName"
+										type="text"
+										value={userDetails.gaurdianName}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.gaurdianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianName}</span>}
+								</div>
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Gaurdian Contact</label>
+									<input
+										id="gaurdianContact"
+										type="text"
+										value={userDetails.gaurdianContact}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianContact}</span>}
+								</div>
+								<div className="input_year flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Standard</label>
+									<select
+										id="standard"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										onChange={handleInputChangeUserProfile}
+									>
+										{standard.map((option) => (
+											<option
+												className="hover:bg-red"
+												key={option}
+												value={option}
+												selected={userDetails.year === option}
+											>
+												{option}
+											</option>
+										))}
+									</select>
+								</div>
+								</>
+							) : (
+								<div className="input_year flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Year</label>
+									<select
+										id="year"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										onChange={handleInputChangeUserProfile}
+									>
+										{year.map((option) => (
+											<option
+												className="hover:bg-red"
+												key={option}
+												value={option}
+												selected={userDetails.year === option}
+											>
+												{option}
+											</option>
+										))}
+									</select>
+								</div>
+							)
 						}
 
-						{!userCheck ? (
-							<div className="input_year flex flex-col pb-8">
-								<label className="text-[24px] pb-4">Year</label>
-								<select
-									id="year"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									onChange={handleInputChangeUserProfile}
-								>
-									{year.map((option) => (
-										<option
-											className="hover:bg-red"
-											key={option}
-											value={option}
-											selected={userDetails.year === option}
-										>
-											{option}
-										</option>
-									))}
-								</select>
-							</div>
-						) : (
-							<div className="input_year flex flex-col pb-8">
-								<label className="text-[24px] pb-4">Standard</label>
-								<select
-									id="standard"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									onChange={handleInputChangeUserProfile}
-								>
-									{standard.map((option) => (
-										<option
-											className="hover:bg-red"
-											key={option}
-											value={option}
-											selected={userDetails.standard === option}
-										>
-											{option}
-										</option>
-									))}
-								</select>
-							</div>
-						)}
 
-						{userCheck ? (
-							<div className="input_name flex flex-col md:pb-8 md:pt-0">
-								<label className="text-[24px] pb-4">Guardian's Name</label>
-								<input
-									id="guardian_name"
-									type="text"
-									value={userDetails.guardian_name}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your guardian's name"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{errors.name && <span className="text-red pt-2 font-generalsans text-sm">*{errors.name}</span>}
-							</div>
-						) : (
-							null
-						)}
-
-						{userCheck ? (
-							<div className="input_name flex flex-col py-8 md:pb-8 md:pt-0">
-								<label className="text-[24px] pb-4">Guardian's Contact No.</label>
-								<input
-									id="guardian_contact"
-									type="text"
-									value={userDetails.guardian_contact}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your guardian's contact no."
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{errors.name && <span className="text-red pt-2 font-generalsans text-sm">*{errors.name}</span>}
-							</div>
-						) : (
-							null
-						)}
 
 						<button
 							className={`${submitting ? "bg-red-faded" : "bg-red"
