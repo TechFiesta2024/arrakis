@@ -11,6 +11,7 @@ import Cookies from "js-cookie";
 
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
+	const standard = ["9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
@@ -29,6 +30,9 @@ export default function Profile() {
 		contact: "",
 		college: "",
 		school: "",
+		gaurdianName: "",
+		gaurdianContact: "",
+		standard: "",
 		stream: "",
 		year: "",
 	});
@@ -48,6 +52,9 @@ export default function Profile() {
 					contact: data[0].contact,
 					college: data[0].college,
 					school: data[0].school,
+					gaurdianName: data[0].gaurdianName,
+					gaurdianContact: data[0].gaurdianContact,
+					standard: data[0].standard,
 					stream: data[0].stream,
 					year: data[0].year,
 				});
@@ -64,7 +71,7 @@ export default function Profile() {
 		setErrors((prevErrors) => ({
 			...prevErrors,
 			[id]: "",
-		  }));
+		}));
 
 		setUserDetails((prevData) => ({
 			...prevData,
@@ -77,7 +84,7 @@ export default function Profile() {
 		e.preventDefault();
 		userDetails.email = user.email;
 		const newErrors = {};
-		['name', 'contact', 'college', 'school', 'stream', 'year'].forEach(field => {
+		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
 			if (!userDetails[field].trim()) {
 				newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
 			}
@@ -229,7 +236,7 @@ export default function Profile() {
 							<div className="input_college flex flex-col pb-8">
 								<label className="text-[24px] pb-4">School Name</label>
 								<input
-									id="college"
+									id="school"
 									type="text"
 									value={userDetails?.school}
 									onChange={handleInputChangeUserProfile}
@@ -265,39 +272,96 @@ export default function Profile() {
 								disabled
 							/>
 						</div>
+						{
+							userCheck ? (
+								null
+							) : (
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Stream</label>
+									<input
+										id="stream"
+										type="text"
+										value={userDetails.stream}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>}
+								</div>
 
-						<div className="input_stream flex flex-col pb-8">
-							<label className="text-[24px] pb-4">Stream</label>
-							<input
-								id="stream"
-								type="text"
-								value={userDetails.stream}
-								onChange={handleInputChangeUserProfile}
-								placeholder="Enter your stream"
-								className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-							/>
-							{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>}
-						</div>
-
-						<div className="input_year flex flex-col pb-8">
-							<label className="text-[24px] pb-4">Year</label>
-							<select
-								id="year"
-								className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								onChange={handleInputChangeUserProfile}
-							>
-								{year.map((option) => (
-									<option
-										className="hover:bg-red"
-										key={option}
-										value={option}
-										selected={userDetails.year === option}
+							)
+						}
+						{
+							userCheck ? (
+								<>
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Gaurdian Name</label>
+									<input
+										id="gaurdianName"
+										type="text"
+										value={userDetails.gaurdianName}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.gaurdianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianName}</span>}
+								</div>
+								<div className="input_stream flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Gaurdian Contact</label>
+									<input
+										id="gaurdianContact"
+										type="text"
+										value={userDetails.gaurdianContact}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianContact}</span>}
+								</div>
+								<div className="input_year flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Standard</label>
+									<select
+										id="standard"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										onChange={handleInputChangeUserProfile}
 									>
-										{option}
-									</option>
-								))}
-							</select>
-						</div>
+										{standard.map((option) => (
+											<option
+												className="hover:bg-red"
+												key={option}
+												value={option}
+												selected={userDetails.year === option}
+											>
+												{option}
+											</option>
+										))}
+									</select>
+								</div>
+								</>
+							) : (
+								<div className="input_year flex flex-col pb-8">
+									<label className="text-[24px] pb-4">Year</label>
+									<select
+										id="year"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										onChange={handleInputChangeUserProfile}
+									>
+										{year.map((option) => (
+											<option
+												className="hover:bg-red"
+												key={option}
+												value={option}
+												selected={userDetails.year === option}
+											>
+												{option}
+											</option>
+										))}
+									</select>
+								</div>
+							)
+						}
+
+
 
 						<button
 							className={`${submitting ? "bg-red-faded" : "bg-red"
