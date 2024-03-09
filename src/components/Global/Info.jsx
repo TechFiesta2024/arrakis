@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function EventWorkshopInfo({ pageData, params }) {
     const [data, setData] = useState({ coordinator: [] });
@@ -21,21 +22,57 @@ export default function EventWorkshopInfo({ pageData, params }) {
     async function register() {
         const userid = Cookies.get("studentId");
 
-        try {
-            const { data } = await axiosInstance.post(
-                `/${path}/join/${params.id}`,
+        // try {
+        //     // const response = await axiosInstance.post(
+        //     //     `/${path}/join/${params.id}`,
 
-                {},
-                {
-                    headers: {
-                        userid,
-                    },
-                },
-            );
-            console.log(data);
-        } catch (err) {
-            console.error(err);
+        //     //     {},
+        //     //     {
+        //     //         headers: {
+        //     //             userid,
+        //     //         },
+        //     //     },
+        //     // );
+        //     // console.log(response);
+
+        //     // if (response.status === 200) {
+
+        //     //     toast.success(`${data.message}`, {
+        //     //         autoClose: 3000,
+        //     //         position: "top-right",
+        //     //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+        //     //         hideProgressBar: true,
+        //     //         style: {
+        //     //             color: "#010100",
+        //     //             backgroundColor: "#FFF3B0",
+        //     //             font: "generalsans",
+        //     //             fontSize: "14px",
+        //     //             border: "1px solid #010100",
+        //     //         },
+        //     //     }
+        //     //     );
+        //     // }
+
+
+        // } catch (err) {
+        //     console.error(err);
+        // }
+
+
+        toast.success(`ok`, {
+            autoClose: 3000,
+            position: "top-right",
+            icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+            hideProgressBar: true,
+            style: {
+                color: "#010100",
+                backgroundColor: "#FFF3B0",
+                font: "generalsans",
+                fontSize: "14px",
+                border: "1px solid #010100",
+            },
         }
+        );
 
     }
 
@@ -43,6 +80,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
     return (
         <>
+
             <div className="md:px-20">
                 <div className="border-x-[.5px] border-yellowish">
                     <div className="pl-4 md:pl-14 py-4 md:py-6">
@@ -127,6 +165,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                 </div>
                             </button>
                         </div>
+                        <ToastContainer />
                     </div>
                     <div>
                         <div className="pl-4 md:pl-14 pt-7 md:pt-8">
@@ -237,6 +276,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             </Link>
                         ))}
                     </div>
+                    <ToastContainer />
                 </div>
             </div>
         </>
