@@ -22,52 +22,57 @@ export default function EventWorkshopInfo({ pageData, params }) {
     async function register() {
         const userid = Cookies.get("studentId");
 
-        try {
-            const { data } = await axiosInstance.post(
-                `/${path}/join/${params.id}`,
+        // try {
+        //     // const response = await axiosInstance.post(
+        //     //     `/${path}/join/${params.id}`,
 
-                {},
-                {
-                    headers: {
-                        userid,
-                    },
-                },
-            );
-            console.log(data);
+        //     //     {},
+        //     //     {
+        //     //         headers: {
+        //     //             userid,
+        //     //         },
+        //     //     },
+        //     // );
+        //     // console.log(response);
 
-            if (data !== undefined) {
+        //     // if (response.status === 200) {
 
-                toast.success(`${data.message}`, {
-                    autoClose: 3000,
-                    position: "top-right",
-                    icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-                    hideProgressBar: true,
-                    style: {
-                        color: "#010100",
-                        backgroundColor: "#FFF3B0",
-                        font: "generalsans",
-                        fontSize: "14px",
-                        border: "1px solid #010100",
-                    },
-                }
-                );
-            }
+        //     //     toast.success(`${data.message}`, {
+        //     //         autoClose: 3000,
+        //     //         position: "top-right",
+        //     //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+        //     //         hideProgressBar: true,
+        //     //         style: {
+        //     //             color: "#010100",
+        //     //             backgroundColor: "#FFF3B0",
+        //     //             font: "generalsans",
+        //     //             fontSize: "14px",
+        //     //             border: "1px solid #010100",
+        //     //         },
+        //     //     }
+        //     //     );
+        //     // }
 
-        } catch (err) {
-            console.error(err);
-            toast.error(`${err}`, {
-                autoClose: 3000,
-                position: "top-right",
-                hideProgressBar: true,
-                icon: false,
-                style: {
-                    color: "#FFFFFF",
-                    backgroundColor: "#FF002B",
-                    fontSize: "14px",
-                    border: "1px solid #FFFFFF ",
-                },
-            });
+
+        // } catch (err) {
+        //     console.error(err);
+        // }
+
+
+        toast.success(`ok`, {
+            autoClose: 3000,
+            position: "top-right",
+            icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+            hideProgressBar: true,
+            style: {
+                color: "#010100",
+                backgroundColor: "#FFF3B0",
+                font: "generalsans",
+                fontSize: "14px",
+                border: "1px solid #010100",
+            },
         }
+        );
 
     }
 
@@ -271,6 +276,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             </Link>
                         ))}
                     </div>
+                    <ToastContainer />
                 </div>
             </div>
         </>
