@@ -72,6 +72,12 @@ export default function Navbar() {
 		setIsOpen(false);
 	}, [urlPathName]);
 
+
+	const pathname = usePathname();
+	const active = "bg-yellowish28 border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
+	const inActive = "border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
+
+
 	return (
 		<>
 			{/* Desktop Navbar */}
@@ -79,21 +85,21 @@ export default function Navbar() {
 				<div className="navbar__left md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
 						href="/events"
-						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
+						className={`link ${pathname === "/events" ? active : inActive}`}
 					>
 						Events
 					</Link>
 
 					<Link
 						href="/workshop"
-						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
+						className={`link ${pathname === "/workshop" ? active : inActive}`}
 					>
 						Workshop
 					</Link>
 
 					<Link
 						href="/about"
-						className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center"
+						className={`link ${pathname === "/about" ? active : inActive}`}
 					>
 						About
 					</Link>
@@ -108,14 +114,14 @@ export default function Navbar() {
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
 						href="/team"
-						className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center"
+						className={`link ${pathname === "/team" ? active : inActive}`}
 					>
 						Team
 					</Link>
 
 					<Link
 						href="/dashboard"
-						className="border-r-[0.5px] h-full w-1/3 flex justify-center items-center "
+						className={`link ${pathname === "/dashboard" ? active : inActive}`}
 					>
 						Dashboard
 					</Link>
