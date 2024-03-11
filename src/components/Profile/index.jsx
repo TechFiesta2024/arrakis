@@ -54,8 +54,9 @@ export default function Profile() {
 				});
 				console.log(data);
 
-				console.log(userDetails)
-
+				// console.log(userDetails)
+				const userTypeFromAPI = data.type || ''; 
+				setSelectedUserType(userTypeFromAPI)
 				setUserDetails({
 					name: data.name,
 					contact: data.contact,
@@ -67,7 +68,6 @@ export default function Profile() {
 					stream: data?.stream,
 					year: data?.year,
 				});
-				console.log(userDetails.name)
 
 			} catch (err) {
 				console.error(err);
@@ -205,7 +205,7 @@ export default function Profile() {
 								<label className="flex items-center cursor-pointer">
 									<div className="relative">
 										{
-											userDetails.type === 'school' ? (
+											(selectedUserType === 'school' || userDetails) ? (
 												<>
 													<input
 														type="checkbox"
@@ -213,7 +213,7 @@ export default function Profile() {
 														checked={isChecked}
 														onChange={handleToggle}
 														// value={selectedUserType}
-														disabled
+														disabled={selectedUserType}
 													/>
 													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 													<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck cursor-not-allowed rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
@@ -272,7 +272,7 @@ export default function Profile() {
 								<input
 									id="school"
 									type="text"
-									value={userDetails?.school}
+									value={userDetails.school}
 									onChange={handleInputChangeUserProfile}
 									placeholder="Enter your school name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
@@ -329,7 +329,7 @@ export default function Profile() {
 							userCheck ? (
 								<>
 								<div className="input_stream flex flex-col pb-8">
-									<label className="text-[24px] pb-4">Gaurdian Name</label>
+									<label className="text-[24px] pb-4">Guardian Name</label>
 									<input
 										id="gaurdianName"
 										type="text"
