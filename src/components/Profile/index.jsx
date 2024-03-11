@@ -46,23 +46,29 @@ export default function Profile() {
 	useEffect(() => {
 		async function getMe() {
 			try {
-				const { data } = await axiosInstance.get("/user/me", {
+				const { data } = await axiosInstance.get("/user", {
 					headers: {
-						userid: user.UUID,
+						// userid: user.UUID,
+						email: user.email,
 					},
 				});
+				console.log(data);
+
+				console.log(userDetails)
 
 				setUserDetails({
-					name: data[0].name,
-					contact: data[0].contact,
-					college: data[0].college,
-					school: data[0].school,
-					gaurdianName: data[0].gaurdianName,
-					gaurdianContact: data[0].gaurdianContact,
-					standard: data[0].standard,
-					stream: data[0].stream,
-					year: data[0].year,
+					name: data.name,
+					contact: data.contact,
+					college: data?.college,
+					school: data?.school,
+					gaurdianName: data?.guardian_name,
+					gaurdianContact: data?.guardian_contact,
+					standard: data?.class,
+					stream: data?.stream,
+					year: data?.year,
 				});
+				console.log(userDetails.name)
+
 			} catch (err) {
 				console.error(err);
 			}
@@ -87,27 +93,49 @@ export default function Profile() {
 	const [submitting, setSubmitting] = useState(false);
 	const handleSubmitChangeUserProfile = async (e) => {
 		e.preventDefault();
-		userDetails.email = user.email;
-		const newErrors = {};
-		['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
-			if (!userDetails[field].trim()) {
-				newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
-			}
-		});
+		// userDetails.email = user.email;
+		// const newErrors = {};
+		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
+		// 	if (!userDetails[field].trim()) {
+		// 		newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
+		// 	}
+		// });
 
-		if (Object.keys(newErrors).length > 0) {
-			setErrors(newErrors);
-			return;
-		}
+		// if (Object.keys(newErrors).length > 0) {
+		// 	setErrors(newErrors);
+		// 	return;
+		// }
 
-		// Clear errors if there are no validation errors
-		setErrors({});
+		// // Clear errors if there are no validation errors
+		// setErrors({});
+
+		const url = selectedUserType === 'school' ?
+			'/user/school' :
+			'/user/college';
+
+		const dataPayload = selectedUserType === 'school' ? {
+			name: userDetails.name,
+			email: user.email,
+			school: userDetails.school,
+			contact: userDetails.contact,
+			class: userDetails.standard,
+			guardian_contact: userDetails.gaurdianContact,
+			guardian_name: userDetails.gaurdianName
+		} : {
+			name: userDetails.name,
+			email: user.email,
+			college: userDetails.college,
+			contact: userDetails.contact,
+			stream: userDetails.stream,
+			year: userDetails.year
+		};
 
 
 		try {
+			console.log(dataPayload)
 			setSubmitting(true);
-			const res = await axiosInstance.post("/user/login", userDetails);
-
+			const res = await axiosInstance.post(`${url}`, dataPayload);
+			console.log(res);
 			Cookies.set("studentId", res.data.userid, { expires: 7 });
 			setUser((user) => ({
 				...user,
@@ -177,7 +205,7 @@ export default function Profile() {
 								<label className="flex items-center cursor-pointer">
 									<div className="relative">
 										{
-											userDetails.name.length > 0 ? (
+											userDetails.type === 'school' ? (
 												<>
 													<input
 														type="checkbox"
