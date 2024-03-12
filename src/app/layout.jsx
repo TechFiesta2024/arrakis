@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/index ";
 import AuthContextProvider from "@/context/AuthContext";
+import { Analytics } from "@vercel/analytics/react"
 
 const Navbar = dynamic(() => import("@/components/Navbar"));
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
 					<div className="pt-0">{children}</div>
 					<Footer />
 				</AuthContextProvider>
+				{/* <Analytics /> */}
 			</body>
 		</html>
 	);
