@@ -10,8 +10,8 @@ import axiosInstance from "@/utils/axiosInstance";
 import Cookies from "js-cookie";
 
 export default function Profile() {
-	const year = ["1st", "2nd", "3rd", "4th"];
-	const standard = ["9th", "10th", "11th", "12th"];
+	const year = ["-", "1st", "2nd", "3rd", "4th"];
+	const standard = [ "-", "9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
@@ -42,25 +42,29 @@ export default function Profile() {
 	useEffect(() => {
 		async function getMe() {
 			try {
-				const { data } = await axiosInstance.get("/user", {
+				const res = await axiosInstance.get("/user", {
 					headers: {
 						email: user.email,
 					},
 				});
-				// console.log(data);
+				console.log(res.status);
 
-				setSelectedUserType(data.type || userType[0])
-				setUserDetails({
-					name: data?.name,
-					contact: data?.contact,
-					college: data?.college,
-					school: data?.school,
-					gaurdianName: data?.guardian_name,
-					gaurdianContact: data?.guardian_contact,
-					grade: data?.class,
-					stream: data?.stream,
-					year: data?.year,
-				});
+				const { data } = res
+
+				if (res.status === 200) {
+					setSelectedUserType(data.type)
+					setUserDetails({
+						name: data?.name,
+						contact: data?.contact,
+						college: data?.college,
+						school: data?.school,
+						gaurdianName: data?.guardian_name,
+						gaurdianContact: data?.guardian_contact,
+						grade: data?.class,
+						stream: data?.stream,
+						year: data?.year,
+					});
+				}
 
 			} catch (err) {
 				console.error(err);
@@ -111,7 +115,7 @@ export default function Profile() {
 			email: user.email,
 			school: userDetails.school,
 			contact: userDetails.contact,
-			class: userDetails.standard,
+			class: userDetails.grade,
 			guardian_contact: userDetails.gaurdianContact,
 			guardian_name: userDetails.gaurdianName
 		} : {
@@ -125,31 +129,31 @@ export default function Profile() {
 		console.log(dataPayload)
 		console.log(userDetails)
 
-		// try {
-		// 	console.log(dataPayload)
-		// 	setSubmitting(true);
-		// 	const res = await axiosInstance.post(`${url}`, dataPayload);
-		// 	console.log(res);
-		// 	Cookies.set("studentId", res.data.userid, { expires: 7 });
-		// 	setUser((user) => ({
-		// 		...user,
-		// 		UUID: res.data.userid,
-		// 	}));
+		try {
+			console.log(dataPayload)
+			setSubmitting(true);
+			const res = await axiosInstance.post(`${url}`, dataPayload);
+			console.log(res);
+			Cookies.set("studentId", res.data.userid, { expires: 7 });
+			setUser((user) => ({
+				...user,
+				UUID: res.data.userid,
+			}));
 
-		// 	// if (res.status === 200) {
-		// 	//     toast.success(`${res.data.message}`, {
-		// 	//         autoClose: 3000,
-		// 	//         position: "top-right",
-		// 	//         icon: <Image src={Images.logoVerify} alt="verify" />,
-		// 	//         hideProgressBar: true,
-		// 	//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-		// 	//     });
-		// 	// }
-		// } catch (err) {
-		// 	console.error(err);
-		// } finally {
-		// 	setSubmitting(false);
-		// }
+			// if (res.status === 200) {
+			//     toast.success(`${res.data.message}`, {
+			//         autoClose: 3000,
+			//         position: "top-right",
+			//         icon: <Image src={Images.logoVerify} alt="verify" />,
+			//         hideProgressBar: true,
+			//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+			//     });
+			// }
+		} catch (err) {
+			console.error(err);
+		} finally {
+			setSubmitting(false);
+		}
 	};
 
 	const flexStart = "flex justify-start items-center";
@@ -340,6 +344,7 @@ export default function Profile() {
 												className="hover:bg-red"
 												key={option}
 												value={option}
+												// defaultValue='-'
 												selected={userDetails.grade === option}
 											>
 												{option}
