@@ -44,14 +44,18 @@ export default function Navbar() {
 
 		// Get user uuid from messiah endpoint by email
 		try {
-			const { data } = await axiosInstance.post("/user/checkemail", {
-				email: result.email,
+			const { data } = await axiosInstance.get("/user",  {
+				headers: {
+					email: result.email
+				}
 			});
-
-			Cookies.set("studentId", data.userid, { expires: 7 });
+			console.log(data);
+			console.log(data.id);
+			
+			Cookies.set("studentId", data.id, { expires: 7 });
 			setUser((user) => ({
 				...user,
-				UUID: data.userid,
+				UUID: data.id,
 			}));
 		} catch (err) {
 			console.error(err);

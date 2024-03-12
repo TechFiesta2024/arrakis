@@ -10,8 +10,8 @@ import axiosInstance from "@/utils/axiosInstance";
 import Cookies from "js-cookie";
 
 export default function Profile() {
-	const year = ["-", "1st", "2nd", "3rd", "4th"];
-	const standard = ["-", "9th", "10th", "11th", "12th"];
+	const year = ["1st", "2nd", "3rd", "4th"];
+	const standard = ["9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
@@ -47,16 +47,15 @@ export default function Profile() {
 						email: user.email,
 					},
 				});
-				console.log(res.status);
-
 				const { data } = res
 
-				if (data.message !== "User does not exist") {
+				if (res.status === 200) {
+					console.log(data)
 					setSelectedUserType(data.type)
 					setUserDetails({
 						name: data?.name,
 						contact: data?.contact,
-						college: data?.college,
+						// college: data?.college,
 						school: data?.school,
 						gaurdianName: data?.guardian_name,
 						gaurdianContact: data?.guardian_contact,
@@ -126,11 +125,8 @@ export default function Profile() {
 			stream: userDetails.stream,
 			year: userDetails.year
 		};
-		console.log(dataPayload)
-		console.log(userDetails)
 
 		try {
-			console.log(dataPayload)
 			setSubmitting(true);
 			const res = await axiosInstance.post(`${url}`, dataPayload);
 			console.log(res);
@@ -252,7 +248,7 @@ export default function Profile() {
 								<input
 									id="school"
 									type="text"
-									value={userDetails.school}
+									value={userDetails?.school}
 									onChange={handleInputChangeUserProfile}
 									placeholder="Enter your school name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
@@ -265,7 +261,7 @@ export default function Profile() {
 								<input
 									id="college"
 									type="text"
-									value={userDetails.college}
+									value={userDetails?.college}
 									onChange={handleInputChangeUserProfile}
 									placeholder="Enter your College Name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
@@ -344,7 +340,7 @@ export default function Profile() {
 													className="hover:bg-red"
 													key={option}
 													value={option}
-													// defaultValue='-'
+													defaultValue={standard[0]}
 													selected={userDetails.grade === option}
 												>
 													{option}
@@ -366,6 +362,7 @@ export default function Profile() {
 												className="hover:bg-red"
 												key={option}
 												value={option}
+												defaultValue={year[0]}
 												selected={userDetails.year === option}
 											>
 												{option}
