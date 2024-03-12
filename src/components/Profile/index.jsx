@@ -47,7 +47,7 @@ export default function Profile() {
 						email: user.email,
 					},
 				});
-				const { data } = res
+				// const { data } = res
 
 				if (res.status === 200) {
 					console.log(data)
@@ -204,6 +204,7 @@ export default function Profile() {
 											checked={isChecked}
 											onChange={handleToggle}
 											value={selectedUserType}
+										
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
