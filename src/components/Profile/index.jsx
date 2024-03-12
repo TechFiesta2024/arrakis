@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 
 export default function Profile() {
 	const year = ["-", "1st", "2nd", "3rd", "4th"];
-	const standard = [ "-", "9th", "10th", "11th", "12th"];
+	const standard = ["-", "9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
@@ -51,7 +51,7 @@ export default function Profile() {
 
 				const { data } = res
 
-				if (res.status === 200) {
+				if (data.message !== "User does not exist") {
 					setSelectedUserType(data.type)
 					setUserDetails({
 						name: data?.name,
@@ -194,7 +194,7 @@ export default function Profile() {
 										)}
 									</div>
 									<div className="placeholder">
-										<p className=" font-anton text-2xl text-black">{selectedUserType.toUpperCase()}</p>
+										<p className=" font-anton text-2xl text-black">{selectedUserType?.toUpperCase()}</p>
 										<p className="text-greyish font-generalsans text-xs">{`You are updating as ${selectedUserType} student`}</p>
 									</div>
 								</div>
@@ -308,50 +308,50 @@ export default function Profile() {
 						{
 							userCheck ? (
 								<>
-								<div className="input_stream flex flex-col pb-8">
-									<label className="text-[24px] pb-4">Guardian Name</label>
-									<input
-										id="gaurdianName"
-										type="text"
-										value={userDetails.gaurdianName}
-										onChange={handleInputChangeUserProfile}
-										placeholder="Enter your stream"
-										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									/>
-									{errors.gaurdianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianName}</span>}
-								</div>
-								<div className="input_stream flex flex-col pb-8">
-									<label className="text-[24px] pb-4">Gaurdian Contact</label>
-									<input
-										id="gaurdianContact"
-										type="text"
-										value={userDetails.gaurdianContact}
-										onChange={handleInputChangeUserProfile}
-										placeholder="Enter your stream"
-										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									/>
-									{errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianContact}</span>}
-								</div>
-								<div className="input_year flex flex-col pb-8">
-									<label className="text-[24px] pb-4">Standard</label>
-									<select
-										id="grade"
-										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-										onChange={handleInputChangeUserProfile}
-									>
-										{standard.map((option) => (
-											<option
-												className="hover:bg-red"
-												key={option}
-												value={option}
-												// defaultValue='-'
-												selected={userDetails.grade === option}
-											>
-												{option}
-											</option>
-										))}
-									</select>
-								</div>
+									<div className="input_stream flex flex-col pb-8">
+										<label className="text-[24px] pb-4">Guardian Name</label>
+										<input
+											id="gaurdianName"
+											type="text"
+											value={userDetails.gaurdianName}
+											onChange={handleInputChangeUserProfile}
+											placeholder="Enter your stream"
+											className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										/>
+										{errors.gaurdianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianName}</span>}
+									</div>
+									<div className="input_stream flex flex-col pb-8">
+										<label className="text-[24px] pb-4">Gaurdian Contact</label>
+										<input
+											id="gaurdianContact"
+											type="text"
+											value={userDetails.gaurdianContact}
+											onChange={handleInputChangeUserProfile}
+											placeholder="Enter your stream"
+											className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+										/>
+										{errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianContact}</span>}
+									</div>
+									<div className="input_year flex flex-col pb-8">
+										<label className="text-[24px] pb-4">Standard</label>
+										<select
+											id="grade"
+											className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+											onChange={handleInputChangeUserProfile}
+										>
+											{standard.map((option) => (
+												<option
+													className="hover:bg-red"
+													key={option}
+													value={option}
+													// defaultValue='-'
+													selected={userDetails.grade === option}
+												>
+													{option}
+												</option>
+											))}
+										</select>
+									</div>
 								</>
 							) : (
 								<div className="input_year flex flex-col pb-8">
