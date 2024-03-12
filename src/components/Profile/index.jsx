@@ -10,13 +10,12 @@ import axiosInstance from "@/utils/axiosInstance";
 import Cookies from "js-cookie";
 
 export default function Profile() {
-	const year = ["1st", "2nd", "3rd", "4th"];
-	const standard = ["9th", "10th", "11th", "12th"];
+	const year = ["-", "1st", "2nd", "3rd", "4th"];
+	const standard = [ "-", "9th", "10th", "11th", "12th"];
 
 	const { user, setUser } = useAuthState();
 
 	const userType = ["school", "college"];
-	// const userType = ["college", "school"];
 
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
@@ -34,40 +33,38 @@ export default function Profile() {
 		school: "",
 		gaurdianName: "",
 		gaurdianContact: "",
-		standard: "",
 		stream: "",
 		year: "",
-		standard: "",
-		guardian_name: "",
-		guardian_contact: "",
+		grade: "",
 	});
 
 	/* Get user info when navigating to /profile */
 	useEffect(() => {
 		async function getMe() {
 			try {
-				const { data } = await axiosInstance.get("/user", {
+				const res = await axiosInstance.get("/user", {
 					headers: {
-						// userid: user.UUID,
 						email: user.email,
 					},
 				});
-				console.log(data);
+				console.log(res.status);
 
-				// console.log(userDetails)
-				const userTypeFromAPI = data.type || ''; 
-				setSelectedUserType(userTypeFromAPI)
-				setUserDetails({
-					name: data.name,
-					contact: data.contact,
-					college: data?.college,
-					school: data?.school,
-					gaurdianName: data?.guardian_name,
-					gaurdianContact: data?.guardian_contact,
-					standard: data?.class,
-					stream: data?.stream,
-					year: data?.year,
-				});
+				const { data } = res
+
+				if (res.status === 200) {
+					setSelectedUserType(data.type)
+					setUserDetails({
+						name: data?.name,
+						contact: data?.contact,
+						college: data?.college,
+						school: data?.school,
+						gaurdianName: data?.guardian_name,
+						gaurdianContact: data?.guardian_contact,
+						grade: data?.class,
+						stream: data?.stream,
+						year: data?.year,
+					});
+				}
 
 			} catch (err) {
 				console.error(err);
@@ -118,7 +115,7 @@ export default function Profile() {
 			email: user.email,
 			school: userDetails.school,
 			contact: userDetails.contact,
-			class: userDetails.standard,
+			class: userDetails.grade,
 			guardian_contact: userDetails.gaurdianContact,
 			guardian_name: userDetails.gaurdianName
 		} : {
@@ -129,7 +126,8 @@ export default function Profile() {
 			stream: userDetails.stream,
 			year: userDetails.year
 		};
-
+		console.log(dataPayload)
+		console.log(userDetails)
 
 		try {
 			console.log(dataPayload)
@@ -204,33 +202,15 @@ export default function Profile() {
 							<div className={`col-span-1 ${flexEnd}`}>
 								<label className="flex items-center cursor-pointer">
 									<div className="relative">
-										{
-											(selectedUserType === 'school' || userDetails) ? (
-												<>
-													<input
-														type="checkbox"
-														className="hidden"
-														checked={isChecked}
-														onChange={handleToggle}
-														// value={selectedUserType}
-														disabled={selectedUserType}
-													/>
-													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-													<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck cursor-not-allowed rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
-												</>
-											) : (
-												<>
-													<input
-														type="checkbox"
-														className="hidden"
-														checked={isChecked}
-														onChange={handleToggle}
-													/>
-													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-													<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
-												</>
-											)
-										}
+										<input
+											type="checkbox"
+											className="hidden"
+											checked={isChecked}
+											onChange={handleToggle}
+											value={selectedUserType}
+										/>
+										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
+										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
 									</div>
 								</label>
 							</div>
@@ -355,7 +335,7 @@ export default function Profile() {
 								<div className="input_year flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Standard</label>
 									<select
-										id="standard"
+										id="grade"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 										onChange={handleInputChangeUserProfile}
 									>
@@ -364,7 +344,8 @@ export default function Profile() {
 												className="hover:bg-red"
 												key={option}
 												value={option}
-												selected={userDetails.year === option}
+												// defaultValue='-'
+												selected={userDetails.grade === option}
 											>
 												{option}
 											</option>
