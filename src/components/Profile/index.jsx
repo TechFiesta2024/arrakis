@@ -50,6 +50,7 @@ export default function Profile() {
 				})
 				const { data } = res
 
+
 				if (res.status === 200) {
 					setToggleDisabled(true)
 					setSelectedUserType(data.type)
