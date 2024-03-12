@@ -134,7 +134,7 @@ export default function Profile() {
 				...user,
 				UUID: res.data.id,
 			}))
-
+			setSubmitting(true);
 			// if (res.status === 200) {
 			//     toast.success(`${res.data.message}`, {
 			//         autoClose: 3000,
@@ -194,7 +194,7 @@ export default function Profile() {
 							</div>
 							<div className={`col-span-1 ${flexEnd}`}>
 								<label className="flex items-center cursor-pointer">
-									<div className="relative">
+									<div className={`relative ${toggleDisabled && 'cursor-not-allowed'}`}>
 										<input
 											type="checkbox"
 											className="hidden"
@@ -204,7 +204,7 @@ export default function Profile() {
 											disabled={toggleDisabled}
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
+										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${toggleDisabled && 'cursor-not-allowed'} ${userCheck ? 'translate-x-0' : 'translate-x-6'} `}></div>
 									</div>
 								</label>
 							</div>

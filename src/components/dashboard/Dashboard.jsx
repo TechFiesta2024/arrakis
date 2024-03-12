@@ -17,7 +17,7 @@ export default function Dashboard() {
 	useEffect(() => {
 		async function getMe() {
 			try {
-				const { data } = await axiosInstance.get("/user/me", {
+				const { data } = await axiosInstance.get("/user", {
 					headers: {
 						userid: user.UUID,
 					},
