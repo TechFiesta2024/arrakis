@@ -19,10 +19,13 @@ export default function Profile() {
 
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
+	const [submittedOnce, setSubmittedOnce] = useState(false);
 
 	const handleToggle = () => {
-		setChecked(!isChecked);
-		setSelectedUserType(isChecked ? userType[0] : userType[1]);
+		if (!submittedOnce){
+			setChecked(!isChecked);
+			setSelectedUserType(isChecked ? userType[0] : userType[1]);
+		}
 	};
 
 	const [errors, setErrors] = useState({});
@@ -47,10 +50,11 @@ export default function Profile() {
 						email: user.email,
 					},
 				});
-				// const { data } = res
+				const { data } = res
 
 				if (res.status === 200) {
-					console.log(data)
+					// console.log(data)
+					setSubmittedOnce(true);
 					setSelectedUserType(data.type)
 					setUserDetails({
 						name: data?.name,
@@ -204,7 +208,7 @@ export default function Profile() {
 											checked={isChecked}
 											onChange={handleToggle}
 											value={selectedUserType}
-										
+											disabled={submittedOnce}
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
