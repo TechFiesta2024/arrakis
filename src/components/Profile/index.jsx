@@ -1,42 +1,43 @@
 "use client";
 import Image from "next/image";
-import SmartShapes from "@/components/Global/SmartShapes";
+import Images from "/public/assets/index.js";
+import Cookies from "js-cookie";
 import { useAuthState } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import Images from "/public/assets/index.js";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
-import Cookies from "js-cookie";
 
 export default function Profile() {
 	const year = ["1st", "2nd", "3rd", "4th"];
-	const standard = ["9th", "10th", "11th", "12th"];
+	const standard = ["9th", "10th", "11th", "12th"]
+	const userType = ["school", "college"]
 
-	const { user, setUser } = useAuthState();
+	const { user, setUser } = useAuthState()
 
-	const userType = ["school", "college"];
+	const [isChecked, setChecked] = useState(false)
+	const [toggleDisabled, setToggleDisabled] = useState(false)
+	const [selectedUserType, setSelectedUserType] = useState(userType[0])
 
-	const [isChecked, setChecked] = useState(false);
-	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
+	const userCheck = selectedUserType === userType[0]
 
 	const handleToggle = () => {
-		setChecked(!isChecked);
-		setSelectedUserType(isChecked ? userType[0] : userType[1]);
-	};
+		setChecked(!isChecked)
+		setSelectedUserType(isChecked ? userType[0] : userType[1])
+	}
 
-	const [errors, setErrors] = useState({});
+	const [errors, setErrors] = useState({})
 	const [userDetails, setUserDetails] = useState({
-		name: "",
-		contact: "",
-		college: "",
-		school: "",
-		gaurdianName: "",
-		gaurdianContact: "",
-		stream: "",
-		year: "",
-		grade: "",
-	});
+		name: '',
+		contact: '',
+		college: '',
+		school: '',
+		guardianName: '',
+		guardianContact: '',
+		stream: '',
+		year: '',
+		grade: ''
+	})
 
 	/* Get user info when navigating to /profile */
 	useEffect(() => {
@@ -45,20 +46,20 @@ export default function Profile() {
 				const res = await axiosInstance.get("/user", {
 					headers: {
 						email: user.email,
-					},
-				});
+					}
+				})
 				const { data } = res
 
 				if (res.status === 200) {
-					console.log(data)
+					setToggleDisabled(true)
 					setSelectedUserType(data.type)
 					setUserDetails({
-						name: data?.name,
-						contact: data?.contact,
-						// college: data?.college,
+						name: data.name,
+						contact: data.contact,
+						college: data?.college,
 						school: data?.school,
-						gaurdianName: data?.guardian_name,
-						gaurdianContact: data?.guardian_contact,
+						guardianName: data?.guardian_name,
+						guardianContact: data?.guardian_contact,
 						grade: data?.class,
 						stream: data?.stream,
 						year: data?.year,
@@ -66,27 +67,27 @@ export default function Profile() {
 				}
 
 			} catch (err) {
-				console.error(err);
+				console.error(err)
 			}
 		}
-		getMe();
-	}, []);
+		getMe()
+	}, [])
 
 	const handleInputChangeUserProfile = (e) => {
-		const { id, value } = e.target;
+		const { id, value } = e.target
 
 		setErrors((prevErrors) => ({
 			...prevErrors,
-			[id]: "",
+			[id]: '',
 		}));
 
 		setUserDetails((prevData) => ({
 			...prevData,
-			[id]: value,
-		}));
-	};
+			[id]: value
+		}))
+	}
 
-	const [submitting, setSubmitting] = useState(false);
+	const [submitting, setSubmitting] = useState(false)
 	const handleSubmitChangeUserProfile = async (e) => {
 		e.preventDefault();
 		// userDetails.email = user.email;
@@ -105,18 +106,16 @@ export default function Profile() {
 		// // Clear errors if there are no validation errors
 		// setErrors({});
 
-		const url = selectedUserType === 'school' ?
-			'/user/school' :
-			'/user/college';
+		const url = userCheck ? '/user/school' : '/user/college';
 
-		const dataPayload = selectedUserType === 'school' ? {
+		const dataPayload = userCheck ? { // userCheck true when school
 			name: userDetails.name,
 			email: user.email,
 			school: userDetails.school,
 			contact: userDetails.contact,
 			class: userDetails.grade,
-			guardian_contact: userDetails.gaurdianContact,
-			guardian_name: userDetails.gaurdianName
+			guardian_contact: userDetails.guardianContact,
+			guardian_name: userDetails.guardianName
 		} : {
 			name: userDetails.name,
 			email: user.email,
@@ -124,17 +123,16 @@ export default function Profile() {
 			contact: userDetails.contact,
 			stream: userDetails.stream,
 			year: userDetails.year
-		};
+		}
 
 		try {
 			setSubmitting(true);
-			const res = await axiosInstance.post(`${url}`, dataPayload);
-			console.log(res);
-			Cookies.set("studentId", res.data.userid, { expires: 7 });
+			const res = await axiosInstance.post(`${url}`, dataPayload)
+			Cookies.set("studentId", res.data.id, { expires: 7 })
 			setUser((user) => ({
 				...user,
-				UUID: res.data.userid,
-			}));
+				UUID: res.data.id,
+			}))
 
 			// if (res.status === 200) {
 			//     toast.success(`${res.data.message}`, {
@@ -146,17 +144,16 @@ export default function Profile() {
 			//     });
 			// }
 		} catch (err) {
-			console.error(err);
+			console.error(err)
 		} finally {
-			setSubmitting(false);
+			setSubmitting(false)
 		}
-	};
+	}
 
 	const flexStart = "flex justify-start items-center";
 	const flexEnd = "flex justify-end items-center";
 	const flexCenter = "flex justify-center items-center";
 
-	const userCheck = selectedUserType === "school"
 
 	return (
 		<>
@@ -180,13 +177,12 @@ export default function Profile() {
 						</div>
 						<div className=" bg-yellowish h-auto w-full px-4 py-2 grid grid-cols-3 rounded-md">
 							<div className={`col-span-2`}>
-								{/* <p className=" text-greyish font-generalsans text-sm pt-2 pb-1">Define your institute type</p> */}
 								<div className={`org_type ${flexStart} gap-4 py-2`}>
 									<div className={`badge bg-red h-14 w-14 rounded-md ${flexCenter}`}>
-										{selectedUserType === "school" ? (
+										{userCheck ? (
 											<Image src={Images.school} className="h-8 w-8" alt="school" />
 										) : (
-											<Image src={Images.college} className="h-8 w-8" alt="school" />
+											<Image src={Images.college} className="h-8 w-8" alt="college" />
 										)}
 									</div>
 									<div className="placeholder">
@@ -204,6 +200,7 @@ export default function Profile() {
 											checked={isChecked}
 											onChange={handleToggle}
 											value={selectedUserType}
+											disabled={toggleDisabled}
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
@@ -242,33 +239,35 @@ export default function Profile() {
 
 				<div className="profile__right border-x-[0.5px] md:border-r-[0.5px] flex w-full md:w-1/2 h-auto items-center md:py-8">
 					<div className="collab__right_input h-full flex px-4 md:px-[90px] flex-col w-full justify-evenly">
-						{userCheck ? (
-							<div className="input_college flex flex-col pb-8">
-								<label className="text-[24px] pb-4">School Name</label>
-								<input
-									id="school"
-									type="text"
-									value={userDetails?.school}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your school name"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{errors.school && <span className="text-red pt-2 font-generalsans text-sm">{errors.school}</span>}
-							</div>
-						) : (
-							<div className="input_college flex flex-col pb-8">
-								<label className="text-[24px] pb-4">College Name</label>
-								<input
-									id="college"
-									type="text"
-									value={userDetails?.college}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your College Name"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{errors.college && <span className="text-red pt-2 font-generalsans text-sm">{errors.college}</span>}
-							</div>
-						)}
+						{
+							userCheck ? (
+								<div className="input_college flex flex-col pb-8">
+									<label className="text-[24px] pb-4">School Name</label>
+									<input
+										id="school"
+										type="text"
+										value={userDetails?.school}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your school name"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.school && <span className="text-red pt-2 font-generalsans text-sm">{errors.school}</span>}
+								</div>
+							) : (
+								<div className="input_college flex flex-col pb-8">
+									<label className="text-[24px] pb-4">College Name</label>
+									<input
+										id="college"
+										type="text"
+										value={userDetails?.college}
+										onChange={handleInputChangeUserProfile}
+										placeholder="Enter your College Name"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+									{errors.college && <span className="text-red pt-2 font-generalsans text-sm">{errors.college}</span>}
+								</div>
+							)
+						}
 
 						<div className="input_email flex flex-col pb-8">
 							<label className="text-[24px] pb-4">Email ID</label>
@@ -282,6 +281,7 @@ export default function Profile() {
 								disabled
 							/>
 						</div>
+
 						{
 							userCheck ? (
 								null
@@ -296,37 +296,38 @@ export default function Profile() {
 										placeholder="Enter your stream"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>}
+									{/* {errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>} */}
 								</div>
 
 							)
 						}
+
 						{
 							userCheck ? (
 								<>
 									<div className="input_stream flex flex-col pb-8">
 										<label className="text-[24px] pb-4">Guardian Name</label>
 										<input
-											id="gaurdianName"
+											id="guardianName"
 											type="text"
-											value={userDetails.gaurdianName}
+											value={userDetails.guardianName}
 											onChange={handleInputChangeUserProfile}
-											placeholder="Enter your stream"
+											placeholder="Enter your Guardian's name"
 											className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 										/>
-										{errors.gaurdianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianName}</span>}
+										{/* {errors.guardianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.guardianName}</span>} */}
 									</div>
 									<div className="input_stream flex flex-col pb-8">
-										<label className="text-[24px] pb-4">Gaurdian Contact</label>
+										<label className="text-[24px] pb-4">Guardian Contact</label>
 										<input
-											id="gaurdianContact"
+											id="guardianContact"
 											type="text"
-											value={userDetails.gaurdianContact}
+											value={userDetails.guardianContact}
 											onChange={handleInputChangeUserProfile}
-											placeholder="Enter your stream"
+											placeholder="Enter your Guardian's contact no."
 											className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 										/>
-										{errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.gaurdianContact}</span>}
+										{/* {errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.guardianContact}</span>} */}
 									</div>
 									<div className="input_year flex flex-col pb-8">
 										<label className="text-[24px] pb-4">Standard</label>
@@ -374,16 +375,15 @@ export default function Profile() {
 						}
 
 
-
 						<button
-							className={`${submitting ? "bg-red-faded" : "bg-red"
-								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
+							className={`${submitting ? "bg-red-faded" : "bg-red"} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
 							onClick={handleSubmitChangeUserProfile}
 							disabled={submitting}
 						>
 							Submit
 						</button>
+
 						{/* <ToastContainer /> */}
 					</div>
 				</div >

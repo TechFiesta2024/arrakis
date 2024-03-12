@@ -49,8 +49,6 @@ export default function Navbar() {
 					email: result.email
 				}
 			});
-			console.log(data);
-			console.log(data.id);
 			
 			Cookies.set("studentId", data.id, { expires: 7 });
 			setUser((user) => ({
