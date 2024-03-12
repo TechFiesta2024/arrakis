@@ -210,7 +210,7 @@ export default function Profile() {
 											value={selectedUserType}
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
+										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
 									</div>
 								</label>
 							</div>
