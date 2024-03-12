@@ -6,7 +6,6 @@ import { useState } from "react";
 export default function DataState({ workshopArray }) {
 
 
-	console.log(workshopArray[0].workshopName);
 	const softwareWorkshops = workshopArray.filter(
 		(workshop) => workshop.type === "Software",
 	);

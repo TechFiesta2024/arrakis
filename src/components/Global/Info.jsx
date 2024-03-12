@@ -22,41 +22,39 @@ export default function EventWorkshopInfo({ pageData, params }) {
     async function register() {
         const userid = Cookies.get("studentId");
 
-        // try {
-        //     // const response = await axiosInstance.post(
-        //     //     `/${path}/join/${params.id}`,
+        try {
+            const response = await axiosInstance.post(`/${path}/join/${params.id}`,
+                {},
+                {
+                    headers: {
+                        userid,
+                    },
+                },
+            );
+            console.log(response);
 
-        //     //     {},
-        //     //     {
-        //     //         headers: {
-        //     //             userid,
-        //     //         },
-        //     //     },
-        //     // );
-        //     // console.log(response);
+            // if (response.status === 200) {
 
-        //     // if (response.status === 200) {
-
-        //     //     toast.success(`${data.message}`, {
-        //     //         autoClose: 3000,
-        //     //         position: "top-right",
-        //     //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-        //     //         hideProgressBar: true,
-        //     //         style: {
-        //     //             color: "#010100",
-        //     //             backgroundColor: "#FFF3B0",
-        //     //             font: "generalsans",
-        //     //             fontSize: "14px",
-        //     //             border: "1px solid #010100",
-        //     //         },
-        //     //     }
-        //     //     );
-        //     // }
+            //     toast.success(`${data.message}`, {
+            //         autoClose: 3000,
+            //         position: "top-right",
+            //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+            //         hideProgressBar: true,
+            //         style: {
+            //             color: "#010100",
+            //             backgroundColor: "#FFF3B0",
+            //             font: "generalsans",
+            //             fontSize: "14px",
+            //             border: "1px solid #010100",
+            //         },
+            //     }
+            //     );
+            // }
 
 
-        // } catch (err) {
-        //     console.error(err);
-        // }
+        } catch (err) {
+            console.error(err);
+        }
 
 
         toast.success(`ok`, {

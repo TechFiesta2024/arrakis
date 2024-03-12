@@ -22,8 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
-    "react-modal": "^3.16.1",
-    "react-toastify": "^10.0.4"
+    "react-toastify": "^10.0.4",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.3",
