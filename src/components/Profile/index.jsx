@@ -16,7 +16,6 @@ export default function Profile() {
 	const { user, setUser } = useAuthState();
 
 	const userType = ["school", "college"];
-	// const userType = ["college", "school"];
 
 	const [isChecked, setChecked] = useState(false);
 	const [selectedUserType, setSelectedUserType] = useState(userType[0]);
@@ -34,12 +33,9 @@ export default function Profile() {
 		school: "",
 		gaurdianName: "",
 		gaurdianContact: "",
-		standard: "",
 		stream: "",
 		year: "",
-		standard: "",
-		guardian_name: "",
-		guardian_contact: "",
+		grade: "",
 	});
 
 	/* Get user info when navigating to /profile */
@@ -48,23 +44,20 @@ export default function Profile() {
 			try {
 				const { data } = await axiosInstance.get("/user", {
 					headers: {
-						// userid: user.UUID,
 						email: user.email,
 					},
 				});
-				console.log(data);
+				// console.log(data);
 
-				// console.log(userDetails)
-				const userTypeFromAPI = data.type || ''; 
-				setSelectedUserType(userTypeFromAPI)
+				setSelectedUserType(data.type || userType[0])
 				setUserDetails({
-					name: data.name,
-					contact: data.contact,
+					name: data?.name,
+					contact: data?.contact,
 					college: data?.college,
 					school: data?.school,
 					gaurdianName: data?.guardian_name,
 					gaurdianContact: data?.guardian_contact,
-					standard: data?.class,
+					grade: data?.class,
 					stream: data?.stream,
 					year: data?.year,
 				});
@@ -129,33 +122,34 @@ export default function Profile() {
 			stream: userDetails.stream,
 			year: userDetails.year
 		};
+		console.log(dataPayload)
+		console.log(userDetails)
 
+		// try {
+		// 	console.log(dataPayload)
+		// 	setSubmitting(true);
+		// 	const res = await axiosInstance.post(`${url}`, dataPayload);
+		// 	console.log(res);
+		// 	Cookies.set("studentId", res.data.userid, { expires: 7 });
+		// 	setUser((user) => ({
+		// 		...user,
+		// 		UUID: res.data.userid,
+		// 	}));
 
-		try {
-			console.log(dataPayload)
-			setSubmitting(true);
-			const res = await axiosInstance.post(`${url}`, dataPayload);
-			console.log(res);
-			Cookies.set("studentId", res.data.userid, { expires: 7 });
-			setUser((user) => ({
-				...user,
-				UUID: res.data.userid,
-			}));
-
-			// if (res.status === 200) {
-			//     toast.success(`${res.data.message}`, {
-			//         autoClose: 3000,
-			//         position: "top-right",
-			//         icon: <Image src={Images.logoVerify} alt="verify" />,
-			//         hideProgressBar: true,
-			//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-			//     });
-			// }
-		} catch (err) {
-			console.error(err);
-		} finally {
-			setSubmitting(false);
-		}
+		// 	// if (res.status === 200) {
+		// 	//     toast.success(`${res.data.message}`, {
+		// 	//         autoClose: 3000,
+		// 	//         position: "top-right",
+		// 	//         icon: <Image src={Images.logoVerify} alt="verify" />,
+		// 	//         hideProgressBar: true,
+		// 	//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+		// 	//     });
+		// 	// }
+		// } catch (err) {
+		// 	console.error(err);
+		// } finally {
+		// 	setSubmitting(false);
+		// }
 	};
 
 	const flexStart = "flex justify-start items-center";
@@ -204,33 +198,15 @@ export default function Profile() {
 							<div className={`col-span-1 ${flexEnd}`}>
 								<label className="flex items-center cursor-pointer">
 									<div className="relative">
-										{
-											(selectedUserType === 'school' || userDetails) ? (
-												<>
-													<input
-														type="checkbox"
-														className="hidden"
-														checked={isChecked}
-														onChange={handleToggle}
-														// value={selectedUserType}
-														disabled={selectedUserType}
-													/>
-													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-													<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck cursor-not-allowed rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
-												</>
-											) : (
-												<>
-													<input
-														type="checkbox"
-														className="hidden"
-														checked={isChecked}
-														onChange={handleToggle}
-													/>
-													<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-													<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
-												</>
-											)
-										}
+										<input
+											type="checkbox"
+											className="hidden"
+											checked={isChecked}
+											onChange={handleToggle}
+											value={selectedUserType}
+										/>
+										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
+										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-greenCheck rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
 									</div>
 								</label>
 							</div>
@@ -355,7 +331,7 @@ export default function Profile() {
 								<div className="input_year flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Standard</label>
 									<select
-										id="standard"
+										id="grade"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 										onChange={handleInputChangeUserProfile}
 									>
@@ -364,7 +340,7 @@ export default function Profile() {
 												className="hover:bg-red"
 												key={option}
 												value={option}
-												selected={userDetails.year === option}
+												selected={userDetails.grade === option}
 											>
 												{option}
 											</option>
