@@ -149,7 +149,7 @@ export default function DataState({ workshopArray }) {
 						</div>
 						<div className="hardware__side flex items-center flex-col w-full lg:w-1/2 justify-center border-l-[0.5px] border-yellowish">
 							<div className="hardware__heading flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-l-[0.5px] border-yellowish cursor-pointer">
-								<Image src={Images.iconCpu} alt="Monitor Mobile Icon"/>
+								<Image src={Images.iconCpu} alt="Monitor Mobile Icon" />
 								<span className="text-yellowish">Hardware Workshops</span>
 							</div>
 							{hardwareWorkshops.map((data, index) => (

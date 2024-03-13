@@ -45,7 +45,7 @@ export default function Dashboard() {
 					<EmptyState />
 				) : (
 					<DataState workshopArray={workshop} />
-		)}
+				)}
 			</div>
 		</>
 	);
