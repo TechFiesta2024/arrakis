@@ -26,7 +26,7 @@ const TeamCard = ({ member }) => {
 					</div>
 					<div className="py-3"></div>
 					<div className="grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
-						<Link
+						{/* <Link
 							href={x_url}
 							className="border-r-[.5px] border-black flex justify-center items-center py-4"
 						>
@@ -42,7 +42,7 @@ const TeamCard = ({ member }) => {
 								alt="linkedIn"
 								className="lg:w-7 h-6"
 							/>
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</div>

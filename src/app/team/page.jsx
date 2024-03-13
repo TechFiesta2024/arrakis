@@ -6,7 +6,7 @@ import teamData from "/public/data/team.json";
 import { useEffect, useState } from "react";
 
 export default function TeamPage() {
-	const [selectedButton, setSelectedButton] = useState("Techies");
+	const [selectedButton, setSelectedButton] = useState("Coordinators");
 	const [filteredData, setFilteredData] = useState([]);
 
 	useEffect(() => {
@@ -44,31 +44,31 @@ export default function TeamPage() {
 						<div className="grid grid-cols-1">
 							<div className="flex-row justify-evenly items-center">
 								<button
-									onClick={() => setSelectedButton("Techies")}
+									onClick={() => setSelectedButton("Coordinators")}
 									className={
-										selectedButton === "Techies" ? selectedBtnClass : btnClass
-									}
-								>
-									Techies
-								</button>
-								<button
-									onClick={() => setSelectedButton("Management")}
-									className={
-										selectedButton === "Management"
+										selectedButton === "Coordinators"
 											? selectedBtnClass
 											: btnClass
 									}
 								>
-									Management
+									Coordinators
 								</button>
 								<button
+									onClick={() => setSelectedButton("Developers")}
+									className={
+										selectedButton === "Developers" ? selectedBtnClass : btnClass
+									}
+								>
+									Developers
+								</button>
+								{/* <button
 									onClick={() => setSelectedButton("Content")}
 									className={
 										selectedButton === "Content" ? selectedBtnClass : btnClass
 									}
 								>
 									Content
-								</button>
+								</button> */}
 							</div>
 						</div>
 					</div>
