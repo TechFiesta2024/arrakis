@@ -7,7 +7,7 @@ export default function EventWorkshopCard({ data }) {
 
 	const urlPathName = usePathname()
 
-	const { id, name, description, image_url } = data
+	const { id, name, description, image_url, teamSize } = data
 
 	const flexStylesBetween = 'flex justify-between items-center'
 	const flexStylesCenter = 'flex justify-center items-center'
@@ -43,7 +43,7 @@ export default function EventWorkshopCard({ data }) {
 										<span className=" font-generalsans text-yellowish text-sm">Team Size</span>
 									</div>
 									<div className={`badge-value bg-yellowish rounded-full w-[40%] h-8 ${flexStylesCenter}`}>
-										<span className=" text-xs text-black font-generalsans-semibold">1 - 2</span>
+										<span className=" text-xs text-black font-generalsans-semibold">{teamSize}</span>
 									</div>
 								</div>
 							</div>

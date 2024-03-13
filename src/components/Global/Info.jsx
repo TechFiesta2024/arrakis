@@ -138,7 +138,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                             Mode
                                         </h1>
                                         <h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-                                            {`${data.mode} | ${data.destination}`}
+                                            {`${data.mode ? data.mode : 'Offline'} | ${data.destination}`}
                                         </h1>
                                     </div>
                                 </div>
@@ -189,91 +189,37 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     </div>
                     {
                         checkRoute ? (
-                            <div className=" ">
-                                <div className="grid grid-cols-2 md:grid-cols-3 ">
-                                    <div
-                                        className="col-span-2 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black"
-                                    >
-                                        <div className="inline-flex gap-0 md:gap-2 py-4">
-                                            <div>
-                                                <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
-                                                    Winner
-                                                </h1>
-                                                <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
-                                                    ₹6000
-                                                </h1>
-                                            </div>
+                            <>
+                                {data.prize && (
+                                    <>
+                                        <div className="pl-4 md:pl-14 py-7 md:py-10">
+                                            <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
+                                                Prize Pool
+                                            </h1>
                                         </div>
-                                    </div>
-                                    <div className="col-span-1 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black">
-                                        <div className="inline-flex gap-0 md:gap-2 py-4">
-                                            <div>
-                                                <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
-                                                    Winner
-                                                </h1>
-                                                <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
-                                                    ₹6000
-                                                </h1>
-                                            </div>
+                                        <div className="grid grid-cols-2 md:grid-cols-3 " >
+                                            {data.prize.map((prize, index) => (
+                                                <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish" key={index}>
+                                                    <div className="inline-flex gap-0 md:gap-2 py-4">
+                                                        <div>
+                                                            <h1 className="text-yellowish text-xl md:text-3xl font-generalsans-semibold">
+                                                                {prize.position}
+                                                            </h1>
+                                                            <h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
+                                                                ₹{prize.amount}
+                                                            </h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
-                                    </div>
-                                    <div className="col-span-1 md:col-span-1 flex justify-center items-center border-[1px] bg-yellowish border-black">
-                                        <div className="inline-flex gap-0 md:gap-2 py-4">
-                                            <div>
-                                                <h1 className="text-black text-xl md:text-3xl font-generalsans-semibold">
-                                                    Winner
-                                                </h1>
-                                                <h1 className="text-black text-md md:text-xl font-generalsans font-normal">
-                                                    ₹6000
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                                    </>
+                                )}
+                            </>
                         ) : (
                             null
                         )
                     }
-                    {/* 
-                    <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
-                        <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10">
-                            Coordinators
-                        </h1>
-                    </div> */}
-                    {/* <div className="grid md:grid-cols-2 grid-cols-1">
-                        {data.coordinator.map((coordinator, index) => (
-                            <Link href={coordinator.contact} key={index}>
-                                <div className="md:col-span-1 col-span-1 border-b-[.5px] md:border-r-[.5px] border-yellowish">
-                                    <div className="flex pl-4 md:pl-0 justify-start md:justify-center items-center gap-4 py-6 md:py-10 ">
-                                        <div>
-                                            <img
-                                                src={coordinator.image_url}
-                                                alt="coordinator"
-                                                className="h-24 w-24 md:h-32 md:w-32 rounded-full object-cover"
-                                            />
-                                        </div>
-                                        <div>
-                                            <div className="inline-flex gap-16 md:gap-20">
-                                                <h1 className="text-yellowish font-generalsans font-semibold text-xl md:text-3xl">
-                                                    {coordinator.name}
-                                                </h1>
-                                                <Image
-                                                    src={Images.arrowRightYellowish}
-                                                    alt="arrow_yellow"
-                                                    className="text-yellowish"
-                                                />
-                                            </div>
-                                            <h1 className="text-yellowish font-generalsans font-normal text-sm md:text-base pt-2">
-                                                {coordinator.designation}
-                                            </h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div> */}
                     <ToastContainer />
                 </div>
             </div>
