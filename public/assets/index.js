@@ -55,6 +55,9 @@ import arrowRightYellowish from './arrowrightYellowish.svg'
 import profile from './profile.svg'
 import logout from './logout.svg'
 import userIcon from './profile_yellow.svg'
+import ftest24 from './ftest24.svg'
+import school from './school.svg'
+import college from './college.svg'
 
 
 
@@ -109,7 +112,10 @@ const Images = {
     close,
     profile,
     userIcon,
-    logout
+    logout,
+    ftest24,
+    school,
+    college
 };
 
 export default Images;

@@ -1,9 +1,8 @@
 export const metadata = {
-    title: 'Dashboard',
-    description: ''
-}
+	title: "Dashboard",
+	description: "",
+};
 
 export default function DashboardLayout({ children }) {
-    return <>{children}</>
-
+	return <>{children}</>;
 }

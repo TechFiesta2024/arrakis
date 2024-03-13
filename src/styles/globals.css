@@ -35,9 +35,10 @@ body {
     src: url(../../public/fonts/GeneralSans-Semibold.otf);
 }
 
-
-
-
+.btn-hover:hover {
+    transition: all 0.3s ease;
+    gap: 18px;
+}
 
 @keyframes rotate {
     0% {
@@ -81,5 +82,32 @@ body {
 
     to {
         transform: translateX(-100%);
+    }
+}
+
+
+
+.spinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.loadingSpinner {
+    border-top: 2px solid #363636;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
