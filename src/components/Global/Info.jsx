@@ -33,23 +33,23 @@ export default function EventWorkshopInfo({ pageData, params }) {
             );
             console.log(response);
 
-            // if (response.status === 200) {
+            if (response.status === 200) {
 
-            //     toast.success(`${data.message}`, {
-            //         autoClose: 3000,
-            //         position: "top-right",
-            //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-            //         hideProgressBar: true,
-            //         style: {
-            //             color: "#010100",
-            //             backgroundColor: "#FFF3B0",
-            //             font: "generalsans",
-            //             fontSize: "14px",
-            //             border: "1px solid #010100",
-            //         },
-            //     }
-            //     );
-            // }
+                toast.success(`${response.data.message}`, {
+                    autoClose: 3000,
+                    position: "top-right",
+                    icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+                    hideProgressBar: true,
+                    style: {
+                        color: "#010100",
+                        backgroundColor: "#FFF3B0",
+                        font: "generalsans",
+                        fontSize: "14px",
+                        border: "1px solid #010100",
+                    },
+                }
+                );
+            }
 
 
         } catch (err) {
@@ -57,20 +57,20 @@ export default function EventWorkshopInfo({ pageData, params }) {
         }
 
 
-        toast.success(`ok`, {
-            autoClose: 3000,
-            position: "top-right",
-            icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-            hideProgressBar: true,
-            style: {
-                color: "#010100",
-                backgroundColor: "#FFF3B0",
-                font: "generalsans",
-                fontSize: "14px",
-                border: "1px solid #010100",
-            },
-        }
-        );
+        // toast.success(`ok`, {
+        //     autoClose: 3000,
+        //     position: "top-right",
+        //     icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+        //     hideProgressBar: true,
+        //     style: {
+        //         color: "#010100",
+        //         backgroundColor: "#FFF3B0",
+        //         font: "generalsans",
+        //         fontSize: "14px",
+        //         border: "1px solid #010100",
+        //     },
+        // }
+        // );
 
     }
 
