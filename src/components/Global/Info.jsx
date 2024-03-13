@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
+import { AxiosError } from "axios";
 
 export default function EventWorkshopInfo({ pageData, params }) {
 	const [data, setData] = useState({ coordinator: [] });
@@ -32,7 +33,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
 					},
 				},
 			);
-			console.log(response);
 
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
@@ -50,23 +50,20 @@ export default function EventWorkshopInfo({ pageData, params }) {
 				});
 			}
 		} catch (err) {
-			console.error(err);
+			toast.error(`${err.response.data.message}`, {
+				autoClose: 3000,
+				position: "top-right",
+				icon: false,
+				hideProgressBar: true,
+				style: {
+					color: "#FFF",
+					backgroundColor: "#FF002B",
+					font: "generalsans",
+					fontSize: "14px",
+					border: "1px solid #010100",
+				},
+			});
 		}
-
-		// toast.success(`ok`, {
-		//     autoClose: 3000,
-		//     position: "top-right",
-		//     icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-		//     hideProgressBar: true,
-		//     style: {
-		//         color: "#010100",
-		//         backgroundColor: "#FFF3B0",
-		//         font: "generalsans",
-		//         fontSize: "14px",
-		//         border: "1px solid #010100",
-		//     },
-		// }
-		// );
 	}
 
 	const checkRoute = urlPathName === `/events/${params.id}`;
