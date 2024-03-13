@@ -103,7 +103,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     <div>
                         <div className=" pl-4 md:pl-14 py-7 md:py-10">
                             <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans font-bold">
-                                {data.workshopName}
+                                {data.name}
                             </h1>
                         </div>
                     </div>
@@ -236,13 +236,13 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             null
                         )
                     }
-
+                    {/* 
                     <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
                         <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10">
                             Coordinators
                         </h1>
-                    </div>
-                    <div className="grid md:grid-cols-2 grid-cols-1">
+                    </div> */}
+                    {/* <div className="grid md:grid-cols-2 grid-cols-1">
                         {data.coordinator.map((coordinator, index) => (
                             <Link href={coordinator.contact} key={index}>
                                 <div className="md:col-span-1 col-span-1 border-b-[.5px] md:border-r-[.5px] border-yellowish">
@@ -273,7 +273,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                 </div>
                             </Link>
                         ))}
-                    </div>
+                    </div> */}
                     <ToastContainer />
                 </div>
             </div>

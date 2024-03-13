@@ -6,7 +6,7 @@ const EventWorkshopPage = dynamic(() => import('../Global/CardContainer'))
 
 export default function Events() {
 
-    const eventType = ["School", "Techfest","Humatronics"]
+    const eventType = ["School", "College"]
 
     return (
         <div className="px-[1px] md:px-20 w-full">

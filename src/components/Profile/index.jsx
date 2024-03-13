@@ -91,7 +91,6 @@ export default function Profile() {
 	const [submitting, setSubmitting] = useState(false)
 	const handleSubmitChangeUserProfile = async (e) => {
 		e.preventDefault();
-		// userDetails.email = user.email;
 		// const newErrors = {};
 		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardianName', 'guardianContact'].forEach(field => {
 		// 	if (!userDetails[field].trim()) {

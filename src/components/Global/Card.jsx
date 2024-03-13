@@ -3,11 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Images from "/public/assets";
 
-export default function EventWorkshopCard({ workshop }) {
+export default function EventWorkshopCard({ data }) {
 
 	const urlPathName = usePathname()
 
-	const { id, workshopName, description, image_url } = workshop
+	const { id, name, description, image_url } = data
 
 	const flexStylesBetween = 'flex justify-between items-center'
 	const flexStylesCenter = 'flex justify-center items-center'
@@ -24,10 +24,10 @@ export default function EventWorkshopCard({ workshop }) {
 						alt="cover_img"
 					/>
 				</div>
-				<div className="">
+				<div className="flex flex-col justify-evenly">
 					<div className="px-6 lg:pt-6 pt-4 h-3/4">
 						<p className="text-yellowish font-generalsans font-bold text-2xl">
-							{workshopName}
+							{name}
 						</p>
 						<p className="text-yellowish font-generalsans text-sm lg:pt-3 py-1">
 							{description}
