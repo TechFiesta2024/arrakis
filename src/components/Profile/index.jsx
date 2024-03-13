@@ -135,15 +135,15 @@ export default function Profile() {
 				UUID: res.data.id,
 			}))
 			setSubmitting(true);
-			// if (res.status === 200) {
-			//     toast.success(`${res.data.message}`, {
-			//         autoClose: 3000,
-			//         position: "top-right",
-			//         icon: <Image src={Images.logoVerify} alt="verify" />,
-			//         hideProgressBar: true,
-			//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-			//     });
-			// }
+			if (res.status === 200) {
+				toast.success(`${res.data.message}`, {
+					autoClose: 1000,
+					position: "bottom-right",
+					icon: <Image src={Images.logoVerify} alt="verify" />,
+					hideProgressBar: true,
+					style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+				});
+			}
 		} catch (err) {
 			console.error(err)
 		} finally {
@@ -384,11 +384,10 @@ export default function Profile() {
 						>
 							Submit
 						</button>
-
-						{/* <ToastContainer /> */}
 					</div>
 				</div>
 			</div>
+
 		</>
 	);
 }
