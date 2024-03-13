@@ -23,18 +23,14 @@ const nextConfig = {
                         value: 's-maxage=60, stale-while-revalidate=30',
                     },
                 ],
-            },
-            {
-                source: '/workshop',
-                headers: [
-                    {
-                        key: 'Cache-Control',
-                        value: 's-maxage=600, stale-while-revalidate=30',
-                    },
-                ],
-            },
+            }
         ];
     },
+    logging: {
+        fetches: {
+            fullUrl: true
+        }
+    }
 };
 
 module.exports = nextConfig;
