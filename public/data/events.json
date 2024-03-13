@@ -8,6 +8,21 @@
     "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
     "date": "1st",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "Winner",
+        "amount": "3000"
+      },
+      {
+        "position": "Winner",
+        "amount": "3000"
+      },
+      {
+        "position": "Winner",
+        "amount": "3000"
+      }
+    ],
     "destination": "Lab 1"
   },
   {
@@ -19,6 +34,21 @@
     "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "Winner",
+        "amount": "3000"
+      },
+      {
+        "position": "Winner",
+        "amount": "3000"
+      },
+      {
+        "position": "Winner",
+        "amount": "3000"
+      }
+    ],
     "destination": "Lab 2"
   },
   {
@@ -30,6 +60,21 @@
     "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "3000"
+      },
+      {
+        "position": "1st",
+        "amount": "5000"
+      },
+      {
+        "position": "3rd",
+        "amount": "2000"
+      }
+    ],
     "destination": "ION Lab"
   },
   {
@@ -41,6 +86,21 @@
     "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "3000"
+      },
+      {
+        "position": "1st",
+        "amount": "5000"
+      },
+      {
+        "position": "3rd",
+        "amount": "2000"
+      }
+    ],
     "destination": "Auditorium"
   },
   {
@@ -52,6 +112,21 @@
     "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "3000"
+      },
+      {
+        "position": "1st",
+        "amount": "5000"
+      },
+      {
+        "position": "3rd",
+        "amount": "2000"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -63,6 +138,21 @@
     "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "5000"
+      },
+      {
+        "position": "1st",
+        "amount": "7000"
+      },
+      {
+        "position": "3rd",
+        "amount": "4000"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -74,6 +164,21 @@
     "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "5000"
+      },
+      {
+        "position": "1st",
+        "amount": "7000"
+      },
+      {
+        "position": "3rd",
+        "amount": "4000"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -85,6 +190,21 @@
     "body": "IOT Problem Identification, Solution Design, and Presentation - Demonstration.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "2500"
+      },
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1500"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -96,6 +216,21 @@
     "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "2500"
+      },
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1500"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -107,6 +242,21 @@
     "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -118,6 +268,21 @@
     "body": "",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "2500"
+      },
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1500"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -129,6 +294,21 @@
     "body": "",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "prize": [
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -140,6 +320,7 @@
     "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
     "destination": "AOT Campus"
   },
   {
@@ -151,6 +332,7 @@
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
     "destination": "AOT Campus"
   },
   {
@@ -162,6 +344,7 @@
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
     "destination": "AOT Campus"
   },
   {
@@ -173,6 +356,7 @@
     "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
     "destination": "AOT Campus"
   }
 ]
