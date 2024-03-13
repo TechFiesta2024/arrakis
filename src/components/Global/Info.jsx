@@ -188,37 +188,33 @@ export default function EventWorkshopInfo({ pageData, params }) {
                         </div>
                     </div>
                     {
-                        checkRoute ? (
-                            <>
-                                {data.prize && (
-                                    <>
-                                        <div className="pl-4 md:pl-14 py-7 md:py-10">
-                                            <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                                                Prize Pool
-                                            </h1>
-                                        </div>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 " >
-                                            {data.prize.map((prize, index) => (
-                                                <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish" key={index}>
-                                                    <div className="inline-flex gap-0 md:gap-2 py-4">
-                                                        <div>
-                                                            <h1 className="text-yellowish text-xl md:text-3xl font-generalsans-semibold">
-                                                                {prize.position}
-                                                            </h1>
-                                                            <h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
-                                                                ₹{prize.amount}
-                                                            </h1>
-                                                        </div>
+                        checkRoute ?
+                            data.prize && (
+                                <>
+                                    <div className="pl-4 md:pl-14 py-7 md:py-10">
+                                        <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
+                                            Prize Pool
+                                        </h1>
+                                    </div>
+                                    <div className="grid grid-cols-2 md:grid-cols-3 " >
+                                        {data.prize.map((prize, index) => (
+                                            <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish" key={index}>
+                                                <div className="inline-flex gap-0 md:gap-2 py-4">
+                                                    <div>
+                                                        <h1 className="text-yellowish text-xl md:text-3xl font-generalsans-semibold">
+                                                            {prize.position}
+                                                        </h1>
+                                                        <h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
+                                                            ₹{prize.amount}
+                                                        </h1>
                                                     </div>
                                                 </div>
-                                            ))}
-                                        </div>
-                                    </>
-                                )}
-                            </>
-                        ) : (
-                            null
-                        )
+                                            </div>
+                                        ))}
+                                    </div>
+                                </>
+                            )
+                            : null
                     }
                     <ToastContainer />
                 </div>
