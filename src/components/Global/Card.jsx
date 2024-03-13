@@ -24,14 +24,16 @@ export default function EventWorkshopCard({ data }) {
 						alt="cover_img"
 					/>
 				</div>
-				<div className="flex flex-col justify-evenly">
-					<div className="px-6 lg:pt-6 pt-4 h-3/4">
+				<div className="">
+					<div className="px-6 lg:pt-6 pt-4">
 						<p className="text-yellowish font-generalsans font-bold text-2xl">
 							{name}
 						</p>
-						<p className="text-yellowish font-generalsans text-sm lg:pt-3 py-1">
-							{description}
-						</p>
+						<div className="description-container h-20 overflow-hidden">
+							<p className="text-yellowish font-generalsans text-sm lg:pt-3 py-1">
+								{description}
+							</p>
+						</div>
 					</div>
 					{
 						checkRoute && (
