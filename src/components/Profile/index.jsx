@@ -4,7 +4,7 @@ import Images from "/public/assets/index.js";
 import Cookies from "js-cookie";
 import { useAuthState } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
 
@@ -93,7 +93,7 @@ export default function Profile() {
 		e.preventDefault();
 		// userDetails.email = user.email;
 		// const newErrors = {};
-		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
+		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardianName', 'guardianContact'].forEach(field => {
 		// 	if (!userDetails[field].trim()) {
 		// 		newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
 		// 	}
@@ -134,7 +134,7 @@ export default function Profile() {
 				...user,
 				UUID: res.data.id,
 			}))
-			setSubmitting(true);
+			setToggleDisabled(true);
 			if (res.status === 200) {
 				toast.success(`${res.data.message}`, {
 					autoClose: 1000,
