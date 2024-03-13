@@ -14,13 +14,11 @@ export default function EventDate() {
 						/>
 					</div>
 					<div className="text-black text-2xl flex-col h-[100%]">
-						<span className="font-generalsans text-xs">
-							When?
-						</span>
+						<span className="font-generalsans text-xs">When?</span>
 						<p className="font-generalsans-semibold">April 8 - 9</p>
 					</div>
 				</div>
 			</div>
 		</>
 	);
-};
+}

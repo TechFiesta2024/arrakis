@@ -9,11 +9,7 @@ const TeamCard = ({ member }) => {
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
-					<img
-						className="object-cover"
-						src={image_url}
-						alt="team_image"
-					/>
+					<img className="object-cover" src={image_url} alt="team_image" />
 				</div>
 				<div className="">
 					<div className="lg:pt-6 pt-4 ">
