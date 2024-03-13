@@ -1,132 +1,194 @@
 [
   {
-    "id": 1,
-    "type": "School",
-    "workshopName": "Product Development",
+    "id": "ui_ux",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "UXplore",
     "image_url": "/assets/avatar.png",
-    "description": "This workshop is about the product development",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11-16",
+    "description": "UI/UX Design is the process of creating products that provide meaningful and relevant experiences to users.",
+    "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
+    "date": "1st",
     "time": "10:00 AM - 12:00 PM",
-    "mode": "Online",
-    "destination": "Aot Campus",
-    "coordinator": [
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Lab 1"
   },
   {
-    "id": 2,
-    "type": "School",
-    "workshopName": "Web Development",
+    "id": "frontend",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "ClashDevs",
     "image_url": "/assets/avatar.png",
-    "description": "This workshop is about the web development",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "Developing the frontend of a website or an application.",
+    "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "mode": "Online",
-    "destination": "",
-    "coordinator": [
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Lab 2"
   },
   {
-    "id": 3,
-    "type": "School",
-    "workshopName": "App Development",
+    "id": "ctf",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "Cynox",
     "image_url": "/assets/avatar.png",
-    "description": "This workshop is about the app development",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "CTF is a gamified event where participants compete to find and exploit vulnerabilities",
+    "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "mode": "Online",
-    "destination": "",
-    "coordinator": [
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "ION Lab"
   },
   {
-    "id": 4,
-    "type": "Techfest",
-    "workshopName": "Game Development",
+    "id": "webathon",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "Eureka",
     "image_url": "/assets/avatar.png",
-    "description": "This workshop is about the game development",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "WebAThon is a hackathon where participants compete to build a web application in a limited time",
+    "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "mode": "Online",
-    "destination": "",
-    "coordinator": [
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Auditorium"
   },
   {
-    "id": 5,
-    "type": "Humatronics",
-    "workshopName": "Extempore",
+    "id": "treasure_hunt",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "TraceIt",
     "image_url": "/assets/avatar.png",
-    "description": "This workshop is about the game development",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "Search around the campus to find the hidden treasure. ",
+    "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "mode": "Online",
-    "destination": "",
-    "coordinator": [
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "/assets/avatar.png",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "maze_solver",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "Entangled",
+    "image_url": "/assets/avatar.png",
+    "description": "Maze Solver is a robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
+    "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "race",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "EdrenaLine",
+    "image_url": "/assets/avatar.png",
+    "description": "Race cars are vehicles that can be controlled remotely using a handheld transmitter or controller.",
+    "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "iot",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "SymbIoT",
+    "image_url": "/assets/avatar.png",
+    "description": "IOT problem TODO",
+    "body": "IOT Problem Identification, Solution Design, and Presentation - Demonstration.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "circuit",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "Connectify",
+    "image_url": "/assets/avatar.png",
+    "description": "circuit event",
+    "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circui",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "science_exhibition",
+    "type": "techfiesta",
+    "isSchool": true,
+    "name": "XtraVaganza",
+    "image_url": "/assets/avatar.png",
+    "description": "science exhibition",
+    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "cad",
+    "type": "techfiesta",
+    "isSchool": false,
+    "name": "FreeForm",
+    "image_url": "/assets/avatar.png",
+    "description": "cad event description",
+    "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circui",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "math",
+    "type": "techfiesta",
+    "isSchool": true,
+    "name": "QuantQuest",
+    "image_url": "/assets/avatar.png",
+    "description": "test test",
+    "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circui",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "creative_writing",
+    "type": "humatronics",
+    "isSchool": false,
+    "name": "WordCraftique",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "waste_to_art",
+    "type": "humatronics",
+    "isSchool": false,
+    "name": "Junkraft",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "extempore",
+    "type": "humatronics",
+    "isSchool": true,
+    "name": "XpreXive",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "painting",
+    "type": "humatronics",
+    "isSchool": true,
+    "name": "Artistix",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "destination": "AOT Campus"
   }
 ]
