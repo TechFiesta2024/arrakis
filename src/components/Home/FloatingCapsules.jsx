@@ -109,6 +109,7 @@ export default function FloatingCapsules({ canvasWidth, canvasHeight }) {
 		window.Matter = Matter;
 		window.engine = engine;
 		window.runner = runner;
+
 	}
 
 	return (

@@ -131,7 +131,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-yellowish">
                                 <div className="inline-flex gap-0 md:gap-2 py-4">
                                     <div className="flex justify-center items-center">
-                                        <Image src={Images.map} alt="map" className="h-10" />
+                                        <Image src={Images.map} alt="map" className="w-10" />
                                     </div>
                                     <div>
                                         <h1 className="text-yellowish text-sm md:text-xl font-generalsans font-semibold">
