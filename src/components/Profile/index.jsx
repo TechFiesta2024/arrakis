@@ -387,8 +387,8 @@ export default function Profile() {
 
 						{/* <ToastContainer /> */}
 					</div>
-				</div >
-			</div >
+				</div>
+			</div>
 		</>
 	);
 }
