@@ -47,8 +47,8 @@ function FilterCard({ filteredData }) {
     return (
         <>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-                {filteredData.map((workshop, index) => (
-                    <EventWorkshopCard key={index} workshop={workshop} />
+                {filteredData.map((data, index) => (
+                    <EventWorkshopCard key={index} data={data} />
                 ))}
             </div>
         </>

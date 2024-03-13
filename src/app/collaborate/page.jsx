@@ -518,7 +518,7 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								<ToastContainer />
+								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
@@ -580,7 +580,7 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								<ToastContainer />
+								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}

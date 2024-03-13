@@ -4,7 +4,7 @@ import Images from "/public/assets/index.js";
 import Cookies from "js-cookie";
 import { useAuthState } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
 
@@ -91,9 +91,8 @@ export default function Profile() {
 	const [submitting, setSubmitting] = useState(false)
 	const handleSubmitChangeUserProfile = async (e) => {
 		e.preventDefault();
-		// userDetails.email = user.email;
 		// const newErrors = {};
-		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'gaurdianName', 'gaurdianContact'].forEach(field => {
+		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardianName', 'guardianContact'].forEach(field => {
 		// 	if (!userDetails[field].trim()) {
 		// 		newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
 		// 	}
@@ -134,16 +133,16 @@ export default function Profile() {
 				...user,
 				UUID: res.data.id,
 			}))
-
-			// if (res.status === 200) {
-			//     toast.success(`${res.data.message}`, {
-			//         autoClose: 3000,
-			//         position: "top-right",
-			//         icon: <Image src={Images.logoVerify} alt="verify" />,
-			//         hideProgressBar: true,
-			//         style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
-			//     });
-			// }
+			setToggleDisabled(true);
+			if (res.status === 200) {
+				toast.success(`${res.data.message}`, {
+					autoClose: 1000,
+					position: "bottom-right",
+					icon: <Image src={Images.logoVerify} alt="verify" />,
+					hideProgressBar: true,
+					style: { color: "#010100", backgroundColor: "#FEFAE0", font: "generalsans", fontSize: '14px', border: "0.5px solid #010100" },
+				});
+			}
 		} catch (err) {
 			console.error(err)
 		} finally {
@@ -194,7 +193,7 @@ export default function Profile() {
 							</div>
 							<div className={`col-span-1 ${flexEnd}`}>
 								<label className="flex items-center cursor-pointer">
-									<div className="relative">
+									<div className={`relative ${toggleDisabled && 'cursor-not-allowed'}`}>
 										<input
 											type="checkbox"
 											className="hidden"
@@ -204,7 +203,7 @@ export default function Profile() {
 											disabled={toggleDisabled}
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
-										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${isChecked ? 'translate-x-6' : 'translate-x-0'}`}></div>
+										<div className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${toggleDisabled && 'cursor-not-allowed'} ${userCheck ? 'translate-x-0' : 'translate-x-6'} `}></div>
 									</div>
 								</label>
 							</div>
@@ -384,11 +383,10 @@ export default function Profile() {
 						>
 							Submit
 						</button>
-
-						{/* <ToastContainer /> */}
 					</div>
-				</div >
-			</div >
+				</div>
+			</div>
+
 		</>
 	);
 }

@@ -22,57 +22,55 @@ export default function EventWorkshopInfo({ pageData, params }) {
     async function register() {
         const userid = Cookies.get("studentId");
 
-        // try {
-        //     // const response = await axiosInstance.post(
-        //     //     `/${path}/join/${params.id}`,
+        try {
+            const response = await axiosInstance.post(`/${path}/join/${params.id}`,
+                {},
+                {
+                    headers: {
+                        userid,
+                    },
+                },
+            );
+            console.log(response);
 
-        //     //     {},
-        //     //     {
-        //     //         headers: {
-        //     //             userid,
-        //     //         },
-        //     //     },
-        //     // );
-        //     // console.log(response);
+            if (response.status === 200) {
 
-        //     // if (response.status === 200) {
-
-        //     //     toast.success(`${data.message}`, {
-        //     //         autoClose: 3000,
-        //     //         position: "top-right",
-        //     //         icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-        //     //         hideProgressBar: true,
-        //     //         style: {
-        //     //             color: "#010100",
-        //     //             backgroundColor: "#FFF3B0",
-        //     //             font: "generalsans",
-        //     //             fontSize: "14px",
-        //     //             border: "1px solid #010100",
-        //     //         },
-        //     //     }
-        //     //     );
-        //     // }
+                toast.success(`${response.data.message}`, {
+                    autoClose: 3000,
+                    position: "top-right",
+                    icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+                    hideProgressBar: true,
+                    style: {
+                        color: "#010100",
+                        backgroundColor: "#FFF3B0",
+                        font: "generalsans",
+                        fontSize: "14px",
+                        border: "1px solid #010100",
+                    },
+                }
+                );
+            }
 
 
-        // } catch (err) {
-        //     console.error(err);
-        // }
-
-
-        toast.success(`ok`, {
-            autoClose: 3000,
-            position: "top-right",
-            icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-            hideProgressBar: true,
-            style: {
-                color: "#010100",
-                backgroundColor: "#FFF3B0",
-                font: "generalsans",
-                fontSize: "14px",
-                border: "1px solid #010100",
-            },
+        } catch (err) {
+            console.error(err);
         }
-        );
+
+
+        // toast.success(`ok`, {
+        //     autoClose: 3000,
+        //     position: "top-right",
+        //     icon: <Image src={Images.logoVerify} alt="whatsapp" />,
+        //     hideProgressBar: true,
+        //     style: {
+        //         color: "#010100",
+        //         backgroundColor: "#FFF3B0",
+        //         font: "generalsans",
+        //         fontSize: "14px",
+        //         border: "1px solid #010100",
+        //     },
+        // }
+        // );
 
     }
 
@@ -105,7 +103,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     <div>
                         <div className=" pl-4 md:pl-14 py-7 md:py-10">
                             <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans font-bold">
-                                {data.workshopName}
+                                {data.name}
                             </h1>
                         </div>
                     </div>
@@ -238,13 +236,13 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             null
                         )
                     }
-
+                    {/* 
                     <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
                         <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10">
                             Coordinators
                         </h1>
-                    </div>
-                    <div className="grid md:grid-cols-2 grid-cols-1">
+                    </div> */}
+                    {/* <div className="grid md:grid-cols-2 grid-cols-1">
                         {data.coordinator.map((coordinator, index) => (
                             <Link href={coordinator.contact} key={index}>
                                 <div className="md:col-span-1 col-span-1 border-b-[.5px] md:border-r-[.5px] border-yellowish">
@@ -275,7 +273,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                 </div>
                             </Link>
                         ))}
-                    </div>
+                    </div> */}
                     <ToastContainer />
                 </div>
             </div>

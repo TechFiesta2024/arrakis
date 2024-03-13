@@ -10,11 +10,11 @@ export default function Footer() {
 					<p className="text-sm md:text-lg">©Techfiesta&apos;24</p>
 				</div>
 				<div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2">
-					<Link href="/" className="text-sm md:text-lg">
+					<Link href="/helpdesk" className="text-sm md:text-lg">
 						Contact
 					</Link>
 				</div>
-				<div className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2 bg-red">
+				<div className="border-x-[0.5px] cursor-pointer flex items-center justify-center border-yellowish h-full w-1/2 bg-red">
 					<Link href="/collaborate" className="text-sm md:text-lg">
 						Collaborate
 					</Link>
