@@ -8,7 +8,7 @@
     "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
     "date": "1st",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "Winner",
@@ -34,7 +34,7 @@
     "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "Winner",
@@ -60,7 +60,7 @@
     "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -86,7 +86,7 @@
     "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -112,7 +112,7 @@
     "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -138,7 +138,7 @@
     "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -164,7 +164,7 @@
     "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -190,7 +190,7 @@
     "body": "IOT Problem Identification, Solution Design, and Presentation - Demonstration.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -216,7 +216,7 @@
     "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -242,7 +242,7 @@
     "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -268,7 +268,7 @@
     "body": "",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -294,7 +294,7 @@
     "body": "",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "prize": [
       {
         "position": "1st",
@@ -320,7 +320,7 @@
     "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "destination": "AOT Campus"
   },
   {
@@ -332,7 +332,7 @@
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "destination": "AOT Campus"
   },
   {
@@ -344,7 +344,7 @@
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "destination": "AOT Campus"
   },
   {
@@ -356,7 +356,7 @@
     "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "destination": "AOT Campus"
   }
 ]
