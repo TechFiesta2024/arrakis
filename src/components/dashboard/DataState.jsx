@@ -82,11 +82,11 @@ export default function DataState({ workshopArray }) {
 							{softwareWorkshops.map((data, index) => (
 								<div
 									key={index}
-									className="flex w-full h-32 md:h-40 border-r-[0.5px] border-yellowish border-b-[0.5px] "
+									className="flex w-full h-32 md:h-40 border-r-[0.5px] border-yellowish border-b-[0.5px]"
 								>
 									<div className="flex flex-col justify-evenly items-start w-5/6 p-2 md:p-5">
 										<div className="font-generalsans-semibold text-2xl md:text-3xl text-yellowish">
-											{data.workshopName}
+											{data.name}
 										</div>
 										<div className="flex flex-wrap gap-2 md:gap-3 text-yellowish text-xs sm:text-sm md:text-base pt-2 md:pt-0">
 											<div className="flex items-center gap-1 md:gap-1">
@@ -94,7 +94,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.iconCalendar}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.date}
 												</span>
@@ -104,7 +104,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.iconClock}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.time}
 												</span>
@@ -114,7 +114,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.iconGlobal}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.mode}
 												</span>
@@ -134,22 +134,22 @@ export default function DataState({ workshopArray }) {
 											</span>
 										</div>
 									</div>
-									<Link
-										href={data.link}
-										className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish"
-									>
-										<Image
-											src={Images.iconLink2}
-											className="w-10 lg:w-16"
-											alt="Link2 Icon"
-										></Image>
-									</Link>
+									{/* <Link */}
+									{/* 	href={data.link} */}
+									{/* 	className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish" */}
+									{/* > */}
+									{/* 	<Image */}
+									{/* 		src={Images.iconLink2} */}
+									{/* 		className="w-10 lg:w-16" */}
+									{/* 		alt="Link2 Icon" */}
+									{/* 	></Image> */}
+									{/* </Link> */}
 								</div>
 							))}
 						</div>
-						<div className="hardware__side flex items-center flex-col w-full lg:w-1/2 justify-center">
+						<div className="hardware__side flex items-center flex-col w-full lg:w-1/2 justify-center border-l-[0.5px] border-yellowish">
 							<div className="hardware__heading flex items-center h-20 w-full justify-center text-2xl gap-3 border-y-[0.5px] border-l-[0.5px] border-yellowish cursor-pointer">
-								<Image src={Images.iconCpu} alt="Monitor Mobile Icon"></Image>
+								<Image src={Images.iconCpu} alt="Monitor Mobile Icon"/>
 								<span className="text-yellowish">Hardware Workshops</span>
 							</div>
 							{hardwareWorkshops.map((data, index) => (
@@ -159,7 +159,7 @@ export default function DataState({ workshopArray }) {
 								>
 									<div className="flex flex-col justify-evenly items-start w-5/6 p-2 md:p-5">
 										<div className="font-generalsans-semibold text-2xl md:text-3xl text-yellowish">
-											{data.workshopName}
+											{data.name}
 										</div>
 										<div className="flex flex-wrap gap-2 md:gap-5 text-yellowish text-xs sm:text-sm md:text-base pt-2 md:pt-0">
 											<div className="flex  items-center gap-1 md:gap-1">
@@ -167,7 +167,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.iconCalendar}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.date}
 												</span>
@@ -177,7 +177,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.iconClock}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.time}
 												</span>
@@ -187,7 +187,7 @@ export default function DataState({ workshopArray }) {
 													className="w-5"
 													src={Images.map}
 													alt="Link2 Icon"
-												></Image>
+												/>
 												<span className="text-yellowish sm:text-xs">
 													{data.mode}
 												</span>
@@ -204,16 +204,16 @@ export default function DataState({ workshopArray }) {
 											</span>
 										</div>
 									</div>
-									<Link
-										href={data.link}
-										className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish"
-									>
-										<Image
-											src={Images.iconLink2}
-											className="w-10 lg:w-16"
-											alt="Link2 Icon"
-										></Image>
-									</Link>
+									{/* <Link */}
+									{/* 	href={data.link} */}
+									{/* 	className="flex justify-center items-center w-24 sm:w-1/6 lg:w-40 bg-red border-l-[0.5px] border-yellowish" */}
+									{/* > */}
+									{/* 	<Image */}
+									{/* 		src={Images.iconLink2} */}
+									{/* 		className="w-10 lg:w-16" */}
+									{/* 		alt="Link2 Icon" */}
+									{/* 	></Image> */}
+									{/* </Link> */}
 								</div>
 							))}
 						</div>
