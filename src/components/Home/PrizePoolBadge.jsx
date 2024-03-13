@@ -17,4 +17,4 @@ export default function PrizePoolBadge() {
 			</div>
 		</>
 	);
-};
+}

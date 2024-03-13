@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function TimerMockup() {
-	const targetDate = new Date("April 1, 2024 00:00:00").getTime();
+	const targetDate = new Date("April 8, 2024 00:00:00").getTime();
 
 	const calculateTimeRemaining = () => {
 		const now = new Date().getTime();
@@ -61,7 +61,7 @@ export default function TimerMockup() {
 					className={`bg-mockup bg-no-repeat h-[600px] w-[300px] whitespace-nowrap bg-contain object-cover mt-[450px] md:mt-96`}
 				>
 					<div className={`mt-16 ${flexStylesCenter}`}>
-						<div className={``}>
+						<div>
 							<p className="text-3xl font-generalsans text-black ">
 								{`${formatTimeValue(timeRemaining.days)}:${formatTimeValue(
 									timeRemaining.hours,
@@ -78,4 +78,4 @@ export default function TimerMockup() {
 			</div>
 		</>
 	);
-};
+}

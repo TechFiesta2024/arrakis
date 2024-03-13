@@ -2,161 +2,37 @@
   {
     "name": "John Doe",
     "linkedin": "https://www.linkedin.com/in/johndoe",
-    "x_url": "https://example.com/johndoe"
+    "x_url": "https://example.com/johndoe",
+    "phone": "1234567890"
   },
   {
     "name": "Jane Smith",
-
     "linkedin": "https://www.linkedin.com/in/janesmith",
-    "x_url": "https://example.com/janesmith"
+    "x_url": "https://example.com/janesmith",
+    "phone": "1234567890"
   },
   {
     "name": "Michael Johnson",
     "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson"
+    "x_url": "https://example.com/michaeljohnson",
+    "phone": "1234567890"
   },
   {
     "name": "Alice Brown",
     "linkedin": "https://www.linkedin.com/in/alicebrown",
-    "x_url": "https://example.com/alicebrown"
+    "x_url": "https://example.com/alicebrown",
+    "phone": "1234567890"
   },
   {
     "name": "Robert Lee",
-
     "linkedin": "https://www.linkedin.com/in/robertlee",
-    "x_url": "https://example.com/robertlee"
+    "x_url": "https://example.com/robertlee",
+    "phone": "1234567890"
   },
   {
-    "name": "Emily Taylor",
-    "linkedin": "https://www.linkedin.com/in/emilytaylor",
-    "x_url": "https://example.com/emilytaylor"
-  },
-  {
-    "name": "David Clark",
-    "linkedin": "https://www.linkedin.com/in/davidclark",
-    "x_url": "https://example.com/davidclark"
-  },
-  {
-    "name": "Sarah White",
-
-    "linkedin": "https://www.linkedin.com/in/sarahwhite",
-    "x_url": "https://example.com/sarahwhite"
-  },
-  {
-    "name": "Mark Davis",
-    "linkedin": "https://www.linkedin.com/in/markdavis",
-    "x_url": "https://example.com/markdavis"
-  },
-  {
-    "name": "Jennifer Green",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
-  },
-  {
-    "name": "William Baker",
-
-    "linkedin": "https://www.linkedin.com/in/williambaker",
-    "x_url": "https://example.com/williambaker"
-  },
-  {
-    "name": "Laura Martinez",
-    "linkedin": "https://www.linkedin.com/in/lauramartinez",
-    "x_url": "https://example.com/lauramartinez"
-  },
-  {
-    "name": "Daniel Taylor",
-    "linkedin": "https://www.linkedin.com/in/danieltaylor",
-    "x_url": "https://example.com/danieltaylor"
-  },
-  {
-    "name": "Amanda Johnson",
-
-    "linkedin": "https://www.linkedin.com/in/amandajohnson",
-    "x_url": "https://example.com/amandajohnson"
-  },
-  {
-    "name": "Christopher Adams",
-    "linkedin": "https://www.linkedin.com/in/christopheradams",
-    "x_url": "https://example.com/christopheradams"
-  },
-  {
-    "name": "Olivia Thomas",
-    "linkedin": "https://www.linkedin.com/in/oliviathomas",
-    "x_url": "https://example.com/oliviathomas"
-  },
-  {
-    "name": "George Wilson",
-
-    "linkedin": "https://www.linkedin.com/in/georgewilson",
-    "x_url": "https://example.com/georgewilson"
-  },
-  {
-    "name": "Victoria Rodriguez",
-    "linkedin": "https://www.linkedin.com/in/victoriarodriguez",
-    "x_url": "https://example.com/victoriarodriguez"
-  },
-  {
-    "name": "Matthew Kelly",
-    "linkedin": "https://www.linkedin.com/in/matthewkelly",
-    "x_url": "https://example.com/matthewkelly"
-  },
-  {
-    "name": "Sophia Martinez",
-
-    "linkedin": "https://www.linkedin.com/in/sophiamartinez",
-    "x_url": "https://example.com/sophiamartinez"
-  },
-  {
-    "name": "Alexander Brown",
-    "linkedin": "https://www.linkedin.com/in/alexanderbrown",
-    "x_url": "https://example.com/alexanderbrown"
-  },
-  {
-    "name": "Grace Evans",
-    "linkedin": "https://www.linkedin.com/in/graceevans",
-    "x_url": "https://example.com/graceevans"
-  },
-  {
-    "name": "Nathan Flores",
-
-    "linkedin": "https://www.linkedin.com/in/nathanflores",
-    "x_url": "https://example.com/nathanflores"
-  },
-  {
-    "name": "Isabella Hernandez",
-    "linkedin": "https://www.linkedin.com/in/isabellahernandez",
-    "x_url": "https://example.com/isabellahernandez"
-  },
-  {
-    "name": "Ethan Rivera",
-    "linkedin": "https://www.linkedin.com/in/ethanrivera",
-    "x_url": "https://example.com/ethanrivera"
-  },
-  {
-    "name": "Madison Sullivan",
-
-    "linkedin": "https://www.linkedin.com/in/madisonsullivan",
-    "x_url": "https://example.com/madisonsullivan"
-  },
-  {
-    "name": "Jacob Nguyen",
-    "linkedin": "https://www.linkedin.com/in/jacobnguyen",
-    "x_url": "https://example.com/jacobnguyen"
-  },
-  {
-    "name": "Ava Kim",
-    "linkedin": "https://www.linkedin.com/in/avakim",
-    "x_url": "https://example.com/avakim"
-  },
-  {
-    "name": "Liam Patel",
-
-    "linkedin": "https://www.linkedin.com/in/liampatel",
-    "x_url": "https://example.com/liampatel"
-  },
-  {
-    "name": "Chloe Kim",
-    "linkedin": "https://www.linkedin.com/in/chloekim",
-    "x_url": "https://example.com/chloekim"
+    "name": "Cool Name",
+    "linkedin": "https://www.linkedin.com/in/robertlee",
+    "x_url": "https://example.com/robertlee",
+    "phone": "1234567890"
   }
 ]

@@ -63,12 +63,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -89,12 +89,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -115,12 +115,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -141,12 +141,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "5000"
-      },
-      {
         "position": "1st",
         "amount": "7000"
+      },
+      {
+        "position": "2nd",
+        "amount": "5000"
       },
       {
         "position": "3rd",
@@ -167,12 +167,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "5000"
-      },
-      {
         "position": "1st",
         "amount": "7000"
+      },
+      {
+        "position": "2nd",
+        "amount": "5000"
       },
       {
         "position": "3rd",
@@ -193,12 +193,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -219,12 +219,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -245,12 +245,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
       },
       {
         "position": "3rd",
@@ -271,12 +271,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -297,12 +297,12 @@
     "teamSize": "",
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
       },
       {
         "position": "3rd",

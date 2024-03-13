@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "/public/assets";
 import SmartShapes from "@/components/Global/SmartShapes";
@@ -163,10 +163,11 @@ export default function CollaboratePage() {
 			return; // Prevent form submission if validation fails
 		}
 
-
 		try {
-
-			const response = await axiosInstance.post("/community/ambassador", ambassorDetails);
+			const response = await axiosInstance.post(
+				"/community/ambassador",
+				ambassorDetails,
+			);
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
@@ -303,9 +304,11 @@ export default function CollaboratePage() {
 			return;
 		}
 
-
 		try {
-			const response = await axiosInstance.post("/community/collab", communityPartnerDetails)
+			const response = await axiosInstance.post(
+				"/community/collab",
+				communityPartnerDetails,
+			);
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
@@ -518,7 +521,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
@@ -580,7 +582,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
