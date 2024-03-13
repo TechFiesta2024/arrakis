@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export default function EventWorkshopInfo({ pageData, params }) {
     const [data, setData] = useState({ coordinator: [] });
@@ -163,7 +163,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                 </div>
                             </button>
                         </div>
-                        <ToastContainer />
                     </div>
                     <div>
                         <div className="pl-4 md:pl-14 pt-7 md:pt-8">
@@ -216,7 +215,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             )
                             : null
                     }
-                    <ToastContainer />
                 </div>
             </div>
         </>

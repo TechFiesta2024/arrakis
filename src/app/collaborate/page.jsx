@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "/public/assets";
 import SmartShapes from "@/components/Global/SmartShapes";
@@ -518,7 +518,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
@@ -580,7 +579,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
