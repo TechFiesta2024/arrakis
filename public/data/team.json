@@ -64,12 +64,12 @@
     "x_url": "https://example.com/michaeljohnson"
   },
   {
-    "name": "Content Creators",
-    "role": "All lovely content from lovely people",
+    "name": "Photographers",
+    "role": "People behind beautiful pictures",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2086.JPG",
-    "linkedin": "https://www.linkedin.com/in/emilytaylor",
-    "x_url": "https://example.com/emilytaylor"
+    "image_url": "/assets/avatar.png",
+    "linkedin": "https://www.linkedin.com/in/sarahwhite",
+    "x_url": "https://example.com/sarahwhite"
   },
   {
     "name": "Abhirup Saha",
@@ -128,12 +128,12 @@
     "x_url": "https://example.com/jennifergreen"
   },
   {
-    "name": "Photographers",
-    "role": "People behind beautiful pictures",
+    "name": "Content Creators",
+    "role": "All lovely content from lovely people",
     "department": "Coordinators",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/sarahwhite",
-    "x_url": "https://example.com/sarahwhite"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2086.JPG",
+    "linkedin": "https://www.linkedin.com/in/emilytaylor",
+    "x_url": "https://example.com/emilytaylor"
   },
   {
     "name": "All Coordinators",
