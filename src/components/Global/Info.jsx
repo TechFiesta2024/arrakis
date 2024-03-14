@@ -102,7 +102,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
           </div>
           <div>
             <div className=" pl-4 md:pl-14 py-7 md:py-10">
-              <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans font-bold">
+              <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans-semibold">
                 {data.name}
               </h1>
             </div>
@@ -168,8 +168,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
           <div>
             <div className="pl-4 md:pl-14 pt-7 md:pt-8">
               {checkRoute ? (
-                <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                  Rules
+                <h1 className="text-yellowish font-generalsans-semibold text-3xl md:text-5xl">
+                  Event Details
                 </h1>
               ) : (
                 <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
@@ -186,17 +186,17 @@ export default function EventWorkshopInfo({ pageData, params }) {
               ) : (
                 rules.map((rule, index) => (
                   <div key={index} className="py-4">
-                    <p className="text-yellowish text-[28px] font-generalsans-semibold pb-2">
+                    <p className="text-yellowish md:text-3xl font-generalsans-semibold pb-2">
                       {rule.type}:
                     </p>
                     {Array.isArray(rule.body) ? (
                       <ul className="text-yellowish list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i}>🚀{r}</li>
+                          <li key={i} className="text-yellowish font-generalsans text-xl leading-8">🚀{r}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-yellowish">{rule.body}</p>
+                      <p className="text-yellowish font-generalsans text-xl">{rule.body}</p>
                     )}
                   </div>
                 ))

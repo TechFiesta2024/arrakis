@@ -70,7 +70,7 @@ const Images = {
     logoLinkedIn,
     logoX,
     logoInstagram,
-
+    iconArrowRight,
     logoLinkedInBlack,
     logoXBlack,
     logoVerify,
