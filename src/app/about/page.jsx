@@ -13,7 +13,7 @@ export default function AboutPage() {
 						<SmartShapes />
 					</div>
 					<div className="flex justify-center items-center h-[152px] border-yellowish border-b-[0.5px] flex-col overflow-hidden">
-						<Image src={Images.about} alt="campus" width={100} height={100}/>
+						<Image src={Images.about} alt="campus" width={100} height={90} />
 					</div>
 					<div className=" p-10  flex flex-col">
 						<p className=" text-yellowish text-[16px] sm:text-[32px] text-justify">
