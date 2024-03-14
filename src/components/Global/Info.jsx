@@ -9,7 +9,8 @@ import { usePathname } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 
 export default function EventWorkshopInfo({ pageData, params }) {
-    const [data, setData] = useState({ coordinator: [] });
+    const [data, setData] = useState({});
+    const [rules, setRules] = useState([])
     const urlPathName = usePathname()
     const path = urlPathName.split('/')[1]
 
@@ -17,7 +18,10 @@ export default function EventWorkshopInfo({ pageData, params }) {
         const selectedPageData = pageData.find((d) => "" + d.id === params.id)
 
         setData(selectedPageData)
+        setRules(selectedPageData.rules)
     }, [])
+    console.log(rules)
+
 
     async function register() {
         const userid = Cookies.get("studentId");
@@ -182,9 +186,33 @@ export default function EventWorkshopInfo({ pageData, params }) {
                         </div>
 
                         <div className="pl-4 md:pl-14 py-8">
-                            <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
-                                {data.body}
-                            </h1>
+                            {
+                                checkRoute ?
+                                    <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
+                                        {data.body}
+                                    </h1>
+                                    : (
+                                        rules.map((rule, index) =>
+                                        (
+                                            <div key={index}>
+                                                <p>{rule.type}</p>
+                                                {
+                                                    rule.body.length > 0 ?
+                                                        (<ul>
+                                                            {rule?.body.map((r, i) => (
+                                                                <li key={i}>{r}</li>
+                                                            ))}
+                                                        </ul>)
+                                                        :
+                                                        (
+                                                            <p>{rule.body}</p>
+
+                                                        )   
+                                                }
+                                            </div>
+                                        ))
+                                    )
+                            }
                         </div>
                     </div>
                     {

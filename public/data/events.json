@@ -9,6 +9,7 @@
     "date": "1st",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "Winner",
@@ -35,6 +36,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "Winner",
@@ -61,6 +63,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -87,6 +90,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -113,6 +117,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -139,6 +144,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -165,6 +171,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -191,6 +198,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -217,6 +225,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -243,6 +252,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -269,6 +279,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -295,6 +306,7 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
+    "rules": [],
     "prize": [
       {
         "position": "2nd",
@@ -321,7 +333,46 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
-    "destination": "AOT Campus"
+    "destination": "AOT Campus",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Categories",
+        "body": [
+          "-Poetry(Max 20 lines)\n",
+          "Short Story(Max 1000 words)\n",
+          "Drama(Max 1000 words)\n",
+          "Creative Non-fiction (Max 1000 words)"
+        ]
+      },
+      {
+        "type": "Themes",
+        "body": "Will be announced 30 minutes prior to the event."
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      },
+      {
+        "type": "Mode of Writing",
+        "body": "Pen and Paper"
+      },
+      {
+        "type": "resources",
+        "body": "Paper will be provided by the college"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "1. Original Work: All submissions must be original and unpublished pieces of writing created solely by the participant.\n",
+          "2. Adherence to Guidelines: Entries must adhere to the specified word limits and formatting guidelines for each category.\n",
+          "3. Respectful Content: Content must be appropriate for a diverse audience and refrain from containing offensive language, explicit content, or discriminatory themes."
+        ]
+      }
+    ]
   },
   {
     "id": "waste_to_art",
@@ -333,10 +384,23 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
-    "destination": "AOT Campus"
+    "destination": "AOT Campus",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "1. Required waste materials should be brought by the participants.\n",
+          "2. The focus should be on artistic composition, creativity, and design."
+        ]
+      }
+    ]
   },
   {
-    "id": "extempore",
+    "id": "extempore_school",
     "type": "School",
     "name": "XpreXive",
     "image_url": "/assets/avatar.png",
@@ -345,7 +409,57 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
-    "destination": "AOT Campus"
+    "destination": "AOT Campus",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2 + 1 minutes for each participant"
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "1. Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery.\n",
+          "2. Each participant gets 2+1 minutes to speak on the topic.\n",
+          "3. Participants will be marked on content, organization of thought, delivery, voice modulation & body language.\n",
+          "4. No supporting materials will be allowed during the speech."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "extempore_college",
+    "type": "College",
+    "name": "XpreXive",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "",
+    "destination": "AOT Campus",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2 + 1 minutes for each participant"
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "1. Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery.\n",
+          "2. Each participant gets 2+1 minutes to speak on the topic.\n",
+          "3. Participants will be marked on content, organization of thought, delivery, voice modulation & body language.\n",
+          "4. No supporting materials will be allowed during the speech."
+        ]
+      }
+    ]
   },
   {
     "id": "painting",
@@ -357,6 +471,37 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "",
-    "destination": "AOT Campus"
+    "destination": "AOT Campus",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Mode of Painting",
+        "body": "Manual"
+      },
+      {
+        "type": "Resources",
+        "body": "Participants are required to bring their own art paper and necessary painting materials."
+      },
+      {
+        "type": "Art Paper Dimensions",
+        "body": "15 inch × 10 inch"
+      },
+      {
+        "type": "Themes",
+        "body": "Will be announced 30 minutes prior to the event."
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "1. Originality: Participants must create original artwork during the competition. Plagiarism or copying from existing artwork is strictly prohibited.\n",
+          "2. Adherence to Theme: Artwork must reflect the theme provided for the competition. Deviating from the theme may result in disqualification.\n",
+          "3. Respectful Content: Artwork should be appropriate for a diverse audience and should not contain offensive or explicit content. Any artwork deemed inappropriate will be disqualified from the competition.\n",
+          "4. Pencil Sketches will not be considered."
+        ]
+      }
+    ]
   }
 ]
