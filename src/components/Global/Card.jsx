@@ -48,7 +48,7 @@ export default function EventWorkshopCard({ data }) {
 									teamSize === "" ?
 										<>
 											<div className="label">
-												<span className=" font-generalsans text-yellowish text-sm">
+												<span className=" font-generalsans text-yellowish text-xs md:text-sm">
 													Team Size
 												</span>
 											</div>
@@ -61,7 +61,7 @@ export default function EventWorkshopCard({ data }) {
 										:
 										<>
 											<div className="label">
-												<span className=" font-generalsans text-yellowish text-sm">
+												<span className=" font-generalsans text-yellowish text-xs md:text-sm">
 													Team Size
 												</span>
 											</div>
