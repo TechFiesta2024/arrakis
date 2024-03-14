@@ -34,7 +34,7 @@ export default function EventWorkshopCard({ data }) {
 							{name}
 						</p>
 						<div className="description-container h-16 overflow-hidden">
-							<p className="text-yellowish font-generalsans text-sm lg:pt-3 py-1">
+							<p className=" text-grey font-generalsans text-sm lg:pt-3 py-1">
 								{description}
 							</p>
 						</div>
@@ -78,18 +78,21 @@ export default function EventWorkshopCard({ data }) {
 							</div>
 						</div>
 					) : (
-						<div className="py-8 px-6 flex flex-row flex-wrap gap-2">
-							{
-								relatedEvents.map((event, index) => (
-									<div key={index}
-										className={`badge flex flex-row gap-2 text-sm w-auto h-10 py-4 px-2 ${flexStylesBetween} bg-yellowishopc rounded-full text-yellowish`}
-									>
-										<div className="bg-yellowish p-3 rounded-full"></div>
-										{event}
-									</div>
-								))
-							}
-						</div>
+						<>
+							<p className="text-yellowish font-generalsans font-bold text-xl px-6">Related Events</p>
+							<div className="py-8 px-6 flex flex-row flex-wrap gap-2">
+								{
+									relatedEvents.map((event, index) => (
+										<div key={index}
+											className={`badge flex flex-row gap-2 text-sm w-auto h-10 py-4 px-2 ${flexStylesBetween} bg-yellowishopc rounded-full text-yellowish`}
+										>
+											<div className="bg-yellowish p-3 rounded-full"></div>
+											{event}
+										</div>
+									))
+								}
+							</div>
+						</>
 					)}
 					<div className="py-4"></div>
 					<div className="h-1/4 grid grid-cols-1 bg-red border-b-[.5px] border-black">
