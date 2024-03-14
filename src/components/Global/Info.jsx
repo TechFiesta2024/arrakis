@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
+import { rgbDataURL } from "@/utils/blurryImage";
 
 export default function EventWorkshopInfo({ pageData, params }) {
   const [data, setData] = useState({});
@@ -14,9 +15,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
 
+  const selectedPageData = pageData.find((d) => "" + d.id === params.id);
   useEffect(() => {
-    const selectedPageData = pageData.find((d) => "" + d.id === params.id);
-
     setData(selectedPageData);
     setRules(selectedPageData.rules);
   }, []);
@@ -34,7 +34,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
           },
         }
       );
-      console.log(response);
 
       if (response.status === 200) {
         toast.success(`${response.data.message}`, {
@@ -97,6 +96,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
               width={500}
               height={200}
               unoptimized
+              placeholder="blur"
+              blurDataURL={rgbDataURL(128, 128, 128)}
             />
           </div>
           <div>
@@ -137,9 +138,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
                       Mode
                     </h1>
                     <h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-                      {`${data.mode ? data.mode : "Offline"} | ${
-                        data.destination
-                      }`}
+                      {`${data.mode ? data.mode : "Offline"} | ${data.destination
+                        }`}
                     </h1>
                   </div>
                 </div>
