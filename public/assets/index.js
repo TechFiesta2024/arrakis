@@ -35,7 +35,7 @@ import iconClock from './clock.svg'
 import iconCalendar from './calendar.svg'
 import iconEmail from './mail.svg'
 import iconLinkedinWhite from './linkedinWhite.svg'
-import iconXWhite from './iconXWhite.svg' 
+import iconXWhite from './iconXWhite.svg'
 
 import Rectangle9 from './Rectangle_9.svg'
 import CommImg from './communityimage.svg'
@@ -59,6 +59,7 @@ import ftest24 from './ftest24.svg'
 import school from './school.svg'
 import college from './college.svg'
 
+import campus from './campus.svg'
 
 
 const Images = {
@@ -115,7 +116,8 @@ const Images = {
     logout,
     ftest24,
     school,
-    college
+    college,
+    campus
 };
 
 export default Images;
