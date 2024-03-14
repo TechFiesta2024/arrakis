@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Images from "/public/assets";
-import Link from "next/link";
+import { rgbDataURL } from "@/utils/blurryImage";
 
 const TeamCard = ({ member }) => {
 	const { name, role, image_url, linkedin, x_url } = member;
@@ -9,7 +8,15 @@ const TeamCard = ({ member }) => {
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
-					<Image className="object-cover" src={image_url} alt="team_image" width={300} height={600} />
+					<Image
+						className="object-cover"
+						src={image_url}
+						alt="team_image"
+						width={300}
+						height={600}
+						placeholder="blur"
+						blurDataURL={rgbDataURL(128, 128, 128)}
+					/>
 				</div>
 				<div className="">
 					<div className="lg:pt-6 pt-4 ">
