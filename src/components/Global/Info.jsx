@@ -85,7 +85,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
 					</div>
 					<div className="border-y-[.5px] border-yellowish">
 						<Image
-							src={data.image_url}
+							src={data?.image_url}
 							alt="workshop"
 							className="object-cover w-full"
 							width={1200}

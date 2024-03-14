@@ -1,29 +1,54 @@
 [
   {
-    "id": "product_design",
+    "id": "product_design_lifecycle",
     "type": "Software",
-    "name": "Product Development",
+    "name": "Product Design Lifecycle",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "This workshop is about the product development",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
-    "destination": "Home",
-    "coordinator": [
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Home"
+  },
+  {
+    "id": "git",
+    "type": "Software",
+    "name": "Git & Github",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the product development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "destination": "Home"
+    
+  },
+  {
+    "id": "business_logic",
+    "type": "Software",
+    "name": "Business Logic",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the product development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "destination": "Home"
+    
+  },
+  {
+    "id": "backend_deploy",
+    "type": "Software",
+    "name": "Backend Deployment",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the product development",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Online",
+    "destination": "Home"
+    
   },
   {
     "id": "cad",
@@ -35,21 +60,8 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "mode": "Online",
-    "destination": "Home",
-    "coordinator": [
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Home"
+    
   },
   {
     "id": "ctf",
@@ -61,46 +73,72 @@
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "mode": "Mix",
-    "destination": "Home",
-    "coordinator": [
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Home"
+    
   },
   {
-    "id": "hardware",
+    "id": "race_maze",
     "type": "Hardware",
-    "name": "Embedded & IOT Workshop",
+    "name": "Fun with Hardware",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "This workshop is about the Embedded and IOT",
     "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "mode": "Mix",
-    "destination": "Home | College",
-    "coordinator": [
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "John Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      },
-      {
-        "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-        "name": "Jane Doe",
-        "designation": "Frontend Developer",
-        "contact": "https://www.linkedin.com/in/chirantan-das001"
-      }
-    ]
+    "destination": "Home | College"
+    
+  },
+  {
+    "id": "circuits",
+    "type": "Hardware",
+    "name": "Circuit Basics",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the Embedded and IOT",
+    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Mix",
+    "destination": "Home | College"
+    
+  },
+  {
+    "id": "iot",
+    "type": "Hardware",
+    "name": "IOT Basics",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the Embedded and IOT",
+    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Mix",
+    "destination": "Home | College"
+    
+  },
+  {
+    "id": "fpga",
+    "type": "Hardware",
+    "name": "Intro to FPGA",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the Embedded and IOT",
+    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Mix",
+    "destination": "Home | College"
+    
+  },
+  {
+    "id": "embedded",
+    "type": "Hardware",
+    "name": "Intro to Embedded Systems",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "This workshop is about the Embedded and IOT",
+    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "mode": "Mix",
+    "destination": "Home | College"
+    
   }
 ]
