@@ -186,7 +186,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
                         <div className="pl-4 md:pl-14 py-8">
                             {
-                                !checkRoute ?
+                                checkRoute ?
                                     <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
                                         {data.body}
                                     </h1>

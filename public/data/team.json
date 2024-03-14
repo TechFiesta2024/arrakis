@@ -3,9 +3,9 @@
     "name": "Swastik Bose",
     "role": "UI/UX & Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/johndoe",
-    "x_url": "https://example.com/johndoe"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165239_IMG_8607.JPG",
+    "linkedin": "https://www.linkedin.com/in/swastik-bose007",
+    "x_url": "https://github.com/swastik-bose007"
   },
   {
     "name": "Hardware Team",
@@ -19,9 +19,9 @@
     "name": "Bisakh Neogi",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165144_IMG_8605.JPG",
+    "linkedin": "https://www.linkedin.com/in/bishakh-neogi-387815205",
+    "x_url": "https://github.com/bishakhne0gi"
   },
   {
     "name": "Software Team",
@@ -43,9 +43,9 @@
     "name": "Chirantan Das",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/robertlee",
-    "x_url": "https://example.com/robertlee"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165103_IMG_8604.JPG",
+    "linkedin": "https://www.linkedin.com/in/chirantan-das001",
+    "x_url": "https://github.com/CHIRANTAN-001"
   },
   {
     "name": "Graphics Designers",
@@ -59,9 +59,9 @@
     "name": "Sayan Mallick",
     "role": "Backend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165035_IMG_8602.JPG",
+    "linkedin": "https://www.linkedin.com/in/snxk",
+    "x_url": "https://github.com/lmnzx"
   },
   {
     "name": "Photographers",
@@ -75,9 +75,9 @@
     "name": "Abhirup Saha",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/davidclark",
-    "x_url": "https://example.com/davidclark"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164940_IMG_8600.JPG",
+    "linkedin": "https://www.linkedin.com/in/abhirup-saha-9605b0228",
+    "x_url": "https://github.com/Abhirup-02"
   },
   {
     "name": "PR Team",
@@ -88,14 +88,6 @@
     "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Raja Majumder",
-    "role": "Frontend Engineer", 
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
-  },
-  {
     "name": "Financers",
     "role": "People behind managing funds",
     "department": "Coordinators",
@@ -104,28 +96,12 @@
     "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Shanit Paul",
-    "role": "Frontend Engineer", 
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
-  },
-  {
     "name": "Subhanil Bhaduri",
     "role": "UI Developer", 
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
-  },
-  {
-    "name": "Tamajit Ghosh",
-    "role": "UI Developer", 
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164857_IMG_8599.JPG",
+    "linkedin": "https://www.linkedin.com/in/subhanil-bhaduri-ba903221a",
+    "x_url": "https://github.com/Subhanil-Bhaduri-001"
   },
   {
     "name": "Content Creators",

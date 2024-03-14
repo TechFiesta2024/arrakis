@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { rgbDataURL } from "@/utils/blurryImage";
+import Images from "../../../public/assets";
+import Link from "next/link";
 
 const TeamCard = ({ member }) => {
-	const { name, role, image_url, linkedin, x_url } = member;
+	const { name, role, image_url, linkedin, x_url, department } = member;
 	return (
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
@@ -29,23 +31,29 @@ const TeamCard = ({ member }) => {
 					</div>
 					<div className="py-3"></div>
 					<div className="grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
-						{/* <Link
-							href={x_url}
-							className="border-r-[.5px] border-black flex justify-center items-center py-4"
-						>
-							<Image
-								src={Images.logoXBlack}
-								alt="twitter"
-								className="lg:w-6 h-5"
-							/>
-						</Link>
-						<Link href={linkedin} className="flex justify-center items-center">
-							<Image
-								src={Images.logoLinkedInBlack}
-								alt="linkedIn"
-								className="lg:w-7 h-6"
-							/>
-						</Link> */}
+						{
+							department === "Developers" && (
+								<>
+									<Link
+										href={x_url}
+										className="border-r-[.5px] border-black flex justify-center items-center py-4"
+									>
+										<Image
+											src={Images.github}
+											alt="twitter"
+											className="lg:w-6 h-5"
+										/>
+									</Link>
+									<Link href={linkedin} className="flex justify-center items-center">
+										<Image
+											src={Images.logoLinkedInBlack}
+											alt="linkedIn"
+											className="lg:w-7 h-6"
+										/>
+									</Link>
+								</>
+							)
+						}
 					</div>
 				</div>
 			</div>
