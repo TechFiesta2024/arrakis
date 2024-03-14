@@ -17,7 +17,7 @@ export default function EventWorkshopCard({ data }) {
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
-					<img className="object-cover" src={image_url} alt="cover_img" />
+					<Image className="object-cover" src={image_url} alt="cover_img" width={300} height={600} />
 				</div>
 				<div className="">
 					<div className="px-6 lg:pt-6 pt-4">

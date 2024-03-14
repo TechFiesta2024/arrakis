@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
-import { AxiosError } from "axios";
 
 export default function EventWorkshopInfo({ pageData, params }) {
 	const [data, setData] = useState({ coordinator: [] });
@@ -85,10 +84,12 @@ export default function EventWorkshopInfo({ pageData, params }) {
 						</Link>
 					</div>
 					<div className="border-y-[.5px] border-yellowish">
-						<img
+						<Image
 							src={data.image_url}
 							alt="workshop"
 							className="object-cover md:h-96 w-full"
+							width={800}
+							height={400}
 						/>
 					</div>
 					<div>
