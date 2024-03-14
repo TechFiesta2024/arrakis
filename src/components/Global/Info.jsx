@@ -74,6 +74,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
   const checkRoute = urlPathName === `/events/${params.id}`;
 
+  const flexStylesBetween = "flex justify-between items-center";
+
   return (
     <>
       <div className="md:px-20">
@@ -139,7 +141,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     <h1 className="text-yellowish text-sm md:text-xl font-generalsans font-semibold">
                       Mode
                     </h1>
-                    <h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
+                    <h1 className="text-yellowish text-xs font-generalsans font-normal">
                       {`${data.mode ? data.mode : "Offline"} | ${data.destination}`}
                     </h1>
                   </div>
@@ -167,6 +169,26 @@ export default function EventWorkshopInfo({ pageData, params }) {
             </div>
           </div>
           <div>
+            {
+              !checkRoute && Array.isArray(data.relatedEvents) && (
+                <div className="pl-4 md:pl-14 pt-7 md:pt-8">
+                  <p className="text-yellowish font-generalsans font-bold text-xl">Related Events</p>
+                  <div className="py-8 flex flex-row flex-wrap gap-2">
+                    {
+                       data.relatedEvents.map((event, index) => (
+                        <div key={index}
+                          className={`badge flex flex-row gap-2 text-sm w-auto h-10 py-4 px-2 ${flexStylesBetween} bg-yellowishopc rounded-full text-yellowish`}
+                        >
+                          <div className="bg-yellowish p-3 rounded-full"></div>
+                          {event}
+                        </div>
+                      ))
+                    }
+                  </div>
+
+                </div>
+              )
+            }
             <div className="pl-4 md:pl-14 pt-7 md:pt-8">
               <h1 className="text-yellowish font-generalsans-semibold text-3xl md:text-5xl">
                 {checkRoute ? 'Event Details' : 'Workshop Details'}
@@ -175,7 +197,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
             <div className="px-4 md:pl-14 py-8">
               {!checkRoute ? (
-                <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
+                <h1 className="text-grey font-generalsans font-normal text-xl md:text-2xl">
                   {data.body}
                 </h1>
               ) : (
@@ -185,13 +207,13 @@ export default function EventWorkshopInfo({ pageData, params }) {
                       {rule.type}:
                     </p>
                     {Array.isArray(rule.body) ? (
-                      <ul className="text-yellowish list-item">
+                      <ul className="text-grey list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-yellowish font-generalsans text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
+                          <li key={i} className="text-grey font-generalsans text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-yellowish font-generalsans text-xl">{rule.body}</p>
+                      <p className="text-grey font-generalsans text-xl">{rule.body}</p>
                     )}
                   </div>
                 ))
