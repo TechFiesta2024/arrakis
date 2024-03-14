@@ -5,9 +5,9 @@
     "name": "Product Design Lifecycle",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/ux.jpg",
     "description": "Join us with deep dive into the product design & UX laws",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Discover Figma basics, color theory, design systems, wireframing, prototyping, essential animations, and UX principles. Learn to synchronize design with SDLC, delve into design thinking, ideation, persona creation, brand development, and MVP creation. This comprehensive workshop equips you with essential design skills and insights for product development.",
+    "date": "Mar 20-22",
+    "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "destination": "Home"
   },
@@ -17,9 +17,9 @@
     "name": "Git & Github",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "Mastering Git & GitHub: Unleash the Power of Version Control!",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Explore fundamental Git commands, branch management, and resolving merge conflicts. Learn Git operations via command line or GitHub Desktop, gaining essential skills for efficient collaboration and version control in software development projects.",
+    "date": "Mar 24",
+    "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "destination": "Home"
     
@@ -30,9 +30,9 @@
     "name": "Business Logic in Frontend",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/frontend%20dev.jpg",
     "description": "Streamlining user experiences through intuitive frontend design and functionality.",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Learn business logic implementation through real-life examples using ReactJs. Explore coding conventions, code reuse, and flow segregation for efficient development. Gain practical skills in crafting compact, reusable code for robust applications. Dive into hands-on exercises to solidify understanding and enhance your React development expertise.",
+    "date": "Mar 29-30",
+    "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "destination": "Home"
     
@@ -41,11 +41,11 @@
     "id": "backend_deploy",
     "type": "Software",
     "name": "Backend Deployment",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Backend.jpg",
     "description": "Powering your platform with seamless backend solutions.",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Learn essential backend concepts including REST API, HTTP requests, and CRUD operations. Explore Node.js with Express and various database types. Dive into deployment with basics of containerization, static frontend deployment, and managing environments and secrets. Equip yourself with skills for robust backend development and deployment strategies.",
+    "date": "Apr 01-05",
+    "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "destination": "Home"
     
@@ -54,11 +54,11 @@
     "id": "cad",
     "type": "Software",
     "name": "Cad Design Workshop",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CAD.jpg",
     "description": "Unleashing CAD's Creative Potential",
-    "body": "In this workshop, we will learn about the cad design and how to use the cad software",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Discover CAD essentials: industry relevance, software options, and pros/cons. Explore student requirements, limitations, event dynamics, problem solving, drawing demos, and Q&A sessions. Gain insights and practical skills for success in CAD across various industries.",
+    "date": "Mar 23, Apr 02",
+    "time": "8:00 PM - 10:00 PM",
     "mode": "Online",
     "destination": "Home"
     
@@ -69,9 +69,9 @@
     "name": "Capture The Flag Workshop",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CTF.jpg",
     "description": "A Cyber Odyssey into Security Challenges",
-    "body": "This workshop is about the Capture The Flag and how to participate in it",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Embark on a comprehensive journey through cybersecurity with this workshop. Over two days, cover Linux basics, terminal commands, and Python programming. Explore cryptographic techniques like RSA and XOR, tackle web exploits including XSS and SQL injection, delve into reverse engineering with C cracking and APK exploits, master binary exploits such as buffer overflow, and conclude with steganography techniques involving image and file manipulation",
+    "date": "Mar 21-Apr 05",
+    "time": "8:00 PM - 9:00 PM",
     "mode": "Mix",
     "destination": "Home"
     
@@ -80,11 +80,11 @@
     "id": "race_maze",
     "type": "Hardware",
     "name": "Fun with Hardware",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
     "description": "Navigate the twists and turns: A labyrinthine race for victory!",
-    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Discover hardware fundamentals in this workshop featuring maze-solving and race car demonstrations. Get introduced to hardware, follow the roadmap, and understand the workshop outcomes. Witness maze solver and race car demos, learn basic algorithms, and explore control schemes. Dive into practical applications of hardware in an engaging and hands-on environment.",
+    "date": "Mar 20",
+    "time": "9:00 PM - 10:00 PM",
     "mode": "Mix",
     "destination": "Home | College"
     
@@ -93,11 +93,11 @@
     "id": "circuits",
     "type": "Hardware",
     "name": "Circuit Basics",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/Circuit.jpg",
     "description": "Exploring the Currents: A Journey Through Circuitry",
-    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "body": "Join our Basic Circuits workshop for a foundational understanding of logic gates, adders, subtractors, muxes, encoders, and latches. Explore practical applications such as timers, gaining essential skills in digital circuit design. Dive into hands-on activities to solidify concepts and kickstart your journey into the world of circuitry.",
+    "date": "Mar 22",
+    "time": "9:00 PM - 10:00 PM",
     "mode": "Mix",
     "destination": "Home | College"
     
@@ -106,39 +106,39 @@
     "id": "iot",
     "type": "Hardware",
     "name": "IOT Basics",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
     "description": "Unlocking the Power of IoT: Connecting Devices, Empowering Lives.",
-    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "mode": "Mix",
-    "destination": "Home | College"
+    "body": "Explore Basic IoT essentials in our workshop. Witness demos using Raspberry Pi & Pico, delve into IoT infrastructure, protocols, and communication layers. Learn about cloud integration and security. Discover real-world applications like industrial automation, smart homes, and agriculture. Gain insights into IoT's transformative potential across diverse industries.",
+    "date": "Mar 30-31",
+    "time": "9:00 PM - 10:00 PM",
+    "mode": "Online",
+    "destination": "Home"
     
   },
   {
     "id": "fpga",
     "type": "Hardware",
     "name": "Intro to FPGA",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
     "description": "lLearn about the FPGA and how to use it in the embedded systems",
-    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "mode": "Mix",
-    "destination": "Home | College"
+    "body": "Embark on FPGA exploration! Learn deterministic state machines, parallelism, and I/O concepts. Dive into HDL, Verilog, and practical applications like blinking LEDs with Rust. Delve deeper into FFT implementation, FPGA architecture, programming paradigms, and low-latency programming, uncovering the vast potential of FPGA technology in various domains.",
+    "date": "Apr 04-05",
+    "time": "9:00 PM - 10:00 PM",
+    "mode": "Online",
+    "destination": "Home"
     
   },
   {
     "id": "embedded",
     "type": "Hardware",
     "name": "Intro to Embedded Systems",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
     "description": "Explore about the Embedded systems and IOT",
-    "body": "Embedded and IOT workshop is about the embedded systems and the internet of things",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "mode": "Mix",
-    "destination": "Home | College"
+    "body": "Delve into Embedded Systems and Microcontrollers in this workshop. Understand the significance of embedded computing and its distinctions from general-purpose computing. Explore basic architecture, Arduino Uno's microcontroller, and learn the fundamentals of blink and I/O interfacing techniques. Additionally, delve into microcontroller interfacing, communication protocols, ARM architecture, and Real-Time Operating Systems (RTOS). Gain insights into embedded C and Python for enhanced learning.",
+    "date": "Mar 21, Apr 01",
+    "time": "9:00 PM - 10:00 PM",
+    "mode": "Online",
+    "destination": "Home"
     
   }
 ]
