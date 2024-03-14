@@ -60,7 +60,7 @@ import school from './school.svg'
 import college from './college.svg'
 
 import campus from './campus.svg'
-
+import about from './about.svg'
 
 const Images = {
     logoAot,
@@ -117,7 +117,8 @@ const Images = {
     ftest24,
     school,
     college,
-    campus
+    campus,
+    about
 };
 
 export default Images;

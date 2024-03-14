@@ -12,6 +12,9 @@ export default function AboutPage() {
 						<span className="text-yellowish text-[16px] font-generalsans">We are back after 5 years</span>
 						<SmartShapes />
 					</div>
+					<div className="flex justify-center items-center h-[152px] border-yellowish border-b-[0.5px] flex-col overflow-hidden">
+						<Image src={Images.about} alt="campus" width={100} height={100}/>
+					</div>
 					<div className=" p-10  flex flex-col">
 						<p className=" text-yellowish text-[16px] sm:text-[32px] text-justify">
 							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
