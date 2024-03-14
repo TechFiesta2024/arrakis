@@ -20,7 +20,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
         setData(selectedPageData)
         setRules(selectedPageData.rules)
     }, [])
-    console.log(rules)
+    // console.log(rules)
 
 
     async function register() {
@@ -193,20 +193,16 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                     : (
                                         rules.map((rule, index) =>
                                         (
-                                            <div key={index}>
-                                                <p>{rule.type}</p>
+                                            <div key={index} className="py-4">
+                                                <p className="text-yellowish text-[28px] font-generalsans-semibold pb-2">{rule.type}:</p>
                                                 {
-                                                    rule.body.length > 0 ?
-                                                        (<ul>
+                                                    Array.isArray(rule.body) ?
+                                                        <ul className="text-yellowish list-item">
                                                             {rule?.body.map((r, i) => (
-                                                                <li key={i}>{r}</li>
+                                                                <li key={i}>🚀{r}</li>
                                                             ))}
-                                                        </ul>)
-                                                        :
-                                                        (
-                                                            <p>{rule.body}</p>
-
-                                                        )   
+                                                        </ul>
+                                                        : <p className="text-yellowish">{rule.body}</p>
                                                 }
                                             </div>
                                         ))
