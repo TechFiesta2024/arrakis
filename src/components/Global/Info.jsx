@@ -20,8 +20,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
         setData(selectedPageData)
         setRules(selectedPageData.rules)
     }, [])
-    // console.log(rules)
-
 
     async function register() {
         const userid = Cookies.get("studentId");
@@ -98,10 +96,13 @@ export default function EventWorkshopInfo({ pageData, params }) {
                         </Link>
                     </div>
                     <div className="border-y-[.5px] border-yellowish">
-                        <img
+                        <Image
                             src={data.image_url}
                             alt="workshop"
                             className="object-cover md:h-96 w-full"
+                            width={500}
+                            height={200}
+                            unoptimized
                         />
                     </div>
                     <div>

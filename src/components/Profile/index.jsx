@@ -9,8 +9,8 @@ import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
 
 export default function Profile() {
-	const year = ["1st", "2nd", "3rd", "4th"];
-	const standard = ["9th", "10th", "11th", "12th"];
+	const year = ["-", "1st", "2nd", "3rd", "4th"];
+	const standard = ["-", "9th", "10th", "11th", "12th"];
 	const userType = ["school", "college"];
 
 	const { user, setUser } = useAuthState();
@@ -108,23 +108,23 @@ export default function Profile() {
 
 		const dataPayload = userCheck
 			? {
-					// userCheck true when school
-					name: userDetails.name,
-					email: user.email,
-					school: userDetails.school,
-					contact: userDetails.contact,
-					class: userDetails.grade,
-					guardian_contact: userDetails.guardianContact,
-					guardian_name: userDetails.guardianName,
-			  }
+				// userCheck true when school
+				name: userDetails.name,
+				email: user.email,
+				school: userDetails.school,
+				contact: userDetails.contact,
+				class: userDetails.grade,
+				guardian_contact: userDetails.guardianContact,
+				guardian_name: userDetails.guardianName,
+			}
 			: {
-					name: userDetails.name,
-					email: user.email,
-					college: userDetails.college,
-					contact: userDetails.contact,
-					stream: userDetails.stream,
-					year: userDetails.year,
-			  };
+				name: userDetails.name,
+				email: user.email,
+				college: userDetails.college,
+				contact: userDetails.contact,
+				stream: userDetails.stream,
+				year: userDetails.year,
+			};
 
 		try {
 			setSubmitting(true);
@@ -212,9 +212,8 @@ export default function Profile() {
 							<div className={`col-span-1 ${flexEnd}`}>
 								<label className="flex items-center cursor-pointer">
 									<div
-										className={`relative ${
-											toggleDisabled && "cursor-not-allowed"
-										}`}
+										className={`relative ${toggleDisabled && "cursor-not-allowed"
+											}`}
 									>
 										<input
 											type="checkbox"
@@ -226,9 +225,8 @@ export default function Profile() {
 										/>
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 										<div
-											className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${
-												toggleDisabled && "cursor-not-allowed"
-											} ${userCheck ? "translate-x-0" : "translate-x-6"} `}
+											className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${toggleDisabled && "cursor-not-allowed"
+												} ${userCheck ? "translate-x-0" : "translate-x-6"} `}
 										></div>
 									</div>
 								</label>
@@ -375,7 +373,6 @@ export default function Profile() {
 												className="hover:bg-red"
 												key={option}
 												value={option}
-												defaultValue={standard[0]}
 												selected={userDetails.grade === option}
 											>
 												{option}
@@ -397,7 +394,6 @@ export default function Profile() {
 											className="hover:bg-red"
 											key={option}
 											value={option}
-											defaultValue={year[0]}
 											selected={userDetails.year === option}
 										>
 											{option}
@@ -408,9 +404,8 @@ export default function Profile() {
 						)}
 
 						<button
-							className={`${
-								submitting ? "bg-red-faded" : "bg-red"
-							} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
+							className={`${submitting ? "bg-red-faded" : "bg-red"
+								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
 							onClick={handleSubmitChangeUserProfile}
 							disabled={submitting}

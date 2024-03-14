@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { rgbDataURL } from "@/utils/blurryImage";
 import Images from "../../../public/assets";
 import Link from "next/link";
@@ -11,11 +10,11 @@ const TeamCard = ({ member }) => {
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
 					<Image
-						className="object-cover"
+						className="object-cover h-full"
 						src={image_url}
 						alt="team_image"
 						width={800}
-						height={600}
+						height={800}
 						placeholder="blur"
 						blurDataURL={rgbDataURL(128, 128, 128)}
 					/>
