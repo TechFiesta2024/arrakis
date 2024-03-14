@@ -243,7 +243,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             <Image
                               src={Images.Diamond1}
                               alt="star"
-                              className="h-10" />
+                              className="h-6" />
                             <h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
                               ₹{prize.amount}
                             </h1>
