@@ -1,5 +1,81 @@
 [
   {
+    "id": "science_exhibition",
+    "type": "School",
+    "name": "XtraVaganza",
+    "image_url": "/assets/avatar.png",
+    "description": "science exhibition",
+    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "math",
+    "type": "School",
+    "name": "QuantQuest",
+    "image_url": "/assets/avatar.png",
+    "description": "test test",
+    "body": "",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "extempore",
+    "type": "School",
+    "name": "XpreXive",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "painting",
+    "type": "School",
+    "name": "Artistix",
+    "image_url": "/assets/avatar.png",
+    "description": "TODO",
+    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
+  },
+  {
     "id": "ui_ux",
     "type": "College",
     "name": "UXplore",
@@ -234,32 +310,6 @@
     "destination": "AOT Campus"
   },
   {
-    "id": "science_exhibition",
-    "type": "School",
-    "name": "XtraVaganza",
-    "image_url": "/assets/avatar.png",
-    "description": "science exhibition",
-    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "prize": [
-      {
-        "position": "1st",
-        "amount": "3000"
-      },
-      {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
-        "position": "3rd",
-        "amount": "1000"
-      }
-    ],
-    "destination": "AOT Campus"
-  },
-  {
     "id": "cad",
     "type": "College",
     "name": "FreeForm",
@@ -286,32 +336,6 @@
     "destination": "AOT Campus"
   },
   {
-    "id": "math",
-    "type": "School",
-    "name": "QuantQuest",
-    "image_url": "/assets/avatar.png",
-    "description": "test test",
-    "body": "",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "prize": [
-      {
-        "position": "1st",
-        "amount": "3000"
-      },
-      {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
-        "position": "3rd",
-        "amount": "1000"
-      }
-    ],
-    "destination": "AOT Campus"
-  },
-  {
     "id": "creative_writing",
     "type": "College",
     "name": "WordCraftique",
@@ -330,30 +354,6 @@
     "image_url": "/assets/avatar.png",
     "description": "TODO",
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "extempore",
-    "type": "School",
-    "name": "XpreXive",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
-    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "painting",
-    "type": "School",
-    "name": "Artistix",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
-    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
     "teamSize": "1 - 2",

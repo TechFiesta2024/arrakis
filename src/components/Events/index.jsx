@@ -4,7 +4,7 @@ import events from "/public/data/events.json";
 const EventWorkshopPage = dynamic(() => import("../Global/CardContainer"));
 
 export default function Events() {
-	const eventType = ["School", "College"];
+	const eventType = new Set(events.map((event) => event.type));
 
 	return (
 		<div className="px-[1px] md:px-20 w-full">
@@ -25,7 +25,7 @@ export default function Events() {
 					</div>
 				</div>
 
-				<EventWorkshopPage data={events} types={eventType} />
+				<EventWorkshopPage data={events} types={Array.from(eventType)} />
 			</div>
 		</div>
 	);
