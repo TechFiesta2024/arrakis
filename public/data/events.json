@@ -24,6 +24,28 @@
         "amount": "1000"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Sajili Chakrobarty",
+        "contact": "+91 74394 61708"
+      },
+      {
+        "name": "Surjya Gopal Goswami",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Ankit Bhattacharjee",
+        "contact": "+91 86974 47665"
+      },
+      {
+        "name": "Koustav Chatterjee",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Dibyajyoti Biswas",
+        "contact": "+91 75958 60781"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -49,6 +71,28 @@
       {
         "position": "3rd",
         "amount": "1000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Diganta Dutta",
+        "contact": "+91 98744 35538"
+      },
+      {
+        "name": "Aratrik Bandyopadhyay",
+        "contact": "+91 62903 30398"
+      },
+      {
+        "name": "Romit Malakar",
+        "contact": "+91 98836 33976"
+      },
+      {
+        "name": "Anirban Jash",
+        "contact": "+91 98326 09948"
+      },
+      {
+        "name": "Ayishik Das",
+        "contact": "+91 76799 98184"
       }
     ],
     "destination": "AOT Campus"
@@ -81,6 +125,7 @@
         "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language"
       }
     ],
+    "coordinators": [],
     "destination": "AOT Campus"
   },
   {
@@ -124,6 +169,180 @@
         ]
       }
     ],
+    "coordinators": [],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "science_exhibition",
+    "type": "College",
+    "name": "XtraVaganza",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Science%20Exhibition.jpg",
+    "description": "Let your creativity and innovation shine!",
+    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
+    "date": "April 9th",
+    "time": "01:30 PM - 03:30 PM",
+    "teamSize": "1 - 2",
+    "rules": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Sajili Chakrobarty",
+        "contact": "+91 74394 61708"
+      },
+      {
+        "name": "Surjya Gopal Goswami",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Ankit Bhattacharjee",
+        "contact": "+91 86974 47665"
+      },
+      {
+        "name": "Koustav Chatterjee",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Dibyajyoti Biswas",
+        "contact": "+91 75958 60781"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "math",
+    "type": "College",
+    "name": "QuantQuest",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Maths.jpg",
+    "description": "Qunatic skills and compete with your peers to solve the greatest mathematical mysteries.",
+    "body": "Bring forth your quantative skills and compete with your peers to solve the greatest mathematical mysteries.",
+    "date": "April 9th",
+    "time": "10:00 AM - 12:30 PM",
+    "teamSize": "",
+    "rules": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Diganta Dutta",
+        "contact": "+91 98744 35538"
+      },
+      {
+        "name": "Aratrik Bandyopadhyay",
+        "contact": "+91 62903 30398"
+      },
+      {
+        "name": "Romit Malakar",
+        "contact": "+91 98836 33976"
+      },
+      {
+        "name": "Anirban Jash",
+        "contact": "+91 98326 09948"
+      },
+      {
+        "name": "Ayishik Das",
+        "contact": "+91 76799 98184"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "extempore",
+    "type": "College",
+    "name": "XpreXive",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "Speak your mind and let others follow your thoughts.",
+    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
+    "date": "April 9th",
+    "time": "10:30 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2 + 1 minutes for each participant"
+      },
+      {
+        "type": "Themes",
+        "body": "Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery."
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language"
+      }
+    ],
+    "coordinators": [],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "painting",
+    "type": "College",
+    "name": "Artistix",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Painting.jpg",
+    "description": "A painting competition for school & college students",
+    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "date": "April 9th",
+    "time": "10:00 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Mode of Painting",
+        "body": "Manual"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own art paper and necessary painting materials."
+      },
+      {
+        "type": "Art Paper Dimensions",
+        "body": "15 inch × 10 inch"
+      },
+      {
+        "type": "Themes",
+        "body": "Will be announced thirty minutes prior to the event."
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "Originality: Participants must create original artwork during the competition. Plagiarism or copying from existing artwork is strictly prohibited.",
+          "Adherence to Theme: Artwork must reflect the theme provided for the competition. Deviating from the theme may result in disqualification.",
+          "Respectful Content: Artwork should be appropriate for a diverse audience and should not contain offensive or explicit content. Any artwork deemed inappropriate will be disqualified from the competition.",
+          "Pencil Sketches will not be considered."
+        ]
+      }
+    ],
+    "coordinators": [],
     "destination": "AOT Campus"
   },
   {
@@ -150,37 +369,54 @@
         "amount": "3000"
       }
     ],
-      "rules": [
-        {
-          "type": "Duration",
-          "body": "1.5 hours"
-        },
-        {
-          "type": "Requirements",
-          "body": "Participants are required to bring their own PC and internet connection."
-        },
-        {
-          "type": "Number of Rounds",
-          "body": "1"
-        },
-        {
-          "type": "Registration Fees",
-          "body": "30/-"
-        },
-  
-        {
-          "type": "Rules",
-          "body": [
-            "Design Thinking Principles. ",
-            "Component Usage.",
-            "Variable Properties. ",
-            "Gesture Accessibilities.",
-            "Color Theories and Dimensions."
-          ]
-        }
-      ],
-      "destination": "Lab 1"
-    },
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "1.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30/-"
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "Design Thinking Principles. ",
+          "Component Usage.",
+          "Variable Properties. ",
+          "Gesture Accessibilities.",
+          "Color Theories and Dimensions."
+        ]
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Swastik Bose",
+        "contact": "+91 70039 84426"
+      },
+      {
+        "name": "Rayoti Kar",
+        "contact": "+91 89279 76871"
+      },
+      {
+        "name": "Snigdha Kundu",
+        "contact": "+91 62905 95597"
+      },
+      {
+        "name": "Namrata Biswas",
+        "contact": "+91 90515 42131"
+      }
+    ],
+    "destination": "Lab 1"
+  },
   {
     "id": "frontend",
     "type": "College",
@@ -204,6 +440,32 @@
       {
         "position": "Winner",
         "amount": "3000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      },
+      {
+        "name": "Subhanil Bhaduri",
+        "contact": "+91 62917 55569"
+      },
+      {
+        "name": "Shanit Kumar Paul",
+        "contact": "+91 93307 01691"
+      },
+      {
+        "name": "Aman Shrivastav",
+        "contact": "+91 70442 06013"
+      },
+      {
+        "name": "Debabrata Mukherjee",
+        "contact": "+91 74073 98936"
       }
     ],
     "destination": "Lab 2"
@@ -233,6 +495,28 @@
         "amount": "2000"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      },
+      {
+        "name": "Arkaprava Ghosh",
+        "contact": "+91 70441 19166"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      },
+      {
+        "name": "Soumyajit Mondal",
+        "contact": "+91 62940 96170"
+      },
+      {
+        "name": "Suvoneel Basu Roy Chowdhury",
+        "contact": "+91 87777 42480"
+      }
+    ],
     "destination": "ION Lab"
   },
   {
@@ -258,6 +542,32 @@
       {
         "position": "3rd",
         "amount": "2000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Bishakh Neogi",
+        "contact": "+91 96747 76719"
+      },
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Swastik Bose",
+        "contact": "+91 70039 84426"
+      },
+      {
+        "name": "Mayukh Ghosh",
+        "contact": "+91 97141 56873"
+      },
+      {
+        "name": "Soumit Srimany",
+        "contact": "+91 75959 03437"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
       }
     ],
     "destination": "Auditorium"
@@ -287,6 +597,28 @@
         "amount": "2000"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Arkaprava Ghosh",
+        "contact": "+91 70441 19166"
+      },
+      {
+        "name": "Soumyajit Mondal",
+        "contact": "+91 62940 96170"
+      },
+      {
+        "name": "Rohit Chakrabarti",
+        "contact": "+91 89108 12276"
+      },
+      {
+        "name": "Soumit Srimany",
+        "contact": "+91 75959 03437"
+      },
+      {
+        "name": "Kuheli Biswas",
+        "contact": "+91 93303 75265"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -312,6 +644,24 @@
       {
         "position": "3rd",
         "amount": "4000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Debjit Saha",
+        "contact": "+91 74390 52996"
+      },
+      {
+        "name": "Krishanu Bandyopadhyay",
+        "contact": "+91 85970 37503"
+      },
+      {
+        "name": "Subhadeep Dutta",
+        "contact": "+91 83358 36561"
+      },
+      {
+        "name": "Abhishek Singh ",
+        "contact": "+91 98310 79865"
       }
     ],
     "destination": "AOT Campus"
@@ -341,6 +691,24 @@
         "amount": "4000"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Soham Sarkar",
+        "contact": "+91 62961 97485"
+      },
+      {
+        "name": "Debarghya Debnath",
+        "contact": "+91 86172 91399"
+      },
+      {
+        "name": "Anushka Hazra",
+        "contact": "+91 74773 96371"
+      },
+      {
+        "name": "Khushi Gupta",
+        "contact": "+91 80927 83235"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -366,6 +734,24 @@
       {
         "position": "3rd",
         "amount": "1500"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Tannistha Das",
+        "contact": "+91 74399 96987"
+      },
+      {
+        "name": "Suvam Das",
+        "contact": "+91 89615 47065"
+      },
+      {
+        "name": "Someshwar Srimany",
+        "contact": "+91 79805 35766"
+      },
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
       }
     ],
     "destination": "AOT Campus"
@@ -395,6 +781,24 @@
         "amount": "1500"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Someshwar Srimany",
+        "contact": "+91 79805 35766"
+      },
+      {
+        "name": "Rahul Srivastava",
+        "contact": "+91 90079 74773"
+      },
+      {
+        "name": "Sagnik Ray",
+        "contact": "+91 89108 34699"
+      },
+      {
+        "name": "Debjani Kangsa Banik",
+        "contact": "+91 79080 96741"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -420,6 +824,24 @@
       {
         "position": "3rd",
         "amount": "1500"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Debojyoti Dutta",
+        "contact": "+91 89440 97103"
+      },
+      {
+        "name": "Dipayan Shown",
+        "contact": "+91 90643 07622"
+      },
+      {
+        "name": "Sampurna Dan",
+        "contact": "+91 82529 25943"
+      },
+      {
+        "name": "Sayan Mukherjee",
+        "contact": "+91 98754 70017"
       }
     ],
     "destination": "AOT Campus"
@@ -473,6 +895,7 @@
         ]
       }
     ],
+    "coordinators": [],
     "destination": "AOT Campus"
   },
   {
@@ -499,6 +922,7 @@
         "body": "Required waste materials should be brought by the participants."
       }
     ],
+    "coordinators": [],
     "destination": "AOT Campus"
   }
 ]

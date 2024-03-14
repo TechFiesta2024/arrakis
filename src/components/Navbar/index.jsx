@@ -16,7 +16,7 @@ const LINKS = [
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
 	{ name: "Dashboard", href: "/dashboard" },
-	{ name: "Contact", href: "/" },
+	{ name: "Contact", href: "/helpdesk" },
 ];
 
 export default function Navbar() {
