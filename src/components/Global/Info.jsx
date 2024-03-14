@@ -167,7 +167,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
                                 </div>
                             </button>
                         </div>
-                        <ToastContainer />
                     </div>
                     <div>
                         <div className="pl-4 md:pl-14 pt-7 md:pt-8">
@@ -248,7 +247,6 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             null
                         )
                     }
-                    <ToastContainer />
                 </div>
             </div>
         </>
