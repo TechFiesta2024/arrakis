@@ -35,18 +35,37 @@ export default function EventWorkshopCard({ data }) {
 							<div
 								className={`badge w-[40%] h-10 py-4 pr-2 pl-4 ${flexStylesBetween} bg-yellowishopc rounded-full`}
 							>
-								<div className="label">
-									<span className=" font-generalsans text-yellowish text-sm">
-										Team Size
-									</span>
-								</div>
-								<div
-									className={`badge-value bg-yellowish rounded-full w-[40%] h-8 ${flexStylesCenter}`}
-								>
-									<span className=" text-xs text-black font-generalsans-semibold">
-										{teamSize}
-									</span>
-								</div>
+								{
+									teamSize === "" ?
+										<>
+											<div className="label">
+												<span className=" font-generalsans text-yellowish text-sm">
+													Team Size
+												</span>
+											</div>
+											<div className={`badge-value bg-yellowish rounded-full w-[40%] h-8 ${flexStylesCenter}`}>
+												<span className=" text-xs text-black font-generalsans-semibold">
+													Solo
+												</span>
+											</div>
+										</>
+										:
+										<>
+											<div className="label">
+												<span className=" font-generalsans text-yellowish text-sm">
+													Team Size
+												</span>
+											</div>
+											<div
+												className={`badge-value bg-yellowish rounded-full w-[40%] h-8 ${flexStylesCenter}`}
+											>
+												<span className=" text-xs text-black font-generalsans-semibold">
+													{teamSize}
+												</span>
+											</div>
+										</>
+								}
+
 							</div>
 						</div>
 					)}
