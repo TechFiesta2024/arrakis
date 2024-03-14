@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import events from "/public/data/events.json";
 import Image from "next/image";
 import Images from "../../../public/assets";
+import Link from "next/link";
 
 const EventWorkshopPage = dynamic(() => import("../Global/CardContainer"));
 
