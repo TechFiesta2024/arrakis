@@ -35,6 +35,7 @@ const TeamCard = ({ member }) => {
 								<>
 									<Link
 										href={x_url}
+										target="_blank"
 										className="border-r-[.5px] border-black flex justify-center items-center py-4"
 									>
 										<Image
@@ -43,7 +44,7 @@ const TeamCard = ({ member }) => {
 											className="lg:w-6 h-5"
 										/>
 									</Link>
-									<Link href={linkedin} className="flex justify-center items-center">
+									<Link href={linkedin} target="_blank" className="flex justify-center items-center">
 										<Image
 											src={Images.logoLinkedInBlack}
 											alt="linkedIn"
