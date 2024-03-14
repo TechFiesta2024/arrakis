@@ -9,11 +9,7 @@ const TeamCard = ({ member }) => {
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
-					<img
-						className="object-cover"
-						src={image_url}
-						alt="team_image"
-					/>
+					<img className="object-cover" src={image_url} alt="team_image" />
 				</div>
 				<div className="">
 					<div className="lg:pt-6 pt-4 ">
@@ -26,7 +22,7 @@ const TeamCard = ({ member }) => {
 					</div>
 					<div className="py-3"></div>
 					<div className="grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
-						<Link
+						{/* <Link
 							href={x_url}
 							className="border-r-[.5px] border-black flex justify-center items-center py-4"
 						>
@@ -42,7 +38,7 @@ const TeamCard = ({ member }) => {
 								alt="linkedIn"
 								className="lg:w-7 h-6"
 							/>
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</div>

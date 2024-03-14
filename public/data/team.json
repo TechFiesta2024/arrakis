@@ -1,242 +1,146 @@
 [
   {
-    "name": "John Doe",
-    "role": "Software Engineer",
-    "department": "Techies",
+    "name": "Swastik Bose",
+    "role": "UI/UX & Frontend Engineer",
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/johndoe",
     "x_url": "https://example.com/johndoe"
   },
   {
-    "name": "Jane Smith",
-    "role": "Product Manager",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
+    "name": "Hardware Team",
+    "role": "People behind hardware workshops",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
     "linkedin": "https://www.linkedin.com/in/janesmith",
     "x_url": "https://example.com/janesmith"
   },
   {
-    "name": "Michael Johnson",
-    "role": "Content Writer",
-    "department": "Content",
+    "name": "Bisakh Neogi",
+    "role": "Frontend Engineer",
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/michaeljohnson",
     "x_url": "https://example.com/michaeljohnson"
   },
   {
-    "name": "Alice Brown",
-    "role": "Software Engineer",
-    "department": "Techies",
+    "name": "Software Team",
+    "role": "People behind all software operations",
+    "department": "Coordinators",
     "image_url": "/assets/avatar.png",
+    "linkedin": "https://www.linkedin.com/in/janesmith",
+    "x_url": "https://example.com/janesmith"
+  },
+  {
+    "name": "Management Team",
+    "role": "People behind coordination",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240313170943_IMG_8465.jpg",
     "linkedin": "https://www.linkedin.com/in/alicebrown",
     "x_url": "https://example.com/alicebrown"
   },
   {
-    "name": "Robert Lee",
-    "role": "Project Manager",
-    "department": "Management",
+    "name": "Chirantan Das",
+    "role": "Frontend Engineer",
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/robertlee",
     "x_url": "https://example.com/robertlee"
   },
   {
-    "name": "Emily Taylor",
-    "role": "Content Creator",
-    "department": "Content",
+    "name": "Graphics Designers",
+    "role": "People behind managing funds",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240313172928_IMG_8471.jpg",
+    "linkedin": "https://www.linkedin.com/in/sarahwhite",
+    "x_url": "https://example.com/sarahwhite"
+  },
+  {
+    "name": "Sayan Mallick",
+    "role": "Backend Engineer",
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
+    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
+    "x_url": "https://example.com/michaeljohnson"
+  },
+  {
+    "name": "Content Creators",
+    "role": "All lovely content from lovely people",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2086.JPG",
     "linkedin": "https://www.linkedin.com/in/emilytaylor",
     "x_url": "https://example.com/emilytaylor"
   },
   {
-    "name": "David Clark",
-    "role": "Software Engineer",
-    "department": "Techies",
+    "name": "Abhirup Saha",
+    "role": "Frontend Engineer",
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/davidclark",
     "x_url": "https://example.com/davidclark"
   },
   {
-    "name": "Sarah White",
-    "role": "HR Manager",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
+    "name": "PR Team",
+    "role": "People behind marketing operations",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2098.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Mark Davis",
-    "role": "Content Editor",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/markdavis",
-    "x_url": "https://example.com/markdavis"
-  },
-  {
-    "name": "Jennifer Green",
-    "role": "Software Engineer",
-    "department": "Techies",
+    "name": "Raja Majumder",
+    "role": "Frontend Engineer", 
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
     "linkedin": "https://www.linkedin.com/in/jennifergreen",
     "x_url": "https://example.com/jennifergreen"
   },
   {
-    "name": "William Baker",
-    "role": "Finance Manager",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/williambaker",
-    "x_url": "https://example.com/williambaker"
+    "name": "Financers",
+    "role": "People behind managing funds",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2091.JPG",
+    "linkedin": "https://www.linkedin.com/in/sarahwhite",
+    "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Laura Martinez",
-    "role": "Content Strategist",
-    "department": "Content",
+    "name": "Shanit Paul",
+    "role": "Frontend Engineer", 
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/lauramartinez",
-    "x_url": "https://example.com/lauramartinez"
+    "linkedin": "https://www.linkedin.com/in/jennifergreen",
+    "x_url": "https://example.com/jennifergreen"
   },
   {
-    "name": "Daniel Taylor",
-    "role": "Software Engineer",
-    "department": "Techies",
+    "name": "Subhanil Bhaduri",
+    "role": "UI Developer", 
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/danieltaylor",
-    "x_url": "https://example.com/danieltaylor"
+    "linkedin": "https://www.linkedin.com/in/jennifergreen",
+    "x_url": "https://example.com/jennifergreen"
   },
   {
-    "name": "Amanda Johnson",
-    "role": "Operations Manager",
-    "department": "Management",
+    "name": "Tamajit Ghosh",
+    "role": "UI Developer", 
+    "department": "Developers",
     "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/amandajohnson",
-    "x_url": "https://example.com/amandajohnson"
+    "linkedin": "https://www.linkedin.com/in/jennifergreen",
+    "x_url": "https://example.com/jennifergreen"
   },
   {
-    "name": "Christopher Adams",
-    "role": "Content Writer",
-    "department": "Content",
+    "name": "Photographers",
+    "role": "People behind beautiful pictures",
+    "department": "Coordinators",
     "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/christopheradams",
-    "x_url": "https://example.com/christopheradams"
+    "linkedin": "https://www.linkedin.com/in/sarahwhite",
+    "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Olivia Thomas",
-    "role": "Software Engineer",
-    "department": "Techies",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/oliviathomas",
-    "x_url": "https://example.com/oliviathomas"
-  },
-  {
-    "name": "George Wilson",
-    "role": "Marketing Manager",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/georgewilson",
-    "x_url": "https://example.com/georgewilson"
-  },
-  {
-    "name": "Victoria Rodriguez",
-    "role": "Content Manager",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/victoriarodriguez",
-    "x_url": "https://example.com/victoriarodriguez"
-  },
-  {
-    "name": "Matthew Kelly",
-    "role": "Software Engineer",
-    "department": "Techies",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/matthewkelly",
-    "x_url": "https://example.com/matthewkelly"
-  },
-  {
-    "name": "Sophia Martinez",
-    "role": "HR Coordinator",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/sophiamartinez",
-    "x_url": "https://example.com/sophiamartinez"
-  },
-  {
-    "name": "Alexander Brown",
-    "role": "Content Specialist",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/alexanderbrown",
-    "x_url": "https://example.com/alexanderbrown"
-  },
-  {
-    "name": "Grace Evans",
-    "role": "Software Engineer",
-    "department": "Techies",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/graceevans",
-    "x_url": "https://example.com/graceevans"
-  },
-  {
-    "name": "Nathan Flores",
-    "role": "Marketing Coordinator",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/nathanflores",
-    "x_url": "https://example.com/nathanflores"
-  },
-  {
-    "name": "Isabella Hernandez",
-    "role": "Content Analyst",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/isabellahernandez",
-    "x_url": "https://example.com/isabellahernandez"
-  },
-  {
-    "name": "Ethan Rivera",
-    "role": "Software Engineer",
-    "department": "Techies",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/ethanrivera",
-    "x_url": "https://example.com/ethanrivera"
-  },
-  {
-    "name": "Madison Sullivan",
-    "role": "Marketing Specialist",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/madisonsullivan",
-    "x_url": "https://example.com/madisonsullivan"
-  },
-  {
-    "name": "Jacob Nguyen",
-    "role": "Content Coordinator",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jacobnguyen",
-    "x_url": "https://example.com/jacobnguyen"
-  },
-  {
-    "name": "Ava Kim",
-    "role": "Software Engineer",
-    "department": "Techies",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/avakim",
-    "x_url": "https://example.com/avakim"
-  },
-  {
-    "name": "Liam Patel",
-    "role": "Marketing Analyst",
-    "department": "Management",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/liampatel",
-    "x_url": "https://example.com/liampatel"
-  },
-  {
-    "name": "Chloe Kim",
-    "role": "Content Strategist",
-    "department": "Content",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/chloekim",
-    "x_url": "https://example.com/chloekim"
+    "name": "All Coordinators",
+    "role": "People behind everything",
+    "department": "Coordinators",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2079%20(1).JPG",
+    "linkedin": "https://www.linkedin.com/in/sarahwhite",
+    "x_url": "https://example.com/sarahwhite"
   }
 ]

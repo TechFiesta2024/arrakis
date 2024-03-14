@@ -44,12 +44,12 @@ export default function Navbar() {
 
 		// Get user uuid from messiah endpoint by email
 		try {
-			const { data } = await axiosInstance.get("/user",  {
+			const { data } = await axiosInstance.get("/user", {
 				headers: {
-					email: result.email
-				}
+					email: result.email,
+				},
 			});
-			
+
 			Cookies.set("studentId", data.id, { expires: 7 });
 			setUser((user) => ({
 				...user,
@@ -74,11 +74,11 @@ export default function Navbar() {
 		setIsOpen(false);
 	}, [urlPathName]);
 
-
 	const pathname = usePathname();
-	const active = "bg-yellowish28 border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
-	const inActive = "border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
-
+	const active =
+		"bg-yellowish28 border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
+	const inActive =
+		"border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
 
 	return (
 		<>
@@ -163,7 +163,7 @@ export default function Navbar() {
 			{/* Mobile Navbar */}
 			<div className="block px-[1px] bg-black lg:hidden pt-[1px]">
 				<Link
-					href='/'
+					href="/"
 					className={`navbar__top flex justify-between items-center px-6 py-6 border-x-[.5px] border-y-[.5px] text-yellowish`}
 				>
 					<Image src={Images.ftest24} height={27} alt="aot" />
@@ -179,7 +179,10 @@ export default function Navbar() {
 						<div
 							className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed `}
 						>
-							<Link href='/' className={`flex justify-between items-center px-6 py-6 `}>
+							<Link
+								href="/"
+								className={`flex justify-between items-center px-6 py-6 `}
+							>
 								<Image src={Images.ftest24} height={27} alt="aot" />
 								<Image
 									onClick={() => setIsOpen(!isOpen)}
@@ -200,7 +203,10 @@ export default function Navbar() {
 											<p className="text-yellowish font-generalsans font-medium">
 												Register
 											</p>
-											<Image src={Images.arrowRightYellowish} alt="arrow_right" />
+											<Image
+												src={Images.arrowRightYellowish}
+												alt="arrow_right"
+											/>
 										</div>
 									) : (
 										<div className="group h-full w-full z-[1000]">

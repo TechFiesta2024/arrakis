@@ -1,5 +1,4 @@
 export default function ParticipateBadge() {
-
 	return (
 		<>
 			<div className="participate-badge_container bg-grid-pattern h-[100%] w-[100%] flex justify-center items-center">
@@ -11,4 +10,4 @@ export default function ParticipateBadge() {
 			</div>
 		</>
 	);
-};
+}
