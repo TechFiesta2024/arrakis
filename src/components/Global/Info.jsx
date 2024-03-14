@@ -12,6 +12,7 @@ import { rgbDataURL } from "@/utils/blurryImage";
 export default function EventWorkshopInfo({ pageData, params }) {
   const [data, setData] = useState({});
   const [rules, setRules] = useState([]);
+  const [coordinators, setCoordinators] = useState([]);
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
 
@@ -102,7 +103,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
           </div>
           <div>
             <div className=" pl-4 md:pl-14 py-7 md:py-10">
-              <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans font-bold">
+              <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans-semibold">
                 {data.name}
               </h1>
             </div>
@@ -129,7 +130,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </div>
               </div>
               <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-yellowish">
-                <div className="inline-flex gap-0 md:gap-2 py-4">
+                <div className="inline-flex gap-2 md:gap-2 py-4">
                   <div className="flex justify-center items-center">
                     <Image src={Images.map} alt="map" className="w-10" />
                   </div>
@@ -138,8 +139,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                       Mode
                     </h1>
                     <h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-                      {`${data.mode ? data.mode : "Offline"} | ${data.destination
-                        }`}
+                      {`${data.mode ? data.mode : "Offline"} | ${data.destination }`}
                     </h1>
                   </div>
                 </div>
@@ -168,17 +168,17 @@ export default function EventWorkshopInfo({ pageData, params }) {
           <div>
             <div className="pl-4 md:pl-14 pt-7 md:pt-8">
               {checkRoute ? (
-                <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                  Rules
+                <h1 className="text-yellowish font-generalsans-semibold text-3xl md:text-5xl">
+                  Event Details
                 </h1>
               ) : (
                 <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                  Description
+                  Workshop Details
                 </h1>
               )}
             </div>
 
-            <div className="pl-4 md:pl-14 py-8">
+            <div className="px-4 md:pl-14 py-8">
               {!checkRoute ? (
                 <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
                   {data.body}
@@ -186,17 +186,17 @@ export default function EventWorkshopInfo({ pageData, params }) {
               ) : (
                 rules.map((rule, index) => (
                   <div key={index} className="py-4">
-                    <p className="text-yellowish text-[28px] font-generalsans-semibold pb-2">
+                    <p className="text-yellowish md:text-3xl font-generalsans-semibold pb-2">
                       {rule.type}:
                     </p>
                     {Array.isArray(rule.body) ? (
                       <ul className="text-yellowish list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i}>🚀{r}</li>
+                          <li key={i} className="text-yellowish font-generalsans text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-yellowish">{rule.body}</p>
+                      <p className="text-yellowish font-generalsans text-xl">{rule.body}</p>
                     )}
                   </div>
                 ))
@@ -215,7 +215,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                   <div className="grid grid-cols-2 md:grid-cols-3 ">
                     {data.prize.map((prize, index) => (
                       <div
-                        className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
+                        className="col-span-2 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
                         key={index}
                       >
                         <div className="inline-flex gap-0 md:gap-2 py-4">
@@ -235,6 +235,43 @@ export default function EventWorkshopInfo({ pageData, params }) {
               )}
             </>
           ) : null}
+          <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
+            <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10">
+              Coordinators
+            </h1>
+          </div>
+          <div className="grid md:grid-cols-2 grid-cols-1">
+            {coordinators.length > 0 && coordinators.map((coordinator, index) => (
+              <Link href={coordinator.contact} key={index}>
+                <div className="md:col-span-1 col-span-1 border-b-[.5px] md:border-r-[.5px] border-yellowish">
+                  <div className="flex pl-4 md:pl-0 justify-start md:justify-center items-center gap-4 py-6 md:py-10 ">
+                    <div>
+                      <img
+                        src={coordinator.image_url}
+                        alt="coordinator"
+                        className="h-24 w-24 md:h-32 md:w-32 rounded-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="inline-flex gap-16 md:gap-20">
+                        <h1 className="text-yellowish font-generalsans font-semibold text-xl md:text-3xl">
+                          {coordinator.name}
+                        </h1>
+                        <Image
+                          src={Images.arrowRightYellowish}
+                          alt="arrow_yellow"
+                          className="text-yellowish"
+                        />
+                      </div>
+                      <h1 className="text-yellowish font-generalsans font-normal text-sm md:text-base pt-2">
+                        {coordinator.designation}
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </>

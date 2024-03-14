@@ -136,7 +136,6 @@
     "date": "April 8th",
     "time": "10:30 AM - 12:00 Noon",
     "teamSize": "1 - 2",
-    "rules": [],
     "prize": [
       {
         "position": "Winner",
@@ -151,8 +150,37 @@
         "amount": "3000"
       }
     ],
-    "destination": "Lab 1"
-  },
+      "rules": [
+        {
+          "type": "Duration",
+          "body": "1.5 hours"
+        },
+        {
+          "type": "Requirements",
+          "body": "Participants are required to bring their own PC and internet connection."
+        },
+        {
+          "type": "Number of Rounds",
+          "body": "1"
+        },
+        {
+          "type": "Registration Fees",
+          "body": "30/-"
+        },
+  
+        {
+          "type": "Rules",
+          "body": [
+            "Design Thinking Principles. ",
+            "Component Usage.",
+            "Variable Properties. ",
+            "Gesture Accessibilities.",
+            "Color Theories and Dimensions."
+          ]
+        }
+      ],
+      "destination": "Lab 1"
+    },
   {
     "id": "frontend",
     "type": "College",
