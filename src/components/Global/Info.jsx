@@ -87,9 +87,10 @@ export default function EventWorkshopInfo({ pageData, params }) {
 						<Image
 							src={data.image_url}
 							alt="workshop"
-							className="object-cover md:h-96 w-full"
-							width={800}
-							height={400}
+							className="object-cover w-full"
+							width={1200}
+							height={300}
+							unoptimized
 						/>
 					</div>
 					<div>
