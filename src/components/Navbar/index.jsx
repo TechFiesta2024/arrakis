@@ -162,18 +162,20 @@ export default function Navbar() {
 
 			{/* Mobile Navbar */}
 			<div className="block px-[1px] bg-black lg:hidden pt-[1px]">
-				<Link
-					href="/"
+				<div
 					className={`navbar__top flex justify-between items-center px-6 py-6 border-x-[.5px] border-y-[.5px] text-yellowish`}
 				>
-					<Image src={Images.ftest24} height={27} alt="aot" />
-					<Image
-						onClick={() => setIsOpen(!isOpen)}
-						src={isOpen ? Images.close : Images.hamburger}
-						height={27}
-						alt="hamburger_close"
-					/>
-				</Link>
+					<Link href='/'>
+						<Image src={Images.ftest24} height={27} alt="aot" />
+					</Link>
+					<div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
+						<Image
+							src={isOpen ? Images.close : Images.hamburger}
+							height={27}
+							alt="hamburger_close"
+						/>
+					</div>
+				</div>
 				{isOpen && (
 					<div className="">
 						<div
@@ -249,7 +251,7 @@ export default function Navbar() {
 											key={id}
 											className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-5"
 											// Close navbar if requrl and href is same
-											onClick={() => l.href == urlPathName && setIsOpen(false)}
+											onClick={() => l.href === urlPathName && setIsOpen(false)}
 										>
 											<Link
 												href={l.href}
