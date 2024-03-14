@@ -1,14 +1,89 @@
 [
   {
+    "id": "science_exhibition",
+    "type": "School",
+    "name": "XtraVaganza",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "science exhibition",
+    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "math",
+    "type": "School",
+    "name": "QuantQuest",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "test test",
+    "body": "",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2000"
+      },
+      {
+        "position": "3rd",
+        "amount": "1000"
+      }
+    ],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "extempore",
+    "type": "School",
+    "name": "XpreXive",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "TODO",
+    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "painting",
+    "type": "School",
+    "name": "Artistix",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "TODO",
+    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "date": "Mar 11-16",
+    "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
+  },
+  {
     "id": "ui_ux",
     "type": "College",
     "name": "UXplore",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "UI/UX Design is the process of creating products that provide meaningful and relevant experiences to users.",
     "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
     "date": "1st",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
     "rules": [],
     "prize": [
       {
@@ -30,12 +105,12 @@
     "id": "frontend",
     "type": "College",
     "name": "ClashDevs",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "Developing the frontend of a website or an application.",
     "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
@@ -57,21 +132,21 @@
     "id": "ctf",
     "type": "College",
     "name": "Cynox",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "CTF is a gamified event where participants compete to find and exploit vulnerabilities",
     "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -84,21 +159,21 @@
     "id": "webathon",
     "type": "College",
     "name": "Eureka",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "WebAThon is a hackathon where participants compete to build a web application in a limited time",
     "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -111,21 +186,21 @@
     "id": "treasure_hunt",
     "type": "College",
     "name": "TraceIt",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "Search around the campus to find the hidden treasure. ",
     "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "3000"
-      },
-      {
         "position": "1st",
         "amount": "5000"
+      },
+      {
+        "position": "2nd",
+        "amount": "3000"
       },
       {
         "position": "3rd",
@@ -138,21 +213,21 @@
     "id": "maze_solver",
     "type": "College",
     "name": "Entangled",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "Maze Solver is a robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
     "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "5000"
-      },
-      {
         "position": "1st",
         "amount": "7000"
+      },
+      {
+        "position": "2nd",
+        "amount": "5000"
       },
       {
         "position": "3rd",
@@ -165,21 +240,21 @@
     "id": "race",
     "type": "College",
     "name": "EdrenaLine",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "Race cars are vehicles that can be controlled remotely using a handheld transmitter or controller.",
     "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "5000"
-      },
-      {
         "position": "1st",
         "amount": "7000"
+      },
+      {
+        "position": "2nd",
+        "amount": "5000"
       },
       {
         "position": "3rd",
@@ -192,21 +267,21 @@
     "id": "iot",
     "type": "College",
     "name": "SymbIoT",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "IOT problem TODO",
     "body": "IOT Problem Identification, Solution Design, and Presentation - Demonstration.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -219,21 +294,21 @@
     "id": "circuit",
     "type": "College",
     "name": "Connectify",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "circuit event",
     "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -255,16 +330,16 @@
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2000"
+        "position": "1st",
+        "amount": "2500"
       },
       {
-        "position": "1st",
-        "amount": "3000"
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
-        "amount": "1000"
+        "amount": "1500"
       }
     ],
     "destination": "AOT Campus"
@@ -273,21 +348,21 @@
     "id": "cad",
     "type": "College",
     "name": "FreeForm",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "cad event description",
     "body": "",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2500"
-      },
-      {
         "position": "1st",
         "amount": "3000"
+      },
+      {
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
@@ -309,16 +384,16 @@
     "rules": [],
     "prize": [
       {
-        "position": "2nd",
-        "amount": "2000"
+        "position": "1st",
+        "amount": "2500"
       },
       {
-        "position": "1st",
-        "amount": "3000"
+        "position": "2nd",
+        "amount": "2500"
       },
       {
         "position": "3rd",
-        "amount": "1000"
+        "amount": "1500"
       }
     ],
     "destination": "AOT Campus"
@@ -327,12 +402,13 @@
     "id": "creative_writing",
     "type": "College",
     "name": "WordCraftique",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "description": "TODO",
     "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
     "destination": "AOT Campus",
     "rules": [
       {
@@ -378,6 +454,7 @@
     "id": "waste_to_art",
     "type": "College",
     "name": "Junkraft",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
     "image_url": "/assets/avatar.png",
     "description": "TODO",
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
@@ -408,6 +485,8 @@
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
     "date": "Mar 11-16",
     "time": "10:00 AM - 12:00 PM",
+    "teamSize": "1 - 2",
+    "destination": "AOT Campus"
     "teamSize": "",
     "destination": "AOT Campus",
     "rules": [

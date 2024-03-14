@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import axiosInstance from "@/utils/axiosInstance";
 import Cookies from "js-cookie";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export default function EventWorkshopInfo({ pageData, params }) {
     const [data, setData] = useState({});

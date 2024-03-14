@@ -2,6 +2,12 @@
 const nextConfig = {
     reactStrictMode: false,
     images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'storage-techfiesta24.blr1.cdn.digitaloceanspaces.com'
+            }
+        ],
         domains: ['lh3.googleusercontent.com'],
     },
     async headers() {

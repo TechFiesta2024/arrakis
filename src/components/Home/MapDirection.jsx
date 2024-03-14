@@ -12,12 +12,12 @@ export default function MapDirection() {
 				rel="noopener noreferrer"
 				className="participate-badge_container bg-map h-[100%] w-[100%] flex justify-end items-end object-cover bg-cover pb-6 pr-6"
 			>
-				<div className="bg-red h-8 w-auto p-1 rounded-md">
-					<p className=" font-generalsans text-sm text-center ">
+				<div className="bg-red w-auto px-2 py-2 rounded-md hover:scale-105 transition-transform ease-in-out delay-150">
+					<p className=" font-generalsans text-sm text-center">
 						Academy of Technology
 					</p>
 				</div>
 			</Link>
 		</>
 	);
-};
+}

@@ -19,14 +19,14 @@ export default function Dashboard() {
 			try {
 				const { data } = await axiosInstance.get("/user", {
 					headers: {
-						email: user.email
+						email: user.email,
 					},
 				});
 				if (data.workshop.length > 0) {
-					const workshopsArray = data.workshop.map((d) => d.category)
+					const workshopsArray = data.workshop.map((d) => d.category);
 					setWorkshop(
 						workshops.filter((obj) =>
-							workshopsArray.toString().includes(obj.id)
+							workshopsArray.toString().includes(obj.id),
 						),
 					);
 				}
