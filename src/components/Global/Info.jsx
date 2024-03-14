@@ -129,7 +129,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </div>
               </div>
               <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-yellowish">
-                <div className="inline-flex gap-0 md:gap-2 py-4">
+                <div className="inline-flex gap-2 md:gap-2 py-4">
                   <div className="flex justify-center items-center">
                     <Image src={Images.map} alt="map" className="w-10" />
                   </div>
@@ -138,8 +138,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                       Mode
                     </h1>
                     <h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-                      {`${data.mode ? data.mode : "Offline"} | ${data.destination
-                        }`}
+                      {`${data.mode ? data.mode : "Offline"} | ${data.destination }`}
                     </h1>
                   </div>
                 </div>
@@ -173,12 +172,12 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </h1>
               ) : (
                 <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-                  Description
+                  Workshop Details
                 </h1>
               )}
             </div>
 
-            <div className="pl-4 md:pl-14 py-8">
+            <div className="px-4 md:pl-14 py-8">
               {!checkRoute ? (
                 <h1 className="text-yellowish font-generalsans font-normal text-xl md:text-2xl">
                   {data.body}
@@ -192,7 +191,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     {Array.isArray(rule.body) ? (
                       <ul className="text-yellowish list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-yellowish font-generalsans text-xl leading-8">🚀{r}</li>
+                          <li key={i} className="text-yellowish font-generalsans text-xl mt-4 md:leading-8">🚀{r}</li>
                         ))}
                       </ul>
                     ) : (
@@ -215,7 +214,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                   <div className="grid grid-cols-2 md:grid-cols-3 ">
                     {data.prize.map((prize, index) => (
                       <div
-                        className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
+                        className="col-span-2 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
                         key={index}
                       >
                         <div className="inline-flex gap-0 md:gap-2 py-4">
