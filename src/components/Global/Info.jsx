@@ -129,16 +129,17 @@ export default function EventWorkshopInfo({ pageData, params }) {
 											Mode
 										</h1>
 										<h1 className="text-yellowish text-xs md:text-base font-generalsans font-normal">
-											{`${data.mode ? data.mode : "Offline"} | ${
-												data.destination
-											}`}
+											{`${data.mode ? data.mode : "Offline"} | ${data.destination
+												}`}
 										</h1>
 									</div>
 								</div>
 							</div>
+
 							<button
-								className="col-span-2 md:col-span-1 flex justify-center items-center bg-red"
+								className="col-span-2 md:col-span-1 flex justify-center items-center bg-red disabled:bg-gray-400 border-yellowish border-r-[.5px] border-y-[.5px] text-yellowish font-generalsans font-semibold text-xl md:text-2xl disabled:cursor-not-allowed disabled:text-gray-400 disabled:border-gray-400 disabled:opacity-50"
 								onClick={register}
+								disabled={Cookies.get("studentId") ? false : true}
 							>
 								<div className="inline-flex gap-2 py-4">
 									<div className="flex justify-center items-center">
@@ -178,33 +179,33 @@ export default function EventWorkshopInfo({ pageData, params }) {
 					</div>
 					{checkRoute
 						? data.prize && (
-								<>
-									<div className="pl-4 md:pl-14 py-7 md:py-10">
-										<h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
-											Prize Pool
-										</h1>
-									</div>
-									<div className="grid grid-cols-2 md:grid-cols-3 ">
-										{data.prize.map((prize, index) => (
-											<div
-												className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
-												key={index}
-											>
-												<div className="inline-flex gap-0 md:gap-2 py-4">
-													<div>
-														<h1 className="text-yellowish text-xl md:text-3xl font-generalsans-semibold">
-															{prize.position}
-														</h1>
-														<h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
-															₹{prize.amount}
-														</h1>
-													</div>
+							<>
+								<div className="pl-4 md:pl-14 py-7 md:py-10">
+									<h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl">
+										Prize Pool
+									</h1>
+								</div>
+								<div className="grid grid-cols-2 md:grid-cols-3 ">
+									{data.prize.map((prize, index) => (
+										<div
+											className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-y-[.5px] border-yellowish"
+											key={index}
+										>
+											<div className="inline-flex gap-0 md:gap-2 py-4">
+												<div>
+													<h1 className="text-yellowish text-xl md:text-3xl font-generalsans-semibold">
+														{prize.position}
+													</h1>
+													<h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
+														₹{prize.amount}
+													</h1>
 												</div>
 											</div>
-										))}
-									</div>
-								</>
-						  )
+										</div>
+									))}
+								</div>
+							</>
+						)
 						: null}
 				</div>
 			</div>
