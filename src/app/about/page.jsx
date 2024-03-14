@@ -14,16 +14,15 @@ export default function AboutPage() {
 					</div>
 					<div className=" p-10  flex flex-col">
 						<p className=" text-yellowish text-[16px] sm:text-[32px] text-justify">
-
-							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							Lorem Impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 						</p>
 					</div>
-					{/* <div className="flex justify-center items-center h-[252px] border-yellowish border-t-[0.5px] flex-col"> */}
+
 					<Image src={Images.campus} className=" sm:h-full sm:w-full border-yellowish border-t-[0.5px]" alt="campus" />
-					{/* </div> */}
+
 				</div>
 			</div>
 		</>
