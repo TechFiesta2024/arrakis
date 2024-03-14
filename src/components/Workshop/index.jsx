@@ -4,7 +4,7 @@ import workshops from "/public/data/workshop.json";
 const EventWorkshopPage = dynamic(() => import("../Global/CardContainer"));
 
 export default function Workshop() {
-	const workshopType = ["Software", "Hardware"];
+	const workshopType = new Set(workshops.map((workshop) => workshop.type))
 
 	return (
 		<div className="px-[1px] md:px-20 w-full">
@@ -24,7 +24,7 @@ export default function Workshop() {
 						</div>
 					</div>
 				</div>
-				<EventWorkshopPage data={workshops} types={workshopType} />
+				<EventWorkshopPage data={workshops} types={Array.from(workshopType)} />
 			</div>
 		</div>
 	);

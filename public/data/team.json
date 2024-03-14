@@ -27,7 +27,7 @@
     "name": "Software Team",
     "role": "People behind all software operations",
     "department": "Coordinators",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
     "linkedin": "https://www.linkedin.com/in/janesmith",
     "x_url": "https://example.com/janesmith"
   },
@@ -131,7 +131,7 @@
     "name": "Photographers",
     "role": "People behind beautiful pictures",
     "department": "Coordinators",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },

@@ -12,7 +12,7 @@ const TeamCard = ({ member }) => {
 						className="object-cover"
 						src={image_url}
 						alt="team_image"
-						width={300}
+						width={800}
 						height={600}
 						placeholder="blur"
 						blurDataURL={rgbDataURL(128, 128, 128)}
