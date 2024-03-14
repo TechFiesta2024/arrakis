@@ -34,7 +34,7 @@ const HelpDeskCard = ({ member }) => {
 									className="lg:w-7 h-6"
 								/>
 								<a href={linkedin} className="font-generalsans">
-									{linkedin_username}
+									Linkedin
 								</a>
 							</Link>
 
@@ -45,7 +45,7 @@ const HelpDeskCard = ({ member }) => {
 									className="lg:w-7 h-3"
 								/>
 								<a href={x_url} className="font-generalsans">
-									{x_username}
+									X (Twitter)
 								</a>
 							</Link>
 
@@ -61,10 +61,10 @@ const HelpDeskCard = ({ member }) => {
 					</div>
 				</div>
 				<a
-					href={`tel:${phone}`}
+					href={`mailto:${phone}`}
 					className="col-span-1 bg-red flex justify-center items-center"
 				>
-					<Image src={Images.logoPhoneWhite} alt="twitter" height={30} />
+					<Image src={Images.iconEmail} alt="twitter" height={30} />
 				</a>
 			</div>
 		</>
