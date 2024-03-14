@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Images from "/public/assets";
+import { rgbDataURL } from "@/utils/blurryImage";
 
 export default function EventWorkshopCard({ data }) {
 	const urlPathName = usePathname();
@@ -17,7 +18,15 @@ export default function EventWorkshopCard({ data }) {
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
-					<Image className="object-cover h-[10rem]" src={image_url} alt="cover_img" width={800} height={800} />
+					<Image
+						className="object-cover h-[10rem]"
+						src={image_url}
+						alt="cover_img"
+						width={800}
+						height={800}
+						placeholder="blur"
+						blurDataURL={rgbDataURL(128, 128, 128)}
+					/>
 				</div>
 				<div className="">
 					<div className="px-6 lg:pt-6 pt-4">
@@ -70,12 +79,12 @@ export default function EventWorkshopCard({ data }) {
 						</div>
 					)}
 					<div className="py-4"></div>
-					<div className="h-1/4 grid grid-cols-1 bg-yellowish border-b-[.5px] border-black">
+					<div className="h-1/4 grid grid-cols-1 bg-red border-b-[.5px] border-black">
 						<Link
 							href={`${urlPathName}/${id}`}
 							className="border-r-[.5px] border-black flex justify-center items-center gap-2 py-4 btn-hover"
 						>
-							<h1 className="text-black text-[14px] font-generalsans font-bold ">
+							<h1 className="text-white text-[14px] font-generalsans font-bold ">
 								VIEW DETAILS & REGISTER
 							</h1>
 							<Image src={Images.arrowRight} alt="arrow_right" />

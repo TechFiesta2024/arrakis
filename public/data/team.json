@@ -16,7 +16,7 @@
     "x_url": "https://example.com/janesmith"
   },
   {
-    "name": "Bisakh Neogi",
+    "name": "Bishakh Neogi",
     "role": "Frontend Engineer",
     "department": "Developers",
     "image_url": "/assets/avatar.png",
@@ -67,7 +67,7 @@
     "name": "Photographers",
     "role": "People behind beautiful pictures",
     "department": "Coordinators",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2127.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
