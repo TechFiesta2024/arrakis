@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Images from "/public/assets";
 import SmartShapes from "@/components/Global/SmartShapes";
@@ -25,6 +25,12 @@ export default function CollaboratePage() {
 		setSelectedButton("Community Partner");
 	};
 
+	const name = (name) => {
+		if (name === "") {
+			return "Fill the required field."
+		}
+
+	}
 	const validateEmail = (email) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
@@ -97,52 +103,6 @@ export default function CollaboratePage() {
 			);
 			return;
 		}
-		if (!validateContactNumber(ambassorDetails.ambassador_contact)) {
-			toast.error(`Please enter a valid 10 digit contact number`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
-		if (!validateEmail(ambassorDetails.ambassador_email)) {
-			toast.error(`Please enter a valid email address`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
-
-		if (!validateLinkedInURL(ambassorDetails.ambassador_linkedin)) {
-			toast.error(`Please enter a valid LinkedIn URL`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
 		if (!ambassorDetails.ambassador_name) {
 			// Show error toast for the desired field(s)
 			toast.error(
@@ -163,10 +123,11 @@ export default function CollaboratePage() {
 			return; // Prevent form submission if validation fails
 		}
 
-
 		try {
-
-			const response = await axiosInstance.post("/community/ambassador", ambassorDetails);
+			const response = await axiosInstance.post(
+				"/community/ambassador",
+				ambassorDetails,
+			);
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
@@ -186,18 +147,6 @@ export default function CollaboratePage() {
 			}
 		} catch (error) {
 			console.error("Error:", error);
-			toast.error(`Form not submitted successfully`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
 			resetAmbassadorDetails();
 		}
 	};
@@ -232,80 +181,11 @@ export default function CollaboratePage() {
 	const handleSubmitCommunityPartner = async (e) => {
 		e.preventDefault();
 
-		if (
-			communityPartnerDetails.community_name === "" &&
-			communityPartnerDetails.community_contact === "" &&
-			communityPartnerDetails.community_college === "" &&
-			communityPartnerDetails.community_lead_name === "" &&
-			communityPartnerDetails.community_email === "" &&
-			communityPartnerDetails.community_linkedin === ""
-		) {
-			toast.error(
-				`Please fill in all required fields with valid information.`,
-				{
-					autoClose: 3000,
-					position: "top-right",
-					hideProgressBar: true,
-					icon: false,
-					style: {
-						color: "#FFFFFF",
-						backgroundColor: "#FF002B",
-						fontSize: "14px",
-						border: "1px solid #FFFFFF ",
-					},
-				},
-			);
-			return;
-		}
-		if (!validateContactNumber(communityPartnerDetails.community_contact)) {
-			toast.error(`Please enter a valid 10 digit contact number`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
-		if (!validateEmail(communityPartnerDetails.community_email)) {
-			toast.error(`Please enter a valid email address`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
-		if (!validateLinkedInURL(communityPartnerDetails.community_linkedin)) {
-			toast.error(`Please enter a valid LinkedIn URL`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
-			return;
-		}
-
-
 		try {
-			const response = await axiosInstance.post("/community/collab", communityPartnerDetails)
+			const response = await axiosInstance.post(
+				"/community/collab",
+				communityPartnerDetails,
+			);
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
@@ -324,19 +204,6 @@ export default function CollaboratePage() {
 				resetCommunityPartnerDetails();
 			}
 		} catch (error) {
-			console.error("Error:", error);
-			toast.error(`Form not submitted successfully`, {
-				autoClose: 3000,
-				position: "top-right",
-				hideProgressBar: true,
-				icon: false,
-				style: {
-					color: "#FFFFFF",
-					backgroundColor: "#FF002B",
-					fontSize: "14px",
-					border: "1px solid #FFFFFF ",
-				},
-			});
 			resetCommunityPartnerDetails();
 		}
 	};
@@ -418,6 +285,11 @@ export default function CollaboratePage() {
 										placeholder="Enter your full name"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!ambassorDetails.ambassador_name &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>}
+
 								</div>
 								<div className="input_name flex flex-col pb-8 md:pb-0">
 									<label className="text-[24px] pb-4">Contact No.</label>
@@ -429,6 +301,11 @@ export default function CollaboratePage() {
 										placeholder="Enter your contact no."
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!validateContactNumber(ambassorDetails.ambassador_contact) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid 10 digit contact number
+										</span>
+									}
 								</div>
 							</>
 						)}
@@ -444,6 +321,12 @@ export default function CollaboratePage() {
 										placeholder="Enter the community name"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+
+									{!communityPartnerDetails.community_name &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>}
+
 								</div>
 								<div className="input_name flex flex-col pb-8 md:pb-0">
 									<label className="text-[24px] pb-4">
@@ -457,6 +340,10 @@ export default function CollaboratePage() {
 										placeholder="Enter the community contact no."
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!validateContactNumber(communityPartnerDetails.community_contact) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid 10 digit contact number
+										</span>}
 								</div>
 							</>
 						)}
@@ -477,6 +364,10 @@ export default function CollaboratePage() {
 										placeholder="Enter your College Name"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!ambassorDetails.ambassador_college &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>}
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Email ID</label>
@@ -488,6 +379,10 @@ export default function CollaboratePage() {
 										placeholder="Enter your email id"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!validateEmail(ambassorDetails.ambassador_email) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid email id
+										</span>}
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">
@@ -500,6 +395,11 @@ export default function CollaboratePage() {
 										placeholder="Describe within 200 words"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!ambassorDetails.ambassador_description &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>}
+
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">LinkedIn Profile</label>
@@ -511,6 +411,10 @@ export default function CollaboratePage() {
 										placeholder="https://linkedin.com/username"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{!validateLinkedInURL(ambassorDetails.ambassador_linkedin) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid LinkedIn URL
+										</span>}
 								</div>
 								<button
 									className="bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0"
@@ -518,7 +422,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}
@@ -538,6 +441,12 @@ export default function CollaboratePage() {
 										placeholder="Enter the name of the Community lead"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{
+										!communityPartnerDetails.community_lead_name &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>
+									}
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">
@@ -551,6 +460,12 @@ export default function CollaboratePage() {
 										placeholder="Enter name of the College"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{
+										!communityPartnerDetails.community_college &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Required field
+										</span>
+									}
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Community Email ID</label>
@@ -562,6 +477,12 @@ export default function CollaboratePage() {
 										placeholder="Enter the community email id"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{
+										!validateEmail(communityPartnerDetails.community_email) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid email id
+										</span>
+									}
 								</div>
 								<div className="input_name flex flex-col pb-8">
 									<label className="text-[24px] pb-4">LinkedIn Profile</label>
@@ -573,6 +494,12 @@ export default function CollaboratePage() {
 										placeholder="https://linkedin.com/username"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
+									{
+										!validateLinkedInURL(communityPartnerDetails.community_linkedin) &&
+										<span className="text-red pt-2 font-generalsans text-sm">
+											*Please enter a valid LinkedIn URL
+										</span>
+									}
 								</div>
 								<button
 									className="bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0"
@@ -580,7 +507,6 @@ export default function CollaboratePage() {
 								>
 									Submit
 								</button>
-								{/* <ToastContainer /> */}
 							</div>
 						</>
 					)}

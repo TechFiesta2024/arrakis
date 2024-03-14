@@ -1,16 +1,10 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import Images from "/public/assets";
 import Matter from "matter-js";
 
-const {
-	Bodies,
-	Engine,
-	Mouse,
-	MouseConstraint,
-	Render,
-	Runner,
-	World,
-} = Matter;
+const { Bodies, Engine, Mouse, MouseConstraint, Render, Runner, World } =
+	Matter;
 
 const randRange = (min, max) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -73,10 +67,11 @@ export default function FloatingCapsules({ canvasWidth, canvasHeight }) {
 		]);
 
 		// App capsules
-		const capsules = menu.map((item) => Capsule(item));
+		// const capsules = menu.map((item) => Capsule(item));
+		const capsules = Object.values(Images.capsules).map((capsule) => Capsule(capsule))
 		World.add(engine.world, capsules);
 
-		capsules.map((capsule, idx) => { });
+		capsules.map((capsule, idx) => {});
 
 		// MOUSE
 		const mouse = Mouse.create(render.canvas);
@@ -109,7 +104,6 @@ export default function FloatingCapsules({ canvasWidth, canvasHeight }) {
 		window.Matter = Matter;
 		window.engine = engine;
 		window.runner = runner;
-
 	}
 
 	return (
@@ -122,27 +116,30 @@ export default function FloatingCapsules({ canvasWidth, canvasHeight }) {
 			</div>
 		</>
 	);
-};
+}
 
-const Capsule = (text, width = 140, height = 33) => {
+const Capsule = (capsule, width = 140, height = 33) => {
 	const body = Bodies.rectangle(
 		width / 2 + randRange(30, 80),
 		height / 2,
-		width,
-		height,
+		capsule.width - 10,
+		capsule.height,
 		{
 			render: {
-				fillStyle: "red",
-				strokeStyle: "#010100",
+				// fillStyle: "red",
+				// strokeStyle: "#010100",
 				lineWidth: 2,
+				sprite: {
+					texture: capsule.src
+				}
 			},
 			angle: randRange(0, 180),
-			chamfer: {
-				radius: [15, 15, 15, 15],
-			},
+			// chamfer: {
+			// 	radius: [15, 15, 15, 15],
+			// },
 		},
 	);
-	body.name = text;
+	// body.name = text;
 	return body;
 };
 
