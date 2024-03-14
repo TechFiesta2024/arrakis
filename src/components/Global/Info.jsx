@@ -137,24 +137,18 @@ export default function EventWorkshopInfo({ pageData, params }) {
 							</div>
 
 							<button
-								className="col-span-2 md:col-span-1 flex justify-center items-center bg-red disabled:bg-gray-400 border-yellowish border-r-[.5px] border-y-[.5px] text-yellowish font-generalsans font-semibold text-xl md:text-2xl disabled:cursor-not-allowed disabled:text-gray-400 disabled:border-gray-400 disabled:opacity-50"
+								className="col-span-2 md:col-span-1 flex justify-center items-center bg-red disabled:bg-gray-400 border-yellowish border-r-[.5px] border-y-[.5px] text-yellowish font-generalsans font-semibold text-xl md:text-2xl disabled:cursor-not-allowed disabled:text-gray-400 disabled:border-gray-400 disabled:opacity-50 disabled:gap-2 gap-2 hover:gap-4 transition-all ease-in-out delay-150"
 								onClick={register}
 								disabled={Cookies.get("studentId") ? false : true}
 							>
-								<div className="inline-flex gap-2 py-4">
-									<div className="flex justify-center items-center">
-										<Image
-											src={Images.register}
-											alt="register"
-											className="h-10"
-										/>
-									</div>
-									<div className="flex justify-center items-center">
-										<h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
-											Register
-										</h1>
-									</div>
-								</div>
+								<Image
+									src={Images.register}
+									alt="register"
+									className="h-10"
+								/>
+								<h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
+									Register
+								</h1>
 							</button>
 						</div>
 					</div>
