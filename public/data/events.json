@@ -357,15 +357,15 @@
     "teamSize": "1 - 2",
     "prize": [
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       },
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       },
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       }
     ],
@@ -430,15 +430,15 @@
     "rules": [],
     "prize": [
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       },
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       },
       {
-        "position": "Winner",
+        "position": "Top 3",
         "amount": "3000"
       }
     ],
@@ -452,12 +452,12 @@
         "contact": "+91 62953 35673"
       },
       {
-        "name": "Subhanil Bhaduri",
-        "contact": "+91 62917 55569"
-      },
-      {
         "name": "Shanit Kumar Paul",
         "contact": "+91 93307 01691"
+      },
+      {
+        "name": "Sampurna Dan",
+        "contact": "+91 82529 25943"
       },
       {
         "name": "Aman Shrivastav",

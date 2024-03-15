@@ -203,17 +203,17 @@ export default function EventWorkshopInfo({ pageData, params }) {
               ) : (
                 rules.map((rule, index) => (
                   <div key={index} className="py-4">
-                    <p className="text-yellowish md:text-3xl font-generalsans-semibold pb-2">
+                    <p className="text-yellowish text-xl font-generalsans-semibold pb-2">
                       {rule.type}:
                     </p>
                     {Array.isArray(rule.body) ? (
                       <ul className="text-grey list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-grey font-generalsans text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
+                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-grey font-generalsans text-xl">{rule.body}</p>
+                      <p className="text-grey font-generalsans text-md md:text-xl">{rule.body}</p>
                     )}
                   </div>
                 ))
@@ -244,7 +244,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                               src={Images.Diamond1}
                               alt="star"
                               className="h-10" />
-                            <h1 className="text-yellowish text-md md:text-xl font-generalsans font-normal">
+                            <h1 className="text-yellowish text-lg md:text-xl font-generalsans font-normal">
                               ₹{prize.amount}
                             </h1>
                           </div>
