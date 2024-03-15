@@ -199,7 +199,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 <h1 className="text-grey font-generalsans font-normal text-lg md:text-xl">
                   {data.body}
                 </h1>
-              {!checkRoute && (
+              {checkRoute && (
                 rules?.map((rule, index) => (
                   <div key={index} className="py-4">
                     <p className="text-yellowish text-xl md:text-2xl font-generalsans-semibold pb-2">
