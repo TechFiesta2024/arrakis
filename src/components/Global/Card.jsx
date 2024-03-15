@@ -30,16 +30,16 @@ export default function EventWorkshopCard({ data }) {
 				</div>
 				<div className="">
 					<div className="px-6 lg:pt-6 pt-4">
-						<p className="text-yellowish font-generalsans font-bold text-2xl">
+						<p className="text-yellowish font-generalsans-semibold font-bold text-2xl">
 							{name}
 						</p>
 						<div className="description-container">
-							<p className=" text-grey font-generalsans text-sm lg:pt-3 py-1">
+							<p className=" text-yellowish font-generalsans text-lg lg:pt-3 py-1">
 								{concept}
 							</p>
 						</div>
 						<div className="description-container h-16 overflow-hidden">
-							<p className=" text-yellowish font-generalsans text-sm lg:pt-3 py-1">
+							<p className=" text-yellowish font-generalsans text-lg lg:pt-3 py-1">
 								{description}
 							</p>
 						</div>
