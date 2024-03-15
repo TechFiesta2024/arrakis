@@ -181,18 +181,19 @@ export default function Navbar() {
 						<div
 							className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed `}
 						>
-							<Link
-								href="/"
+							<div
 								className={`flex justify-between items-center px-6 py-6 `}
 							>
-								<Image src={Images.ftest24} height={27} alt="aot" />
+								<Link href='/'>
+									<Image src={Images.ftest24} height={27} alt="aot" />
+								</Link>
 								<Image
 									onClick={() => setIsOpen(!isOpen)}
 									src={isOpen ? Images.close : Images.hamburger}
 									height={27}
 									alt="hamburger_close"
 								/>
-							</Link>
+							</div>
 							<div
 								className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed px-[1px]`}
 							>

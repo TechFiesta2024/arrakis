@@ -1,19 +1,19 @@
 [
   {
-    "name": "Swastik Bose",
-    "role": "UI/UX & Frontend Engineer",
-    "department": "Developers",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165239_IMG_8607.JPG",
-    "linkedin": "https://www.linkedin.com/in/swastik-bose007",
-    "x_url": "https://github.com/swastik-bose007"
-  },
-  {
     "name": "Hardware Team",
     "role": "People behind hardware workshops",
     "department": "Coordinators",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
     "linkedin": "https://www.linkedin.com/in/janesmith",
     "x_url": "https://example.com/janesmith"
+  },
+  {
+    "name": "Swastik Bose",
+    "role": "UI/UX & Frontend Engineer",
+    "department": "Developers",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165239_IMG_8607.JPG",
+    "linkedin": "https://www.linkedin.com/in/swastik-bose007",
+    "x_url": "https://github.com/swastik-bose007"
   },
   {
     "name": "Bishakh Neogi",
@@ -48,8 +48,8 @@
     "x_url": "https://github.com/CHIRANTAN-001"
   },
   {
-    "name": "Designers",
-    "role": "Great people behind great designs",
+    "name": "Graphics Designers",
+    "role": "People behind managing funds",
     "department": "Coordinators",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240313172928_IMG_8471.jpg",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
@@ -96,16 +96,8 @@
     "x_url": "https://example.com/sarahwhite"
   },
   {
-    "name": "Shanit Paul",
-    "role": "Frontend Developer",
-    "department": "Developers",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/final_croped_image.jpeg",
-    "linkedin": "https://www.linkedin.com/in/shanitpaul",
-    "x_url": "https://github.com/SlicePoh"
-  },
-  {
     "name": "Subhanil Bhaduri",
-    "role": "UI Developer",
+    "role": "UI Developer", 
     "department": "Developers",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164857_IMG_8599.JPG",
     "linkedin": "https://www.linkedin.com/in/subhanil-bhaduri-ba903221a",
@@ -115,7 +107,7 @@
     "name": "Content Creators",
     "role": "All lovely content from lovely people",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2086.JPG",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
@@ -123,7 +115,7 @@
     "name": "All Coordinators",
     "role": "People behind everything",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2079.JPG",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2079%20(1).JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   }
