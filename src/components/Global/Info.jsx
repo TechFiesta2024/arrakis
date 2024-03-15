@@ -148,8 +148,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </div>
               </div>
               <button
-                className="col-span-2 md:col-span-1 flex justify-center items-center bg-red"
-                onClick={register}
+                className={`col-span-2 md:col-span-1 flex justify-center items-center bg-red ${checkRoute ? 'cursor-not-allowed bg-red-faded' : 'cursor-pointer'}`}
+                onClick={register} disabled={checkRoute}
               >
                 <div className="inline-flex gap-2 py-4">
                   <div className="flex justify-center items-center">
@@ -209,7 +209,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     {Array.isArray(rule.body) ? (
                       <ul className="text-grey list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">⚪️  {" "}{r}</li>
+                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
@@ -258,7 +258,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
           ) : null}
 
           {
-            coordinators.length > 0 &&
+            coordinators?.length > 0 &&
             <>
               <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
                 <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10 pt-24">

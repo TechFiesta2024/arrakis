@@ -3,7 +3,7 @@ import { rgbDataURL } from "@/utils/blurryImage";
 import Images from "../../../public/assets";
 import Link from "next/link";
 
-const TeamCard = ({ member }) => {
+export default function TeamCard({ member }) {
 	const { name, role, image_url, linkedin, x_url, department } = member;
 	return (
 		<>
@@ -60,5 +60,3 @@ const TeamCard = ({ member }) => {
 		</>
 	);
 };
-
-export default TeamCard;
