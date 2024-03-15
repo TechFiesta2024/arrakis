@@ -11,7 +11,50 @@
     "date": "April 9th",
     "time": "01:30 PM - 03:30 PM",
     "teamSize": "1 - 2",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "Each participant must create their own model on the given topic.",
+          "Models should measure 300 mm x 300 mm.",
+          "Plagiarism will result in disqualification.",
+          "Models must focus on innovation in energy and mobility for a carbon-free world."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Innovation and Creativity",
+          "Relevance to Theme.",
+          "Presentation and Explanation.",
+          "Practicality and Feasibility.",
+          "Overall Impact."
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "2 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": [
+          "Each participant must bring their model to the exhibition.",
+          "Models should be ready for presentation."
+        ]
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Themes",
+        "body": "Innovation in energy and mobility aiming towards a Carbon-free world."
+      },
+      {
+        "type": "Registration Fees",
+        "body": "No registration fees"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -64,19 +107,16 @@
     "teamSize": "",
     "rules": [
       {
-        "type": "Rules",
-        "body": [
-          "Accuracy",
-          "Precision(Time)"
-        ]
+        "type": "Judging Criteria",
+        "body": ["Accuracy", "Precision(Time)"]
       },
       {
         "type": "Duration",
-        "body": "3 hours"
+        "body": "1 hour [ for each round ]"
       },
       {
         "type": "Requirements",
-        "body": "Pen (They’ll bring) and Paper (We’ll provide)."
+        "body": "Paper will be provided from our side. Participants must bring their own pen."
       },
       {
         "type": "Number of Rounds",
@@ -126,21 +166,21 @@
     "destination": "AOT Campus"
   },
   {
-    "id": "extempore",
+    "id": "extempore_jr",
     "concept": "Extempore (Jr Level)",
     "type": "School",
     "name": "XpreXive",
     "alt_name": "Extempore",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/extempore_banner.jpeg",
     "description": "Exclusively For School Students | Free Registration",
-    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
+    "body": "An extempore is a public speaking activity where participants speak on a given topic without prior preparation. It's a test of communication and critical thinking skills, requiring speakers to think spontaneously and deliver a coherent speech within a limited timeframe.",
     "date": "April 9th",
     "time": "10:30 AM - 01:00 PM",
     "teamSize": "",
     "rules": [
       {
-        "type": "Judging Criteria",
-        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language."
+        "type": "Rules",
+        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language. No supporting materials will be allowed during the speech."
       },
       {
         "type": "Duration",
@@ -153,6 +193,10 @@
       {
         "type": "Language",
         "body": "English"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "No registration fees"
       }
     ],
     "coordinators": [],
@@ -173,14 +217,14 @@
     "destination": "AOT Campus"
   },
   {
-    "id": "painting",
+    "id": "painting_jr",
     "concept": "Painting Competition (Jr Level)",
     "type": "School",
     "name": "Artistix",
     "alt_name": "Painting Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/painting_banner_final.jpeg",
     "description": "Exclusively For School Students | Free Registration",
-    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "body": "The event of painting offers budding artists a platform to express themselves visually through various mediums. Participants create original artworks based on given themes or subjects, showcasing their creativity, technique, and interpretation.",
     "date": "April 9th",
     "time": "10:00 AM - 01:00 PM",
     "teamSize": "",
@@ -219,18 +263,22 @@
     "destination": "AOT Campus"
   },
   {
-    "id": "extempore",
+    "id": "extempore_sr",
     "concept": "Extempore (Sr Level)",
     "type": "College",
     "name": "XpreXive",
     "alt_name": "Extempore",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/extempore_banner.jpeg",
     "description": "Exclusively For College Students | Free Registration",
-    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
-    "date": "April 9th",
+    "body": "An extempore is a public speaking activity where participants speak on a given topic without prior preparation. It's a test of communication and critical thinking skills, requiring speakers to think spontaneously and deliver a coherent speech within a limited timeframe.",
+    "date": "April 8th",
     "time": "10:30 AM - 01:00 PM",
     "teamSize": "",
     "rules": [
+      {
+        "type": "Rules",
+        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language"
+      },
       {
         "type": "Duration",
         "body": "2 + 1 minutes for each participant"
@@ -244,22 +292,36 @@
         "body": "English"
       },
       {
-        "type": "Judging Criteria",
-        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language"
+        "type": "Registration Fees",
+        "body": "No registration fees"
       }
     ],
     "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
-    "id": "painting",
+    "id": "painting_sr",
     "concept": "Painting Competition (Sr Level)",
     "type": "College",
     "name": "Artistix",
     "alt_name": "Painting Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/painting_banner_final.jpeg",
     "description": "Exclusively For College Students | Free Registration",
-    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "body": "The event of painting offers budding artists a platform to express themselves visually through various mediums. Participants create original artworks based on given themes or subjects, showcasing their creativity, technique, and interpretation.",
     "date": "April 9th",
     "time": "10:00 AM - 01:00 PM",
     "teamSize": "",
@@ -511,9 +573,7 @@
       },
       {
         "type": "Judging Criteria",
-        "body": [
-          "Completely handled through automated leaderboard system."
-        ]
+        "body": ["Completely handled through automated leaderboard system."]
       },
       {
         "type": "Unacceptable behaviors",
@@ -697,9 +757,7 @@
       },
       {
         "type": "Judging Criteria",
-        "body": [
-          "Completely based on time effcieny of the completion of hunt."
-        ]
+        "body": ["Completely based on time effcieny of the completion of hunt."]
       },
       {
         "type": "Duration",
@@ -863,9 +921,7 @@
       },
       {
         "type": "Judging Criteria",
-        "body": [
-          "Based on the time which will be taken to complete the race."
-        ]
+        "body": ["Based on the time which will be taken to complete the race."]
       },
       {
         "type": "Duration",
@@ -1114,10 +1170,7 @@
       },
       {
         "type": "Judging Criteria",
-        "body": [
-          "Clarity with visual appeal.",
-          "Practically & usability."
-        ]
+        "body": ["Clarity with visual appeal.", "Practically & usability."]
       },
       {
         "type": "Duration",
@@ -1185,9 +1238,7 @@
     "rules": [
       {
         "type": "Rules",
-        "body": [
-          "Content should be original not plagiarized."
-        ]
+        "body": ["Content should be original not plagiarized."]
       },
       {
         "type": "Judging Criteria",
