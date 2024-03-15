@@ -7,7 +7,7 @@ import { rgbDataURL } from "@/utils/blurryImage";
 export default function EventWorkshopCard({ data }) {
 	const urlPathName = usePathname();
 
-	const { id, name, description, image_url, teamSize, relatedEvents } = data;
+	const { id, name, description, image_url, teamSize, relatedEvents, concept } = data;
 
 	const flexStylesBetween = "flex justify-between items-center";
 	const flexStylesCenter = "flex justify-center items-center";
@@ -33,8 +33,13 @@ export default function EventWorkshopCard({ data }) {
 						<p className="text-yellowish font-generalsans font-bold text-2xl">
 							{name}
 						</p>
-						<div className="description-container h-16 overflow-hidden">
+						<div className="description-container">
 							<p className=" text-grey font-generalsans text-sm lg:pt-3 py-1">
+								{concept}
+							</p>
+						</div>
+						<div className="description-container h-16 overflow-hidden">
+							<p className=" text-yellowish font-generalsans text-sm lg:pt-3 py-1">
 								{description}
 							</p>
 						</div>

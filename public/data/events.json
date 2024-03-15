@@ -1,6 +1,7 @@
 [
   {
     "id": "science_exhibition",
+    "concept": "Science Exhibition",
     "type": "School",
     "name": "XtraVaganza",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Science%20Exhibition.jpg",
@@ -50,6 +51,7 @@
   },
   {
     "id": "math",
+    "concept": "Maths Competition",
     "type": "School",
     "name": "QuantQuest",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Maths.jpg",
@@ -128,6 +130,7 @@
   },
   {
     "id": "extempore",
+    "concept": "Extempore (Jr Level)",
     "type": "School",
     "name": "XpreXive",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
@@ -173,6 +176,7 @@
   },
   {
     "id": "painting",
+    "concept": "Painting Competition (Jr Level)",
     "type": "School",
     "name": "Artistix",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Painting.jpg",
@@ -217,6 +221,7 @@
   },
   {
     "id": "extempore",
+    "concept": "Extempore (Sr Level)",
     "type": "College",
     "name": "XpreXive",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
@@ -248,6 +253,7 @@
   },
   {
     "id": "painting",
+    "concept": "Painting Competition (Sr Level)",
     "type": "College",
     "name": "Artistix",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Painting.jpg",
@@ -306,6 +312,7 @@
   },
   {
     "id": "ui_ux",
+    "concept": "UX & Product Design",
     "type": "College",
     "name": "UXplore",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/ux.jpg",
@@ -378,6 +385,7 @@
   },
   {
     "id": "frontend",
+    "concept": "Frontend Competition",
     "type": "College",
     "name": "ClashDevs",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/frontend%20dev.jpg",
@@ -460,6 +468,7 @@
   },
   {
     "id": "ctf",
+    "concept": "Capture the Flag",
     "type": "College",
     "name": "Cynox",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CTF.jpg",
@@ -544,6 +553,7 @@
   },
   {
     "id": "webathon",
+    "concept": "Startup Pitch Deck",
     "type": "College",
     "name": "Eureka",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Eureka.jpg",
@@ -626,6 +636,7 @@
   },
   {
     "id": "treasure_hunt",
+    "concept": "Treasure Hunt Competition",
     "type": "College",
     "name": "TraceIt",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Treasure%20hunt.jpg",
@@ -704,6 +715,7 @@
   },
   {
     "id": "maze_solver",
+    "concept": "Maze Solver Competition",
     "type": "College",
     "name": "Entangled",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20race.jpg",
@@ -778,6 +790,7 @@
   },
   {
     "id": "race",
+    "concept": "UX & Product Design",
     "type": "College",
     "name": "EdrenaLine",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
@@ -852,6 +865,7 @@
   },
   {
     "id": "iot",
+    "concept": "IOT Competition",
     "type": "College",
     "name": "SymbIoT",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
@@ -925,6 +939,7 @@
   },
   {
     "id": "circuit",
+    "concept": "Circuit Design Competition",
     "type": "College",
     "name": "Connectify",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/Circuit.jpg",
@@ -1011,6 +1026,7 @@
   },
   {
     "id": "cad",
+    "concept": "FreeCAD Competition",
     "type": "College",
     "name": "FreeForm",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CAD.jpg",
@@ -1087,6 +1103,7 @@
   },
   {
     "id": "creative_writing",
+    "concept": "Creative Writing Competition",
     "type": "College",
     "name": "WordCraftique",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Creative%20writing.jpg",
@@ -1138,6 +1155,7 @@
   },
   {
     "id": "waste_to_art",
+    "concept": "Waste to Art Competition",
     "type": "College",
     "name": "Junkraft",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Wastetoart.jpg",
