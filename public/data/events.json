@@ -1102,27 +1102,26 @@
       {
         "type": "Rules",
         "body": [
-          "Bring your own PC with FreeCAD installed",
-          "Do not copy from peers",
-          "A complete model is to be submitted according to the given problem statement",
-          "Partial judging won't be allowed",
-          "No practice runs will be provided",
-          "All designs submitted must be original works created by the participant and must not infringe on the intellectual property rights of any third party.",
-          "The final results will be based on the completeness and optimum usage of the software.",
-          "The judges' decision will be final and binding."
+          "Bring your own laptop with install FreeCAD version(0.21.2) Download link will be provided at that time of workshop",
+          "No malpractices will be entertained in the whole event.",
+          "No practice runs or practice design is permitted.",
+          "A complete model is to be submitted according to the given problem statement. If it is not possible then partial design is also accepted.",
+          "We are not going to provide any time of extra time in any round.",
+          "All designs submitted must be original works created by the participant.",
+          "The final results will be based on the completeness and fair design.",
+          "Our Judges decision will be final and binding."
         ]
       },
       {
         "type": "Judging Criteria",
         "body": [
-          "Originality and innovation demonstrated.",
-          "Clarity with visual appeal",
-          "Practicality and usability."
+          "Clarity with visual appeal.",
+          "Practically & usability."
         ]
       },
       {
         "type": "Duration",
-        "body": "2.5 hours"
+        "body": "1 hour [ for each round ]"
       },
       {
         "type": "Requirements",
@@ -1130,7 +1129,7 @@
       },
       {
         "type": "Number of Rounds",
-        "body": "1"
+        "body": "2"
       },
       {
         "type": "Registration Fees",
