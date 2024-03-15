@@ -47,14 +47,14 @@ export default function TeamCardContainer() {
 								>
 									Coordinators
 								</button>
-								<button
+								{/* <button
 									onClick={() => setSelectedButton("Developers")}
 									className={
 										selectedButton === "Developers" ? selectedBtnClass : btnClass
 									}
 								>
 									Developers
-								</button>
+								</button> */}
 							</div>
 						</div>
 					</div>
