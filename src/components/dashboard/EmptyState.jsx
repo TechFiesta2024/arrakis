@@ -19,7 +19,7 @@ export default function EmptyState() {
 					<Link href='/workshop' className='bg-red flex justify-center items-center gap-3 px-8 md:px-10 py-4 md:py-3 rounded-xl transition-transform hover:scale-x-110'>
 						<Image src={Images.iconScreenMirror} alt="Screen mirror" />
 						<p>Register Workshops</p>
-						<Image src={Images.iconArrowRight} alt="Arrow Right Icon" />
+						<Image src={Images.arrowRight} alt="Arrow Right Icon" />
 					</Link>
 				</div>
 				<SmartShapes />
