@@ -1,38 +1,38 @@
 [
   {
-    "name": "John Doe",
-    "linkedin": "https://www.linkedin.com/in/johndoe",
-    "x_url": "https://example.com/johndoe",
-    "phone": "1234567890"
+    "name": "ANUSHKA HAZRA",
+    "linkedin": "https://www.linkedin.com/in/anushka-hazra-15b4a7205",
+    "x_url": "https://x.com/anushka_hazra",
+    "email": "anushka.hazra.20@aot.edu.in"
   },
   {
-    "name": "Jane Smith",
-    "linkedin": "https://www.linkedin.com/in/janesmith",
-    "x_url": "https://example.com/janesmith",
-    "phone": "1234567890"
+    "name": "MAYUKH GHOSH",
+    "linkedin": "https://www.linkedin.com/in/mayukh-ghosh-7ab511200",
+    "x_url": "https://x.com/mr_mayukh1011",
+    "email": "mayukh.ghosh.20@aot.edu.in"
   },
   {
-    "name": "Michael Johnson",
-    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson",
-    "phone": "1234567890"
+    "name": "ARKAPRAVA GHOSH",
+    "linkedin": "https://www.linkedin.com/in/arkaprava-ghosh-141685220",
+    "x_url": "https://x.com/ArkapravaGhos11",
+    "email": "arkaprava.ghosh.20@aot.edu.in"
   },
   {
-    "name": "Alice Brown",
-    "linkedin": "https://www.linkedin.com/in/alicebrown",
-    "x_url": "https://example.com/alicebrown",
-    "phone": "1234567890"
+    "name": "ARATRIK BANDYOPADHYAY",
+    "linkedin": "https://www.linkedin.com/in/aratrik-bandyopadhyay-14755a222",
+    "x_url": "https://x.com/Aratrik006",
+    "email": "aratrik.bandyopadhyay.21@aot.edu.in"
   },
   {
-    "name": "Robert Lee",
-    "linkedin": "https://www.linkedin.com/in/robertlee",
+    "name": "SOUMYAJIT MONDAL",
+    "linkedin": "https://www.linkedin.com/in/soumyajit-mondal2825",
+    "x_url": "https://x.com/Soumyajit200328",
+    "email": "soumyajit.mondal.21@aot.edu.in"
+  },
+  {
+    "name": "ROMIT MALAKAR",
+    "linkedin": "https://www.linkedin.com/in/romitmalakar",
     "x_url": "https://example.com/robertlee",
-    "phone": "1234567890"
-  },
-  {
-    "name": "Cool Name",
-    "linkedin": "https://www.linkedin.com/in/robertlee",
-    "x_url": "https://example.com/robertlee",
-    "phone": "1234567890"
+    "email": "romit.malakar.20@aot.edu.in"
   }
 ]

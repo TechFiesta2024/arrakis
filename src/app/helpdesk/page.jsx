@@ -1,9 +1,6 @@
-"use client";
-
-import Card from "@/components/HelpDesk/Card";
-import helpdeskData from "/public/data/helpdesk.json";
-import Images from "/public/assets";
 import Image from "next/image";
+import Images from "/public/assets";
+import HelpdeskCard from "@/components/HelpDesk";
 import SmartShapes from "@/components/Global/SmartShapes";
 
 export default function HelpDeskPage() {
@@ -52,7 +49,7 @@ export default function HelpDeskPage() {
 
 					{/* ------------------------- Helpdesk Team Cards ----------------------------- */}
 
-					<Card filteredData={helpdeskData} />
+					<HelpdeskCard />
 				</div>
 			</div>
 		</>
