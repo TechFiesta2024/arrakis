@@ -209,7 +209,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     {Array.isArray(rule.body) ? (
                       <ul className="text-grey list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
+                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">⚪️ {" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
