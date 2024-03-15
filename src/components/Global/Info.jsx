@@ -203,7 +203,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
               ) : (
                 rules.map((rule, index) => (
                   <div key={index} className="py-4">
-                    <p className="text-yellowish text-xl font-generalsans-semibold pb-2">
+                    <p className="text-yellowish text-xl md:text-2xl font-generalsans-semibold pb-2">
                       {rule.type}:
                     </p>
                     {Array.isArray(rule.body) ? (
