@@ -84,8 +84,8 @@ export default function EventWorkshopCard({ data }) {
 						</div>
 					) : (
 						<>
-							<p className="text-yellowish font-generalsans font-bold text-xl px-6">Related Events</p>
-							<div className="py-8 px-6 flex flex-row flex-wrap gap-2">
+							<p className="text-yellowish font-generalsans font-bold text-xl px-6 pt-6">Related Events</p>
+							<div className="py-4 px-6 flex flex-row flex-wrap gap-2">
 								{
 									relatedEvents.map((event, index) => (
 										<div key={index}
