@@ -91,12 +91,12 @@ export default function EventWorkshopInfo({ pageData, params }) {
             <Image
               src={data.image_url}
               alt="workshop"
-              className="object-cover md:h-96 w-full"
+              className="object-cover h-48 md:h-96 w-full"
               width={500}
               height={200}
               unoptimized
               placeholder="blur"
-              blurDataURL={rgbDataURL(128, 128, 128)}
+              blurDataURL={rgbDataURL(150, 150, 150)}
             />
           </div>
           <div>
@@ -131,7 +131,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </div>
               </div>
               <div className="col-span-1 md:col-span-1 flex justify-center items-center border-r-[.5px] border-yellowish">
-                <div className="inline-flex gap-2 md:gap-2 py-4">
+                <div className="inline-flex gap-2 md:gap-4 py-4">
                   <div className="flex justify-center items-center">
                     <Image src={Images.map} alt="map" className="w-10" />
                   </div>
@@ -240,7 +240,8 @@ export default function EventWorkshopInfo({ pageData, params }) {
                             <Image
                               src={Images.Diamond1}
                               alt="star"
-                              className="h-10" />
+                              className="h-7"
+                            />
                             <h1 className="text-yellowish text-lg md:text-xl font-generalsans font-normal">
                               {prize.amount}
                             </h1>
