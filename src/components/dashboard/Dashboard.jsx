@@ -1,3 +1,4 @@
+import axios from "axios";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useAuthState } from "@/context/AuthContext";
@@ -15,6 +16,7 @@ export default function Dashboard() {
 	const [workshop, setWorkshop] = useState([]);
 
 	useEffect(() => {
+		const source = axios.CancelToken.source();
 		async function getMe() {
 			try {
 				const { data } = await axiosInstance.get("/user", {
@@ -31,10 +33,19 @@ export default function Dashboard() {
 					);
 				}
 			} catch (err) {
-				console.error(err);
+				if (axios.isCancel(err)) {
+					console.error("Axios error: ", err.message);
+				}
+				else {
+					console.error(err)
+				}
 			}
 		}
 		getMe();
+
+		return () => {
+			source.cancel("Request Cancelled.");
+		}
 	}, []);
 
 	return (

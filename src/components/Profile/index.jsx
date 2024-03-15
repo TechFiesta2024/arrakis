@@ -1,4 +1,4 @@
-"use client";
+import axios from "axios";
 import Image from "next/image";
 import Images from "/public/assets/index.js";
 import Cookies from "js-cookie";
@@ -41,6 +41,7 @@ export default function Profile() {
 
 	/* Get user info when navigating to /profile */
 	useEffect(() => {
+		const source = axios.CancelToken.source();
 		async function getMe() {
 			try {
 				const res = await axiosInstance.get("/user", {
@@ -66,10 +67,19 @@ export default function Profile() {
 					});
 				}
 			} catch (err) {
-				console.error(err);
+				if (axios.isCancel(err)) {
+					console.error("Axios error: ", err.message);
+				}
+				else {
+					console.error(err);
+				}
 			}
 		}
 		getMe();
+
+		return () => {
+			source.cancel("Request Cancelled.");
+		}
 	}, []);
 
 	const handleInputChangeUserProfile = (e) => {
@@ -226,7 +236,7 @@ export default function Profile() {
 										<div className="toggle__line w-12 bg-black rounded-full shadow-inner h-7"></div>
 										<div
 											className={`toggle__dot absolute top-[1.6px] w-6 h-6 bg-red rounded-full shadow inset-y-0 transition-transform delay-100 ${toggleDisabled && "cursor-not-allowed"
-												} ${userCheck ? "translate-x-0" : "translate-x-6"} `}
+												} ${userCheck ? "translate-x-0" : "translate-x-[1.35rem]"} `}
 										></div>
 									</div>
 								</label>

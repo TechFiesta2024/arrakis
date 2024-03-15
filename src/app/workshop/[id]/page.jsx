@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import workshops from "/public/data/workshop.json";
 import Preloader from "@/components/Global/Preloader";
 
 const EventWorkshopInfo = dynamic(() => import("@/components/Global/Info"), {
@@ -7,5 +6,5 @@ const EventWorkshopInfo = dynamic(() => import("@/components/Global/Info"), {
 });
 
 export default function WorkshopPageById({ params }) {
-	return <EventWorkshopInfo pageData={workshops} params={params} />;
+	return <EventWorkshopInfo params={params} />;
 }
