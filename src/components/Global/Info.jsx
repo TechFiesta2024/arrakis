@@ -245,7 +245,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                               alt="star"
                               className="h-10" />
                             <h1 className="text-yellowish text-lg md:text-xl font-generalsans font-normal">
-                              ₹{prize.amount}
+                              {prize.amount}
                             </h1>
                           </div>
                         </div>
