@@ -14,7 +14,7 @@ const LINKS = [
 	{ name: "Events", href: "/events" },
 	{ name: "Workshop", href: "/workshop" },
 	{ name: "About", href: "/about" },
-	{ name: "Team", href: "/team" },
+	{ name: "Games Meet", href: "/gamesmeet" },
 	{ name: "Dashboard", href: "/dashboard" },
 	{ name: "Contact", href: "/helpdesk" },
 ];
@@ -22,7 +22,7 @@ const LINKS = [
 export default function Navbar() {
 	const { user, setUser, setIsAuthenticated, isAuthenticated } = useAuthState();
 	const [isOpen, setIsOpen] = useState(false);
-	const urlPathName = usePathname();
+	const pathname = usePathname();
 
 	const flexStylesCenter = "flex justify-center items-center";
 
@@ -72,9 +72,8 @@ export default function Navbar() {
 	useEffect(() => {
 		// Hide the mobile navbar when the url changes.
 		setIsOpen(false);
-	}, [urlPathName]);
+	}, [pathname]);
 
-	const pathname = usePathname();
 	const active =
 		"bg-yellowish28 border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
 	const inActive =
@@ -115,10 +114,10 @@ export default function Navbar() {
 
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
-						href="/team"
-						className={`link ${pathname === "/team" ? active : inActive}`}
+						href="/gamesmeet"
+						className={`link ${pathname === "/gamesmeet" ? active : inActive}`}
 					>
-						Team
+						Games Meet
 					</Link>
 
 					<Link
@@ -128,12 +127,6 @@ export default function Navbar() {
 						Dashboard
 					</Link>
 
-					{/* <Link */}
-					{/* 	href="/" */}
-					{/* 	className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center" */}
-					{/* > */}
-					{/* 	Contact */}
-					{/* </Link> */}
 
 					{!isAuthenticated ? (
 						<div
@@ -252,7 +245,7 @@ export default function Navbar() {
 											key={id}
 											className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-5"
 											// Close navbar if requrl and href is same
-											onClick={() => l.href === urlPathName && setIsOpen(false)}
+											onClick={() => l.href === pathname && setIsOpen(false)}
 										>
 											<Link
 												href={l.href}
