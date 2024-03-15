@@ -9,8 +9,8 @@ export default function ProfileUpdateReminder() {
 	const { isAuthenticated, user } = useAuthState();
 	const [profileUpdateReminder, setProfileUpdateReminder] = useState(false);
 
-	const timeout = setTimeout(() => setProfileUpdateReminder(isAuthenticated && !parseBool(user.UUID)), 1250,);
 	useEffect(() => {
+		const timeout = setTimeout(() => setProfileUpdateReminder(isAuthenticated && !parseBool(user.UUID)), 1250);
 		return () => clearTimeout(timeout);
 	}, [isAuthenticated, user.UUID]);
 

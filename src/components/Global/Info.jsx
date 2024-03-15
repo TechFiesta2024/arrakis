@@ -8,13 +8,15 @@ import Images from "../../../public/assets";
 import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
+import events from "/public/data/events.json";
+import workshops from "/public/data/workshop.json";
 
-export default function EventWorkshopInfo({ pageData, params }) {
+export default function EventWorkshopInfo({ params }) {
   const [data, setData] = useState({});
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
 
-  const selectedPageData = pageData.find((d) => "" + d.id === params.id);
+  const selectedPageData = path === 'events' ? events.find((event) => event.id === params.id) : workshops.find((workshop) => workshop.id === params.id);
   useEffect(() => {
     setData(selectedPageData);
   }, []);
@@ -102,7 +104,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
           <div>
             <div className=" pl-4 md:pl-14 py-7 md:py-10">
               <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans-semibold">
-                {data.name} 
+                {data.name}
                 <div className="text-grey text-2xl md:text-3xl pt-4 font-generalsans font-normal">
                   {data.alt_name}
                 </div>
