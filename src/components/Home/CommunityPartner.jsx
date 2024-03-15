@@ -19,7 +19,7 @@ export default function CommunityPartner() {
 				<div className="communityparter__mainContainer border-y-[0.5px] border-yellowish  ">
 					<div className=" communitypartner__text  justify-center w-full px-20 text-grey">
 						<div className="communitypartner__textcontainer flex justify-center items-center p-3 h-[96px] ">
-							<p className="md:font-generalsans font-extrabold text-xl md:text-3xl text-yellowish">
+							<p className="md:font-generalsans font-extrabold text-lg md:text-3xl text-yellowish">
 								Community Partners
 							</p>
 						</div>

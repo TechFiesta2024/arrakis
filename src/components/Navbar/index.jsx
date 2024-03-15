@@ -16,7 +16,7 @@ const LINKS = [
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
 	{ name: "Dashboard", href: "/dashboard" },
-	{ name: "Contact", href: "/" },
+	{ name: "Contact", href: "/helpdesk" },
 ];
 
 export default function Navbar() {
@@ -162,35 +162,38 @@ export default function Navbar() {
 
 			{/* Mobile Navbar */}
 			<div className="block px-[1px] bg-black lg:hidden pt-[1px]">
-				<Link
-					href="/"
+				<div
 					className={`navbar__top flex justify-between items-center px-6 py-6 border-x-[.5px] border-y-[.5px] text-yellowish`}
 				>
-					<Image src={Images.ftest24} height={27} alt="aot" />
-					<Image
-						onClick={() => setIsOpen(!isOpen)}
-						src={isOpen ? Images.close : Images.hamburger}
-						height={27}
-						alt="hamburger_close"
-					/>
-				</Link>
+					<Link href='/'>
+						<Image src={Images.ftest24} height={27} alt="aot" />
+					</Link>
+					<div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
+						<Image
+							src={isOpen ? Images.close : Images.hamburger}
+							height={27}
+							alt="hamburger_close"
+						/>
+					</div>
+				</div>
 				{isOpen && (
 					<div className="">
 						<div
 							className={`flex flex-col top-0 left-0 right-0 z-50 bg-black h-screen fixed `}
 						>
-							<Link
-								href="/"
+							<div
 								className={`flex justify-between items-center px-6 py-6 `}
 							>
-								<Image src={Images.ftest24} height={27} alt="aot" />
+								<Link href='/'>
+									<Image src={Images.ftest24} height={27} alt="aot" />
+								</Link>
 								<Image
 									onClick={() => setIsOpen(!isOpen)}
 									src={isOpen ? Images.close : Images.hamburger}
 									height={27}
 									alt="hamburger_close"
 								/>
-							</Link>
+							</div>
 							<div
 								className={`flex flex-col top-20 left-0 right-0 z-50 bg-black h-screen fixed px-[1px]`}
 							>
@@ -249,7 +252,7 @@ export default function Navbar() {
 											key={id}
 											className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-5"
 											// Close navbar if requrl and href is same
-											onClick={() => l.href == urlPathName && setIsOpen(false)}
+											onClick={() => l.href === urlPathName && setIsOpen(false)}
 										>
 											<Link
 												href={l.href}

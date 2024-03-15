@@ -3,24 +3,47 @@
     "id": "science_exhibition",
     "type": "School",
     "name": "XtraVaganza",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "science exhibition",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Science%20Exhibition.jpg",
+    "description": "Let your creativity and innovation shine! (Junior level)",
     "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "date": "April 9th",
+    "time": "01:30 PM - 03:30 PM",
     "teamSize": "1 - 2",
+    "rules": [],
     "prize": [
       {
         "position": "1st",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "2000"
+        "amount": "₹2000"
       },
       {
         "position": "3rd",
-        "amount": "1000"
+        "amount": "₹1000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Sajili Chakrobarty",
+        "contact": "+91 74394 61708"
+      },
+      {
+        "name": "Surjya Gopal Goswami",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Ankit Bhattacharjee",
+        "contact": "+91 86974 47665"
+      },
+      {
+        "name": "Koustav Chatterjee",
+        "contact": "+91 62911 79735"
+      },
+      {
+        "name": "Dibyajyoti Biswas",
+        "contact": "+91 75958 60781"
       }
     ],
     "destination": "AOT Campus"
@@ -29,24 +52,68 @@
     "id": "math",
     "type": "School",
     "name": "QuantQuest",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "test test",
-    "body": "",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Maths.jpg",
+    "description": "Qunatic skills and compete with your peers to solve the greatest mathematical mysteries. (Junior level)",
+    "body": "Bring forth your quantative skills and compete with your peers to solve the greatest mathematical mysteries.",
+    "date": "April 9th",
+    "time": "10:30 AM - 12:30 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": ["Accuracy", "Precision(Time)"]
+      },
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Pen (They’ll bring) and Paper (We’ll provide)."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "No registration fees"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "2000"
+        "amount": "₹2000"
       },
       {
         "position": "3rd",
-        "amount": "1000"
+        "amount": "₹1000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Diganta Dutta",
+        "contact": "+91 98744 35538"
+      },
+      {
+        "name": "Aratrik Bandyopadhyay",
+        "contact": "+91 62903 30398"
+      },
+      {
+        "name": "Romit Malakar",
+        "contact": "+91 98836 33976"
+      },
+      {
+        "name": "Anirban Jash",
+        "contact": "+91 98326 09948"
+      },
+      {
+        "name": "Ayishik Das",
+        "contact": "+91 76799 98184"
       }
     ],
     "destination": "AOT Campus"
@@ -56,47 +123,254 @@
     "type": "School",
     "name": "XpreXive",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "TODO",
-    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
+    "description": "Speak your mind and let others follow your thoughts. (Junior level)",
+    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
+    "date": "April 9th",
+    "time": "10:30 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Judging Criteria",
+        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language."
+      },
+      {
+        "type": "Duration",
+        "body": "2 + 1 minutes for each participant"
+      },
+      {
+        "type": "Themes",
+        "body": "Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery."
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      }
+    ],
+    "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
     "id": "painting",
     "type": "School",
     "name": "Artistix",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "TODO",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Painting.jpg",
+    "description": "A painting competition for school & college students (Junior level)",
     "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
+    "date": "April 9th",
+    "time": "10:00 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "Originality: Participants must create original artwork during the competition. Plagiarism or copying from existing artwork is strictly prohibited.",
+          "Adherence to Theme: Artwork must reflect the theme provided for the competition. Deviating from the theme may result in disqualification.",
+          "Respectful Content: Artwork should be appropriate for a diverse audience and should not contain offensive or explicit content. Any artwork deemed inappropriate will be disqualified from the competition.",
+          "Pencil Sketches will not be considered."
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Mode of Painting",
+        "body": "Manual"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own art paper and necessary painting materials."
+      },
+      {
+        "type": "Art Paper Dimensions",
+        "body": "15 inch × 10 inch"
+      },
+      {
+        "type": "Themes",
+        "body": "Will be announced thirty minutes prior to the event."
+      }
+    ],
+    "coordinators": [],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "extempore",
+    "type": "College",
+    "name": "XpreXive",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "description": "Speak your mind and let others follow your thoughts. (Senior level)",
+    "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
+    "date": "April 9th",
+    "time": "10:30 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2 + 1 minutes for each participant"
+      },
+      {
+        "type": "Themes",
+        "body": "Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery."
+      },
+      {
+        "type": "Language",
+        "body": "English"
+      },
+      {
+        "type": "Judging Criteria",
+        "body": "Participants will be marked on content, organization of thought, delivery, voice modulation & body language"
+      }
+    ],
+    "coordinators": [],
+    "destination": "AOT Campus"
+  },
+  {
+    "id": "painting",
+    "type": "College",
+    "name": "Artistix",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Painting.jpg",
+    "description": "A painting competition for school & college students (Senior level)",
+    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
+    "date": "April 9th",
+    "time": "10:00 AM - 01:00 PM",
+    "teamSize": "",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "Originality: Participants must create original artwork during the competition. Plagiarism or copying from existing artwork is strictly prohibited.",
+          "Adherence to Theme: Artwork must reflect the theme provided for the competition. Deviating from the theme may result in disqualification.",
+          "Respectful Content: Artwork should be appropriate for a diverse audience and should not contain offensive or explicit content. Any artwork deemed inappropriate will be disqualified from the competition.",
+          "Pencil Sketches will not be considered."
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Mode of Painting",
+        "body": "Manual"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own art paper and necessary painting materials."
+      },
+      {
+        "type": "Art Paper Dimensions",
+        "body": "15 inch × 10 inch"
+      },
+      {
+        "type": "Themes",
+        "body": "Will be announced thirty minutes prior to the event."
+      }
+    ],
+    "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
     "id": "ui_ux",
     "type": "College",
     "name": "UXplore",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/ux.jpg",
     "description": "UI/UX Design is the process of creating products that provide meaningful and relevant experiences to users.",
     "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
-    "date": "1st",
-    "time": "10:00 AM - 12:00 PM",
-    "rules": [],
+    "date": "April 8th",
+    "time": "10:30 AM - 12:00 PM",
+    "teamSize": "1 - 2",
     "prize": [
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
       },
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
       },
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
+      }
+    ],
+    "rules": [
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Design Thinking Principles. ",
+          "Component Usage.",
+          "Variable Properties. ",
+          "Gesture Accessibilities.",
+          "Color Theories and Dimensions."
+        ]
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "No usage of components from figma community",
+          "You can take inspiration from dribble or behance but no copying of designs"
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "1.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Swastik Bose",
+        "contact": "+91 70039 84426"
+      },
+      {
+        "name": "Rayoti Kar",
+        "contact": "+91 89279 76871"
+      },
+      {
+        "name": "Snigdha Kundu",
+        "contact": "+91 62905 95597"
+      },
+      {
+        "name": "Namrata Biswas",
+        "contact": "+91 90515 42131"
       }
     ],
     "destination": "Lab 1"
@@ -105,25 +379,91 @@
     "id": "frontend",
     "type": "College",
     "name": "ClashDevs",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/frontend%20dev.jpg",
     "description": "Developing the frontend of a website or an application.",
     "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "date": "April 8th",
+    "time": "3:00 PM - 5:00 pm",
     "teamSize": "1 - 2",
-    "rules": [],
     "prize": [
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
       },
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
       },
       {
-        "position": "Winner",
-        "amount": "3000"
+        "position": "Top 3",
+        "amount": "₹3000"
+      }
+    ],
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "No use of CSS libaries",
+          "No use of JS libraries",
+          "No use of any frontend framework"
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Optimized & Organised CSS",
+          "Design Consistency",
+          "Web Performance",
+          "Responsiveness",
+          "Code Reusability",
+          "SEO"
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "2 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Bisakh Neogi",
+        "contact": "+91 96747 76719"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      },
+      {
+        "name": "Shanit Kumar Paul",
+        "contact": "+91 93307 01691"
+      },
+      {
+        "name": "Sampurna Dan",
+        "contact": "+91 82529 25943"
+      },
+      {
+        "name": "Aman Shrivastav",
+        "contact": "+91 70442 06013"
+      },
+      {
+        "name": "Debabrata Mukherjee",
+        "contact": "+91 74073 98936"
       }
     ],
     "destination": "Lab 2"
@@ -132,25 +472,86 @@
     "id": "ctf",
     "type": "College",
     "name": "Cynox",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "CTF is a gamified event where participants compete to find and exploit vulnerabilities",
-    "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CTF.jpg",
+    "description": "Gamified competitive cybersecurity event that is based on different challenges or aspects of information security",
+    "body": "Capture the Flag (CTF) is an exercise in which participants attempt to find text strings, called \"flags\", which are secretly hidden in purposefully-vulnerable programs or websites",
+    "date": "April 8th",
+    "time": "02:30 PM - 05:00 PM",
+    "teamSize": "3 - 4",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "Participants are free to use any software or equipment of their choice (e.g. disassembler, Kali, virtual machines, pwntools...) provided it does not damage the target",
+          "Be mindful of your surroundings and of your fellow Users – your fellow Users may have a different level of comfort with respect to language and personal space",
+          "Refrain from demeaning, discriminatory or harassing behavior or speech",
+          "Ask organizers if you are in doubt"
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": ["Completely handled through automated leaderboard system."]
+      },
+      {
+        "type": "Unacceptable behaviors",
+        "body": [
+          "Attack any machine other than the designated ones",
+          "DoS Cynox CTF infrastructure or college",
+          "Modify the scoreboard",
+          "Intentionally prevent other teams from flagging"
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "2.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "5000"
+        "amount": "₹5000"
       },
       {
         "position": "2nd",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "3rd",
-        "amount": "2000"
+        "amount": "₹2000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      },
+      {
+        "name": "Arkaprava Ghosh",
+        "contact": "+91 70441 19166"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      },
+      {
+        "name": "Soumyajit Mondal",
+        "contact": "+91 62940 96170"
+      },
+      {
+        "name": "Suvoneel Basu Roy Chowdhury",
+        "contact": "+91 87777 42480"
       }
     ],
     "destination": "ION Lab"
@@ -159,25 +560,87 @@
     "id": "webathon",
     "type": "College",
     "name": "Eureka",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Eureka.jpg",
     "description": "WebAThon is a hackathon where participants compete to build a web application in a limited time",
     "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "date": "April 8th - 9th",
+    "time": "12:00 PM - 03:30 PM",
+    "teamSize": "3 - 5",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "You must prepare your ppt before demonstrating your product.",
+          "There has to be a MVP ready for demonstration."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Revenue Generation",
+          "UX and branding",
+          "Implementation",
+          "Scalability",
+          "Future Scope",
+          "Uniqueness",
+          "Target Audience"
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "6.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "5000"
+        "amount": "₹5000"
       },
       {
         "position": "2nd",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "3rd",
-        "amount": "2000"
+        "amount": "₹2000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Bishakh Neogi",
+        "contact": "+91 96747 76719"
+      },
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Swastik Bose",
+        "contact": "+91 70039 84426"
+      },
+      {
+        "name": "Mayukh Ghosh",
+        "contact": "+91 97141 56873"
+      },
+      {
+        "name": "Soumit Srimany",
+        "contact": "+91 75959 03437"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
       }
     ],
     "destination": "Auditorium"
@@ -186,25 +649,80 @@
     "id": "treasure_hunt",
     "type": "College",
     "name": "TraceIt",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Treasure%20hunt.jpg",
     "description": "Search around the campus to find the hidden treasure. ",
     "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "date": "April 9th",
+    "time": "11:30 AM - 03:30 PM",
+    "teamSize": "2 - 3",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "A trail of clues leads from one to the next in the Treasure Hunt.",
+          "There is a specific order in which you must find the clues. No team can ignore a clue.",
+          "Avoid looking for hints in restricted places.",
+          "In the unlikely event that players discover a clue belonging to a different team, they are not allowed to alter it. If this regulation is broken, the team may be disqualified.",
+          "Please put anything back if participants move something while looking for the clue.",
+          "Although each team's clues are unique and placed in various locations, they always lead to the same place—the treasure. Whichever team locates the treasure wins.",
+          "The judges' decisions are final and will be regarded as fair."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": ["Completely based on time effcieny of the completion of hunt."]
+      },
+      {
+        "type": "Duration",
+        "body": "4 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC, mobile and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "5000"
+        "amount": "₹5000"
       },
       {
         "position": "2nd",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "3rd",
-        "amount": "2000"
+        "amount": "₹2000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Arkaprava Ghosh",
+        "contact": "+91 70441 19166"
+      },
+      {
+        "name": "Soumyajit Mondal",
+        "contact": "+91 62940 96170"
+      },
+      {
+        "name": "Rohit Chakrabarti",
+        "contact": "+91 89108 12276"
+      },
+      {
+        "name": "Soumit Srimany",
+        "contact": "+91 75959 03437"
+      },
+      {
+        "name": "Kuheli Biswas",
+        "contact": "+91 93303 75265"
       }
     ],
     "destination": "AOT Campus"
@@ -213,25 +731,77 @@
     "id": "maze_solver",
     "type": "College",
     "name": "Entangled",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "Maze Solver is a robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20race.jpg",
+    "description": "Design and develop a maze solver to race to the destination.",
     "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "date": "April 8th",
+    "time": "10:30 AM - 05:00 PM",
+    "teamSize": "2 - 4",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "The robot must follow the design specifications provided. Any deviation from the mentioned specifications will lead to disqualification.",
+          "Robots that cause deliberate interference with other robots or damage to the field will be disqualified.",
+          "Humans that cause deliberate interference with robots or damage to the field will be disqualified.",
+          "The coach should not be involved in the launching of the robots as this may lead to disqualification.",
+          "It is expected that the aim of all teams is to play a fair and clean game.",
+          "All decisions about scoring, game play and timing are made by the juries. Teams should completely respect their vote and decisions. Members of the jury will be from different fields of the robotic science."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Based on the time which will be taken to complete the maze by the robot."
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "6.30 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Maze-solving robot according to our Constraints."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "7000"
+        "amount": "₹6000"
       },
       {
         "position": "2nd",
-        "amount": "5000"
+        "amount": "₹5000"
       },
       {
         "position": "3rd",
-        "amount": "4000"
+        "amount": "₹4000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Debjit Saha",
+        "contact": "+91 74390 52996"
+      },
+      {
+        "name": "Krishanu Bandyopadhyay",
+        "contact": "+91 85970 37503"
+      },
+      {
+        "name": "Subhadeep Dutta",
+        "contact": "+91 83358 36561"
+      },
+      {
+        "name": "Abhishek Singh ",
+        "contact": "+91 98310 79865"
       }
     ],
     "destination": "AOT Campus"
@@ -241,24 +811,74 @@
     "type": "College",
     "name": "EdrenaLine",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "Race cars are vehicles that can be controlled remotely using a handheld transmitter or controller.",
+    "description": "Adreneline rush with RC cars",
     "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "date": "April 9th",
+    "time": "10:00 AM - 03:30 PM",
+    "teamSize": "2 - 4",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "This is a Circuit Racing event.",
+          "Only the marshal for that round is permitted to lift the vehicle and deposit it at the closest checkpoint behind that point in the event that it tumbles, stops, or exits the arena.",
+          "They will need to be completely remote controlled the entire time the race is running, until and until it becomes necessary to touch the vehicle.",
+          "Every time the machine needs to be lifted by the marshal, a time penalty will be imposed. There will also be a time-penalty for reverse gearing (all the details regarding the time-penalties will be disclosed on the day of the event)",
+          "There will be a time penalty each time the marshal has to raise the equipment. Reverse gearing will also result in a time penalty; full information about the time penalties will be revealed on the day of the event.",
+          "It is also forbidden for team members to purposefully harm the opponent's car. The accused team will be eliminated if proven guilty."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": ["Based on the time which will be taken to complete the race."]
+      },
+      {
+        "type": "Duration",
+        "body": "5.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Race cars according to our Constraints."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "7000"
+        "amount": "₹6000"
       },
       {
         "position": "2nd",
-        "amount": "5000"
+        "amount": "₹5000"
       },
       {
         "position": "3rd",
-        "amount": "4000"
+        "amount": "₹4000"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Soham Sarkar",
+        "contact": "+91 62961 97485"
+      },
+      {
+        "name": "Debarghya Debnath",
+        "contact": "+91 86172 91399"
+      },
+      {
+        "name": "Anushka Hazra",
+        "contact": "+91 74773 96371"
+      },
+      {
+        "name": "Khushi Gupta",
+        "contact": "+91 80927 83235"
       }
     ],
     "destination": "AOT Campus"
@@ -267,25 +887,78 @@
     "id": "iot",
     "type": "College",
     "name": "SymbIoT",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "IOT problem TODO",
-    "body": "IOT Problem Identification, Solution Design, and Presentation - Demonstration.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/IOT.jpg",
+    "description": "Harnessing the power of IoT for innovative solutions.",
+    "body": "Join experts and enthusiasts to explore cutting-edge AI solutions for IoT challenges, from optimizing energy consumption to enhancing security protocols.",
+    "date": "April 8th",
+    "time": "10:30 AM - 01:30 PM",
+    "teamSize": "2 - 3",
+    "rules": [
+      {
+        "type": "Rules",
+        "body": [
+          "The Problem Statement will be provided on spot, you must submit a project that is based on this.",
+          "You will have the opportunity to submit your project once the event begins; this will be your only and final submission.",
+          "You must submit original, creative ideas; any submission that is found to be plagiarized will not be accepted.",
+          "The whole Hackathon period must be used to create your hack. You can make advantage of additional publicly accessible platforms and services like Google Maps, Facebook Connect, Twitter feeds, and open source libraries.",
+          "The judges' decisions are final and will be regarded as fair."
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Feasibility of the proeject",
+          "Environmental constraints",
+          "Cost effectiveness"
+        ]
+      },
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants should know TinkerCAD."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "3000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "2500"
+        "amount": "₹2500"
       },
       {
         "position": "3rd",
-        "amount": "1500"
+        "amount": "₹1500"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Tannistha Das",
+        "contact": "+91 74399 96987"
+      },
+      {
+        "name": "Suvam Das",
+        "contact": "+91 89615 47065"
+      },
+      {
+        "name": "Someshwar Srimany",
+        "contact": "+91 79805 35766"
+      },
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
       }
     ],
     "destination": "AOT Campus"
@@ -294,52 +967,82 @@
     "id": "circuit",
     "type": "College",
     "name": "Connectify",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "circuit event",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/Circuit.jpg",
+    "description": "Guide the current through the circuit to light up the bulb.",
     "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
+    "date": "April 8th",
+    "time": "10:30 AM - 04:30 PM",
     "teamSize": "1 - 2",
-    "rules": [],
-    "prize": [
+    "rules": [
       {
-        "position": "1st",
-        "amount": "3000"
+        "type": "Rules",
+        "body": [
+          "This will be a circuit designing round in which actual application has to be made.",
+          "You will be provided question sheets/components on the registration desk and you need to submit them back within the specified time limit.",
+          "All the components and material required for the circuit will be provided by us. List of available components will be displayed.",
+          "Power supply and other testing devices like multimeter, batteries and other tools will be made available.",
+          "All teams will be having same kit of components.",
+          "In case something got damaged you may request the organizer to replace the components/parts.",
+          "Teams should draw circuit diagram of the application depicting all the principles and theories involved in circuit as well as the working of the Application on a work Sheet."
+        ]
       },
       {
-        "position": "2nd",
-        "amount": "2500"
+        "type": "Judging Criteria",
+        "body": [
+          "Design of circuit.",
+          "Compactness of design.",
+          "Desired output.",
+          "Breadboard skills/neatness of the implemented",
+          "Circuit."
+        ]
       },
       {
-        "position": "3rd",
-        "amount": "1500"
+        "type": "Duration",
+        "body": "6 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "No Requirement. [We’ll provide Breadboard, Jumper Wires, LEDs, and ICs]."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
       }
     ],
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "science_exhibition",
-    "type": "School",
-    "name": "XtraVaganza",
-    "image_url": "/assets/avatar.png",
-    "description": "science exhibition",
-    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
-    "rules": [],
     "prize": [
       {
         "position": "1st",
-        "amount": "2500"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "2500"
+        "amount": "₹2500"
       },
       {
         "position": "3rd",
-        "amount": "1500"
+        "amount": "₹1500"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Someshwar Srimany",
+        "contact": "+91 79805 35766"
+      },
+      {
+        "name": "Rahul Srivastava",
+        "contact": "+91 90079 74773"
+      },
+      {
+        "name": "Sagnik Ray",
+        "contact": "+91 89108 34699"
+      },
+      {
+        "name": "Debjani Kangsa Banik",
+        "contact": "+91 79080 96741"
       }
     ],
     "destination": "AOT Campus"
@@ -348,52 +1051,81 @@
     "id": "cad",
     "type": "College",
     "name": "FreeForm",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "cad event description",
-    "body": "",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
-    "prize": [
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CAD.jpg",
+    "description": "Architect the future with CAD.",
+    "body": "Tech Fiesta 24 allows you to showcase your talent on a creative stage, open exclusively for technical performers of all levels of expertise. Freecad is a computer-aided design (CAD) and drafting software application. Master the skill of creating aesthetic and pleasing visual elements and design the face of tomorrow.",
+    "date": "April 8th",
+    "time": "10:30 AM - 01:00 PM",
+    "teamSize": "3 - 4",
+    "rules": [
       {
-        "position": "1st",
-        "amount": "3000"
+        "type": "Rules",
+        "body": [
+          "Bring your own PC with FreeCAD installed",
+          "Do not copy from peers",
+          "A complete model is to be submitted according to the given problem statement",
+          "Partial judging won't be allowed",
+          "No practice runs will be provided",
+          "All designs submitted must be original works created by the participant and must not infringe on the intellectual property rights of any third party.",
+          "The final results will be based on the completeness and optimum usage of the software.",
+          "The judges' decision will be final and binding."
+        ]
       },
       {
-        "position": "2nd",
-        "amount": "2500"
+        "type": "Judging Criteria",
+        "body": [
+          "Originality and innovation demonstrated.",
+          "Clarity with visual appeal",
+          "Practicality and usability."
+        ]
       },
       {
-        "position": "3rd",
-        "amount": "1500"
+        "type": "Duration",
+        "body": "2.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
       }
     ],
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "math",
-    "type": "School",
-    "name": "QuantQuest",
-    "image_url": "/assets/avatar.png",
-    "description": "test test",
-    "body": "",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
-    "rules": [],
     "prize": [
       {
         "position": "1st",
-        "amount": "2500"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "2500"
+        "amount": "₹2500"
       },
       {
         "position": "3rd",
-        "amount": "1500"
+        "amount": "₹1500"
+      }
+    ],
+    "coordinators": [
+      {
+        "name": "Debojyoti Dutta",
+        "contact": "+91 89440 97103"
+      },
+      {
+        "name": "Dipayan Shown",
+        "contact": "+91 90643 07622"
+      },
+      {
+        "name": "Sampurna Dan",
+        "contact": "+91 82529 25943"
+      },
+      {
+        "name": "Sayan Mukherjee",
+        "contact": "+91 98754 70017"
       }
     ],
     "destination": "AOT Campus"
@@ -402,15 +1134,25 @@
     "id": "creative_writing",
     "type": "College",
     "name": "WordCraftique",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "description": "TODO",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Creative%20writing.jpg",
+    "description": "Create a masterpiece with your words!",
     "body": " Express yourself with words! You will be given ideas to work with to create distinctive and inventive pieces. We would love to see entries that engage the reader with unique ideas, vivid imagery, and compelling storytelling, as well as exhibiting mastery of language and narrative style.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "destination": "AOT Campus"
-    "destination": "AOT Campus",
+    "date": "April 8th",
+    "time": "10:30 AM - 01:30 PM",
+    "teamSize": "",
     "rules": [
+      {
+        "type": "Rules",
+        "body": ["Content should be original not plagiarized."]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Original Work: All submissions must be original and unpublished pieces of writing created solely by the participant.",
+          "Adherence to Guidelines: Entries must adhere to the specified word limits and formatting guidelines for each category.",
+          "Respectful Content: Content must be appropriate for a diverse audience and refrain from containing offensive language, explicit content, or discriminatory themes."
+        ]
+      },
       {
         "type": "Duration",
         "body": "3 hours"
@@ -418,9 +1160,9 @@
       {
         "type": "Categories",
         "body": [
-          "-Poetry(Max 20 lines)\n",
-          "Short Story(Max 1000 words)\n",
-          "Drama(Max 1000 words)\n",
+          "Poetry(Max 20 lines)",
+          "Short Story(Max 1000 words)",
+          "Drama(Max 1000 words)",
           "Creative Non-fiction (Max 1000 words)"
         ]
       },
@@ -439,148 +1181,49 @@
       {
         "type": "resources",
         "body": "Paper will be provided by the college"
-      },
-      {
-        "type": "Judging Criteria",
-        "body": [
-          "1. Original Work: All submissions must be original and unpublished pieces of writing created solely by the participant.\n",
-          "2. Adherence to Guidelines: Entries must adhere to the specified word limits and formatting guidelines for each category.\n",
-          "3. Respectful Content: Content must be appropriate for a diverse audience and refrain from containing offensive language, explicit content, or discriminatory themes."
-        ]
       }
-    ]
+    ],
+    "destination": "AOT Campus"
   },
   {
     "id": "waste_to_art",
     "type": "College",
     "name": "Junkraft",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Extempore.jpg",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/H%20-%20Wastetoart.jpg",
+    "description": "Through the looking glass of waste, find art!",
     "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
-    "destination": "AOT Campus",
+    "date": "April 8th",
+    "time": "02:00 PM - 05:00 PM",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Duration",
         "body": "3 hours"
-      },
-      {
-        "type": "Judging Criteria",
-        "body": [
-          "1. Required waste materials should be brought by the participants.\n",
-          "2. The focus should be on artistic composition, creativity, and design."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "extempore_school",
-    "type": "School",
-    "name": "XpreXive",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
-    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "1 - 2",
-    "destination": "AOT Campus"
-    "teamSize": "",
-    "destination": "AOT Campus",
-    "rules": [
-      {
-        "type": "Duration",
-        "body": "2 + 1 minutes for each participant"
-      },
-      {
-        "type": "Language",
-        "body": "English"
-      },
-      {
-        "type": "Judging Criteria",
-        "body": [
-          "1. Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery.\n",
-          "2. Each participant gets 2+1 minutes to speak on the topic.\n",
-          "3. Participants will be marked on content, organization of thought, delivery, voice modulation & body language.\n",
-          "4. No supporting materials will be allowed during the speech."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "extempore_college",
-    "type": "College",
-    "name": "XpreXive",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
-    "body": "Transform trash into treasure! Show us your creativity by transforming waste into something beautiful and functional. Entries will be evaluated based on the uniqueness of the concept, the effectiveness of the transformation, the sustainability of the materials utilized, and the overall visual appeal and utility of the completed product.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
-    "destination": "AOT Campus",
-    "rules": [
-      {
-        "type": "Duration",
-        "body": "2 + 1 minutes for each participant"
-      },
-      {
-        "type": "Language",
-        "body": "English"
-      },
-      {
-        "type": "Judging Criteria",
-        "body": [
-          "1. Themes and relevant topics will be given on the spot, participants will be allowed to pick their topic only once through lottery.\n",
-          "2. Each participant gets 2+1 minutes to speak on the topic.\n",
-          "3. Participants will be marked on content, organization of thought, delivery, voice modulation & body language.\n",
-          "4. No supporting materials will be allowed during the speech."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "painting",
-    "type": "School",
-    "name": "Artistix",
-    "image_url": "/assets/avatar.png",
-    "description": "TODO",
-    "body": "Let your brushes dance over the canvas! Paint your interpretation of the supplied themes. We would love to see artworks that not only demonstrate technical competence, but also communicate emotion, depth, and interpretation. Entries should be creative in their composition, color use, and overall visual impact.",
-    "date": "Mar 11-16",
-    "time": "10:00 AM - 12:00 PM",
-    "teamSize": "",
-    "destination": "AOT Campus",
-    "rules": [
-      {
-        "type": "Duration",
-        "body": "3 hours"
-      },
-      {
-        "type": "Mode of Painting",
-        "body": "Manual"
-      },
-      {
-        "type": "Resources",
-        "body": "Participants are required to bring their own art paper and necessary painting materials."
-      },
-      {
-        "type": "Art Paper Dimensions",
-        "body": "15 inch × 10 inch"
       },
       {
         "type": "Themes",
-        "body": "Will be announced 30 minutes prior to the event."
+        "body": "The focus should be on artistic composition, creativity, and design."
       },
       {
-        "type": "Judging Criteria",
-        "body": [
-          "1. Originality: Participants must create original artwork during the competition. Plagiarism or copying from existing artwork is strictly prohibited.\n",
-          "2. Adherence to Theme: Artwork must reflect the theme provided for the competition. Deviating from the theme may result in disqualification.\n",
-          "3. Respectful Content: Artwork should be appropriate for a diverse audience and should not contain offensive or explicit content. Any artwork deemed inappropriate will be disqualified from the competition.\n",
-          "4. Pencil Sketches will not be considered."
-        ]
+        "type": "Requirements",
+        "body": "Required waste materials should be brought by the participants."
       }
-    ]
+    ],
+    "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
+    "destination": "AOT Campus"
   }
 ]
