@@ -108,7 +108,7 @@ export default function EventWorkshopCard({ data }) {
 							<h1 className="text-white text-[14px] font-generalsans font-bold ">
 								VIEW DETAILS & REGISTER
 							</h1>
-							<Image src={Images.iconArrowRight} alt="arrow_right" />
+							<Image src={Images.arrowRight} alt="arrow_right" />
 						</Link>
 					</div>
 				</div>

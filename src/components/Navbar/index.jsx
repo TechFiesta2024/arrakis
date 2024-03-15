@@ -207,7 +207,7 @@ export default function Navbar() {
 												Register
 											</p>
 											<Image
-												src={Images.arrowRightYellowish}
+												src={Images.arrowRight}
 												alt="arrow_right"
 											/>
 										</div>
@@ -224,7 +224,7 @@ export default function Navbar() {
 													>
 														<p className=" text-grey">Go to profile </p>
 														<Image
-															src={Images.arrowRightYellowish}
+															src={Images.arrowRight}
 															height={10}
 															alt="arrow_right"
 														/>
@@ -262,7 +262,7 @@ export default function Navbar() {
 													{l.name}
 												</p>
 												<Image
-													src={Images.arrowRightYellowish}
+													src={Images.arrowRight}
 													height={30}
 													alt="arrow_right"
 												/>
