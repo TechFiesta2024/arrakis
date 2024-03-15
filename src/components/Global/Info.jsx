@@ -11,16 +11,12 @@ import { rgbDataURL } from "@/utils/blurryImage";
 
 export default function EventWorkshopInfo({ pageData, params }) {
   const [data, setData] = useState({});
-  const [rules, setRules] = useState([]);
-  const [coordinators, setCoordinators] = useState([]);
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
 
   const selectedPageData = pageData.find((d) => "" + d.id === params.id);
   useEffect(() => {
     setData(selectedPageData);
-    setRules(selectedPageData.rules);
-    setCoordinators(selectedPageData.coordinators);
   }, []);
 
   async function register() {
@@ -39,10 +35,11 @@ export default function EventWorkshopInfo({ pageData, params }) {
 
       if (response.status === 200) {
         toast.success(`${response.data.message}`, {
-          autoClose: 3000,
+          autoClose: 2000,
           position: "top-right",
           icon: <Image src={Images.logoVerify} alt="whatsapp" />,
           hideProgressBar: true,
+          closeButton: false,
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
@@ -53,23 +50,21 @@ export default function EventWorkshopInfo({ pageData, params }) {
         });
       }
     } catch (err) {
-      console.error(err);
+      if (err.response.status === 400) {
+        toast.warning(`User not registered`, {
+          autoClose: 1500,
+          position: "top-right",
+          hideProgressBar: true,
+          closeButton: false,
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+            fontSize: "1.1rem",
+            border: "1px solid red",
+          },
+        });
+      }
     }
-
-    // toast.success(`ok`, {
-    //     autoClose: 3000,
-    //     position: "top-right",
-    //     icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-    //     hideProgressBar: true,
-    //     style: {
-    //         color: "#010100",
-    //         backgroundColor: "#FFF3B0",
-    //         font: "generalsans",
-    //         fontSize: "14px",
-    //         border: "1px solid #010100",
-    //     },
-    // }
-    // );
   }
 
   const checkRoute = urlPathName === `/events/${params.id}`;
@@ -199,11 +194,11 @@ export default function EventWorkshopInfo({ pageData, params }) {
             </div>
 
             <div className="px-4 md:px-14 py-8">
-                <h1 className="text-grey font-generalsans font-normal text-lg md:text-xl">
-                  {data.body}
-                </h1>
+              <h1 className="text-grey font-generalsans font-normal text-lg md:text-xl">
+                {data.body}
+              </h1>
               {checkRoute && (
-                rules?.map((rule, index) => (
+                data?.rules?.map((rule, index) => (
                   <div key={index} className="py-4">
                     <p className="text-yellowish text-xl md:text-2xl font-generalsans-semibold pb-2">
                       {rule.type}:
@@ -260,7 +255,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
           ) : null}
 
           {
-            coordinators?.length > 0 &&
+            data?.coordinators?.length > 0 &&
             <>
               <div className="pl-4 md:pl-14 border-y-[.5px] border-yellowish">
                 <h1 className="text-yellowish font-generalsans font-semibold text-3xl md:text-5xl py-10 pt-24">
@@ -268,7 +263,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                 </h1>
               </div>
               <div className="grid md:grid-cols-2 grid-cols-1">
-                {coordinators.map((coordinator, index) => (
+                {data?.coordinators.map((coordinator, index) => (
                   <div className="md:col-span-1 col-span-1 border-b-[.5px] md:border-r-[.5px] border-yellowish" key={index}>
                     <div className="flex flex-row items-start pl-6 md:pl-12 gap-1 py-6 md:py-5">
                       <Image
