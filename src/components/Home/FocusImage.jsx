@@ -27,7 +27,7 @@ export default function FocusImage() {
 					className={`${flexStylesCenter} bg-red px-10 py-1 md:mt-[-30px] z-20 rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`}
 				>
 					<p>Events</p>
-					<Image src={Images.arrowRightYellowish} alt="arrow-right" />
+					<Image src={Images.arrowRight} alt="arrow-right" />
 				</Link>
 
 				{/* ------------------------- Smart Shapes ----------------------------- */}
