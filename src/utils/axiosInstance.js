@@ -1,9 +1,7 @@
 const { default: axios } = require("axios");
 
-const environments = ['development', 'Preview']
-
 const axiosInstance = axios.create({
-	baseURL: `${environments.includes(process.env.NODE_ENV) ? process.env.NEXT_PUBLIC_MESSIAH_DEV_URL : process.env.NEXT_PUBLIC_MESSIAH_PROD_URL}`,
+	baseURL: `${process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'preview' ? process.env.NEXT_PUBLIC_MESSIAH_DEV_URL : process.env.NEXT_PUBLIC_MESSIAH_PROD_URL}`,
 	headers: {
 		"Access-Control-Allow-Headers": "*",
 	},
