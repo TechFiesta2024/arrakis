@@ -36,8 +36,8 @@ body {
 }
 
 .btn-hover:hover {
-    transition: all 0.3s ease;
-    gap: 18px;
+    transition: all 0.4s ease;
+    gap: 20px;
 }
 
 @keyframes rotate {

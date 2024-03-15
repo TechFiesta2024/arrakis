@@ -62,6 +62,8 @@ import college from './college.svg'
 import campus from './campus.svg'
 import about from './about.svg'
 import AOT from './AOT.svg'
+import github from './github.svg'
+import save from './file_save.svg'
 
 const Images = {
     logoAot,
@@ -69,7 +71,7 @@ const Images = {
     logoLinkedIn,
     logoX,
     logoInstagram,
-
+    iconArrowRight,
     logoLinkedInBlack,
     logoXBlack,
     logoVerify,
@@ -120,7 +122,9 @@ const Images = {
     college,
     campus,
     about,
-    AOT
+    AOT,
+    github,
+    save
 };
 
 export default Images;

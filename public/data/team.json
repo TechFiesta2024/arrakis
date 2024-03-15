@@ -1,13 +1,5 @@
 [
   {
-    "name": "Swastik Bose",
-    "role": "UI/UX & Frontend Engineer",
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/johndoe",
-    "x_url": "https://example.com/johndoe"
-  },
-  {
     "name": "Hardware Team",
     "role": "People behind hardware workshops",
     "department": "Coordinators",
@@ -16,18 +8,26 @@
     "x_url": "https://example.com/janesmith"
   },
   {
-    "name": "Bisakh Neogi",
+    "name": "Swastik Bose",
+    "role": "UI/UX & Frontend Engineer",
+    "department": "Developers",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165239_IMG_8607.JPG",
+    "linkedin": "https://www.linkedin.com/in/swastik-bose007",
+    "x_url": "https://github.com/swastik-bose007"
+  },
+  {
+    "name": "Bishakh Neogi",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165144_IMG_8605.JPG",
+    "linkedin": "https://www.linkedin.com/in/bishakh-neogi-387815205",
+    "x_url": "https://github.com/bishakhne0gi"
   },
   {
     "name": "Software Team",
     "role": "People behind all software operations",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164646_IMG_8596.JPG",
     "linkedin": "https://www.linkedin.com/in/janesmith",
     "x_url": "https://example.com/janesmith"
   },
@@ -43,13 +43,13 @@
     "name": "Chirantan Das",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/robertlee",
-    "x_url": "https://example.com/robertlee"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165103_IMG_8604.JPG",
+    "linkedin": "https://www.linkedin.com/in/chirantan-das001",
+    "x_url": "https://github.com/CHIRANTAN-001"
   },
   {
-    "name": "Graphics Designers",
-    "role": "People behind managing funds",
+    "name": "Designers",
+    "role": "Great people behind great designs",
     "department": "Coordinators",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240313172928_IMG_8471.jpg",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
@@ -57,17 +57,17 @@
   },
   {
     "name": "Sayan Mallick",
-    "role": "Backend Engineer",
+    "role": "Full Stack Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/michaeljohnson",
-    "x_url": "https://example.com/michaeljohnson"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314165035_IMG_8602.JPG",
+    "linkedin": "https://www.linkedin.com/in/snxk",
+    "x_url": "https://github.com/lmnzx"
   },
   {
     "name": "Photographers",
     "role": "People behind beautiful pictures",
     "department": "Coordinators",
-    "image_url": "/assets/avatar.png",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2127.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
@@ -75,9 +75,9 @@
     "name": "Abhirup Saha",
     "role": "Frontend Engineer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/davidclark",
-    "x_url": "https://example.com/davidclark"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164940_IMG_8600.JPG",
+    "linkedin": "https://www.linkedin.com/in/abhirup-saha-9605b0228",
+    "x_url": "https://github.com/Abhirup-02"
   },
   {
     "name": "PR Team",
@@ -86,14 +86,6 @@
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2098.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
-  },
-  {
-    "name": "Raja Majumder",
-    "role": "Frontend Engineer", 
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
   },
   {
     "name": "Financers",
@@ -105,33 +97,25 @@
   },
   {
     "name": "Shanit Paul",
-    "role": "Frontend Engineer", 
+    "role": "Frontend Developer",
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/final_croped_image.jpeg",
+    "linkedin": "https://www.linkedin.com/in/shanitpaul",
+    "x_url": "https://github.com/SlicePoh"
   },
   {
     "name": "Subhanil Bhaduri",
     "role": "UI Developer", 
     "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
-  },
-  {
-    "name": "Tamajit Ghosh",
-    "role": "UI Developer", 
-    "department": "Developers",
-    "image_url": "/assets/avatar.png",
-    "linkedin": "https://www.linkedin.com/in/jennifergreen",
-    "x_url": "https://example.com/jennifergreen"
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/20240314164857_IMG_8599.JPG",
+    "linkedin": "https://www.linkedin.com/in/subhanil-bhaduri-ba903221a",
+    "x_url": "https://github.com/Subhanil-Bhaduri-001"
   },
   {
     "name": "Content Creators",
     "role": "All lovely content from lovely people",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2095.JPG",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2086.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   },
@@ -139,7 +123,7 @@
     "name": "All Coordinators",
     "role": "People behind everything",
     "department": "Coordinators",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2079%20(1).JPG",
+    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/pics/DSC_2079.JPG",
     "linkedin": "https://www.linkedin.com/in/sarahwhite",
     "x_url": "https://example.com/sarahwhite"
   }

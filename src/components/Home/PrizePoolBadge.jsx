@@ -11,7 +11,7 @@ export default function PrizePoolBadge() {
 					</div>
 					<div className="text-black font-generalsans-semibold text-2xl flex-col h-[100%]">
 						<span className="font-generalsans text-xs">🎉 Prizepool worth</span>
-						<p className="font-generalsans-semibold">₹1,20,000</p>
+						<p className="font-generalsans-semibold">₹1,11,000</p>
 					</div>
 				</div>
 			</div>

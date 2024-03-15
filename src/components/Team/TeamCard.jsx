@@ -1,19 +1,20 @@
 import Image from "next/image";
-import React from "react";
 import { rgbDataURL } from "@/utils/blurryImage";
+import Images from "../../../public/assets";
+import Link from "next/link";
 
-const TeamCard = ({ member }) => {
-	const { name, role, image_url, linkedin, x_url } = member;
+export default function TeamCard({ member }) {
+	const { name, role, image_url, linkedin, x_url, department } = member;
 	return (
 		<>
 			<div className="border-t-[.5px] border-b-[.5px] border-r-[.5px] border-yellowish">
 				<div className="flex justify-center border-b-[.5px] border-yellowish overflow-hidden ">
 					<Image
-						className="object-cover"
+						className="object-cover h-full"
 						src={image_url}
 						alt="team_image"
 						width={800}
-						height={600}
+						height={800}
 						placeholder="blur"
 						blurDataURL={rgbDataURL(128, 128, 128)}
 					/>
@@ -29,28 +30,33 @@ const TeamCard = ({ member }) => {
 					</div>
 					<div className="py-3"></div>
 					<div className="grid grid-cols-2 bg-yellowish border-b-[.5px] border-yellowish">
-						{/* <Link
-							href={x_url}
-							className="border-r-[.5px] border-black flex justify-center items-center py-4"
-						>
-							<Image
-								src={Images.logoXBlack}
-								alt="twitter"
-								className="lg:w-6 h-5"
-							/>
-						</Link>
-						<Link href={linkedin} className="flex justify-center items-center">
-							<Image
-								src={Images.logoLinkedInBlack}
-								alt="linkedIn"
-								className="lg:w-7 h-6"
-							/>
-						</Link> */}
+						{
+							department === "Developers" && (
+								<>
+									<Link
+										href={x_url}
+										target="_blank"
+										className="border-r-[.5px] border-black flex justify-center items-center py-4"
+									>
+										<Image
+											src={Images.github}
+											alt="twitter"
+											className="lg:w-6 h-5"
+										/>
+									</Link>
+									<Link href={linkedin} target="_blank" className="flex justify-center items-center">
+										<Image
+											src={Images.logoLinkedInBlack}
+											alt="linkedIn"
+											className="lg:w-7 h-6"
+										/>
+									</Link>
+								</>
+							)
+						}
 					</div>
 				</div>
 			</div>
 		</>
 	);
 };
-
-export default TeamCard;

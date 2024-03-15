@@ -6,9 +6,8 @@ export default function EventWorkshopPage({ data, types }) {
 	const [filteredData, setFilteredData] = useState([]);
 	const [selectedButton, setSelectedButton] = useState(types[0]);
 
+	const filtered = data.filter((d) => d.type === selectedButton);
 	useEffect(() => {
-		const filtered = data.filter((d) => d.type === selectedButton);
-
 		setFilteredData(filtered);
 	}, [selectedButton]);
 
