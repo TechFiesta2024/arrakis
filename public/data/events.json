@@ -56,9 +56,38 @@
     "description": "Qunatic skills and compete with your peers to solve the greatest mathematical mysteries. (Junior level)",
     "body": "Bring forth your quantative skills and compete with your peers to solve the greatest mathematical mysteries.",
     "date": "April 9th",
-    "time": "10:00 AM - 12:30 PM",
+    "time": "10:30 AM - 12:00 PM || 10:00 AM - 11:30 AM",
     "teamSize": "",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Pen (They’ll bring) and Paper (We’ll provide)."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "No registration fees"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "Optimized & Organised CSS", 
+          "Design Consistency", 
+          "Web Performance", 
+          "Responsiveness", 
+          "Code Reusability", 
+          "SEO"
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -126,6 +155,20 @@
       }
     ],
     "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -170,104 +213,6 @@
       }
     ],
     "coordinators": [],
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "science_exhibition",
-    "type": "College",
-    "name": "XtraVaganza",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Science%20Exhibition.jpg",
-    "description": "Let your creativity and innovation shine! (Senior level)",
-    "body": "We’ll give them topics and they have to make their model using their ideas and bring their models to our college for the exhibition purpose and explain their model in front of our Coordinators and judges.",
-    "date": "April 9th",
-    "time": "01:30 PM - 03:30 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
-    "prize": [
-      {
-        "position": "1st",
-        "amount": "3000"
-      },
-      {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
-        "position": "3rd",
-        "amount": "1000"
-      }
-    ],
-    "coordinators": [
-      {
-        "name": "Sajili Chakrobarty",
-        "contact": "+91 74394 61708"
-      },
-      {
-        "name": "Surjya Gopal Goswami",
-        "contact": "+91 62911 79735"
-      },
-      {
-        "name": "Ankit Bhattacharjee",
-        "contact": "+91 86974 47665"
-      },
-      {
-        "name": "Koustav Chatterjee",
-        "contact": "+91 62911 79735"
-      },
-      {
-        "name": "Dibyajyoti Biswas",
-        "contact": "+91 75958 60781"
-      }
-    ],
-    "destination": "AOT Campus"
-  },
-  {
-    "id": "math",
-    "type": "College",
-    "name": "QuantQuest",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/T%20-%20Maths.jpg",
-    "description": "Qunatic skills and compete with your peers to solve the greatest mathematical mysteries. (Senior level)",
-    "body": "Bring forth your quantative skills and compete with your peers to solve the greatest mathematical mysteries.",
-    "date": "April 9th",
-    "time": "10:00 AM - 12:30 PM",
-    "teamSize": "",
-    "rules": [],
-    "prize": [
-      {
-        "position": "1st",
-        "amount": "3000"
-      },
-      {
-        "position": "2nd",
-        "amount": "2000"
-      },
-      {
-        "position": "3rd",
-        "amount": "1000"
-      }
-    ],
-    "coordinators": [
-      {
-        "name": "Diganta Dutta",
-        "contact": "+91 98744 35538"
-      },
-      {
-        "name": "Aratrik Bandyopadhyay",
-        "contact": "+91 62903 30398"
-      },
-      {
-        "name": "Romit Malakar",
-        "contact": "+91 98836 33976"
-      },
-      {
-        "name": "Anirban Jash",
-        "contact": "+91 98326 09948"
-      },
-      {
-        "name": "Ayishik Das",
-        "contact": "+91 76799 98184"
-      }
-    ],
     "destination": "AOT Campus"
   },
   {
@@ -343,6 +288,20 @@
       }
     ],
     "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -353,7 +312,7 @@
     "description": "UI/UX Design is the process of creating products that provide meaningful and relevant experiences to users.",
     "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
     "date": "April 8th",
-    "time": "10:30 AM - 12:00 Noon",
+    "time": "10:30 AM - 12:00 PM",
     "teamSize": "1 - 2",
     "prize": [
       {
@@ -384,7 +343,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30/-"
+        "body": "30 Rs. [ per person ]"
       },
       {
         "type": "Rules",
@@ -425,21 +384,50 @@
     "description": "Developing the frontend of a website or an application.",
     "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
     "date": "April 8th",
-    "time": "03:00 PM - 05:00 PM",
-    "teamSize": "1 - 2",
-    "rules": [],
-    "prize": [
+    "time": "3:00 PM - 5:00 pm",
+  "teamSize": "1 - 2",
+  "prize": [
+    {
+      "position": "Top 3",
+      "amount": "3000"
+    },
+    {
+      "position": "Top 3",
+      "amount": "3000"
+    },
+    {
+      "position": "Top 3",
+      "amount": "3000"
+    }
+  ],
+    "rules": [
       {
-        "position": "Top 3",
-        "amount": "3000"
+        "type": "Duration",
+        "body": "2 hours"
       },
       {
-        "position": "Top 3",
-        "amount": "3000"
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
       },
       {
-        "position": "Top 3",
-        "amount": "3000"
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "Optimized & Organised CSS", 
+          "Design Consistency", 
+          "Web Performance", 
+          "Responsiveness", 
+          "Code Reusability", 
+          "SEO"
+        ]
       }
     ],
     "coordinators": [
@@ -475,12 +463,47 @@
     "type": "College",
     "name": "Cynox",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner/CTF.jpg",
-    "description": "CTF is a gamified event where participants compete to find and exploit vulnerabilities",
-    "body": "Capture the Flag (CTF) An event is a gamified event where participants compete to find and exploit vulnerabilities in a simulated environment to capture \"flags\" ",
+    "description": "Gamified competitive cybersecurity event that is based on different challenges or aspects of information security",
+    "body": "Capture the Flag (CTF) is an exercise in which participants attempt to find text strings, called \"flags\", which are secretly hidden in purposefully-vulnerable programs or websites",
     "date": "April 8th",
     "time": "02:30 PM - 05:00 PM",
     "teamSize": "3 - 4",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "Participants are free to use any software or equipment of their choice (e.g. disassembler, Kali, virtual machines, pwntools...) provided it does not damage the target",
+          "Be mindful of your surroundings and of your fellow Users – your fellow Users may have a different level of comfort with respect to language and personal space",
+          "Refrain from demeaning, discriminatory or harassing behavior or speech", 
+          "Ask organizers if you are in doubt"
+        ]
+      },
+      {
+        "type": "Unacceptable behaviors",
+        "body": [
+          "Attack any machine other than the designated ones",
+          "DoS Cynox CTF infrastructure or college", 
+          "Modify the scoreboard", 
+          "Intentionally prevent other teams from flagging"
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -527,9 +550,38 @@
     "description": "WebAThon is a hackathon where participants compete to build a web application in a limited time",
     "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
     "date": "April 8th - 9th",
-    "time": "11:30 AM - 03:30 PM",
+    "time": "12:00 PM - 03:30 PM",
     "teamSize": "3 - 5",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "6.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "Revenue Generation", 
+          "UX and branding", 
+          "Implementation", 
+          "Scalability",
+          "Future Scope",
+          "Uniqueness",
+          "Target Audience"
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -582,7 +634,36 @@
     "date": "April 9th",
     "time": "11:30 AM - 03:30 PM",
     "teamSize": "2 - 3",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "4 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC, mobile and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+      {
+        "type": "Rules",
+        "body": [
+          "A trail of clues leads from one to the next in the Treasure Hunt.",
+          "There is a specific order in which you must find the clues. No team can ignore a clue.",
+          "Avoid looking for hints in restricted places.",
+          "In the unlikely event that players discover a clue belonging to a different team, they are not allowed to alter it. If this regulation is broken, the team may be disqualified.",
+          "Please put anything back if participants move something while looking for the clue.",
+          "Although each team's clues are unique and placed in various locations, they always lead to the same place—the treasure. Whichever team locates the treasure wins.",
+          "The judges' decisions are final and will be regarded as fair."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -629,13 +710,42 @@
     "description": "Design and develop a maze solver to race to the destination.",
     "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
     "date": "April 8th",
-    "time": "10:30 AM - 01:00 PM | 01:30 PM - 05:00 PM",
+    "time": "10:30 AM - 05:00 PM",
     "teamSize": "2 - 4",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "6.30 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Maze-solving robot according to our Constraints."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "The robot must follow the design specifications provided. Any deviation from the mentioned specifications will lead to disqualification.", 
+          "Robots that cause deliberate interference with other robots or damage to the field will be disqualified.", 
+          "Humans that cause deliberate interference with robots or damage to the field will be disqualified.", 
+          "The coach should not be involved in the launching of the robots as this may lead to disqualification.", 
+          "It is expected that the aim of all teams is to play a fair and clean game.", 
+          "All decisions about scoring, game play and timing are made by the juries. Teams should completely respect their vote and decisions. Members of the jury will be from different fields of the robotic science."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "7000"
+        "amount": "6000"
       },
       {
         "position": "2nd",
@@ -674,13 +784,42 @@
     "description": "Adreneline rush with RC cars",
     "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
     "date": "April 9th",
-    "time": "10:00 AM - 12:30 PM",
+    "time": "10:00 AM - 03:30 PM",
     "teamSize": "2 - 4",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "5.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Race cars according to our Constraints."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "This is a Circuit Racing event.", 
+          "Only the marshal for that round is permitted to lift the vehicle and deposit it at the closest checkpoint behind that point in the event that it tumbles, stops, or exits the arena.",
+          "They will need to be completely remote controlled the entire time the race is running, until and until it becomes necessary to touch the vehicle.",
+          "Every time the machine needs to be lifted by the marshal, a time penalty will be imposed. There will also be a time-penalty for reverse gearing (all the details regarding the time-penalties will be disclosed on the day of the event)", 
+          "There will be a time penalty each time the marshal has to raise the equipment. Reverse gearing will also result in a time penalty; full information about the time penalties will be revealed on the day of the event.", 
+          "It is also forbidden for team members to purposefully harm the opponent's car. The accused team will be eliminated if proven guilty."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
-        "amount": "7000"
+        "amount": "6000"
       },
       {
         "position": "2nd",
@@ -719,9 +858,37 @@
     "description": "Harnessing the power of IoT for innovative solutions.",
     "body": "Join experts and enthusiasts to explore cutting-edge AI solutions for IoT challenges, from optimizing energy consumption to enhancing security protocols.",
     "date": "April 8th",
-    "time": "10:30 AM - 01:00 PM",
+    "time": "10:30 AM - 01:30 PM",
     "teamSize": "2 - 3",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "3 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants should know TinkerCAD."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "The Problem Statement will be provided on spot, you must submit a project that is based on this.", 
+          "You will have the opportunity to submit your project once the event begins; this will be your only and final submission.", 
+          "You must submit original, creative ideas; any submission that is found to be plagiarized will not be accepted.",
+          "The whole Hackathon period must be used to create your hack. You can make advantage of additional publicly accessible platforms and services like Google Maps, Facebook Connect, Twitter feeds, and open source libraries.", 
+          "The judges' decisions are final and will be regarded as fair."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -764,9 +931,50 @@
     "description": "Guide the current through the circuit to light up the bulb.",
     "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
     "date": "April 8th",
-    "time": "10:30 AM - 01:30 PM",
+    "time": "10:30 AM - 04:30 PM",
     "teamSize": "2 - 3",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "6 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "No Requirement. [We’ll provide Breadboard, Jumper Wires, LEDs, and ICs]."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "2"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "This will be a circuit designing round in which actual application has to be made.", 
+          "You will be provided question sheets/components on the registration desk and you need to submit them back within the specified time limit.", 
+          "All the components and material required for the circuit will be provided by us. List of available components will be displayed.", 
+          "Power supply and other testing devices like multimeter, batteries and other tools will be made available.", 
+          "All teams will be having same kit of components.", 
+          "In case something got damaged you may request the organizer to replace the components/parts.",
+          "Teams should draw circuit diagram of the application depicting all the principles and theories involved in circuit as well as the working of the Application on a work Sheet."
+
+        ]
+      },
+      {
+        "type": "Judging Criteria",
+        "body": [
+          "Design of circuit.",
+          "Compactness of design.",
+          "Desired output.",
+          "Breadboard skills/neatness of the implemented",
+          "Circuit."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -811,7 +1019,38 @@
     "date": "April 8th",
     "time": "10:30 AM - 01:00 PM",
     "teamSize": "1 - 2",
-    "rules": [],
+    "rules": [
+      {
+        "type": "Duration",
+        "body": "2.5 hours"
+      },
+      {
+        "type": "Requirements",
+        "body": "Participants are required to bring their own PC and internet connection."
+      },
+      {
+        "type": "Number of Rounds",
+        "body": "1"
+      },
+      {
+        "type": "Registration Fees",
+        "body": "30 Rs. [ per person ]"
+      },
+
+      {
+        "type": "Rules",
+        "body": [
+          "Bring your own PC with FreeCAD installed", 
+          "Do not copy from peers", 
+          "A complete model is to be submitted according to the given problem statement", 
+          "Partial judging won't be allowed", 
+          "No practice runs will be provided", 
+          "All designs submitted must be original works created by the participant and must not infringe on the intellectual property rights of any third party.",
+          "The final results will be based on the completeness and optimum usage of the software.",
+          "The judges' decision will be final and binding."
+        ]
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -895,7 +1134,6 @@
         ]
       }
     ],
-    "coordinators": [],
     "destination": "AOT Campus"
   },
   {
@@ -923,6 +1161,20 @@
       }
     ],
     "coordinators": [],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   }
 ]

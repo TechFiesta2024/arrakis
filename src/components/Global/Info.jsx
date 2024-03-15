@@ -195,7 +195,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
               </h1>
             </div>
 
-            <div className="px-4 md:pl-14 py-8">
+            <div className="px-4 md:px-14 py-8">
               {!checkRoute ? (
                 <h1 className="text-grey font-generalsans font-normal text-lg md:text-xl">
                   {data.body}
