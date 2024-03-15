@@ -108,7 +108,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
             <div className=" pl-4 md:pl-14 py-7 md:py-10">
               <h1 className="text-yellowish text-3xl md:text-6xl font-generalsans-semibold">
                 {data.name} 
-                <div className="text-grey text-2xl md:text-3xl pt-2 font-generalsans font-normal">
+                <div className="text-grey text-2xl md:text-3xl pt-4 font-generalsans font-normal">
                   {data.alt_name}
                 </div>
               </h1>
@@ -211,7 +211,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
                     {Array.isArray(rule.body) ? (
                       <ul className="text-grey list-item">
                         {rule?.body.map((r, i) => (
-                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">🚀{" "}{r}</li>
+                          <li key={i} className="text-grey font-generalsans text-md md:text-xl mt-4 md:leading-8">●{" "}{r}</li>
                         ))}
                       </ul>
                     ) : (
