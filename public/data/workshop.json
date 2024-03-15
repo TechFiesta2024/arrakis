@@ -10,7 +10,16 @@
     "date": "Mar 20-22",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Swastik Bose",
+        "contact": "+91 70039 84426"
+      },
+      {
+        "name": "Rayoti Kar",
+        "contact": "+91 89279 76871"
+      }
+    ],
     "destination": "Home"
   },
   {
@@ -24,7 +33,20 @@
     "date": "Mar 24",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Bisakh Neogi",
+        "contact": "+91 96747 76719"
+      },
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -39,7 +61,24 @@
     "date": "Mar 29-30",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Bisakh Neogi",
+        "contact": "+91 96747 76719"
+      },
+      {
+        "name": "Chirantan Das",
+        "contact": "+91 62897 15257"
+      },
+      {
+        "name": "Abhirup Saha",
+        "contact": "+91 62953 35673"
+      },
+      {
+        "name": "Swastik bose",
+        "contact": "+91 70039 84426"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -54,7 +93,20 @@
     "date": "Apr 01-05",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      },
+      {
+        "name": "Irshit Mukherjee",
+        "contact": "+91 90628 86431"
+      },
+      {
+        "name": "Arnab Chatterjee",
+        "contact": "+91 86178 18763"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -69,7 +121,16 @@
     "date": "Mar 23, Apr 02",
     "time": "8:00 PM - 10:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Debojyoti Dutta",
+        "contact": "+91 89440 97103"
+      },
+      {
+        "name": "Dipayan Shown",
+        "contact": "+91 90643 07622"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -84,7 +145,20 @@
     "date": "Mar 21-Apr 05",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Mix",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Raja Majumdar",
+        "contact": "+91 83488 92223"
+      },
+      {
+        "name": "Irshit Mukherjee",
+        "contact": "+91 90628 86431"
+      },
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -99,7 +173,20 @@
     "date": "Mar 20",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Mix",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Krishanu Bandyopadhyay",
+        "contact": "+91 85970 37503"
+      },
+      {
+        "name": "Soham Sarkar",
+        "contact": "+91 62961 97485"
+      },
+      {
+        "name": "Debarghya Debnath",
+        "contact": "+91 86172 91399"
+      }
+    ],
     "destination": "Home | College"
     
   },
@@ -114,7 +201,16 @@
     "date": "Mar 22",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Mix",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Rahul Srivastava",
+        "contact": "+91 90079 74773"
+      },
+      {
+        "name": "Sagnik Ray",
+        "contact": "+91 89108 34699"
+      }
+    ],
     "destination": "Home | College"
     
   },
@@ -129,7 +225,16 @@
     "date": "Mar 30-31",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      },
+      {
+        "name": "Someshwar Srimany",
+        "contact": "+91 79805 35766"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -144,7 +249,12 @@
     "date": "Apr 04-05",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Sayan Mallick",
+        "contact": "+91 85839 36282"
+      }
+    ],
     "destination": "Home"
     
   },
@@ -159,7 +269,20 @@
     "date": "Mar 21, Apr 01",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Abhishek Singh ",
+        "contact": "+91 98310 79865"
+      },
+      {
+        "name": "Debarghya Debnath",
+        "contact": "+91 86172 91399"
+      },
+      {
+        "name": "Tannistha Das",
+        "contact": "+91 74399 96987"
+      }
+    ],
     "destination": "Home"
     
   }
