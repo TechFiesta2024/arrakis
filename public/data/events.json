@@ -6,8 +6,8 @@
     "name": "XtraVaganza",
     "alt_name": "Science Exhibition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/science_exhibition_banner.jpeg",
-    "description": "Exclusively For School Students | Free Registration",
-    "body": "XtraVaganza hosts a dynamic \"Science Exhibition\" tailored for students in classes 9 to 12. Participants are provided with topics and tasked with creating models that embody their ideas and showcase their creativity. These models are then brought to our college for a captivating exhibition where participants explain and showcase their creations to our coordinators and judges. This event serves as a platform for young innovators to express their scientific curiosity, ingenuity, and presentation skills. Join XtraVaganza's Science Exhibition for an inspiring showcase of student talent and innovation.",
+    "description": "Exclusively for Class IX , X, XI, XII students | Free Registration",
+    "body": "Participants will prepare an exhibit based on the Topic-  “Innovation in energy and mobility aiming towards a Carbon-free world”. Space will be provided to showcase your exhibit. The exhibits will be judged based on the relevance with the topic. Please read the mandatory requirements to prepare the exhibits.",
     "date": "April 9th",
     "time": "01:30 PM - 03:30 PM",
     "teamSize": "1 - 2",
@@ -100,8 +100,8 @@
     "name": "QuantQuest",
     "alt_name": "Maths Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/maths_banner.jpeg",
-    "description": "Exclusively For School Students | Free Registration",
-    "body": "QuantQuest invites participants to immerse themselves in the world of mathematics through an exhilarating competition. With challenges inspired by Olympiads and IQ-based problems, this event pushes contestants to showcase their problem-solving prowess. Through on-site challenges resembling Olympiad-style exams, participants have the opportunity to demonstrate their mathematical intellect and strategic thinking. Join us for QuantQuest and embark on a thrilling journey where your mathematical skills take center stage in this unique and intellectually stimulating event.",
+    "description": "Exclusively for Class IX , X, XI, XII students | Free Registration",
+    "body": "Quant Quest is a mathematical contest designed to test the quantitative ability skills of school students. Participants will solve school-level math problems and logical questions in two rounds with prizes awarded based on performance.",
     "date": "April 9th",
     "time": "10:30 AM - 12:30 PM",
     "teamSize": "",
@@ -172,7 +172,7 @@
     "name": "XpreXive",
     "alt_name": "Extempore",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/extempore_banner.jpeg",
-    "description": "Exclusively For School Students | Free Registration",
+    "description": "Exclusively for Class IX , X, XI, XII students | Free Registration",
     "body": "An extempore is a public speaking activity where participants speak on a given topic without prior preparation. It's a test of communication and critical thinking skills, requiring speakers to think spontaneously and deliver a coherent speech within a limited timeframe.",
     "date": "April 9th",
     "time": "10:30 AM - 01:00 PM",
@@ -199,7 +199,9 @@
         "body": "No registration fees"
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      
+    ],
     "prize": [
       {
         "position": "1st",
@@ -223,7 +225,7 @@
     "name": "Artistix",
     "alt_name": "Painting Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/painting_banner_final.jpeg",
-    "description": "Exclusively For School Students | Free Registration",
+    "description": "Exclusively for Class IX , X, XI, XII students | Free Registration",
     "body": "The event of painting offers budding artists a platform to express themselves visually through various mediums. Participants create original artworks based on given themes or subjects, showcasing their creativity, technique, and interpretation.",
     "date": "April 9th",
     "time": "10:00 AM - 01:00 PM",
@@ -259,7 +261,9 @@
         "body": "Will be announced thirty minutes prior to the event."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -296,7 +300,9 @@
         "body": "No registration fees"
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      
+    ],
     "prize": [
       {
         "position": "1st",
@@ -356,7 +362,9 @@
         "body": "Will be announced thirty minutes prior to the event."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      
+    ],
     "prize": [
       {
         "position": "1st",
@@ -381,7 +389,7 @@
     "alt_name": "UX & Product Design",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/uiux_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "Each participant receives an idea for an app screen, micro-component, or micro-interaction. This idea could be anything from a login screen to a newsfeed interaction.",
+    "body": "The event is structured to challenge participants creatively by assigning each individual a unique concept for an app screen, micro-component or micro-interaction, ranging from fundamental elements like login screens to dynamic interactions such as newsfeed interactions.",
     "date": "April 8th",
     "time": "10:30 AM - 12:00 PM",
     "teamSize": "1 - 2",
@@ -403,11 +411,11 @@
       {
         "type": "Judging Criteria",
         "body": [
-          "Design Thinking Principles. ",
-          "Component Usage.",
-          "Variable Properties. ",
-          "Gesture Accessibilities.",
-          "Color Theories and Dimensions."
+          "Design Ingenuity - Originality and innovation in design approach.",
+          "User-Centric Thinking - Prioritizing user needs and intuitive experiences.",
+          "Visual Artistry - Aesthetic appeal, color harmony and layout mastery.",
+          "Interaction Fluidity - Seamless gesture integration and smooth user flow.",
+          "Problem-Solving Prowess - Effective solutions to design challenges."
         ]
       },
       {
@@ -423,7 +431,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC and internet connection."
+        "body": "Participants are required to bring their own laptop and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -431,7 +439,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "coordinators": [
@@ -462,7 +470,7 @@
     "alt_name": "Frontend Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/frontent_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "We will be providing an incomplete UI to the participants. They have to implement it with their inputs to complete the entire UI using only HTML, CSS, and Vanilla Js (No framework allowed) and deploy it on Vercel/netlify.",
+    "body": "Participants will be tasked with completing an incomplete user interface provided to them. Using only HTML, CSS and Vanilla JavaScript (no frameworks allowed), participants must apply their creativity and skills to finalize the entire UI and deploy it on Vercel or Netlify.",
     "date": "April 8th",
     "time": "3:00 PM - 5:00 pm",
     "teamSize": "1 - 2",
@@ -492,12 +500,12 @@
       {
         "type": "Judging Criteria",
         "body": [
-          "Optimized & Organised CSS",
-          "Design Consistency",
-          "Web Performance",
-          "Responsiveness",
-          "Code Reusability",
-          "SEO"
+          "CSS Optimization and Organization - Efficient and structured stylesheets.",
+          "Design Consistency - Maintaining a cohesive and visually appealing interface.",
+          "Web Performance - Ensuring smooth user experiences.",
+          "Responsiveness - Adapting seamlessly across various devices and screen sizes.",
+          "Code Reusability - Promoting maintainable and scalable code practice.",
+          "SEO - Implementing search engine optimization best practice."
         ]
       },
       {
@@ -506,7 +514,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC and internet connection."
+        "body": "Participants are required to bring their own laptop and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -514,7 +522,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "coordinators": [
@@ -557,7 +565,7 @@
     "alt_name": "Capture The Flag",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/ctf_banner.png",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "Capture the Flag (CTF) is an exercise in which participants attempt to find text strings, called \"flags\", which are secretly hidden in purposefully-vulnerable programs or websites",
+    "body": "Capture the Flag (CTF) is a highly engaging and competitive event where participants engage in a gamified challenge, aiming to identify and exploit vulnerabilities within a simulated environment to capture designated flags.",
     "date": "April 8th",
     "time": "02:30 PM - 05:00 PM",
     "teamSize": "3 - 4",
@@ -590,7 +598,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC and internet connection."
+        "body": "Participants are required to bring their own laptop and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -598,7 +606,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -647,7 +655,7 @@
     "alt_name": "Hackathon",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/webathon_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "We have modified the generic webathon planning to a tech expo, where a product building boot camp will be organized where we will conduct workshops and a Product pitch deck battle where students will participate as a team and present us a product demo & presentation.",
+    "body": "Tech Expo transforms the conventional webathon into an immersive experience featuring a product building boot camp. Participants will engage in workshops and a thrilling Product Pitch Deck Battle where teams will present innovative product demos and pitches.",
     "date": "April 8th - 9th",
     "time": "12:00 PM - 03:30 PM",
     "teamSize": "3 - 5",
@@ -677,7 +685,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC and internet connection."
+        "body": "Participants are required to bring their own laptop and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -685,7 +693,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -738,7 +746,7 @@
     "alt_name": "Treasure Hunt & Puzzle Solving",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/treasure_hunt_banner.png",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "The journey begins on a website you control. This serves as the entry point and landing page for participants. ",
+    "body": "The journey begins on a website meticulously crafted to serve as the entry point and landing page for participants.",
     "date": "April 9th",
     "time": "11:30 AM - 03:30 PM",
     "teamSize": "2 - 3",
@@ -765,7 +773,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC, mobile and internet connection."
+        "body": "Participants are required to bring their own laptop, mobile and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -773,7 +781,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -822,7 +830,7 @@
     "alt_name": "Maze Solver Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/maze_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "A maze solver is an autonomous robot or system designed to navigate a maze from a starting point to a predefined destination using sensors, actuators, and decision-making algorithms.",
+    "body": "The Maze Solver Challenge entails the creation of autonomous robots or systems engineered to navigate a maze from a designated starting point to a predefined destination. Participants will utilize sensors, actuators and decision-making algorithms to accomplish this task.",
     "date": "April 8th",
     "time": "10:30 AM - 05:00 PM",
     "teamSize": "2 - 4",
@@ -858,7 +866,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -903,7 +911,7 @@
     "alt_name": "Race Car Competition",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/race_banner_final.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "RC race cars are vehicles that can be controlled remotely using a handheld transmitter or controller. The transmitter sends signals to the car's receiver, translating them into steering, acceleration, and braking. ",
+    "body": "The RC Race Cars Challenge invites participants to showcase their skills in controlling remote-controlled vehicles using handheld transmitters or controllers. By transmitting signals to the car's receiver, participants will navigate through various obstacles, showcasing their proficiency in steering, acceleration and braking.",
     "date": "April 9th",
     "time": "10:00 AM - 03:30 PM",
     "teamSize": "2 - 4",
@@ -937,7 +945,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -982,7 +990,7 @@
     "alt_name": "IoT Problem Solving",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/iot_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "Join experts and enthusiasts to explore cutting-edge AI solutions for IoT challenges, from optimizing energy consumption to enhancing security protocols.",
+    "body": "This event provides a platform for participants to demonstrate their understanding of IoT concepts. Participants will identify real-world problems, design IoT solutions and present their ideas through demonstrations.",
     "date": "April 8th",
     "time": "10:30 AM - 01:30 PM",
     "teamSize": "2 - 3",
@@ -1019,7 +1027,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -1064,7 +1072,7 @@
     "alt_name": "Circuit Designing",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/circuits_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "We’ll provide circuit materials and give them generalized questions that they have to solve by using provided circuit",
+    "body": "The Circuit Development Challenge is an opportunity for participants to showcase their skills in developing electrical circuits using provided materials. Participants will be given a set of circuit materials including breadboards, jumper wires, LEDs and ICs with some additional materials to add a twist to the challenge.",
     "date": "April 8th",
     "time": "10:30 AM - 04:30 PM",
     "teamSize": "1 - 2",
@@ -1105,7 +1113,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -1150,10 +1158,10 @@
     "alt_name": "FreeCAD Designing",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/cad_final_banner_promise.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 30 [per person]",
-    "body": "Tech Fiesta 24 allows you to showcase your talent on a creative stage, open exclusively for technical performers of all levels of expertise. Freecad is a computer-aided design (CAD) and drafting software application. Master the skill of creating aesthetic and pleasing visual elements and design the face of tomorrow.",
+    "body": "Tech Fiesta 24 provides a creative stage exclusively for technical performers of all levels to showcase their talent. In this event, participants will utilize Freecad, a computer-aided design (CAD) and drafting software, to master the skill of creating aesthetic and visually appealing designs, shaping the face of tomorrow.",
     "date": "April 8th",
     "time": "10:30 AM - 01:00 PM",
-    "teamSize": "3 - 4",
+    "teamSize": "2 - 3",
     "rules": [
       {
         "type": "Rules",
@@ -1178,7 +1186,7 @@
       },
       {
         "type": "Requirements",
-        "body": "Participants are required to bring their own PC and internet connection."
+        "body": "Participants are required to bring their own laptop and internet connection."
       },
       {
         "type": "Number of Rounds",
@@ -1186,7 +1194,7 @@
       },
       {
         "type": "Registration Fees",
-        "body": "30 Rs. [ per person ]"
+        "body": "50 Rs. [ per person ]"
       }
     ],
     "prize": [
@@ -1278,6 +1286,9 @@
         "body": "Paper will be provided by the college"
       }
     ],
+    "coordinators": [
+      
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -1306,7 +1317,9 @@
         "body": "Required waste materials should be brought by the participants."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      
+    ],
     "prize": [
       {
         "position": "1st",
