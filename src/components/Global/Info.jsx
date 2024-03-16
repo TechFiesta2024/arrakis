@@ -75,7 +75,7 @@ export default function EventWorkshopInfo({ params }) {
 
   return (
     <>
-      <div className="md:px-20">
+      <div className="px-[.5px] md:px-20">
         <div className="border-x-[.5px] border-yellowish">
           <div className="pl-4 md:pl-14 py-4 md:py-6">
             <Link
