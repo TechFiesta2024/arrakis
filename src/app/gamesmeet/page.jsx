@@ -50,7 +50,12 @@ export default function GamesMeetPage() {
                                                 {data.description}
                                             </p>
                                         </div>
-                                        <p className="text-yellowish font-generalsans font-bold text-xl pt-6">Related Events</p>
+                                        <div className="description-container">
+                                            <p className=" text-yellowish font-generalsans text-xl font-semibold  lg:pt-3 py-1">
+                                                Exclusively for AOT students
+                                            </p>
+                                        </div>
+                                        <p className="text-yellowish font-generalsans font-bold text-xl pt-6">Target Participants</p>
                                         <div className="py-4 flex flex-row flex-wrap gap-2">
                                             {
                                                 data.targetParticipants.map((event, index) => (
