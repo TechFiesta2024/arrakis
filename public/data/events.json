@@ -199,7 +199,16 @@
         "body": "No registration fees"
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Abhishek Maity",
+        "contact": "+91 80015 95895"
+      },
+      {
+        "name": "Dibyendu Moni",
+        "contact": "+91 89450 98684"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -259,7 +268,16 @@
         "body": "Will be announced thirty minutes prior to the event."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Tanisha Saha",
+        "contact": "+91 99036 49240"
+      },
+      {
+        "name": "Atreyee Bose",
+        "contact": "+91 62899 99493"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -296,7 +314,16 @@
         "body": "No registration fees"
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Oindrila Sur",
+        "contact": "+91 82403 65753"
+      },
+      {
+        "name": "Akash Roy",
+        "contact": "+91 81024 22771"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -356,7 +383,16 @@
         "body": "Will be announced thirty minutes prior to the event."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Souvik Rana",
+        "contact": "+91 91631 61124"
+      },
+      {
+        "name": "Stuti Banerjee",
+        "contact": "+91 69003 21079"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
@@ -1278,6 +1314,16 @@
         "body": "Paper will be provided by the college"
       }
     ],
+    "coordinators": [
+      {
+        "name": "Vivek",
+        "contact": "+91 76677 25212"
+      },
+      {
+        "name": "Swarupa Das",
+        "contact": "+91 75016 20381"
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -1306,7 +1352,16 @@
         "body": "Required waste materials should be brought by the participants."
       }
     ],
-    "coordinators": [],
+    "coordinators": [
+      {
+        "name": "Sowradeep Pal",
+        "contact": "+91 62978 97998"
+      },
+      {
+        "name": "Abir Kumar Nandi",
+        "contact": "+91 75860 02767"
+      }
+    ],
     "prize": [
       {
         "position": "1st",
