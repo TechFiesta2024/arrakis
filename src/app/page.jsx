@@ -11,7 +11,7 @@ export default async function Home() {
 			<HeroSection />
 			<MarqueeComponent />
 			<UnleashSkills />
-			<CommunityPartner />
+			{/* <CommunityPartner /> */}
 		</>
 	);
 }

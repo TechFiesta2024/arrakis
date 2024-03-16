@@ -115,9 +115,10 @@ export default function Navbar() {
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
 						href="/gamesmeet"
-						className={`link ${pathname === "/gamesmeet" ? active : inActive}`}
+						className={`link ${pathname === "/gamesmeet" ? active : inActive} flex flex-col`}
 					>
-						Games Meet
+						<p>Games Meet</p>
+						<span className="text-grey font-generalsans text-xs">AOT only</span>
 					</Link>
 
 					<Link
