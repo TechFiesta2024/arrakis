@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
 import workshops from "/public/data/workshop.json";
+import Preloader from "./Preloader";
 
 export default function EventWorkshopInfo({ params }) {
   const [data, setData] = useState({});
@@ -21,10 +22,12 @@ export default function EventWorkshopInfo({ params }) {
     setData(selectedPageData);
   }, []);
 
+  const [registering, setRegistering] = useState(false);
   async function register() {
     const userid = Cookies.get("studentId");
 
     try {
+      setRegistering(true);
       const response = await axiosInstance.post(
         `/${path}/join/${params.id}`,
         {},
@@ -66,6 +69,9 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
+    }
+    finally {
+      setRegistering(false);
     }
   }
 
@@ -148,23 +154,28 @@ export default function EventWorkshopInfo({ params }) {
                 </div>
               </div>
               <button
-                className={`col-span-2 md:col-span-1 flex justify-center items-center ${checkRoute ? 'bg-red-faded cursor-not-allowed' : 'bg-red'} `}
+                className={`col-span-2 md:col-span-1 flex justify-center items-center ${checkRoute || registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
                 onClick={register}
-                disabled={checkRoute}
+                disabled={checkRoute || registering}
               >
                 <div className="inline-flex gap-2 py-4">
-                  <div className="flex justify-center items-center">
-                    <Image
-                      src={Images.register}
-                      alt="register"
-                      className="h-10"
-                    />
-                  </div>
-                  <div className="flex justify-center items-center">
-                    <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
-                      Register
-                    </h1>
-                  </div>
+                  {!registering ?
+                    <>
+                      <div className="flex justify-center items-center">
+                        <Image
+                          src={Images.register}
+                          alt="register"
+                          className="h-10"
+                        />
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
+                          Register
+                        </h1>
+                      </div>
+                    </>
+                    : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />
+                  }
                 </div>
               </button>
             </div>
@@ -289,7 +300,7 @@ export default function EventWorkshopInfo({ params }) {
             </>
           }
         </div>
-      </div>
+      </div >
     </>
   );
 }
