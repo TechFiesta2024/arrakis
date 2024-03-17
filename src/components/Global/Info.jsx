@@ -11,8 +11,11 @@ import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
 import workshops from "/public/data/workshop.json";
 import Preloader from "./Preloader";
+import { useAuthState } from "@/context/AuthContext";
 
 export default function EventWorkshopInfo({ params }) {
+  const { isAuthenticated, user } = useAuthState()
+
   const [data, setData] = useState({});
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
@@ -24,16 +27,30 @@ export default function EventWorkshopInfo({ params }) {
 
   const [registering, setRegistering] = useState(false);
   async function register() {
-    const userid = Cookies.get("studentId");
+    if (!isAuthenticated) {
+      toast.warning(`User not logged in`, {
+        autoClose: 1250,
+        position: "top-right",
+        hideProgressBar: true,
+        closeButton: false,
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+          fontSize: "1.1rem",
+          border: "1px solid red",
+        }
+      })
+      return
+    }
 
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
         `/${path}/join/${params.id}`,
-        {},
+        undefined,
         {
           headers: {
-            userid,
+            userid: user.UUID
           },
         }
       );
@@ -56,7 +73,7 @@ export default function EventWorkshopInfo({ params }) {
       }
     } catch (err) {
       if (err.response.status === 400) {
-        toast.warning(`User not registered`, {
+        toast.warning(`Complete your profile`, {
           autoClose: 1500,
           position: "top-right",
           hideProgressBar: true,

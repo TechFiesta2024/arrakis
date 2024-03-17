@@ -130,7 +130,7 @@ export default function DataState({ workshopArray }) {
 											</span>
 											<span className="underline">
 												<Link
-													href="/workshop"
+													href={`/workshop/${data.id}`}
 													className="text-yellowish text-xs"
 												>
 													workshop page
@@ -202,7 +202,7 @@ export default function DataState({ workshopArray }) {
 												*view details from{" "}
 											</span>
 											<span className="underline">
-												<Link href="/workshop" className="text-yellowish">
+												<Link href={`/workshop/${data.id}`} className="text-yellowish">
 													workshop page
 												</Link>
 											</span>

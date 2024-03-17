@@ -6,6 +6,7 @@ import DataState from "./DataState";
 import EmptyState from "./EmptyState";
 import workshops from "/public/data/workshop.json";
 import axiosInstance from "@/utils/axiosInstance";
+import Preloader from "../Global/Preloader";
 
 const ProfileUpdateReminder = dynamic(
 	() => import("../Global/ProfileUpdateReminder"),
@@ -13,12 +14,14 @@ const ProfileUpdateReminder = dynamic(
 
 export default function Dashboard() {
 	const { user } = useAuthState();
+	const [loading, setLoading] = useState(false);
 	const [workshop, setWorkshop] = useState([]);
 
 	useEffect(() => {
 		const source = axios.CancelToken.source();
 		async function getMe() {
 			try {
+				setLoading(true)
 				const { data } = await axiosInstance.get("/user", {
 					headers: {
 						email: user.email,
@@ -40,6 +43,9 @@ export default function Dashboard() {
 					console.error(err)
 				}
 			}
+			finally {
+				setLoading(false)
+			}
 		}
 		getMe();
 
@@ -51,13 +57,17 @@ export default function Dashboard() {
 	return (
 		<>
 			<ProfileUpdateReminder />
-			<div className="flex justify-center items-start min-h-screen px-[1px] md:mx-20 border-x-[0.5px] border-yellowish text-white">
-				{workshop.length === 0 ? (
-					<EmptyState />
-				) : (
-					<DataState workshopArray={workshop} />
-				)}
-			</div>
+			{
+				loading ? <Preloader width='6rem' height='6rem' color='red' /> :
+
+					<div className="flex justify-center items-start min-h-screen px-[1px] md:mx-20 border-x-[0.5px] border-yellowish text-white">
+						{workshop.length === 0 ? (
+							<EmptyState />
+						) : (
+							<DataState workshopArray={workshop} />
+						)}
+					</div>
+			}
 		</>
 	);
 }
