@@ -99,7 +99,7 @@
     "relatedEvents": [
       "Eureka"
     ],
-    "date": "Apr 01-05",
+    "date": "Apr 1-5",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -128,7 +128,7 @@
     "relatedEvents": [
       "FreeForm"
     ],
-    "date": "Mar 23, Apr 02",
+    "date": "Mar 23, Apr 2-3",
     "time": "8:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -156,7 +156,7 @@
     ],
     "date": "Mar 21-Apr 05",
     "time": "8:00 PM - 9:00 PM",
-    "mode": "Mix",
+    "mode": "Online",
     "coordinators": [
       {
         "name": "Raja Majumdar",
@@ -184,9 +184,9 @@
       "EdrenaLine",
       "Entangled"
     ],
-    "date": "Mar 20",
+    "date": "Mar 29-30",
     "time": "9:00 PM - 10:00 PM",
-    "mode": "Mix",
+    "mode": "Online",
     "coordinators": [
       {
         "name": "Krishanu Bandyopadhyay",
@@ -201,7 +201,7 @@
         "contact": "+91 86172 91399"
       }
     ],
-    "destination": "Home | College"
+    "destination": "Home"
   },
   {
     "id": "circuits",
@@ -213,9 +213,9 @@
     "relatedEvents": [
       "Connectify"
     ],
-    "date": "Mar 22",
+    "date": "Mar 21",
     "time": "9:00 PM - 10:00 PM",
-    "mode": "Mix",
+    "mode": "Online",
     "coordinators": [
       {
         "name": "Rahul Srivastava",
@@ -226,7 +226,7 @@
         "contact": "+91 89108 34699"
       }
     ],
-    "destination": "Home | College"
+    "destination": "Home"
   },
   {
     "id": "iot",
@@ -238,7 +238,7 @@
     "relatedEvents": [
       "SymbIoT"
     ],
-    "date": "Mar 30-31",
+    "date": "Mar 24, 31",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -285,7 +285,7 @@
       "SymbIoT",
       "Connectify"
     ],
-    "date": "Mar 21, Apr 01",
+    "date": "Mar 22-23",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
