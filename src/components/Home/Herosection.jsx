@@ -34,7 +34,7 @@ export default function Herosection() {
 				<div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">
 					<PrizePoolBadge />
 				</div>
-				<div className="col-span-3 bg-black border-b-[0.5px] border-x-[0.5px] border-y-[0.5px] text-yellowish">
+				<div className="col-span-3 border-b-[0.5px] border-x-[0.5px] border-y-[0.5px] text-yellowish">
 					<FocusImage />
 				</div>
 				<div className="hidden md:block md:col-span-1 border-x-[0.5px] text-yellowish">

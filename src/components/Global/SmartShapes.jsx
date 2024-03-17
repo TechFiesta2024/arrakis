@@ -4,7 +4,7 @@ import Images from "/public/assets";
 export default function SmartShapes() {
 	return (
 		<>
-			<div className="w-full z-10">
+			<div className="w-full -z-10">
 				<div
 					className={`mt-[-100px] md:mt-[-150px] flex justify-start items-start animate-rotate-star2`}
 				>

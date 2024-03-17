@@ -30,6 +30,7 @@ module.exports = {
       'yellowish': '#FEFAE0',
       'white': '#FFFFFF',
       'grey':'#ACACAC',
+      'greyfade': '#898989',
       'greenCheck': '#9ef01a',
       'greyish': '#727272',
       'yellowish28': 'rgba(254,250,224,28%)',
