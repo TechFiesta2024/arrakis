@@ -5,8 +5,11 @@ import EventWorkshopCard from "./Card";
 export default function EventWorkshopPage({ data, types }) {
 
 	const [selectedButton, setSelectedButton] = useState(() => {
-		const storedEventType = localStorage.getItem("selectedEventType");
-		return storedEventType ? storedEventType : types[0];
+		if (typeof window !== 'undefined') {
+			const storedEventType = localStorage.getItem("selectedEventType");
+			return storedEventType ? storedEventType : types[0];
+		}
+		return types[0];
 	});
 
 	const [filteredData, setFilteredData] = useState([]);
@@ -18,12 +21,16 @@ export default function EventWorkshopPage({ data, types }) {
 	}, [selectedButton, data]);
 
 	useEffect(() => {
-		localStorage.removeItem("selectedEventType");
+		if (typeof window !== 'undefined') {
+			localStorage.removeItem("selectedEventType");
+		}
 	}, []);
 
 	const handleButtonClick = (type) => {
 		setSelectedButton(type);
-		localStorage.setItem("selectedEventType", type);
+		if (typeof window !== 'undefined') {
+			localStorage.setItem("selectedEventType", type);
+		}
 	};
 
 	const btnClass =
