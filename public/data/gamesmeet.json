@@ -1,53 +1,41 @@
 [
-    {
-      "id": "football",
-      "eventName": "Football",
-      "image_url": "/assets/football.jpg",
-      "targetParticipants": ["Boys"],
-      "description": "Experience the adrenaline rush at AOT's gridiron showdown, where passion and prowess collide on the field!",
-      "poc" : [
-        {
-          "name": "John Doe",
-          "contact": "+91 87945 65231"
-        },
-        {
-          "name": "Jane Doe",
-          "contact": "+91 74568 65231"
-        }
-      ]
-    },
-    {
-      "id": "volleyball",
-      "eventName": "Volleyball",
-      "image_url": "/assets/volleyball.jpg",
-      "targetParticipants": ["Boys", "Girls"],
-      "description": "Spike your way to victory at the Games Meet Volleyball Event - where every serve is a chance to shine!",
-      "poc": [
-        {
-          "name": "John Doe",
-          "contact": "+91 87945 65231"
-        },
-        {
-          "name": "Jane Doe",
-          "contact": "+91 74568 65231"
-        }
-      ]
-    },
-    {
-      "id": "basketball",
-      "eventName": "Basketball",
-      "image_url": "/assets/basketball.jpg",
-      "targetParticipants": ["Boys"],
-      "description": "Dribble, shoot, score – it's game time at the Games Meet Basketball Event! Bring your A-game and let the hoops frenzy begin!",
-      "poc": [
-        {
-          "name": "John Doe",
-          "contact": "+91 87945 65231"
-        },
-        {
-          "name": "Jane Doe",
-          "contact": "+91 74568 65231"
-        }
-      ]
-    }
+  {
+    "id": "football",
+    "eventName": "Football",
+    "image_url": "/assets/football.jpg",
+    "targetParticipants": ["Boys"],
+    "description": "Experience the adrenaline rush at AOT's gridiron showdown, where passion and prowess collide on the field!",
+    "poc": [
+      {
+        "name": "Prof. Subhra Chatterjee",
+        "contact": "+91 9836769973"
+      }
+    ]
+  },
+  {
+    "id": "volleyball",
+    "eventName": "Volleyball",
+    "image_url": "/assets/volleyball.jpg",
+    "targetParticipants": ["Boys", "Girls"],
+    "description": "Spike your way to victory at the Games Meet Volleyball Event - where every serve is a chance to shine!",
+    "poc": [
+      {
+        "name": "Prof. Subhra Chatterjee",
+        "contact": "+91 9836769973"
+      }
+    ]
+  },
+  {
+    "id": "basketball",
+    "eventName": "Basketball",
+    "image_url": "/assets/basketball.jpg",
+    "targetParticipants": ["Boys"],
+    "description": "Dribble, shoot, score – it's game time at the Games Meet Basketball Event! Bring your A-game and let the hoops frenzy begin!",
+    "poc": [
+      {
+        "name": "Prof. Subhra Chatterjee",
+        "contact": "+91 9836769973"
+      }
+    ]
+  }
 ]
