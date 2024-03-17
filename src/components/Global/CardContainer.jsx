@@ -19,7 +19,7 @@ export default function EventWorkshopPage({ data, types }) {
 		if (storedType && types.includes(storedType)) {
 			setSelectedButton(storedType);
 		}
-	}, []); // Only run on component mount
+	}, []);
 
 	const handleButtonClick = (type) => {
 		setSelectedButton(type);
