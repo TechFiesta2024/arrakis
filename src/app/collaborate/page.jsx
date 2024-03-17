@@ -249,7 +249,7 @@ export default function CollaboratePage() {
 								<h1 className="font-anton text-[56px]">Campus Ambassador</h1>
 								<p className="text-xl">
 									Go through the{" "}
-									<Link href="" className="underline">
+									<Link href='https://drive.google.com/file/d/1yvxSWVZWAlimBCfOERmzmyKGgIuwNozZ/view?usp=sharing' target="_blank" className="underline cursor-pointer">
 										norms
 									</Link>{" "}
 									for positive collaboration
@@ -263,7 +263,7 @@ export default function CollaboratePage() {
 								<h1 className="font-anton text-[56px]">Community Partner</h1>
 								<p className="text-xl">
 									Go through the{" "}
-									<Link href="" className="underline">
+									<Link href='https://drive.google.com/file/d/1gpMPZzUMSQAofrlcZe08FfSjifbBhjcf/view?usp=sharing' target="_blank" className="underline cursor-pointer">
 										norms
 									</Link>{" "}
 									for positive collaboration

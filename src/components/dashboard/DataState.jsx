@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Images from "/public/assets";
 import { useState } from "react";
+import SmartShapes from "../Global/SmartShapes";
 
 export default function DataState({ workshopArray }) {
 	const softwareWorkshops = workshopArray.filter(
@@ -44,7 +45,7 @@ export default function DataState({ workshopArray }) {
 	return (
 		<>
 			<div className="dataState flex justify-start items-start flex-col w-full">
-				<div className="flex justify-start items-center flex-col w-full h-72">
+				<div className="flex justify-start items-center flex-col w-full h-72 overflow-hidden">
 					<div className="flex items-center justify-evenly text-xs lg:text-sm w-full md:w-1/3 h-20 border-b-[0.5px] border-yellowish top-20">
 						<button
 							onClick={handleWorkshopClick}
@@ -54,13 +55,15 @@ export default function DataState({ workshopArray }) {
 						</button>
 						<button
 							onClick={handleEventClick}
-							className={selectedButton === "Event" ? active : inActive}
+							className={`${selectedButton === "Event" ? active : inActive} cursor-not-allowed text-greyfade `}
+							disabled
 						>
 							Event
 						</button>
 						<button
 							onClick={handleTeamClick}
-							className={selectedButton === "Team" ? active : inActive}
+							className={`${selectedButton === "Team" ? active : inActive}  cursor-not-allowed text-greyfade `}
+							disabled
 						>
 							Team
 						</button>
@@ -68,6 +71,7 @@ export default function DataState({ workshopArray }) {
 					<div className="flex justify-center items-center text-center font-anton font-bold text-4xl md:text-5xl mt-20 text-yellowish">
 						WORKSHOP BOOKINGS
 					</div>
+					<SmartShapes />
 				</div>
 				<div className="w-full">
 					<div className="flex flex-col md:flex-row flex-wrap w-full justify-start items-start">
