@@ -148,8 +148,8 @@ export default function EventWorkshopInfo({ params }) {
                 </div>
               </div>
               <button
-                className={`col-span-2 md:col-span-1 flex justify-center items-center  cursor-not-allowed bg-red-faded`}
-                onClick={register} disabled
+                className={`col-span-2 md:col-span-1 flex justify-center items-center bg-red`}
+                onClick={register}
               >
                 <div className="inline-flex gap-2 py-4">
                   <div className="flex justify-center items-center">
