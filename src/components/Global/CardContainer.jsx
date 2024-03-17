@@ -1,18 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import EventWorkshopCard from "./Card";
 
 export default function EventWorkshopPage({ data, types }) {
 
-	const [selectedButton, setSelectedButton] = useState(() => {
-		if (typeof window !== 'undefined') {
-			const storedEventType = localStorage.getItem("selectedEventType");
-			return storedEventType ? storedEventType : types[0];
-		}
-		return types[0];
-	});
-
+	// const initialFilter = typeof window !== 'undefined' && localStorage.getItem("selectedButton") || types[0];
 	const [filteredData, setFilteredData] = useState([]);
+	const [selectedButton, setSelectedButton] = useState(types[0]);
 
 	const filtered = data.filter((d) => d.type === selectedButton);
 	
@@ -21,16 +15,15 @@ export default function EventWorkshopPage({ data, types }) {
 	}, [selectedButton, data]);
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			localStorage.removeItem("selectedEventType");
+		const storedType = localStorage.getItem("selectedButton");
+		if (storedType && types.includes(storedType)) {
+			setSelectedButton(storedType);
 		}
-	}, []);
+	}, []); // Only run on component mount
 
 	const handleButtonClick = (type) => {
 		setSelectedButton(type);
-		if (typeof window !== 'undefined') {
-			localStorage.setItem("selectedEventType", type);
-		}
+		localStorage.setItem("selectedButton", type);
 	};
 
 	const btnClass =
@@ -62,6 +55,8 @@ export default function EventWorkshopPage({ data, types }) {
 		</>
 	);
 }
+
+
 
 function FilterCard({ filteredData }) {
 	return (
