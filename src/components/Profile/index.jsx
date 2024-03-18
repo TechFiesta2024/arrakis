@@ -305,7 +305,7 @@ export default function Profile() {
 										placeholder="Enter your Guardian's contact no."
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{errors.guardianContact && errors.guardianContact.type === 'pattern' && <span className="text-red pt-2 font-generalsans text-sm">'Invalid contact no.'</span>}
+									{errors.guardianContact && errors.guardianContact.type === 'pattern' && <span className="text-red pt-2 font-generalsans text-sm">Invalid contact no.</span>}
 								</div>
 								<div className="input_year flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Standard</label>
