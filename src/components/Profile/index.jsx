@@ -148,16 +148,10 @@ export default function Profile() {
 			setToggleDisabled(true);
 			if (res.status === 200) {
 				toast.success(`${res.data.message}`, {
-					autoClose: 1000,
-					position: "bottom-right",
 					icon: <Image src={Images.logoVerify} alt="verify" />,
-					hideProgressBar: true,
 					style: {
 						color: "#010100",
 						backgroundColor: "#FEFAE0",
-						font: "generalsans",
-						fontSize: "14px",
-						border: "0.5px solid #010100",
 					},
 				});
 			}
