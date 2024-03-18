@@ -35,7 +35,7 @@ export default function EventWorkshopInfo({ params }) {
       })
       return
     }
-
+    
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
