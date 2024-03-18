@@ -29,15 +29,9 @@ export default function EventWorkshopInfo({ params }) {
   async function register() {
     if (!isAuthenticated) {
       toast.warning(`User not logged in`, {
-        autoClose: 1250,
-        position: "top-right",
-        hideProgressBar: true,
-        closeButton: false,
         style: {
           color: "#010100",
           backgroundColor: "#FFF3B0",
-          fontSize: "1.1rem",
-          border: "1px solid red",
         }
       })
       return
@@ -57,32 +51,20 @@ export default function EventWorkshopInfo({ params }) {
 
       if (response.status === 200) {
         toast.success(`${response.data.message}`, {
-          autoClose: 2000,
-          position: "top-right",
-          icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-          hideProgressBar: true,
-          closeButton: false,
+          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
-            font: "generalsans",
-            fontSize: "14px",
-            border: "1px solid #010100",
           },
         });
       }
     } catch (err) {
       if (err.response.status === 400) {
         toast.warning(`Complete your profile`, {
-          autoClose: 1500,
-          position: "top-right",
-          hideProgressBar: true,
-          closeButton: false,
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
-            fontSize: "1.1rem",
-            border: "1px solid red",
+            border: "2px solid red",
           },
         });
       }
