@@ -66,6 +66,10 @@ import save from './file_save.svg'
 import solo from './user.svg'
 import people from './people.svg'
 import search from './search.svg'
+import celebration from './celebration.svg'
+import arrowDiag from './call_made.svg'
+import money from './payments.svg'
+import addteam from './person_add.svg'
 
 const Images = {
     logoAot,
@@ -127,7 +131,11 @@ const Images = {
 
     solo,
     people,
-    search
+    search,
+    celebration,
+    arrowDiag,
+    money,
+    addteam
 
 };
 

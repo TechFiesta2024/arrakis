@@ -59,11 +59,17 @@ export default function Dashboard() {
 			}
 		}
 		getMe();
+		
 
 		return () => {
 			source.cancel("Request Cancelled.");
 		}
 	}, []);
+
+	useEffect(() => {
+		setEvent(events);
+		
+	},[])
 
 	return (
 		<>
