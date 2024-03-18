@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import EventWorkshopCard from "./Card";
 
 export default function EventWorkshopPage({ data, types }) {
 
 	const [filteredData, setFilteredData] = useState([]);
 	const [selectedButton, setSelectedButton] = useState(types[0]);
-
 
 	const filtered = data.filter((d) => d.type === selectedButton);
 	
@@ -19,7 +18,7 @@ export default function EventWorkshopPage({ data, types }) {
 		if (storedType && types.includes(storedType)) {
 			setSelectedButton(storedType);
 		}
-	}, []);
+	}, []); // Only run on component mount
 
 	const handleButtonClick = (type) => {
 		setSelectedButton(type);
@@ -55,6 +54,8 @@ export default function EventWorkshopPage({ data, types }) {
 		</>
 	);
 }
+
+
 
 function FilterCard({ filteredData }) {
 	return (

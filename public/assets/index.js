@@ -63,6 +63,10 @@ import AOT from './AOT.svg'
 import github from './github.svg'
 import save from './file_save.svg'
 
+import solo from './user.svg'
+import people from './people.svg'
+import search from './search.svg'
+
 const Images = {
     logoAot,
     logoWhatsapp,
@@ -119,7 +123,12 @@ const Images = {
     about,
     AOT,
     github,
-    save
+    save,
+
+    solo,
+    people,
+    search
+
 };
 
 export default Images;
