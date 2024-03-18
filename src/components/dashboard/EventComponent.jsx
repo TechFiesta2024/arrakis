@@ -65,7 +65,7 @@ const EventComponent = ({ eventArray }) => {
                 {selectedType === "Solo" ? (
                     <>
                         {filteredSoloEvents.map(event => (
-                            <div className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
+                            <div key={event.id} className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
                                 <div className=" col-span-3  md:col-span-1 px-4 pt-6">
                                     <p className='font-generalsans-semibold text-2xl md:text-3xl text-yellowish'>{event.name}</p>
                                     <p className='text-yellowish sm:text-md'>{event.concept}</p>
@@ -91,7 +91,7 @@ const EventComponent = ({ eventArray }) => {
                 ) : (
                     <>
                         {filteredTeamEvents.map(event => (
-                            <div className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
+                            <div key={event.id} className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
                                 <div className=" col-span-3  md:col-span-1 px-4 pt-6">
                                     <p className='font-generalsans-semibold text-2xl md:text-3xl text-yellowish'>{event.name}</p>
                                     <p className='text-yellowish sm:text-md'>{event.concept}</p>
@@ -105,7 +105,7 @@ const EventComponent = ({ eventArray }) => {
                                         <div className="text-grey">offline submission</div>
                                     </div>
                                     <div className="flex gap-2 justify-center items-center bg-yellowishopc text-yellowish px-4 py-1 font-generalsans rounded-2xl">
-                                        <Image src={Images.addteam} className='h-5 w-5' />
+                                        <Image src={Images.people} className='h-5 w-5' />
                                         Create Team
                                     </div>
 
