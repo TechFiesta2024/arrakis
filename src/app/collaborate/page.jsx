@@ -89,15 +89,9 @@ export default function CollaboratePage() {
 			toast.error(
 				`Please fill in all required fields with valid information.`,
 				{
-					autoClose: 3000,
-					position: "top-right",
-					hideProgressBar: true,
-					icon: false,
 					style: {
 						color: "#FFFFFF",
 						backgroundColor: "#FF002B",
-						fontSize: "14px",
-						border: "1px solid #FFFFFF ",
 					},
 				},
 			);
@@ -108,15 +102,9 @@ export default function CollaboratePage() {
 			toast.error(
 				`Please fill in all required fields with valid information.`,
 				{
-					autoClose: 3000,
-					position: "top-right",
-					hideProgressBar: true,
-					icon: false,
 					style: {
 						color: "#FFFFFF",
 						backgroundColor: "#FF002B",
-						fontSize: "14px",
-						border: "1px solid #FFFFFF ",
 					},
 				},
 			);
@@ -131,16 +119,10 @@ export default function CollaboratePage() {
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
-					autoClose: 3000,
-					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-					hideProgressBar: true,
 					style: {
 						color: "#010100",
 						backgroundColor: "#FFF3B0",
-						font: "generalsans",
-						fontSize: "14px",
-						border: "1px solid #010100",
 					},
 				});
 				resetAmbassadorDetails();
@@ -189,16 +171,10 @@ export default function CollaboratePage() {
 			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
-					autoClose: 3000,
-					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-					hideProgressBar: true,
 					style: {
 						color: "#010100",
 						backgroundColor: "#FEFAE0",
-						font: "generalsans",
-						fontSize: "14px",
-						border: "0.5px solid #010100",
 					},
 				});
 				resetCommunityPartnerDetails();

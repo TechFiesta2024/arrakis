@@ -5,6 +5,7 @@ import { useAuthState } from "@/context/AuthContext";
 import DataState from "./DataState";
 import EmptyState from "./EmptyState";
 import workshops from "/public/data/workshop.json";
+import events from "/public/data/events.json";
 import axiosInstance from "@/utils/axiosInstance";
 import Preloader from "../Global/Preloader";
 
@@ -16,6 +17,7 @@ export default function Dashboard() {
 	const { user } = useAuthState();
 	const [loading, setLoading] = useState(false);
 	const [workshop, setWorkshop] = useState([]);
+	const [event, setEvent] = useState([]);
 
 	useEffect(() => {
 		const source = axios.CancelToken.source();
@@ -32,6 +34,14 @@ export default function Dashboard() {
 					setWorkshop(
 						workshops.filter((obj) =>
 							workshopsArray.toString().includes(obj.id),
+						),
+					);
+				}
+				if(data.event.length > 0) {
+					const eventArray = data.event.map((d) => d.category);
+					setEvent(
+						events.filter((obj) =>
+							eventArray.toString().includes(obj.id),
 						),
 					);
 				}
