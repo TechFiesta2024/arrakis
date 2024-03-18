@@ -4,7 +4,6 @@ import EventWorkshopCard from "./Card";
 
 export default function EventWorkshopPage({ data, types }) {
 
-	// const initialFilter = typeof window !== 'undefined' && localStorage.getItem("selectedButton") || types[0];
 	const [filteredData, setFilteredData] = useState([]);
 	const [selectedButton, setSelectedButton] = useState(types[0]);
 
@@ -15,7 +14,7 @@ export default function EventWorkshopPage({ data, types }) {
 	}, [selectedButton, data]);
 
 	useEffect(() => {
-		const storedType = localStorage.getItem("selectedButton");
+		const storedType = sessionStorage.getItem("selectedButton");
 		if (storedType && types.includes(storedType)) {
 			setSelectedButton(storedType);
 		}
@@ -23,7 +22,7 @@ export default function EventWorkshopPage({ data, types }) {
 
 	const handleButtonClick = (type) => {
 		setSelectedButton(type);
-		localStorage.setItem("selectedButton", type);
+		sessionStorage.setItem("selectedButton", type);
 	};
 
 	const btnClass =

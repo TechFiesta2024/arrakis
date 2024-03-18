@@ -1,10 +1,13 @@
 import dynamic from "next/dynamic";
 import workshops from "/public/data/workshop.json";
+import Preloader from "../Global/Preloader";
 
-const EventWorkshopPage = dynamic(() => import("../Global/CardContainer"));
+const WorkshopPage = dynamic(() => import("../Global/CardContainer"), {
+	loading: () => <Preloader width="8rem" height="8rem" color="red" />,
+});
 
 export default function Workshop() {
-	const workshopType = new Set(workshops.map((workshop) => workshop.type))
+	const workshopType = Array.from(new Set(workshops.map((workshop) => workshop.type)))
 
 	return (
 		<div className="px-[1px] md:px-20 w-full">
@@ -24,7 +27,9 @@ export default function Workshop() {
 						</div>
 					</div>
 				</div>
-				<EventWorkshopPage data={workshops} types={Array.from(workshopType)} />
+
+				<WorkshopPage data={workshops} types={workshopType} />
+
 			</div>
 		</div>
 	);

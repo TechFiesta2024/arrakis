@@ -10,8 +10,12 @@ import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
 import workshops from "/public/data/workshop.json";
+import Preloader from "./Preloader";
+import { useAuthState } from "@/context/AuthContext";
 
 export default function EventWorkshopInfo({ params }) {
+  const { isAuthenticated, user } = useAuthState()
+
   const [data, setData] = useState({});
   const urlPathName = usePathname();
   const path = urlPathName.split("/")[1];
@@ -21,16 +25,32 @@ export default function EventWorkshopInfo({ params }) {
     setData(selectedPageData);
   }, []);
 
+  const [registering, setRegistering] = useState(false);
   async function register() {
-    const userid = Cookies.get("studentId");
+    if (!isAuthenticated) {
+      toast.warning(`User not logged in`, {
+        autoClose: 1250,
+        position: "top-right",
+        hideProgressBar: true,
+        closeButton: false,
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+          fontSize: "1.1rem",
+          border: "1px solid red",
+        }
+      })
+      return
+    }
 
     try {
+      setRegistering(true);
       const response = await axiosInstance.post(
         `/${path}/join/${params.id}`,
-        {},
+        undefined,
         {
           headers: {
-            userid,
+            userid: user.UUID
           },
         }
       );
@@ -53,7 +73,7 @@ export default function EventWorkshopInfo({ params }) {
       }
     } catch (err) {
       if (err.response.status === 400) {
-        toast.warning(`User not registered`, {
+        toast.warning(`Complete your profile`, {
           autoClose: 1500,
           position: "top-right",
           hideProgressBar: true,
@@ -66,6 +86,9 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
+    }
+    finally {
+      setRegistering(false);
     }
   }
 
@@ -148,22 +171,28 @@ export default function EventWorkshopInfo({ params }) {
                 </div>
               </div>
               <button
-                className={`col-span-2 md:col-span-1 flex justify-center items-center  cursor-not-allowed bg-red-faded`}
-                onClick={register} disabled
+                className={`col-span-2 md:col-span-1 flex justify-center items-center ${checkRoute || registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
+                onClick={register}
+                disabled={checkRoute || registering}
               >
                 <div className="inline-flex gap-2 py-4">
-                  <div className="flex justify-center items-center">
-                    <Image
-                      src={Images.register}
-                      alt="register"
-                      className="h-10"
-                    />
-                  </div>
-                  <div className="flex justify-center items-center">
-                    <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
-                      Register
-                    </h1>
-                  </div>
+                  {!registering ?
+                    <>
+                      <div className="flex justify-center items-center">
+                        <Image
+                          src={Images.register}
+                          alt="register"
+                          className="h-10"
+                        />
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
+                          Register
+                        </h1>
+                      </div>
+                    </>
+                    : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />
+                  }
                 </div>
               </button>
             </div>
@@ -288,7 +317,7 @@ export default function EventWorkshopInfo({ params }) {
             </>
           }
         </div>
-      </div>
+      </div >
     </>
   );
 }

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
+import Preloader from "../Global/Preloader";
 
 export default function Profile() {
 	const year = ["-", "1st", "2nd", "3rd", "4th"];
@@ -414,13 +415,13 @@ export default function Profile() {
 						)}
 
 						<button
-							className={`${submitting ? "bg-red-faded" : "bg-red"
+							className={`flex justify-center ${submitting ? "bg-red-faded" : "bg-red"
 								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
 							onClick={handleSubmitChangeUserProfile}
 							disabled={submitting}
 						>
-							Submit
+							{!submitting ? 'Save' : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />}
 						</button>
 					</div>
 				</div>
