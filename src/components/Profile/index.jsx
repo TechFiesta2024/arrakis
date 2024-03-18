@@ -112,9 +112,13 @@ export default function Profile() {
 		try {
 			const res = await axiosInstance.post(`${url}`, dataPayload);
 			Cookies.set("studentId", res.data.id, { expires: 7 });
+			Cookies.set("userType", res.data.type, { expires: 7 });
+			Cookies.set("teamId", res.data.team_id, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: res.data.id,
+				userType: res.data.type,
+				teamId: res.data.team_id
 			}));
 			setToggleDisabled(true);
 			if (res.status === 200) {
