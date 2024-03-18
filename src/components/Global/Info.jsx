@@ -1,5 +1,6 @@
 "use client";
 import axiosInstance from "@/utils/axiosInstance";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -13,7 +14,7 @@ import Preloader from "./Preloader";
 import { useAuthState } from "@/context/AuthContext";
 
 export default function EventWorkshopInfo({ params }) {
-  const { isAuthenticated, user } = useAuthState()
+  const { isAuthenticated } = useAuthState()
 
   const [data, setData] = useState({});
   const urlPathName = usePathname();
@@ -35,7 +36,8 @@ export default function EventWorkshopInfo({ params }) {
       })
       return
     }
-
+    const userid = Cookies.get("studentId");
+    
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
@@ -43,7 +45,7 @@ export default function EventWorkshopInfo({ params }) {
         undefined,
         {
           headers: {
-            userid: user.UUID
+            userid
           },
         }
       );
