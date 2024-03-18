@@ -58,9 +58,19 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
-    } catch (err) {
+    }
+    catch (err) {
       if (err.response.status === 400) {
         toast.warning(`Complete your profile`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+            border: "2px solid red",
+          },
+        });
+      }
+      if (err.response.status === 401) {
+        toast.warning(`${err.response.data.message}`, {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
@@ -73,6 +83,7 @@ export default function EventWorkshopInfo({ params }) {
       setRegistering(false);
     }
   }
+
 
   const checkRoute = urlPathName === `/events/${params.id}`;
 
