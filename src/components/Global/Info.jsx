@@ -1,6 +1,5 @@
 "use client";
 import axiosInstance from "@/utils/axiosInstance";
-import Cookies from "js-cookie";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -36,7 +35,7 @@ export default function EventWorkshopInfo({ params }) {
       })
       return
     }
-
+    
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
@@ -65,7 +64,6 @@ export default function EventWorkshopInfo({ params }) {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
-            border: "2px solid red",
           },
         });
       }
@@ -74,7 +72,6 @@ export default function EventWorkshopInfo({ params }) {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
-            border: "2px solid red",
           },
         });
       }
