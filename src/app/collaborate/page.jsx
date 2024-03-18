@@ -25,12 +25,6 @@ export default function CollaboratePage() {
 		setSelectedButton("Community Partner");
 	};
 
-	const name = (name) => {
-		if (name === "") {
-			return "Fill the required field."
-		}
-
-	}
 	const validateEmail = (email) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
@@ -69,15 +63,14 @@ export default function CollaboratePage() {
 
 	const handleInputChangeCampusAmbassador = (e) => {
 		const { id, value } = e.target;
+
 		setAmbassadorDetails((prevData) => ({
 			...prevData,
 			[id]: value,
 		}));
 	};
 
-	const handleSubmitCampusAmbassador = async (e) => {
-		e.preventDefault();
-
+	async function handleSubmitCampusAmbassador() {
 		if (
 			ambassorDetails.ambassador_name === "" &&
 			ambassorDetails.ambassador_contact === "" &&
@@ -116,7 +109,6 @@ export default function CollaboratePage() {
 				"/community/ambassador",
 				ambassorDetails,
 			);
-			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
@@ -160,15 +152,12 @@ export default function CollaboratePage() {
 		}));
 	};
 
-	const handleSubmitCommunityPartner = async (e) => {
-		e.preventDefault();
-
+	async function handleSubmitCommunityPartner() {
 		try {
 			const response = await axiosInstance.post(
 				"/community/collab",
 				communityPartnerDetails,
 			);
-			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
