@@ -25,7 +25,8 @@ export default function EventWorkshopInfo({ params }) {
   }, []);
 
   const [registering, setRegistering] = useState(false);
-  async function register() {
+
+  async function workshopRegister() {
     if (!isAuthenticated) {
       toast.warning(`User not logged in`, {
         style: {
@@ -39,7 +40,7 @@ export default function EventWorkshopInfo({ params }) {
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
-        `/${path}/join/${params.id}`,
+        `/workshop/join/${params.id}`,
         undefined,
         {
           headers: {
@@ -75,6 +76,82 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
+    }
+    finally {
+      setRegistering(false);
+    }
+  }
+
+  async function eventRegister() {
+
+    if (!isAuthenticated) {
+      toast.warning(`User not logged in`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        }
+      })
+      return
+    }
+
+    console.log(data)
+
+    const noModal = data.teamSize === ""; //solo
+    const teamModal = parseInt(data.teamSize.charAt(0)) > 1; //only team
+
+    const userType = user.userType;
+
+    const body = {
+      team_id: "",
+      college_user_id: "",
+      school_user_id: ""
+    }
+
+    //solo event for school college
+    if (userType === 'college' && noModal) body.college_user_id = user.UUID
+    else if (userType === 'school' && noModal) body.school_user_id = user.UUID
+
+    //team event for school college
+    else if (teamModal) body.team_id = user.teamId
+
+    try {
+      setRegistering(true);
+      const response = await axiosInstance.post(
+        `/events/join/${params.id}`, body
+      );
+
+      console.log(response)
+
+      if (response.status === 200) {
+        toast.success(`${response.data.message}`, {
+          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+    }
+    catch (err) {
+      // if (err.response.status === 400) {
+      //   toast.warning(`Complete your profile`, {
+      //     style: {
+      //       color: "#010100",
+      //       backgroundColor: "#FFF3B0",
+      //       border: "2px solid red",
+      //     },
+      //   });
+      // }
+      // if (err.response.status === 401) {
+      //   toast.warning(`${err.response.data.message}`, {
+      //     style: {
+      //       color: "#010100",
+      //       backgroundColor: "#FFF3B0",
+      //       border: "2px solid red",
+      //     },
+      //   });
+      // }
+      console.log(err)
     }
     finally {
       setRegistering(false);
@@ -161,9 +238,11 @@ export default function EventWorkshopInfo({ params }) {
                 </div>
               </div>
               <button
-                className={`col-span-2 md:col-span-1 flex justify-center items-center ${checkRoute || registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
-                onClick={register}
-                disabled={checkRoute || registering}
+                className={`col-span-2 md:col-span-1 flex justify-center items-center ${registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
+                onClick={
+                  !checkRoute ? workshopRegister : eventRegister 
+                }
+                disabled={registering}
               >
                 <div className="inline-flex gap-2 py-4">
                   {!registering ?
