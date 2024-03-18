@@ -222,8 +222,16 @@
         "contact": "+91 90079 74773"
       },
       {
+        "name": "Abhishek Singh",
+        "contact": "+91 98310 79865"
+      },
+      {
         "name": "Sagnik Ray",
         "contact": "+91 89108 34699"
+      },
+      {
+        "name": "Krishanu Bandyopadhyay",
+        "contact": "+91 85970 37503"
       }
     ],
     "destination": "Home"
@@ -245,6 +253,10 @@
       {
         "name": "Sayan Mallick",
         "contact": "+91 85839 36282"
+      },
+      {
+        "name": "Abhishek Singh",
+        "contact": "+91 98310 79865"
       },
       {
         "name": "Someshwar Srimany",
@@ -290,7 +302,7 @@
     "mode": "Online",
     "coordinators": [
       {
-        "name": "Abhishek Singh ",
+        "name": "Abhishek Singh",
         "contact": "+91 98310 79865"
       },
       {
@@ -300,6 +312,10 @@
       {
         "name": "Tannistha Das",
         "contact": "+91 74399 96987"
+      },
+      {
+        "name": "Krishanu Bandyopadhyay",
+        "contact": "+91 85970 37503"
       }
     ],
     "destination": "Home"
