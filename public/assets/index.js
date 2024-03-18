@@ -70,6 +70,8 @@ import celebration from './celebration.svg'
 import arrowDiag from './call_made.svg'
 import money from './payments.svg'
 import addteam from './person_add.svg'
+import copy from './content_copy.svg'
+import check from './done_all.svg'
 
 const Images = {
     logoAot,
@@ -135,7 +137,9 @@ const Images = {
     celebration,
     arrowDiag,
     money,
-    addteam
+    addteam,
+    copy,
+    check
 
 };
 
