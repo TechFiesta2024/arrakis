@@ -18,7 +18,6 @@ export default function Dashboard() {
 	const [loading, setLoading] = useState(false);
 	const [workshop, setWorkshop] = useState([]);
 	const [event, setEvent] = useState([]);
-	// const [team]
 
 	useEffect(() => {
 		const source = axios.CancelToken.source();
@@ -75,7 +74,7 @@ export default function Dashboard() {
 						{workshop.length === 0 ? (
 							<EmptyState />
 						) : (
-							<DataState workshopArray={workshop} eventArray={event} />
+							<DataState workshopArray={workshop} />
 						)}
 					</div>
 			}
