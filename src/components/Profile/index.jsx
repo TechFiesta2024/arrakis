@@ -226,11 +226,29 @@ export default function Profile() {
 							<label className="text-[24px] pb-4">Contact No.</label>
 							<input
 								type="text"
-								{...register("contact", { pattern: /^\d{10}$/ })}
+								name="contact_no"
+								{...register("contact", {
+									required: 'Contact no. is required',
+									pattern: {
+										value: /^\d{10}$/,
+										message: 'Length must be 10'
+									}
+								})}
 								placeholder="Enter your contact no."
 								className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 							/>
-							{errors.contact && errors.contact.type === "pattern" && <span className="text-red pt-2 font-generalsans text-sm">Invalid contact no.</span>}
+							{errors.contact ? (
+								<>
+									{
+										errors.contact.type === 'required' &&
+										<span className="text-red pt-2 font-generalsans text-sm">{errors.contact.message}</span>
+									}
+									{
+										errors.contact.type === 'pattern' &&
+										<span className="text-red pt-2 font-generalsans text-sm">{errors.contact.message}</span>
+									}
+								</>
+							) : null}
 						</div>
 					</div>
 				</div>
@@ -304,11 +322,28 @@ export default function Profile() {
 									<label className="text-[24px] pb-4">Guardian Contact</label>
 									<input
 										type="text"
-										{...register("guardianContact", { pattern: /^\d{10}$/ })}
+										{...register("guardianContact", {
+											required: 'Guardian Contact no. is required',
+											pattern: {
+												value: /^\d{10}$/,
+												message: 'Length must be 10'
+											}
+										})}
 										placeholder="Enter your Guardian's contact no."
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{errors.guardianContact && errors.guardianContact.type === 'pattern' && <span className="text-red pt-2 font-generalsans text-sm">Invalid contact no.</span>}
+									{errors.guardianContact ? (
+										<>
+											{
+												errors.guardianContact.type === 'required' &&
+												<span className="text-red pt-2 font-generalsans text-sm">{errors.guardianContact.message}</span>
+											}
+											{
+												errors.guardianContact.type === 'pattern' &&
+												<span className="text-red pt-2 font-generalsans text-sm">{errors.guardianContact.message}</span>
+											}
+										</>
+									) : null}
 								</div>
 								<div className="input_year flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Standard</label>

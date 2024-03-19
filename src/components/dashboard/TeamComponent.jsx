@@ -9,15 +9,17 @@ import Preloader from '../Global/Preloader'
 
 export default function TeamComponent() {
   const { setUser, user } = useAuthState();
+  console.log(`${user.teamId} ${typeof user.teamId}`);
 
+  const [submitting, setSubmitting] = useState(false)
   const [loading, setLoading] = useState(false)
   const [yourTeam, setYourTeam] = useState({})
+  const [leaderEmail, setLeaderEmail] = useState();
   const [teamMembers, setTeamMembers] = useState([])
 
   const [clipboardValue, setClipboardValue] = useState(user.teamId);
   const [clipboardCheck, setClipboardCheck] = useState(null);
   const [teamName, setTeamName] = useState('');
-  const [leaderEmail, setLeaderEmail] = useState();
 
   const [joinTeamId, setJoinTeamId] = useState('');
 
@@ -33,10 +35,13 @@ export default function TeamComponent() {
           setLeaderEmail(response.data.leader_email)
           setTeamMembers(response.data.college_members.concat(response.data.school_members))
         }
-        console.log(response.data);
       }
       catch (err) {
-        console.log(err);
+        if (err.response.status === 404) {
+          setYourTeam({})
+          setLeaderEmail()
+          setTeamMembers([])
+        }
       }
       finally {
         setLoading(false)
@@ -48,6 +53,7 @@ export default function TeamComponent() {
 
   async function createTeam() {
     try {
+      setSubmitting(true)
       const response = await axiosInstance.post(`/team/create`,
         {
           type: user.userType,
@@ -59,13 +65,11 @@ export default function TeamComponent() {
           }
         }
       );
-      console.log(response, "team");
-
-      Cookies.set("teamId", response.data.code, { expires: 7 });
       setUser((user) => ({
         ...user,
         teamId: response.data.code
       }));
+      Cookies.set("teamId", response.data.code, { expires: 7 });
 
       setClipboardValue(response.data.code)
 
@@ -82,38 +86,15 @@ export default function TeamComponent() {
     } catch (error) {
       console.error(error)
     }
-  }
-
-  async function leaveTeam() {
-    try {
-      const res = await axiosInstance.post(`/team/leave`, undefined, {
-        headers: {
-          teamid: user.teamId,
-          userid: user.UUID
-        }
-      })
-      if (res.status == 200) {
-        Cookies.remove('teamId')
-        setUser((user) => ({
-          ...user,
-          teamId: undefined
-        }));
-        toast.success(`${res.data}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-      window.location.reload();
-    }
-    catch (err) {
-      console.log(err);
+    finally {
+      setTeamName('')
+      setSubmitting(false)
     }
   }
 
   async function joinTeam() {
     try {
+      setSubmitting(true)
       const response = await axiosInstance.post(`/team/join/${joinTeamId}`,
         undefined,
         {
@@ -122,7 +103,6 @@ export default function TeamComponent() {
           }
         }
       );
-      console.log(response)
 
       Cookies.set("teamId", response.data.code, { expires: 7 });
       setUser((user) => ({
@@ -144,27 +124,29 @@ export default function TeamComponent() {
           },
         });
       }
-
-      window.location.reload();
-
     } catch (error) {
       console.error(error)
+    }
+    finally {
+      setJoinTeamId('')
+      setSubmitting(false)
     }
   }
 
   async function deleteTeam() {
     try {
+      setSubmitting(true)
       const res = await axiosInstance.post(`/team/delete/${user.teamId}`, undefined, {
         headers: {
           userid: user.UUID
         }
       })
       if (res.status === 200) {
-        Cookies.remove('teamId')
         setUser((user) => ({
           ...user,
-          teamId: undefined
+          teamId: null
         }));
+        Cookies.set("teamId", null, { expires: 7 });
         const successMessage = typeof res.data === 'string' ? res.data : 'Team deleted successfully';
         toast.success(successMessage, {
           style: {
@@ -172,17 +154,19 @@ export default function TeamComponent() {
             backgroundColor: "#FFF3B0",
           },
         });
-        setYourTeam({});
-        setTeamMembers([]);
       }
     }
     catch (err) {
       console.log(err);
     }
+    finally {
+      setSubmitting(false)
+    }
   }
 
   async function leaveTeam() {
     try {
+      setSubmitting(true)
       const res = await axiosInstance.post(`/team/leave`, undefined, {
         headers: {
           teamid: user.teamId,
@@ -190,11 +174,11 @@ export default function TeamComponent() {
         }
       })
       if (res.status == 200) {
-        Cookies.remove('teamId')
         setUser((user) => ({
           ...user,
-          teamId: undefined
+          teamId: null
         }));
+        Cookies.set("teamId", null, { expires: 7 });
         toast.success(`${res.data}`, {
           style: {
             color: "#010100",
@@ -202,10 +186,12 @@ export default function TeamComponent() {
           },
         });
       }
-      window.location.reload();
     }
     catch (err) {
       console.log(err);
+    }
+    finally {
+      setSubmitting(false)
     }
   }
 
@@ -230,18 +216,23 @@ export default function TeamComponent() {
               <label className="text-[24px] pb-4 text-yellowish">Team name</label>
               <input type="text" onChange={(e) => setTeamName(e.target.value)} value={teamName} className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Create your team name' />
             </div>
-            {user.teamId !== undefined ? (
+            {user.teamId !== null ? (
               <div className={`flex justify-between items-center gap-2 bg-yellowish28 p-4 text-white rounded-[8px] mb-2 w-full mt-10 h-14`}>
                 <p className='text-yellowish font-generalsans' >{clipboardValue}</p>
-                <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} />
+                <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} alt="clipboard" />
               </div>
             ) : (
               <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
                 type="submit"
                 onClick={createTeam}
+                disabled={submitting}
               >
-                <p>Create Team</p>
-                <Image src={Images.arrowRight} className='h-6 w-6' />
+                {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> :
+                  <>
+                    <p>Create Team</p>
+                    <Image src={Images.arrowRight} className='h-6 w-6' alt='arrowRight' />
+                  </>
+                }
               </button>
             )}
             {
@@ -262,9 +253,14 @@ export default function TeamComponent() {
             <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
               type="submit"
               onClick={joinTeam}
+              disabled={submitting}
             >
-              <p>Join Team</p>
-              <Image src={Images.arrowRight} className='h-6 w-6' />
+              {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> :
+                <>
+                  <p>Join Team</p>
+                  <Image src={Images.arrowRight} className='h-6 w-6' alt='arrowRight' />
+                </>
+              }
             </button>
           </div>
         </div>
@@ -272,10 +268,10 @@ export default function TeamComponent() {
         <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] cursor-text'>
           {
             loading ?
-              <Preloader width="5rem" height="5rem" color="red" /> : (
+              <Preloader bgHeight="100%" width="5rem" height="5rem" color="red" /> : (
                 Object.keys(yourTeam).length === 0 ? (
                   <div className='h-full flex justify-center items-center py-10 md:py-0'>
-                    <Image src={Images.launch} className='h-20 w-20' />
+                    <Image src={Images.launch} className='h-20 w-20' alt='launch' />
                     <p className=' text-2xl font-generalsans text-yellowish28'>Create your team</p>
                   </div>
                 ) : (
@@ -287,7 +283,7 @@ export default function TeamComponent() {
                     <div className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
                       <div className="flex justify-between items-center w-full px-8">
                         <div className="flex justify-center items-center gap-4">
-                          <Image src={Images.profile} className='h-6 w-6' />
+                          <Image src={Images.profile} className='h-6 w-6' alt='profile' />
                           <p className=' font-generalsans text-yellowish text-md md:text-lg'>{yourTeam.leader_email}</p>
                         </div>
                         <div className=" bg-yellowishopc text-yellowish px-2 py-2 rounded-full text-sm">Lead Mail</div>
@@ -297,7 +293,7 @@ export default function TeamComponent() {
                       <div key={idx} className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
                         <div className="flex justify-between items-center w-full px-8">
                           <div className="flex justify-center items-center gap-4">
-                            <Image src={Images.profile} className='h-6 w-6' />
+                            <Image src={Images.profile} className='h-6 w-6' alt='profile' />
                             <p className=' font-generalsans text-yellowish text-md md:text-lg'>{t.name}</p>
                           </div>
                         </div>
@@ -305,10 +301,14 @@ export default function TeamComponent() {
                     ))}
                     {
                       leaderEmail === user.email ?
-                        <button className='p-4 bg-red text-yellowish w-full' onClick={deleteTeam}>Delete</button>
+                        <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={deleteTeam} disabled={submitting}>
+                          {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> : 'Delete'}
+                        </button>
                         :
-                        <button className='p-4 bg-red text-yellowish w-full' onClick={leaveTeam}>Leave</button>
-                    }                   
+                        <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={leaveTeam} disabled={submitting}>
+                          {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> : 'Leave'}
+                        </button>
+                    }
                   </div>
                 ))}
         </div>
