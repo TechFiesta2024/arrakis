@@ -1,18 +1,48 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Images from '../../../public/assets'
 import { useAuthState } from '@/context/AuthContext'
 import { toast } from 'react-toastify'
+import axiosInstance from '@/utils/axiosInstance'
+import Cookies from 'js-cookie'
+import Preloader from '../Global/Preloader'
 
-const TeamComponent = () => {
-  const { setUser, user } = useAuthState(); 
+export default function TeamComponent() {
+  const { setUser, user } = useAuthState();
 
+  const [loading, setLoading] = useState(false)
+  const [yourTeam, setYourTeam] = useState({})
+  const [teamMembers, setTeamMembers] = useState([])
 
   const [clipboardValue, setClipboardValue] = useState(user.teamId);
   const [clipboardCheck, setClipboardCheck] = useState(null);
   const [teamName, setTeamName] = useState('')
 
-  const createTeam = async () => {
+
+  useEffect(() => {
+    async function getTeamDetails() {
+      try {
+        setLoading(true)
+        const response = await axiosInstance.get(`/team/${user.teamId}`)
+
+        if (response.status === 200) {
+          setYourTeam(response.data)
+          setTeamMembers(response.data.college_members.concat(response.data.school_members))
+        }
+        console.log(response.data);
+      }
+      catch (err) {
+        console.log(err);
+      }
+      finally {
+        setLoading(false)
+      }
+    }
+    getTeamDetails()
+  }, [])
+
+
+  async function createTeam() {
     try {
       const response = await axiosInstance.post(`/team/create`,
         {
@@ -26,6 +56,7 @@ const TeamComponent = () => {
         }
       );
 
+      Cookies.set("teamId", response.data.code, { expires: 7 });
       setUser((user) => ({
         ...user,
         teamId: response.data.code
@@ -51,7 +82,7 @@ const TeamComponent = () => {
   const clipboardText = async () => {
     try {
       await navigator.clipboard.writeText(clipboardValue)
-      setClipboardCheck("copied")
+      setClipboardCheck("Copied")
       setTimeout(() => {
         setClipboardCheck(null)
       }, 2000);
@@ -59,6 +90,7 @@ const TeamComponent = () => {
       setClipboardCheck("failed to copy")
     }
   }
+
   return (
     <>
       <div className={`grid grid-cols-2 md:grid-cols-4 w-full h-auto`}>
@@ -70,22 +102,22 @@ const TeamComponent = () => {
             </div>
             {user.teamId ? (
               <div className={`flex justify-between items-center gap-2 bg-yellowish28 p-4 text-white rounded-[8px] mb-2 w-full mt-10 h-14`}>
-                <p className='text-yellowish font-generalsans' >{clipboardValue}</p>
+                <p className='text-yellowish font-generalsans' >{clipboardValue ? clipboardValue : ''}</p>
                 <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} />
               </div>
             ) : (
-                <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
-                  type="submit"
-                  onClick={createTeam}
-                >
-                  <p>Create Team</p>
-                  <Image src={Images.arrowRight} className='h-6 w-6' />
-                </button>
+              <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
+                type="submit"
+                onClick={createTeam}
+              >
+                <p>Create Team</p>
+                <Image src={Images.arrowRight} className='h-6 w-6' />
+              </button>
             )}
             {
               clipboardCheck ? (
                 <span className=' text-greyfade font-generalsans text-sm '>{clipboardCheck}</span>
-              ): null
+              ) : null
             }
           </div>
           <div className=" font-anton text-3xl text-center text-yellowish pt-10">OR</div>
@@ -102,12 +134,26 @@ const TeamComponent = () => {
             </button>
           </div>
         </div>
-        <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
 
+        <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
+          <h1>Your Team</h1>
+          {
+            loading ?
+              <Preloader width="5rem" height="5rem" color="red" /> :
+              <div>
+                <p>{yourTeam.name}</p>
+                <p>{yourTeam.leader_email}</p>
+                <p>{yourTeam.leader_contact}</p>
+                <p>{yourTeam.code}</p>
+                <ul>
+                  {teamMembers.map((t, idx) => (
+                    <li key={idx}>{t.name} | {t.email}</li>
+                  ))}
+                </ul>
+              </div>
+          }
         </div>
       </div>
     </>
   )
 }
-
-export default TeamComponent

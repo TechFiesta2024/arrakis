@@ -57,8 +57,7 @@ export default function DataState({ workshopArray, eventArray }) {
 						</button>
 						<button
 							onClick={handleEventClick}
-							className={`${selectedButton === "Event" ? active : inActive} cursor-not-allowed text-greyfade `}
-							disabled
+							className={`${selectedButton === "Event" ? active : inActive} text-yellowish `}
 						>
 							Event
 						</button>
