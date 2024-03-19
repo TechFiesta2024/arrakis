@@ -9,7 +9,7 @@ import Preloader from '../Global/Preloader'
 
 export default function TeamComponent() {
   const { setUser, user } = useAuthState();
-  console.log(`${user.teamId} ${typeof user.teamId}`);
+  // console.log(`${user.teamId} ${typeof user.teamId}`);
 
   const [submitting, setSubmitting] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -54,6 +54,15 @@ export default function TeamComponent() {
   async function createTeam() {
     try {
       setSubmitting(true)
+      if (teamName.trim().length < 4) {
+        toast.warning(`Teamname must be at least 4 letters`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+        return
+      }
       const response = await axiosInstance.post(`/team/create`,
         {
           type: user.userType,
@@ -65,15 +74,15 @@ export default function TeamComponent() {
           }
         }
       );
-      setUser((user) => ({
-        ...user,
-        teamId: response.data.code
-      }));
-      Cookies.set("teamId", response.data.code, { expires: 7 });
-
-      setClipboardValue(response.data.code)
+      console.log(response);
 
       if (response.status === 200) {
+        setUser((user) => ({
+          ...user,
+          teamId: response.data.code
+        }));
+        Cookies.set("teamId", response.data.code, { expires: 7 });
+        setClipboardValue(response.data.code)
         toast.success(`${response.data.message}`, {
           icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
@@ -82,12 +91,11 @@ export default function TeamComponent() {
           },
         });
       }
-
+      setTeamName('')
     } catch (error) {
       console.error(error)
     }
     finally {
-      setTeamName('')
       setSubmitting(false)
     }
   }
@@ -104,18 +112,13 @@ export default function TeamComponent() {
         }
       );
 
-      Cookies.set("teamId", response.data.code, { expires: 7 });
-      setUser((user) => ({
-        ...user,
-        teamId: response.data.code
-      }));
-
-      console.log(user.teamId, "yyy");
-      // setClipboardValue(response.data.code)
 
       if (response.status === 200) {
-
-        consoleg.log(response.data)
+        setUser((user) => ({
+          ...user,
+          teamId: response.data.code
+        }));
+        Cookies.set("teamId", response.data.code, { expires: 7 });
         toast.success(`${response.data.message}`, {
           icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
@@ -173,6 +176,7 @@ export default function TeamComponent() {
           userid: user.UUID
         }
       })
+
       if (res.status == 200) {
         setUser((user) => ({
           ...user,
