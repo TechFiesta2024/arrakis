@@ -25,12 +25,6 @@ export default function CollaboratePage() {
 		setSelectedButton("Community Partner");
 	};
 
-	const name = (name) => {
-		if (name === "") {
-			return "Fill the required field."
-		}
-
-	}
 	const validateEmail = (email) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		return emailRegex.test(email);
@@ -69,15 +63,14 @@ export default function CollaboratePage() {
 
 	const handleInputChangeCampusAmbassador = (e) => {
 		const { id, value } = e.target;
+
 		setAmbassadorDetails((prevData) => ({
 			...prevData,
 			[id]: value,
 		}));
 	};
 
-	const handleSubmitCampusAmbassador = async (e) => {
-		e.preventDefault();
-
+	async function handleSubmitCampusAmbassador() {
 		if (
 			ambassorDetails.ambassador_name === "" &&
 			ambassorDetails.ambassador_contact === "" &&
@@ -89,15 +82,9 @@ export default function CollaboratePage() {
 			toast.error(
 				`Please fill in all required fields with valid information.`,
 				{
-					autoClose: 3000,
-					position: "top-right",
-					hideProgressBar: true,
-					icon: false,
 					style: {
 						color: "#FFFFFF",
 						backgroundColor: "#FF002B",
-						fontSize: "14px",
-						border: "1px solid #FFFFFF ",
 					},
 				},
 			);
@@ -108,15 +95,9 @@ export default function CollaboratePage() {
 			toast.error(
 				`Please fill in all required fields with valid information.`,
 				{
-					autoClose: 3000,
-					position: "top-right",
-					hideProgressBar: true,
-					icon: false,
 					style: {
 						color: "#FFFFFF",
 						backgroundColor: "#FF002B",
-						fontSize: "14px",
-						border: "1px solid #FFFFFF ",
 					},
 				},
 			);
@@ -128,19 +109,12 @@ export default function CollaboratePage() {
 				"/community/ambassador",
 				ambassorDetails,
 			);
-			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
-					autoClose: 3000,
-					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-					hideProgressBar: true,
 					style: {
 						color: "#010100",
 						backgroundColor: "#FFF3B0",
-						font: "generalsans",
-						fontSize: "14px",
-						border: "1px solid #010100",
 					},
 				});
 				resetAmbassadorDetails();
@@ -178,27 +152,18 @@ export default function CollaboratePage() {
 		}));
 	};
 
-	const handleSubmitCommunityPartner = async (e) => {
-		e.preventDefault();
-
+	async function handleSubmitCommunityPartner() {
 		try {
 			const response = await axiosInstance.post(
 				"/community/collab",
 				communityPartnerDetails,
 			);
-			console.log(response.data);
 			if (response.status === 200) {
 				toast.success(`${response.data.message}`, {
-					autoClose: 3000,
-					position: "top-right",
 					icon: <Image src={Images.logoVerify} alt="whatsapp" />,
-					hideProgressBar: true,
 					style: {
 						color: "#010100",
 						backgroundColor: "#FEFAE0",
-						font: "generalsans",
-						fontSize: "14px",
-						border: "0.5px solid #010100",
 					},
 				});
 				resetCommunityPartnerDetails();
@@ -249,7 +214,7 @@ export default function CollaboratePage() {
 								<h1 className="font-anton text-[56px]">Campus Ambassador</h1>
 								<p className="text-xl">
 									Go through the{" "}
-									<Link href="" className="underline">
+									<Link href='https://drive.google.com/file/d/1yvxSWVZWAlimBCfOERmzmyKGgIuwNozZ/view?usp=sharing' target="_blank" className="underline cursor-pointer">
 										norms
 									</Link>{" "}
 									for positive collaboration
@@ -263,7 +228,7 @@ export default function CollaboratePage() {
 								<h1 className="font-anton text-[56px]">Community Partner</h1>
 								<p className="text-xl">
 									Go through the{" "}
-									<Link href="" className="underline">
+									<Link href='https://drive.google.com/file/d/1gpMPZzUMSQAofrlcZe08FfSjifbBhjcf/view?usp=sharing' target="_blank" className="underline cursor-pointer">
 										norms
 									</Link>{" "}
 									for positive collaboration

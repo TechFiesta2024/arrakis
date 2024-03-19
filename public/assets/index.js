@@ -3,10 +3,10 @@ import logoWhatsapp from './whatsapp.svg'
 import logoLinkedIn from './linkedin.svg'
 import logoX from './Vector.svg'
 import logoInstagram from './instagram.svg'
-
 import logoLinkedInBlack from './logoLinkedinBlack.svg'
 import logoXBlack from './logoXblack.svg'
 import logoPhoneWhite from './logoPhoneWhite.svg'
+import logoVerify from './Verify.svg'
 
 import GridBox from './GridBox.svg'
 import Coin from './coin.svg'
@@ -16,7 +16,6 @@ import Capsule2 from './capsule-2.svg'
 import Capsule3 from './capsule-3.svg'
 import Capsule4 from './capsule-4.svg'
 import Capsule5 from './capsule-5.svg'
-import arrowRight from './arrow-right.svg'
 import Star2 from './Star 2.svg'
 import Star3 from './Star 3.svg'
 import Diamond1 from './diamond1.svg'
@@ -26,7 +25,6 @@ import Mockup from './mockup2.svg'
 import iconRectangle from './rectangle.svg'
 import iconStar from './star.svg'
 import iconScreenMirror from './screenmirror.svg'
-import iconArrowRight from './arrowright.svg'
 import iconCpu from './cpu.svg'
 import iconMonitorMobile from './monitormobile.svg'
 import iconLink2 from './link2.svg'
@@ -45,12 +43,12 @@ import close from './ri-close-fill.svg'
 
 
 
-import logoVerify from './Verify.svg'
 import arrowLeft from './arrow-left.svg'
+import arrowRight from './arrow-right.svg'
+import arrowRightRed from './arrow-right-red.svg'
 import calendar from './calendar-search.svg'
 import map from './map.svg'
 import register from './register.svg'
-import arrowRightYellowish from './arrowrightYellowish.svg'
 
 import profile from './profile.svg'
 import logout from './logout.svg'
@@ -65,28 +63,37 @@ import AOT from './AOT.svg'
 import github from './github.svg'
 import save from './file_save.svg'
 
+import solo from './user.svg'
+import people from './people.svg'
+import search from './search.svg'
+import celebration from './celebration.svg'
+import arrowDiag from './call_made.svg'
+import money from './payments.svg'
+import addteam from './person_add.svg'
+import copy from './content_copy.svg'
+import check from './done_all.svg'
+
 const Images = {
     logoAot,
     logoWhatsapp,
     logoLinkedIn,
     logoX,
     logoInstagram,
-    iconArrowRight,
     logoLinkedInBlack,
     logoXBlack,
     logoVerify,
     logoPhoneWhite,
     arrowLeft,
+    arrowRight,
+    arrowRightRed,
     calendar,
     map,
     register,
-    arrowRightYellowish,
 
 
     GridBox,
     Coin,
     capsules: [Capsule, Capsule1, Capsule2, Capsule3, Capsule4, Capsule5],
-    arrowRight,
     // smart shapes
     Star2,
     Star3,
@@ -122,7 +129,18 @@ const Images = {
     about,
     AOT,
     github,
-    save
+    save,
+
+    solo,
+    people,
+    search,
+    celebration,
+    arrowDiag,
+    money,
+    addteam,
+    copy,
+    check
+
 };
 
 export default Images;

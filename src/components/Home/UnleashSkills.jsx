@@ -18,7 +18,7 @@ const UnleashSkills = () => {
 							className={` ${flexStylesCenter} bg-red px-10 flex z-20 text-white rounded-[8px] gap-x-2 transition-transform hover:scale-x-110`}
 						>
 							<div className="buttoncontent flex py-2">Check Workshops</div>
-							<Image src={Images.arrowRightYellowish} alt="arrow-right" />
+							<Image src={Images.arrowRight} alt="arrow-right" />
 						</Link>
 						<SmartShapes />
 					</div>

@@ -14,7 +14,7 @@ const LINKS = [
 	{ name: "Events", href: "/events" },
 	{ name: "Workshop", href: "/workshop" },
 	{ name: "About", href: "/about" },
-	{ name: "Team", href: "/team" },
+	{ name: "Games Meet", href: "/gamesmeet" },
 	{ name: "Dashboard", href: "/dashboard" },
 	{ name: "Contact", href: "/helpdesk" },
 ];
@@ -22,7 +22,7 @@ const LINKS = [
 export default function Navbar() {
 	const { user, setUser, setIsAuthenticated, isAuthenticated } = useAuthState();
 	const [isOpen, setIsOpen] = useState(false);
-	const urlPathName = usePathname();
+	const pathname = usePathname();
 
 	const flexStylesCenter = "flex justify-center items-center";
 
@@ -51,9 +51,13 @@ export default function Navbar() {
 			});
 
 			Cookies.set("studentId", data.id, { expires: 7 });
+			Cookies.set("userType", data.type, { expires: 7 });
+			Cookies.set("teamId", data.team_id, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: data.id,
+				userType: data.type,
+				teamId: data.team_id,
 			}));
 		} catch (err) {
 			console.error(err);
@@ -66,15 +70,16 @@ export default function Navbar() {
 		Cookies.remove("isAuthenticated");
 		Cookies.remove("firebase_token");
 		Cookies.remove("studentId");
+		Cookies.remove("userType");
+		Cookies.remove("teamId")
 		window.location.href = "/";
 	}
 
 	useEffect(() => {
 		// Hide the mobile navbar when the url changes.
 		setIsOpen(false);
-	}, [urlPathName]);
+	}, [pathname]);
 
-	const pathname = usePathname();
 	const active =
 		"bg-yellowish28 border-x-[0.5px] h-full w-1/3 flex justify-center items-center";
 	const inActive =
@@ -115,10 +120,11 @@ export default function Navbar() {
 
 				<div className="navbar__right md:flex items-center justify-evenly w-1/3 h-full">
 					<Link
-						href="/team"
-						className={`link ${pathname === "/team" ? active : inActive}`}
+						href="/gamesmeet"
+						className={`link ${pathname === "/gamesmeet" ? active : inActive} flex flex-col`}
 					>
-						Team
+						<p>Games Meet</p>
+						<span className="text-grey font-generalsans text-xs">AOT only</span>
 					</Link>
 
 					<Link
@@ -128,12 +134,6 @@ export default function Navbar() {
 						Dashboard
 					</Link>
 
-					{/* <Link */}
-					{/* 	href="/" */}
-					{/* 	className="border-x-[0.5px] h-full w-1/3 flex justify-center items-center" */}
-					{/* > */}
-					{/* 	Contact */}
-					{/* </Link> */}
 
 					{!isAuthenticated ? (
 						<div
@@ -207,7 +207,7 @@ export default function Navbar() {
 												Register
 											</p>
 											<Image
-												src={Images.arrowRightYellowish}
+												src={Images.arrowRight}
 												alt="arrow_right"
 											/>
 										</div>
@@ -224,7 +224,7 @@ export default function Navbar() {
 													>
 														<p className=" text-grey">Go to profile </p>
 														<Image
-															src={Images.arrowRightYellowish}
+															src={Images.arrowRight}
 															height={10}
 															alt="arrow_right"
 														/>
@@ -252,7 +252,7 @@ export default function Navbar() {
 											key={id}
 											className="flex justify-between items-center px-6 border-y-[.5px] border-yellowish bg-black py-5"
 											// Close navbar if requrl and href is same
-											onClick={() => l.href === urlPathName && setIsOpen(false)}
+											onClick={() => l.href === pathname && setIsOpen(false)}
 										>
 											<Link
 												href={l.href}
@@ -262,7 +262,7 @@ export default function Navbar() {
 													{l.name}
 												</p>
 												<Image
-													src={Images.arrowRightYellowish}
+													src={Images.arrowRight}
 													height={30}
 													alt="arrow_right"
 												/>
