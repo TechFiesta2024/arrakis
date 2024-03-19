@@ -112,6 +112,8 @@ export default function TeamComponent() {
         });
       }
 
+      window.location.reload();
+
     } catch (error) {
       console.error(error)
     }
