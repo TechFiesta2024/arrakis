@@ -131,7 +131,7 @@ export default function EventWorkshopInfo({ params }) {
     }
     catch (err) {
       if (err.response.status === 400) {
-        toast.warning(`${err.response.data.message}`, {
+        toast.warning(`Create team first from dashboard`, {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
