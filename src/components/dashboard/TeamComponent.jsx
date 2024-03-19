@@ -184,7 +184,6 @@ export default function TeamComponent() {
             </div>
             <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
               type="submit"
-              onClick={joinTeam}
             >
               <p>Join Team</p>
               <Image src={Images.arrowRight} className='h-6 w-6' />
