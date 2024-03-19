@@ -180,7 +180,7 @@ export default function TeamComponent() {
 
   async function leaveTeam (){
     try {
-      const res = await axiosInstance.post(/team/leave, undefined, {
+      const res = await axiosInstance.post(`/team/leave`, undefined, {
         headers: {
           teamid: user.teamId,
           userid: user.UUID
