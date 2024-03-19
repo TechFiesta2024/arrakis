@@ -9,7 +9,6 @@ import Preloader from '../Global/Preloader'
 
 export default function TeamComponent() {
   const { setUser, user } = useAuthState();
-  // console.log(`${user.teamId} ${typeof user.teamId}`);
 
   const [submitting, setSubmitting] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -37,7 +36,7 @@ export default function TeamComponent() {
         }
       }
       catch (err) {
-        if (err.response.status === 404) {
+        if (err.response.status === 404 || 400) {
           setYourTeam({})
           setLeaderEmail()
           setTeamMembers([])
@@ -74,7 +73,6 @@ export default function TeamComponent() {
           }
         }
       );
-      console.log(response);
 
       if (response.status === 200) {
         setUser((user) => ({
@@ -220,12 +218,7 @@ export default function TeamComponent() {
               <label className="text-[24px] pb-4 text-yellowish">Team name</label>
               <input type="text" onChange={(e) => setTeamName(e.target.value)} value={teamName} className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Create your team name' />
             </div>
-            {user.teamId !== null ? (
-              <div className={`flex justify-between items-center gap-2 bg-yellowish28 p-4 text-white rounded-[8px] mb-2 w-full mt-10 h-14`}>
-                <p className='text-yellowish font-generalsans' >{clipboardValue}</p>
-                <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} alt="clipboard" />
-              </div>
-            ) : (
+            {user.teamId === null || 'null' ? (
               <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
                 type="submit"
                 onClick={createTeam}
@@ -238,6 +231,11 @@ export default function TeamComponent() {
                   </>
                 }
               </button>
+            ) : (
+              <div className={`flex justify-between items-center gap-2 bg-yellowish28 p-4 text-white rounded-[8px] mb-2 w-full mt-10 h-14`}>
+                <p className='text-yellowish font-generalsans' >{clipboardValue}</p>
+                <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} alt="clipboard" />
+              </div>
             )}
             {
               clipboardCheck ? (
