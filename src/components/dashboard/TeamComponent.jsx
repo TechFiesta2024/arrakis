@@ -287,7 +287,7 @@ export default function TeamComponent() {
                           <Image src={Images.profile} className='h-6 w-6' />
                           <p className=' font-generalsans text-yellowish text-md md:text-lg'>{yourTeam.leader_email}</p>
                         </div>
-                        <div className=" bg-yellowishopc text-yellowish px-2 py-2 rounded-full text-sm">Team Lead</div>
+                        <div className=" bg-yellowishopc text-yellowish px-2 py-2 rounded-full text-sm">Lead Mail</div>
                       </div>
                     </div>
                     {teamMembers.map((t, idx) => (
