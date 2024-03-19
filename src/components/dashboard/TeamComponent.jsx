@@ -16,7 +16,6 @@ export default function TeamComponent() {
   const [leaderEmail, setLeaderEmail] = useState();
   const [teamMembers, setTeamMembers] = useState([])
 
-  const [clipboardValue, setClipboardValue] = useState(user.teamId);
   const [clipboardCheck, setClipboardCheck] = useState(null);
   const [teamName, setTeamName] = useState('');
 
@@ -52,7 +51,6 @@ export default function TeamComponent() {
 
   async function createTeam() {
     try {
-      setSubmitting(true)
       if (teamName.trim().length < 4) {
         toast.warning(`Teamname must be at least 4 letters`, {
           style: {
@@ -62,6 +60,7 @@ export default function TeamComponent() {
         });
         return
       }
+      setSubmitting(true)
       const response = await axiosInstance.post(`/team/create`,
         {
           type: user.userType,
@@ -80,7 +79,6 @@ export default function TeamComponent() {
           teamId: response.data.code
         }));
         Cookies.set("teamId", response.data.code, { expires: 7 });
-        setClipboardValue(response.data.code)
         toast.success(`${response.data.message}`, {
           icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
@@ -91,7 +89,21 @@ export default function TeamComponent() {
       }
       setTeamName('')
     } catch (error) {
-      console.error(error)
+      if (error.response.status === 400) {
+        toast.warning(`${error.response.data.message}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+        return
+      }
+      toast.warning(`Please try again`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        },
+      });
     }
     finally {
       setSubmitting(false)
@@ -110,7 +122,6 @@ export default function TeamComponent() {
         }
       );
 
-
       if (response.status === 200) {
         setUser((user) => ({
           ...user,
@@ -126,7 +137,21 @@ export default function TeamComponent() {
         });
       }
     } catch (error) {
-      console.error(error)
+      if (error.response.status === 400) {
+        toast.warning(`${error.response.data.message}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+        return
+      }
+      toast.warning(`Please try again`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        },
+      });
     }
     finally {
       setJoinTeamId('')
@@ -158,7 +183,12 @@ export default function TeamComponent() {
       }
     }
     catch (err) {
-      console.log(err);
+      toast.warning(`Please try again`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        },
+      });
     }
     finally {
       setSubmitting(false)
@@ -181,7 +211,7 @@ export default function TeamComponent() {
           teamId: null
         }));
         Cookies.set("teamId", null, { expires: 7 });
-        toast.success(`${res.data}`, {
+        toast.success(`${res.data.message}`, {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
@@ -190,16 +220,21 @@ export default function TeamComponent() {
       }
     }
     catch (err) {
-      console.log(err);
+      toast.warning(`Please try again`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        },
+      });
     }
     finally {
       setSubmitting(false)
     }
   }
 
-  const clipboardText = async () => {
+  const clipboardText = async (value) => {
     try {
-      await navigator.clipboard.writeText(clipboardValue)
+      await navigator.clipboard.writeText(value)
       setClipboardCheck("Copied")
       setTimeout(() => {
         setClipboardCheck(null)
@@ -218,30 +253,19 @@ export default function TeamComponent() {
               <label className="text-[24px] pb-4 text-yellowish">Team name</label>
               <input type="text" onChange={(e) => setTeamName(e.target.value)} value={teamName} className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Create your team name' />
             </div>
-            {user.teamId === null || 'null' ? (
-              <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
-                type="submit"
-                onClick={createTeam}
-                disabled={submitting}
-              >
-                {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> :
-                  <>
-                    <p>Create Team</p>
-                    <Image src={Images.arrowRight} className='h-6 w-6' alt='arrowRight' />
-                  </>
-                }
-              </button>
-            ) : (
-              <div className={`flex justify-between items-center gap-2 bg-yellowish28 p-4 text-white rounded-[8px] mb-2 w-full mt-10 h-14`}>
-                <p className='text-yellowish font-generalsans' >{clipboardValue}</p>
-                <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={clipboardText} alt="clipboard" />
-              </div>
-            )}
-            {
-              clipboardCheck ? (
-                <span className=' text-greyfade font-generalsans text-sm '>{clipboardCheck}</span>
-              ) : null
-            }
+            {/* Create team button */}
+            <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
+              type="submit"
+              onClick={createTeam}
+              disabled={submitting}
+            >
+              {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> :
+                <>
+                  <p>Create Team</p>
+                  <Image src={Images.arrowRight} className='h-6 w-6' alt='arrowRight' />
+                </>
+              }
+            </button>
           </div>
           <div className=" font-anton text-3xl text-center text-yellowish pt-10">OR</div>
           <div className="">
@@ -257,7 +281,7 @@ export default function TeamComponent() {
               onClick={joinTeam}
               disabled={submitting}
             >
-              {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> :
+              {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> :
                 <>
                   <p>Join Team</p>
                   <Image src={Images.arrowRight} className='h-6 w-6' alt='arrowRight' />
@@ -280,7 +304,11 @@ export default function TeamComponent() {
                   <div className='w-full'>
                     <div className="w-full bg-yellowish h-24 flex flex-col justify-center items-center">
                       <p className=' font-anton text-black text-3xl'>{yourTeam.name}</p>
-                      <p className=' text-black font-generalsans text-md'>{yourTeam.code}</p>
+                      <div className='flex items-center gap-2 my-2'>
+                        <p className=' text-black font-generalsans text-md'>{yourTeam.code}</p>
+                        <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={() => clipboardText(yourTeam.code)} alt="clipboard" />
+                        <span className='text-black font-generalsans text-xs'>{clipboardCheck}</span>
+                      </div>
                     </div>
                     <div className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
                       <div className="flex justify-between items-center w-full px-8">
@@ -304,17 +332,17 @@ export default function TeamComponent() {
                     {
                       leaderEmail === user.email ?
                         <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={deleteTeam} disabled={submitting}>
-                          {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> : 'Delete'}
+                          {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> : 'Delete'}
                         </button>
                         :
                         <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={leaveTeam} disabled={submitting}>
-                          {submitting ? <Preloader bgHeight='100%' width="2rem" height="2rem" color="white" /> : 'Leave'}
+                          {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> : 'Leave'}
                         </button>
                     }
                   </div>
                 ))}
         </div>
-      </div>
+      </div >
     </>
   )
 }
