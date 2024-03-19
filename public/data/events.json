@@ -568,7 +568,7 @@
     "body": "Capture the Flag (CTF) is a highly engaging and competitive event where participants engage in a gamified challenge, aiming to identify and exploit vulnerabilities within a simulated environment to capture designated flags.",
     "date": "April 8th",
     "time": "02:30 PM - 05:00 PM",
-    "teamSize": "3 - 4",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -749,7 +749,7 @@
     "body": "The journey begins on a website meticulously crafted to serve as the entry point and landing page for participants.",
     "date": "April 9th",
     "time": "11:30 AM - 03:30 PM",
-    "teamSize": "2 - 3",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -833,7 +833,7 @@
     "body": "The Maze Solver Challenge entails the creation of autonomous robots or systems engineered to navigate a maze from a designated starting point to a predefined destination. Participants will utilize sensors, actuators and decision-making algorithms to accomplish this task.",
     "date": "April 8th",
     "time": "10:30 AM - 05:00 PM",
-    "teamSize": "2 - 4",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -914,7 +914,7 @@
     "body": "The RC Race Cars Challenge invites participants to showcase their skills in controlling remote-controlled vehicles using handheld transmitters or controllers. By transmitting signals to the car's receiver, participants will navigate through various obstacles, showcasing their proficiency in steering, acceleration and braking.",
     "date": "April 9th",
     "time": "10:00 AM - 03:30 PM",
-    "teamSize": "2 - 4",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -993,7 +993,7 @@
     "body": "This event provides a platform for participants to demonstrate their understanding of IoT concepts. Participants will identify real-world problems, design IoT solutions and present their ideas through demonstrations.",
     "date": "April 8th",
     "time": "10:30 AM - 01:30 PM",
-    "teamSize": "2 - 3",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -1075,7 +1075,7 @@
     "body": "The Circuit Development Challenge is an opportunity for participants to showcase their skills in developing electrical circuits using provided materials. Participants will be given a set of circuit materials including breadboards, jumper wires, LEDs and ICs with some additional materials to add a twist to the challenge.",
     "date": "April 8th",
     "time": "10:30 AM - 04:30 PM",
-    "teamSize": "2 - 3",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
@@ -1161,7 +1161,7 @@
     "body": "Tech Fiesta 24 provides a creative stage exclusively for technical performers of all levels to showcase their talent. In this event, participants will utilize Freecad, a computer-aided design (CAD) and drafting software, to master the skill of creating aesthetic and visually appealing designs, shaping the face of tomorrow.",
     "date": "April 8th",
     "time": "10:30 AM - 01:00 PM",
-    "teamSize": "2 - 3",
+    "teamSize": "3 - 5",
     "rules": [
       {
         "type": "Rules",
