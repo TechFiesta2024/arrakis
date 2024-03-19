@@ -10,7 +10,7 @@
     "body": "Participants will prepare an exhibit based on the Topic-  “Innovation in energy and mobility aiming towards a Carbon-free world”. Space will be provided to showcase your exhibit. The exhibits will be judged based on the relevance with the topic. Please read the mandatory requirements to prepare the exhibits.",
     "date": "April 9th",
     "time": "01:30 PM - 03:30 PM",
-    "teamSize": "1 - 2",
+    "teamSize": "2 - 3",
     "rules": [
       {
         "type": "Rules",
@@ -392,7 +392,7 @@
     "body": "The event is structured to challenge participants creatively by assigning each individual a unique concept for an app screen, micro-component or micro-interaction, ranging from fundamental elements like login screens to dynamic interactions such as newsfeed interactions.",
     "date": "April 8th",
     "time": "10:30 AM - 12:00 PM",
-    "teamSize": "1 - 2",
+    "teamSize": "",
     "prize": [
       {
         "position": "Top 3",
@@ -473,7 +473,7 @@
     "body": "Participants will be tasked with completing an incomplete user interface provided to them. Using only HTML, CSS and Vanilla JavaScript (no frameworks allowed), participants must apply their creativity and skills to finalize the entire UI and deploy it on Vercel or Netlify.",
     "date": "April 8th",
     "time": "3:00 PM - 5:00 pm",
-    "teamSize": "1 - 2",
+    "teamSize": "",
     "prize": [
       {
         "position": "Top 3",
@@ -1075,7 +1075,7 @@
     "body": "The Circuit Development Challenge is an opportunity for participants to showcase their skills in developing electrical circuits using provided materials. Participants will be given a set of circuit materials including breadboards, jumper wires, LEDs and ICs with some additional materials to add a twist to the challenge.",
     "date": "April 8th",
     "time": "10:30 AM - 04:30 PM",
-    "teamSize": "1 - 2",
+    "teamSize": "2 - 3",
     "rules": [
       {
         "type": "Rules",

@@ -6,7 +6,7 @@ import SmartShapes from "../Global/SmartShapes";
 import EventComponent from "./EventComponent";
 import TeamComponent from "./TeamComponent";
 
-export default function DataState({ workshopArray }) {
+export default function DataState({ workshopArray, eventArray }) {
 	const softwareWorkshops = workshopArray.filter(
 		(workshop) => workshop.type === "Software",
 	);
@@ -64,8 +64,7 @@ export default function DataState({ workshopArray }) {
 						</button>
 						<button
 							onClick={handleTeamClick}
-							className={`${selectedButton === "Team" ? active : inActive}  cursor-not-allowed text-greyfade `}
-							disabled
+							className={`${selectedButton === "Team" ? active : inActive} text-yellowish `}
 						>
 							Team
 						</button>
@@ -210,7 +209,7 @@ export default function DataState({ workshopArray }) {
 				)}
 
 				{showEvent && (
-					<EventComponent />
+					<EventComponent eventArray={eventArray} />
 				)}
 
 				{showTeam && (
