@@ -16,17 +16,21 @@ export default function TeamComponent() {
 
   const [clipboardValue, setClipboardValue] = useState(user.teamId);
   const [clipboardCheck, setClipboardCheck] = useState(null);
-  const [teamName, setTeamName] = useState('')
+  const [teamName, setTeamName] = useState('');
+  const [leaderEmail, setLeaderEmail] = useState();
 
+  const [joinTeamId, setJoinTeamId] = useState('');
 
   useEffect(() => {
     async function getTeamDetails() {
       try {
         setLoading(true)
-        const response = await axiosInstance.get(`/team/${user.teamId}`)
+
+        const response = await axiosInstance.get(`/team/${user.teamId || joinTeamId}`)
 
         if (response.status === 200) {
           setYourTeam(response.data)
+          setLeaderEmail(response.data.leader_email)
           setTeamMembers(response.data.college_members.concat(response.data.school_members))
         }
         console.log(response.data);
@@ -79,6 +83,55 @@ export default function TeamComponent() {
     }
   }
 
+  async function deleteTeam (){
+    console.log("buri buri saimon");
+  }
+
+  async function leaveTeam (){
+    console.log("buri buri saimon 3");
+  }
+
+  async function joinTeam() {
+    try {
+      const response = await axiosInstance.post(`/team/join/${joinTeamId}`,
+        undefined,
+        {
+          headers: {
+            userid: user.UUID
+          }
+        }
+      );
+      console.log(response)
+
+      Cookies.set("teamId", response.data.code, { expires: 7 });
+      
+      setUser((user) => ({
+        ...user,
+        teamId: response.data.code
+      }));
+
+      console.log(user.teamId, "yyy");
+      // setClipboardValue(response.data.code)
+
+      if (response.status === 200) {
+
+        consoleg.log(response.data)
+        toast.success(`${response.data.message}`, {
+          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+
+      window.location.reload();
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const clipboardText = async () => {
     try {
       await navigator.clipboard.writeText(clipboardValue)
@@ -124,10 +177,14 @@ export default function TeamComponent() {
           <div className="">
             <div className="pt-8 flex flex-col">
               <label className="text-[24px] pb-4 text-yellowish">Team code</label>
-              <input type="text" className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Enter code to join a team' />
+              <input type="text"
+                onChange={(e) => setJoinTeamId(e.target.value)}
+                value={joinTeamId}
+                className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Enter code to join a team' />
             </div>
             <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
               type="submit"
+              onClick={joinTeam}
             >
               <p>Join Team</p>
               <Image src={Images.arrowRight} className='h-6 w-6' />
@@ -136,15 +193,20 @@ export default function TeamComponent() {
         </div>
 
         <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
-          <h1>Your Team</h1>
+          {/* <h1>Your Team</h1> */}
           {
             loading ?
               <Preloader width="5rem" height="5rem" color="red" /> :
-              <div>
+              <div className='pt-4'>
+                <h1 className=' text-3xl text-red font-anton'>Team Name:</h1>
                 <p>{yourTeam.name}</p>
+                <h1 className=' text-3xl text-red font-anton'>Leader Email:</h1>
                 <p>{yourTeam.leader_email}</p>
+                <h1 className=' text-3xl text-red font-anton'>Leader Contact:</h1>
                 <p>{yourTeam.leader_contact}</p>
+                <h1 className=' text-3xl text-red font-anton'>Team Code:</h1>
                 <p>{yourTeam.code}</p>
+                <h1 className=' text-3xl text-red font-anton'>Team Members:</h1>
                 <ul>
                   {teamMembers.map((t, idx) => (
                     <li key={idx}>{t.name} | {t.email}</li>
@@ -152,8 +214,16 @@ export default function TeamComponent() {
                 </ul>
               </div>
           }
+          {
+            leaderEmail === user.email ? 
+            <button className='p-4 bg-red text-yellowish' onClick={deleteTeam}>delete</button>
+            :
+            <button className='p-4 bg-red text-yellowish' onClick={leaveTeam}>leave</button>
+          }
         </div>
       </div>
     </>
   )
 }
+
+
