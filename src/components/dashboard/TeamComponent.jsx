@@ -84,11 +84,58 @@ export default function TeamComponent() {
   }
 
   async function deleteTeam (){
-    console.log("buri buri saimon");
+    try {
+      const res = await axiosInstance.post(`/team/delete/${user.teamId}`, undefined, {
+        headers: {
+          userid: user.UUID
+        }
+      })
+      if (res.status == 200) {
+        Cookies.remove('teamId')
+        setUser((user) => ({
+          ...user,
+          teamId: undefined
+        }));
+        toast.success(`${res.data}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+      window.location.reload();
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   async function leaveTeam (){
-    console.log("buri buri saimon 3");
+    try {
+      const res = await axiosInstance.post(`/team/leave`, undefined, {
+        headers: {
+          teamid: user.teamId,
+          userid: user.UUID
+        }
+      })
+      if (res.status == 200) {
+        Cookies.remove('teamId')
+        setUser((user) => ({
+          ...user,
+          teamId: undefined
+        }));
+        toast.success(`${res.data}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+      window.location.reload();
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   async function joinTeam() {
@@ -184,6 +231,7 @@ export default function TeamComponent() {
             </div>
             <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
               type="submit"
+              onClick={joinTeam}
             >
               <p>Join Team</p>
               <Image src={Images.arrowRight} className='h-6 w-6' />
