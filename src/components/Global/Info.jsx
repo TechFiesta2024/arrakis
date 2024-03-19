@@ -37,7 +37,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
         }
       );
 
-      if (response.status === 200 || response.status === 422) {
+      if (response.status === 200) {
         toast.success(`${response.data.message}`, {
           autoClose: 3000,
           position: "top-right",
@@ -53,7 +53,21 @@ export default function EventWorkshopInfo({ pageData, params }) {
         });
       }
     } catch (err) {
-      console.error(err);
+      if (response.status === 422) {
+        toast.success(`${response.data.message}`, {
+          autoClose: 3000,
+          position: "top-right",
+          icon: false,
+          hideProgressBar: true,
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+            font: "generalsans",
+            fontSize: "14px",
+            border: "1px solid #010100",
+          },
+        });
+      }
     }
 
     // toast.success(`ok`, {
