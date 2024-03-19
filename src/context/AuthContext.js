@@ -16,7 +16,7 @@ const AuthContextProvider = ({ children }) => {
 		firebase_token: undefined,
 		UUID: undefined,
 		userType: undefined,
-		teamId: undefined
+		teamId: null
 	});
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ const AuthContextProvider = ({ children }) => {
 		const firebase_token = Cookies.get("firebase_token");
 		const UUID = Cookies.get("studentId");
 		const userType = Cookies.get("userType");
-		const teamId = Cookies.get("teamId");
+		const teamId = Cookies.get("teamId")
 
 		setUser({ email, avatar, firebase_token, UUID, userType, teamId });
 		setIsAuthenticated(isAuthenticated);
