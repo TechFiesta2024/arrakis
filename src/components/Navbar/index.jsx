@@ -51,9 +51,13 @@ export default function Navbar() {
 			});
 
 			Cookies.set("studentId", data.id, { expires: 7 });
+			Cookies.set("userType", data.type, { expires: 7 });
+			Cookies.set("teamId", data.team_id, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: data.id,
+				userType: data.type,
+				teamId: data.team_id,
 			}));
 		} catch (err) {
 			console.error(err);
@@ -66,6 +70,8 @@ export default function Navbar() {
 		Cookies.remove("isAuthenticated");
 		Cookies.remove("firebase_token");
 		Cookies.remove("studentId");
+		Cookies.remove("userType");
+		Cookies.remove("teamId")
 		window.location.href = "/";
 	}
 

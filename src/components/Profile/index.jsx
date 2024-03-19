@@ -8,10 +8,27 @@ import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import axiosInstance from "@/utils/axiosInstance";
 import Preloader from "../Global/Preloader";
+import { useForm } from 'react-hook-form';
 
 export default function Profile() {
-	const year = ["-", "1st", "2nd", "3rd", "4th"];
-	const standard = ["-", "9th", "10th", "11th", "12th"];
+	const [userDetails, setUserDetails] = useState({
+		name: "",
+		contact: "",
+		college: "",
+		school: "",
+		guardianName: "",
+		guardianContact: "",
+		stream: "",
+		year: "",
+		grade: "",
+	});
+
+	const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
+		values: userDetails
+	});
+
+	const year = ["Select year", "1st", "2nd", "3rd", "4th"];
+	const standard = ["Select standard", "9th", "10th", "11th", "12th"];
 	const userType = ["school", "college"];
 
 	const { user, setUser } = useAuthState();
@@ -27,20 +44,7 @@ export default function Profile() {
 		setSelectedUserType(isChecked ? userType[0] : userType[1]);
 	};
 
-	const [errors, setErrors] = useState({});
-	const [userDetails, setUserDetails] = useState({
-		name: "",
-		contact: "",
-		college: "",
-		school: "",
-		guardianName: "",
-		guardianContact: "",
-		stream: "",
-		year: "",
-		grade: "",
-	});
-
-	/* Get user info when navigating to /profile */
+	/* Get user info when navigating to /profile route */
 	useEffect(() => {
 		const source = axios.CancelToken.source();
 		async function getMe() {
@@ -83,67 +87,37 @@ export default function Profile() {
 		}
 	}, []);
 
-	const handleInputChangeUserProfile = (e) => {
-		const { id, value } = e.target;
-
-		setErrors((prevErrors) => ({
-			...prevErrors,
-			[id]: "",
-		}));
-
-		setUserDetails((prevData) => ({
-			...prevData,
-			[id]: value,
-		}));
-	};
-
-	const [submitting, setSubmitting] = useState(false);
-	const handleSubmitChangeUserProfile = async (e) => {
-		e.preventDefault();
-		// const newErrors = {};
-		// ['name', 'contact', 'college', 'school', 'stream', 'year', 'standard', 'guardianName', 'guardianContact'].forEach(field => {
-		// 	if (!userDetails[field].trim()) {
-		// 		newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
-		// 	}
-		// });
-
-		// if (Object.keys(newErrors).length > 0) {
-		// 	setErrors(newErrors);
-		// 	return;
-		// }
-
-		// // Clear errors if there are no validation errors
-		// setErrors({});
-
+	async function handleSubmitChangeUserProfile(data) {
 		const url = userCheck ? "/user/school" : "/user/college";
 
-		const dataPayload = userCheck
+		const dataPayload = userCheck   /* userCheck true when school */
 			? {
-				// userCheck true when school
-				name: userDetails.name,
+				name: data.name.trim(),
 				email: user.email,
-				school: userDetails.school,
-				contact: userDetails.contact,
-				class: userDetails.grade,
-				guardian_contact: userDetails.guardianContact,
-				guardian_name: userDetails.guardianName,
+				school: data.school.trim(),
+				contact: data.contact.trim(),
+				class: data.grade,
+				guardian_contact: data.guardianContact.trim(),
+				guardian_name: data.guardianName.trim(),
 			}
 			: {
-				name: userDetails.name,
+				name: data.name.trim(),
 				email: user.email,
-				college: userDetails.college,
-				contact: userDetails.contact,
-				stream: userDetails.stream,
-				year: userDetails.year,
+				college: data.college.trim(),
+				contact: data.contact.trim(),
+				stream: data.stream.trim(),
+				year: data.year,
 			};
-
 		try {
-			setSubmitting(true);
 			const res = await axiosInstance.post(`${url}`, dataPayload);
 			Cookies.set("studentId", res.data.id, { expires: 7 });
+			Cookies.set("userType", res.data.type, { expires: 7 });
+			Cookies.set("teamId", res.data.team_id, { expires: 7 });
 			setUser((user) => ({
 				...user,
 				UUID: res.data.id,
+				userType: res.data.type,
+				teamId: res.data.team_id
 			}));
 			setToggleDisabled(true);
 			if (res.status === 200) {
@@ -157,8 +131,6 @@ export default function Profile() {
 			}
 		} catch (err) {
 			console.error(err);
-		} finally {
-			setSubmitting(false);
 		}
 	};
 
@@ -167,7 +139,7 @@ export default function Profile() {
 	const flexCenter = "flex justify-center items-center";
 
 	return (
-		<>
+		<form onSubmit={handleSubmit(handleSubmitChangeUserProfile)}>
 			<div className="profile__container flex flex-col md:flex-row w-full px-0 md:px-20  border-yellowish text-yellowish">
 				<div className="profile__left flex w-full md:w-1/2 border-x-[0.5px] flex-col">
 					<div className="profile__title flex h-[312px] px-4 md:px-[90px] justify-center flex-col gap-8 border-b-[0.5px] overflow-hidden">
@@ -238,38 +210,27 @@ export default function Profile() {
 							</div>
 						</div>
 					</div>
+
 					<div className="profile__left_input md:h-[400px] flex px-4 md:px-[90px] flex-col md:justify-center">
 						<div className="input_name flex flex-col py-8 md:pb-8 md:pt-0">
 							<label className="text-[24px] pb-4">Name</label>
 							<input
-								id="name"
 								type="text"
-								value={userDetails.name}
-								onChange={handleInputChangeUserProfile}
+								{...register("name", { required: "Name is required" })}
 								placeholder="Enter your full name"
 								className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 							/>
-							{errors.name && (
-								<span className="text-red pt-2 font-generalsans text-sm">
-									*{errors.name}
-								</span>
-							)}
+							{errors.name && <span className="text-red pt-2 font-generalsans text-sm">{errors.name.message}</span>}
 						</div>
 						<div className="input_contact flex flex-col pb-8 md:pb-0">
 							<label className="text-[24px] pb-4">Contact No.</label>
 							<input
-								id="contact"
 								type="text"
-								value={userDetails.contact}
-								onChange={handleInputChangeUserProfile}
+								{...register("contact", { pattern: /^\d{10}$/ })}
 								placeholder="Enter your contact no."
 								className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 							/>
-							{errors.contact && (
-								<span className="text-red pt-2 font-generalsans text-sm">
-									{errors.contact}
-								</span>
-							)}
+							{errors.contact && errors.contact.type === "pattern" && <span className="text-red pt-2 font-generalsans text-sm">Invalid contact no.</span>}
 						</div>
 					</div>
 				</div>
@@ -280,42 +241,29 @@ export default function Profile() {
 							<div className="input_college flex flex-col pb-8">
 								<label className="text-[24px] pb-4">School Name</label>
 								<input
-									id="school"
 									type="text"
-									value={userDetails?.school}
-									onChange={handleInputChangeUserProfile}
+									{...register("school", { required: "School name is required" })}
 									placeholder="Enter your school name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 								/>
-								{errors.school && (
-									<span className="text-red pt-2 font-generalsans text-sm">
-										{errors.school}
-									</span>
-								)}
+								{errors.school && <span className="text-red pt-2 font-generalsans text-sm">{errors.school.message}</span>}
 							</div>
 						) : (
 							<div className="input_college flex flex-col pb-8">
 								<label className="text-[24px] pb-4">College Name</label>
 								<input
-									id="college"
 									type="text"
-									value={userDetails?.college}
-									onChange={handleInputChangeUserProfile}
+									{...register("college", { required: "College name is required" })}
 									placeholder="Enter your College Name"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 								/>
-								{errors.college && (
-									<span className="text-red pt-2 font-generalsans text-sm">
-										{errors.college}
-									</span>
-								)}
+								{errors.college && <span className="text-red pt-2 font-generalsans text-sm">{errors.college.message}</span>}
 							</div>
 						)}
 
 						<div className="input_email flex flex-col pb-8">
 							<label className="text-[24px] pb-4">Email ID</label>
 							<input
-								id="email"
 								type="email"
 								defaultValue={user.email}
 								readOnly
@@ -326,18 +274,18 @@ export default function Profile() {
 						</div>
 
 						{userCheck ? null : (
-							<div className="input_stream flex flex-col pb-8">
-								<label className="text-[24px] pb-4">Stream</label>
-								<input
-									id="stream"
-									type="text"
-									value={userDetails.stream}
-									onChange={handleInputChangeUserProfile}
-									placeholder="Enter your stream"
-									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-								/>
-								{/* {errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream}</span>} */}
-							</div>
+							<>
+								<div className="input_stream flex flex-col pb-0.5">
+									<label className="text-[24px] pb-4">Stream</label>
+									<input
+										type="text"
+										{...register("stream", { required: "Stream is required" })}
+										placeholder="Enter your stream"
+										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
+									/>
+								</div>
+								{errors.stream && <span className="text-red pt-2 font-generalsans text-sm">{errors.stream.message}</span>}
+							</>
 						)}
 
 						{userCheck ? (
@@ -345,81 +293,72 @@ export default function Profile() {
 								<div className="input_stream flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Guardian Name</label>
 									<input
-										id="guardianName"
 										type="text"
-										value={userDetails.guardianName}
-										onChange={handleInputChangeUserProfile}
+										{...register("guardianName", { required: "Guardian name is required" })}
 										placeholder="Enter your Guardian's name"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{/* {errors.guardianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.guardianName}</span>} */}
+									{errors.guardianName && <span className="text-red pt-2 font-generalsans text-sm">{errors.guardianName.message}</span>}
 								</div>
 								<div className="input_stream flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Guardian Contact</label>
 									<input
-										id="guardianContact"
 										type="text"
-										value={userDetails.guardianContact}
-										onChange={handleInputChangeUserProfile}
+										{...register("guardianContact", { pattern: /^\d{10}$/ })}
 										placeholder="Enter your Guardian's contact no."
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{/* {errors.gaurdianContact && <span className="text-red pt-2 font-generalsans text-sm">{errors.guardianContact}</span>} */}
+									{errors.guardianContact && errors.guardianContact.type === 'pattern' && <span className="text-red pt-2 font-generalsans text-sm">Invalid contact no.</span>}
 								</div>
 								<div className="input_year flex flex-col pb-8">
 									<label className="text-[24px] pb-4">Standard</label>
 									<select
-										id="grade"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-										onChange={handleInputChangeUserProfile}
+										{...register("grade", { required: "Standard is required" })}
 									>
 										{standard.map((option) => (
 											<option
 												className="hover:bg-red"
 												key={option}
-												value={option}
-												selected={userDetails.grade === option}
 											>
 												{option}
 											</option>
 										))}
 									</select>
+									{errors.grade && <span className="text-red pt-2 font-generalsans text-sm">{errors.grade.message}</span>}
 								</div>
 							</>
 						) : (
 							<div className="input_year flex flex-col pb-8">
 								<label className="text-[24px] pb-4">Year</label>
 								<select
-									id="year"
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									onChange={handleInputChangeUserProfile}
+									{...register("year", { required: true })}
 								>
 									{year.map((option) => (
 										<option
 											className="hover:bg-red"
 											key={option}
-											value={option}
-											selected={userDetails.year === option}
 										>
 											{option}
 										</option>
 									))}
 								</select>
+								{errors.year && <span className="text-red pt-2 font-generalsans text-sm">{errors.year.message}</span>}
 							</div>
 						)}
 
 						<button
-							className={`flex justify-center ${submitting ? "bg-red-faded" : "bg-red"
+							className={`flex justify-center ${isSubmitting ? "bg-red-faded" : "bg-red"
 								} p-4 text-white rounded-[8px] mb-8 md:mb-0`}
 							type="submit"
-							onClick={handleSubmitChangeUserProfile}
-							disabled={submitting}
+							disabled={isSubmitting}
 						>
-							{!submitting ? 'Save' : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />}
+							{!isSubmitting ? 'Save' : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />}
 						</button>
 					</div>
 				</div>
 			</div>
-		</>
+		</form>
 	);
 }
