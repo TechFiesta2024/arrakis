@@ -37,7 +37,7 @@ export default function EventWorkshopInfo({ pageData, params }) {
         }
       );
 
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 422) {
         toast.success(`${response.data.message}`, {
           autoClose: 3000,
           position: "top-right",
