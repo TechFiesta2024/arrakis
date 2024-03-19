@@ -159,7 +159,7 @@ export default function TeamComponent() {
           userid: user.UUID
         }
       })
-      if (res.status == 200) {
+      if (res.status === 200) {
         Cookies.remove('teamId')
         setUser((user) => ({
           ...user,
@@ -171,8 +171,9 @@ export default function TeamComponent() {
             backgroundColor: "#FFF3B0",
           },
         });
+        setYourTeam({});
+        setTeamMembers([]);
       }
-      window.location.reload();
     }
     catch (err) {
       console.log(err);
