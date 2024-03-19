@@ -99,13 +99,13 @@ export default function EventComponent({ eventArray }) {
             <div className={`grid grid-cols-2 w-full `}>
                 <div className={`col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Solo" ? active : inActive}`} onClick={handleSoloClick}>
                     <div className='flex flex-row justify-center items-center py-6 gap-x-3'>
-                        <Image src={Images.solo} />
+                        <Image src={Images.solo} alt='solo' />
                         <span className='font-generalsans text-yellowish md:text-lg'>Solo Participation</span>
                     </div>
                 </div>
                 <div className={`col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Team" ? active : inActive}`} onClick={handleTeamClick}>
                     <div className='flex flex-row justify-center items-center py-6 gap-x-3'>
-                        <Image src={Images.people} />
+                        <Image src={Images.people} alt='people' />
                         <span className='font-generalsans text-yellowish md:text-lg'>Team Participation</span>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ export default function EventComponent({ eventArray }) {
             {
                 soloEvents.length === 0 && teamEvents.length === 0 ? (
                     <div className='h-[60vh] w-full flex justify-center items-center py-20 md:py-0'>
-                        <Image src={Images.launch} className='h-20 w-20' />
+                        <Image src={Images.launch} className='h-20 w-20' alt='launch' />
                         <p className=' text-2xl font-generalsans text-yellowish28'>Register to events</p>
                     </div>
                 ) :
@@ -138,12 +138,12 @@ export default function EventComponent({ eventArray }) {
                                             <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
                                                 {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'WordCraftique', 'Junkraft'].includes(event.name) ?
                                                     <div className="flex justify-center items-center gap-3">
-                                                        <Image src={Images.money} className='h-8 w-8' />
+                                                        <Image src={Images.money} className='h-8 w-8' alt='money' />
                                                         <p className='text-yellowish sm:text-xl'>₹50/member</p>
                                                     </div>
                                                     :
                                                     <div className="flex justify-center items-center gap-3">
-                                                        <Image src={Images.celebration} className='h-8 w-8' />
+                                                        <Image src={Images.celebration} className='h-8 w-8' alt='celebration' />
                                                         <p className='text-yellowish sm:text-md'>Free Participation</p>
                                                     </div>
                                                 }
@@ -158,7 +158,7 @@ export default function EventComponent({ eventArray }) {
                                             <div className="col-span-3  md:col-span-1 flex justify-between items-center gap-6 px-6">
                                                 <p className='text-yellowish sm:text-md'>Entry ticket will be sent later</p>
                                                 <Link href={`/events/${event.id}`}>
-                                                    <Image src={Images.arrowDiag} className='h-8 w-8' />
+                                                    <Image src={Images.arrowDiag} className='h-8 w-8' alt='arrowdiagram' />
                                                 </Link>
                                             </div>
                                         </div>
@@ -175,7 +175,7 @@ export default function EventComponent({ eventArray }) {
                                             <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
                                                 <div className="flex flex-col items-start">
                                                     <div className="flex justify-center items-center gap-3">
-                                                        <Image src={Images.money} className='h-8 w-8' />
+                                                        <Image src={Images.money} className='h-8 w-8' alt='money' />
                                                         <p className='text-yellowish sm:text-xl'>₹{memberLength * 50}</p>
                                                     </div>
                                                     <div className="text-grey">offline submission</div>
@@ -185,7 +185,7 @@ export default function EventComponent({ eventArray }) {
                                             <div className="col-span-3  md:col-span-1 flex justify-between items-center gap-6 px-6">
                                                 <p className='text-yellowish sm:text-md'>Entry ticket will be sent later</p>
                                                 <Link href={`/events/${event.id}`}>
-                                                    <Image src={Images.arrowDiag} className='h-8 w-8' />
+                                                    <Image src={Images.arrowDiag} className='h-8 w-8' alt='arrowdiagram' />
                                                 </Link>
                                             </div>
                                         </div>

@@ -28,8 +28,7 @@ const AuthContextProvider = ({ children }) => {
 		const userType = Cookies.get("userType");
 		const teamId = Cookies.get("teamId")
 
-		const teamID = teamId === undefined ? null : JSON.parse(teamId)
-		setUser({ email, avatar, firebase_token, UUID, userType, teamId: teamID });
+		setUser({ email, avatar, firebase_token, UUID, userType, teamId });
 		setIsAuthenticated(isAuthenticated);
 	}, []);
 
