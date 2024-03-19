@@ -18,12 +18,13 @@ export default function TeamComponent() {
   const [clipboardCheck, setClipboardCheck] = useState(null);
   const [teamName, setTeamName] = useState('')
 
+  const [joinTeamId, setJoinTeamId] = useState('');
 
   useEffect(() => {
     async function getTeamDetails() {
       try {
         setLoading(true)
-        const response = await axiosInstance.get(`/team/${user.teamId}`)
+        const response = await axiosInstance.get(`/team/${user.teamId || joinTeamId}`)
 
         if (response.status === 200) {
           setYourTeam(response.data)
@@ -79,6 +80,45 @@ export default function TeamComponent() {
     }
   }
 
+  async function joinTeam() {
+    try {
+      const response = await axiosInstance.post(`/team/join/${joinTeamId}`,
+        undefined,
+        {
+          headers: {
+            userid: user.UUID
+          }
+        }
+      );
+      console.log(response)
+
+      Cookies.set("teamId", response.data.code, { expires: 7 });
+      setUser((user) => ({
+        ...user,
+        teamId: response.data.code
+      }));
+
+      // setClipboardValue(response.data.code)
+
+      if (response.status === 200) {
+
+        consoleg.log(response.data)
+        toast.success(`${response.data.message}`, {
+          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+
+      window.location.reload();
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const clipboardText = async () => {
     try {
       await navigator.clipboard.writeText(clipboardValue)
@@ -124,10 +164,15 @@ export default function TeamComponent() {
           <div className="">
             <div className="pt-8 flex flex-col">
               <label className="text-[24px] pb-4 text-yellowish">Team code</label>
-              <input type="text" className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Enter code to join a team' />
+              <input type="text"
+                onChange={(e) => setJoinTeamId(e.target.value)}
+                value={joinTeamId}
+                className='bg-black border-yellowish p-4 border-[1px] rounded-md focus:outline-none' placeholder='Enter code to join a team' />
             </div>
             <button className={`flex justify-center items-center gap-2 bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0 w-full mt-10`}
               type="submit"
+    
+              onClick={joinTeam}
             >
               <p>Join Team</p>
               <Image src={Images.arrowRight} className='h-6 w-6' />

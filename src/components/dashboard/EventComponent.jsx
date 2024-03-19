@@ -5,12 +5,15 @@ import Link from 'next/link'
 import { useAuthState } from '@/context/AuthContext'
 import axiosInstance from '@/utils/axiosInstance'
 import events from "/public/data/events.json";
+import axios from 'axios'
 
 export default function EventComponent({ eventArray }) {
     const { user } = useAuthState()
 
+    // console.log(user,"yyyy");
     const [teamEvents, setTeamEvents] = useState([])
     const [memberLength, setMemberLength] = useState(1)
+    const [soloEvents, setSoloEvents] = useState([]);
 
     useEffect(() => {
         async function getTeamEvents() {
@@ -28,11 +31,50 @@ export default function EventComponent({ eventArray }) {
                 }
             }
             catch (err) {
-                console.log(err);
+                // console.log(err);
             }
         }
         getTeamEvents()
     }, [])
+
+    useEffect(() => {
+		const source = axios.CancelToken.source();
+		async function getMe() {
+			try {
+				const response = await axiosInstance.get("/user", {
+					headers: {
+						email: user.email,
+					},
+				});
+				const { data } = response;
+                // console.log(data);
+                setSoloEvents(data?.event)
+                // console.log(data.event, "llll");
+                if (response.status === 200) {
+                    // setMemberLength(response.data.college_members.length)
+                    const categories = response.data.event.map((e) => e.category)
+                    // console.log(categories,"kkk");
+                    setSoloEvents(
+                        events.filter((obj) =>
+                            categories.toString().includes(obj.id),
+                        ))
+                }
+				
+			} catch (err) {
+				if (axios.isCancel(err)) {
+					// console.error("Axios error: ", err.message);
+				}
+				else {
+					// console.error(err);
+				}
+			}
+		}
+		getMe();
+
+		return () => {
+			source.cancel("Request Cancelled.");
+		}
+	}, []);
 
     const handleSoloClick = () => {
         setSelectedType("Solo");
@@ -54,32 +96,32 @@ export default function EventComponent({ eventArray }) {
 
     return (
         <>
-            <div className={`grid grid-cols-2 md:grid-cols-4 w-full `}>
-                <div className={`col-span-1 md:col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Solo" ? active : inActive}`} onClick={handleSoloClick}>
+            <div className={`grid grid-cols-2 w-full `}>
+                <div className={`col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Solo" ? active : inActive}`} onClick={handleSoloClick}>
                     <div className='flex flex-row justify-center items-center py-6 gap-x-3'>
                         <Image src={Images.solo} />
                         <span className='font-generalsans text-yellowish md:text-lg'>Solo Participation</span>
                     </div>
                 </div>
-                <div className={`col-span-1 md:col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Team" ? active : inActive}`} onClick={handleTeamClick}>
+                <div className={`col-span-1 border-yellowish border-[.5px] cursor-pointer ${selectedType === "Team" ? active : inActive}`} onClick={handleTeamClick}>
                     <div className='flex flex-row justify-center items-center py-6 gap-x-3'>
                         <Image src={Images.people} />
                         <span className='font-generalsans text-yellowish md:text-lg'>Team Participation</span>
                     </div>
                 </div>
-                <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
+                {/* <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
                     <div className='flex flex-row justify-start items-center py-6 gap-x-3'>
                         <Image src={Images.search} className='md:h-6' />
                         <input type="text" value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)} className='outline-none w-full h-full bg-black placeholder-yellowish placeholder-opacity-30' placeholder='Search Your Bookings' />
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className='w-full'>
                 {/* // <div key={event.id}>{event.name}</div> */}
                 {selectedType === "Solo" ? (
                     <>
-                        {soloEventsRegistered.map(event => (
+                        {soloEvents.map(event => (
                             <div key={event.id} className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
                                 <div className=" col-span-3  md:col-span-1 px-4 pt-6">
                                     <p className='font-generalsans-semibold text-2xl md:text-3xl text-yellowish'>{event.name}</p>
