@@ -59,6 +59,7 @@ export default function TeamComponent() {
           }
         }
       );
+      console.log(response, "team");
 
       Cookies.set("teamId", response.data.code, { expires: 7 });
       setUser((user) => ({
@@ -83,7 +84,7 @@ export default function TeamComponent() {
     }
   }
 
-  async function leaveTeam (){
+  async function leaveTeam() {
     try {
       const res = await axiosInstance.post(`/team/leave`, undefined, {
         headers: {
@@ -124,7 +125,6 @@ export default function TeamComponent() {
       console.log(response)
 
       Cookies.set("teamId", response.data.code, { expires: 7 });
-
       setUser((user) => ({
         ...user,
         teamId: response.data.code
@@ -159,18 +159,21 @@ export default function TeamComponent() {
           userid: user.UUID
         }
       })
-      if (res.status == 200) {
+      if (res.status === 200) {
         Cookies.remove('teamId')
         setUser((user) => ({
           ...user,
           teamId: undefined
         }));
-        toast.success(`${res.data}`, {
+        const successMessage = typeof res.data === 'string' ? res.data : 'Team deleted successfully';
+        toast.success(successMessage, {
           style: {
             color: "#010100",
             backgroundColor: "#FFF3B0",
           },
         });
+        setYourTeam({});
+        setTeamMembers([]);
       }
     }
     catch (err) {
@@ -178,7 +181,7 @@ export default function TeamComponent() {
     }
   }
 
-  async function leaveTeam (){
+  async function leaveTeam() {
     try {
       const res = await axiosInstance.post(`/team/leave`, undefined, {
         headers: {
@@ -266,35 +269,47 @@ export default function TeamComponent() {
           </div>
         </div>
 
-        <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
+        <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] cursor-text'>
           {
             loading ?
               <Preloader width="5rem" height="5rem" color="red" /> : (
-                Object.keys(yourTeam).length === 0 ? <p>No team</p> : (
-                  <>
-                    <div className='pt-4'>
-                      <h1 className=' text-3xl text-red font-anton'>Team Name:</h1>
-                      <p>{yourTeam.name}</p>
-                      <h1 className=' text-3xl text-red font-anton'>Leader Email:</h1>
-                      <p>{yourTeam.leader_email}</p>
-                      <h1 className=' text-3xl text-red font-anton'>Leader Contact:</h1>
-                      <p>{yourTeam.leader_contact}</p>
-                      <h1 className=' text-3xl text-red font-anton'>Team Code:</h1>
-                      <p>{yourTeam.code}</p>
-                      <h1 className=' text-3xl text-red font-anton'>Team Members:</h1>
-                      <ul>
-                        {teamMembers.map((t, idx) => (
-                          <li key={idx}>{t.name} | {t.email}</li>
-                        ))}
-                      </ul>
+                Object.keys(yourTeam).length === 0 ? (
+                  <div className='h-full flex justify-center items-center py-10 md:py-0'>
+                    <Image src={Images.launch} className='h-20 w-20' />
+                    <p className=' text-2xl font-generalsans text-yellowish28'>Create your team</p>
+                  </div>
+                ) : (
+                  <div className='w-full'>
+                    <div className="w-full bg-yellowish h-24 flex flex-col justify-center items-center">
+                      <p className=' font-anton text-black text-3xl'>{yourTeam.name}</p>
+                      <p className=' text-black font-generalsans text-md'>{yourTeam.code}</p>
                     </div>
+                    <div className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
+                      <div className="flex justify-between items-center w-full px-8">
+                        <div className="flex justify-center items-center gap-4">
+                          <Image src={Images.profile} className='h-6 w-6' />
+                          <p className=' font-generalsans text-yellowish text-md md:text-lg'>{yourTeam.leader_email}</p>
+                        </div>
+                        <div className=" bg-yellowishopc text-yellowish px-2 py-2 rounded-full text-sm">Lead Mail</div>
+                      </div>
+                    </div>
+                    {teamMembers.map((t, idx) => (
+                      <div key={idx} className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
+                        <div className="flex justify-between items-center w-full px-8">
+                          <div className="flex justify-center items-center gap-4">
+                            <Image src={Images.profile} className='h-6 w-6' />
+                            <p className=' font-generalsans text-yellowish text-md md:text-lg'>{t.name}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                     {
                       leaderEmail === user.email ?
-                        <button className='p-4 bg-red text-yellowish' onClick={deleteTeam}>delete</button>
+                        <button className='p-4 bg-red text-yellowish w-full' onClick={deleteTeam}>Delete</button>
                         :
-                        <button className='p-4 bg-red text-yellowish' onClick={leaveTeam}>leave</button>
-                    }
-                  </>
+                        <button className='p-4 bg-red text-yellowish w-full' onClick={leaveTeam}>Leave</button>
+                    }                   
+                  </div>
                 ))}
         </div>
       </div>

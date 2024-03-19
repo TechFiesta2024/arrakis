@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
@@ -14,6 +14,8 @@ import { useAuthState } from "@/context/AuthContext";
 
 export default function EventWorkshopInfo({ params }) {
   const { isAuthenticated, user } = useAuthState()
+
+  const router = useRouter();
 
   const [data, setData] = useState({});
   const urlPathName = usePathname();
@@ -36,7 +38,7 @@ export default function EventWorkshopInfo({ params }) {
       })
       return
     }
-    
+
     try {
       setRegistering(true);
       const response = await axiosInstance.post(
@@ -138,15 +140,15 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
-      // if (err.response.status === 401) {
-      //   toast.warning(`${err.response.data.message}`, {
-      //     style: {
-      //       color: "#010100",
-      //       backgroundColor: "#FFF3B0",
-      //       border: "2px solid red",
-      //     },
-      //   });
-      // }
+      if (err.response.status === 422) {
+        toast.warning(`${err.response.data.message}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+            border: "2px solid red",
+          },
+        });
+      }
     }
     finally {
       setRegistering(false);
@@ -235,7 +237,7 @@ export default function EventWorkshopInfo({ params }) {
               <button
                 className={`col-span-2 md:col-span-1 flex justify-center items-center ${registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
                 onClick={
-                  !checkRoute ? workshopRegister : eventRegister 
+                  !checkRoute ? workshopRegister : eventRegister
                 }
                 disabled={registering}
               >

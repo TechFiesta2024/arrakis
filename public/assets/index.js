@@ -72,6 +72,7 @@ import money from './payments.svg'
 import addteam from './person_add.svg'
 import copy from './content_copy.svg'
 import check from './done_all.svg'
+import launch from './rocket_launch.svg'
 
 const Images = {
     logoAot,
@@ -139,8 +140,8 @@ const Images = {
     money,
     addteam,
     copy,
-    check
-
+    check,
+    launch
 };
 
 export default Images;
