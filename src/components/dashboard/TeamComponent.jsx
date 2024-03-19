@@ -172,6 +172,7 @@ export default function TeamComponent() {
           },
         });
       }
+      window.location.reload();
     }
     catch (err) {
       console.log(err);
