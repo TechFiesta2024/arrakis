@@ -1,9 +1,38 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Images from '../../../public/assets'
 import Link from 'next/link'
+import { useAuthState } from '@/context/AuthContext'
+import axiosInstance from '@/utils/axiosInstance'
+import events from "/public/data/events.json";
 
-const EventComponent = ({ eventArray }) => {
+export default function EventComponent({ eventArray }) {
+    const { user } = useAuthState()
+
+    const [teamEvents, setTeamEvents] = useState([])
+    const [memberLength, setMemberLength] = useState(1)
+
+    useEffect(() => {
+        async function getTeamEvents() {
+            try {
+                const response = await axiosInstance.get(`/team/${user.teamId}`)
+
+                if (response.status === 200) {
+                    setMemberLength(response.data.college_members.length)
+                    const categories = response.data.event.map((e) => e.category)
+
+                    setTeamEvents(
+                        events.filter((obj) =>
+                            categories.toString().includes(obj.id),
+                        ))
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+        getTeamEvents()
+    }, [])
 
     const handleSoloClick = () => {
         setSelectedType("Solo");
@@ -22,20 +51,6 @@ const EventComponent = ({ eventArray }) => {
         "";
 
     const soloEventsRegistered = eventArray.filter(event => event.teamSize === '');
-    console.log(soloEventsRegistered);
-
-    const teamEventsRegistered = eventArray.filter(event => event.teamSize !== '');
-    console.log(teamEventsRegistered);
-
-    const filteredSoloEvents = soloEventsRegistered.filter(event =>
-        event.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        event.concept.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    const filteredTeamEvents = teamEventsRegistered.filter(event =>
-        event.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        event.concept.toLowerCase().includes(searchQuery.toLowerCase())
-    );
 
     return (
         <>
@@ -64,7 +79,7 @@ const EventComponent = ({ eventArray }) => {
                 {/* // <div key={event.id}>{event.name}</div> */}
                 {selectedType === "Solo" ? (
                     <>
-                        {filteredSoloEvents.map(event => (
+                        {soloEventsRegistered.map(event => (
                             <div key={event.id} className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
                                 <div className=" col-span-3  md:col-span-1 px-4 pt-6">
                                     <p className='font-generalsans-semibold text-2xl md:text-3xl text-yellowish'>{event.name}</p>
@@ -90,23 +105,19 @@ const EventComponent = ({ eventArray }) => {
                     </>
                 ) : (
                     <>
-                        {filteredTeamEvents.map(event => (
+                        {teamEvents.map((event) => (
                             <div key={event.id} className=' grid grid-cols-3 border-b border-yellowish h-52 md:h-28 pb-4 md:pb-0'>
                                 <div className=" col-span-3  md:col-span-1 px-4 pt-6">
                                     <p className='font-generalsans-semibold text-2xl md:text-3xl text-yellowish'>{event.name}</p>
-                                    <p className='text-yellowish sm:text-md'>{event.concept}</p>
+                                    {/* <p className='text-yellowish sm:text-md'>{event.concept}</p> */}
                                 </div>
                                 <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
                                     <div className="flex flex-col items-start">
                                         <div className="flex justify-center items-center gap-3">
                                             <Image src={Images.money} className='h-8 w-8' />
-                                            <p className='text-yellowish sm:text-xl'>₹50</p>
+                                            <p className='text-yellowish sm:text-xl'>₹{memberLength * 50}</p>
                                         </div>
                                         <div className="text-grey">offline submission</div>
-                                    </div>
-                                    <div className="flex gap-2 justify-center items-center bg-yellowishopc text-yellowish px-4 py-1 font-generalsans rounded-2xl">
-                                        <Image src={Images.people} className='h-5 w-5' />
-                                        Create Team
                                     </div>
 
                                 </div>
@@ -124,5 +135,3 @@ const EventComponent = ({ eventArray }) => {
         </>
     )
 }
-
-export default EventComponent

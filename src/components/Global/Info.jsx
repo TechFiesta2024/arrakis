@@ -94,8 +94,6 @@ export default function EventWorkshopInfo({ params }) {
       return
     }
 
-    console.log(data)
-
     const noModal = data.teamSize === ""; //solo
     const teamModal = parseInt(data.teamSize.charAt(0)) > 1; //only team
 
@@ -120,7 +118,6 @@ export default function EventWorkshopInfo({ params }) {
         `/events/join/${params.id}`, body
       );
 
-      console.log(response)
 
       if (response.status === 200) {
         toast.success(`${response.data.message}`, {
@@ -133,15 +130,14 @@ export default function EventWorkshopInfo({ params }) {
       }
     }
     catch (err) {
-      // if (err.response.status === 400) {
-      //   toast.warning(`Complete your profile`, {
-      //     style: {
-      //       color: "#010100",
-      //       backgroundColor: "#FFF3B0",
-      //       border: "2px solid red",
-      //     },
-      //   });
-      // }
+      if (err.response.status === 400) {
+        toast.warning(`${err.response.data.message}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
       // if (err.response.status === 401) {
       //   toast.warning(`${err.response.data.message}`, {
       //     style: {
@@ -151,7 +147,6 @@ export default function EventWorkshopInfo({ params }) {
       //     },
       //   });
       // }
-      console.log(err)
     }
     finally {
       setRegistering(false);

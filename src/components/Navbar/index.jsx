@@ -70,6 +70,8 @@ export default function Navbar() {
 		Cookies.remove("isAuthenticated");
 		Cookies.remove("firebase_token");
 		Cookies.remove("studentId");
+		Cookies.remove("userType");
+		Cookies.remove("teamId")
 		window.location.href = "/";
 	}
 

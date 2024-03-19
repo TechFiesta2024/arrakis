@@ -108,7 +108,6 @@ export default function Profile() {
 				stream: data.stream.trim(),
 				year: data.year,
 			};
-		console.log(dataPayload);
 		try {
 			const res = await axiosInstance.post(`${url}`, dataPayload);
 			Cookies.set("studentId", res.data.id, { expires: 7 });

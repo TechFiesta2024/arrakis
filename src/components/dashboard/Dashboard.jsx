@@ -65,11 +65,6 @@ export default function Dashboard() {
 		}
 	}, []);
 
-	useEffect(() => {
-		setEvent(events);
-		
-	},[])
-
 	return (
 		<>
 			<ProfileUpdateReminder />
@@ -80,7 +75,7 @@ export default function Dashboard() {
 						{workshop.length === 0 ? (
 							<EmptyState />
 						) : (
-							<DataState workshopArray={workshop} />
+							<DataState workshopArray={workshop} eventArray={event} />
 						)}
 					</div>
 			}
