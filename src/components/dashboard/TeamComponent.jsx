@@ -93,11 +93,13 @@ export default function TeamComponent() {
       console.log(response)
 
       Cookies.set("teamId", response.data.code, { expires: 7 });
+      
       setUser((user) => ({
         ...user,
         teamId: response.data.code
       }));
 
+      console.log(user.teamId, "yyy");
       // setClipboardValue(response.data.code)
 
       if (response.status === 200) {
@@ -180,15 +182,20 @@ export default function TeamComponent() {
         </div>
 
         <div className='col-span-2 md:col-span-2 border-yellowish border-[.5px] pl-5 cursor-text'>
-          <h1>Your Team</h1>
+          {/* <h1>Your Team</h1> */}
           {
             loading ?
               <Preloader width="5rem" height="5rem" color="red" /> :
-              <div>
+              <div className='pt-4'>
+                <h1 className=' text-3xl text-red font-anton'>Team Name:</h1>
                 <p>{yourTeam.name}</p>
+                <h1 className=' text-3xl text-red font-anton'>Leader Email:</h1>
                 <p>{yourTeam.leader_email}</p>
+                <h1 className=' text-3xl text-red font-anton'>Leader Contact:</h1>
                 <p>{yourTeam.leader_contact}</p>
+                <h1 className=' text-3xl text-red font-anton'>Team Code:</h1>
                 <p>{yourTeam.code}</p>
+                <h1 className=' text-3xl text-red font-anton'>Team Members:</h1>
                 <ul>
                   {teamMembers.map((t, idx) => (
                     <li key={idx}>{t.name} | {t.email}</li>
