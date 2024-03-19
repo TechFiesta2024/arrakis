@@ -125,7 +125,6 @@ export default function TeamComponent() {
       console.log(response)
 
       Cookies.set("teamId", response.data.code, { expires: 7 });
-
       setUser((user) => ({
         ...user,
         teamId: response.data.code
