@@ -108,7 +108,10 @@
     "rules": [
       {
         "type": "Judging Criteria",
-        "body": ["Accuracy", "Precision(Time)"]
+        "body": [
+          "Accuracy",
+          "Precision(Time)"
+        ]
       },
       {
         "type": "Duration",
@@ -200,7 +203,14 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Atreyee Bose",
+        "contact": "+91 62899 99493"
+      },
+      {
+        "name": "Oindrila Sur",
+        "contact": "+91 82403 65753"
+      }
     ],
     "prize": [
       {
@@ -262,7 +272,18 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Swarup Das",
+        "contact": "+91 75016 20381"
+      },
+      {
+        "name": "Tanisha Saha",
+        "contact": "+91 99036 49240"
+      },
+      {
+        "name": "Stuti Banerjee",
+        "contact": "+91 96419 62719"
+      }
     ],
     "destination": "AOT Campus"
   },
@@ -301,7 +322,14 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Tanisha Saha",
+        "contact": "+91 99036 49240"
+      },
+      {
+        "name": "Stuti Banerjee",
+        "contact": "+91 96419 62719"
+      }
     ],
     "prize": [
       {
@@ -363,7 +391,14 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Dibyenbu Moni",
+        "contact": "+91 89450 98684"
+      },
+      {
+        "name": "Vivek",
+        "contact": "+91 76677 25212"
+      }
     ],
     "prize": [
       {
@@ -581,7 +616,9 @@
       },
       {
         "type": "Judging Criteria",
-        "body": ["Completely handled through automated leaderboard system."]
+        "body": [
+          "Completely handled through automated leaderboard system."
+        ]
       },
       {
         "type": "Unacceptable behaviors",
@@ -765,7 +802,9 @@
       },
       {
         "type": "Judging Criteria",
-        "body": ["Completely based on time effcieny of the completion of hunt."]
+        "body": [
+          "Completely based on time effcieny of the completion of hunt."
+        ]
       },
       {
         "type": "Duration",
@@ -929,7 +968,9 @@
       },
       {
         "type": "Judging Criteria",
-        "body": ["Based on the time which will be taken to complete the race."]
+        "body": [
+          "Based on the time which will be taken to complete the race."
+        ]
       },
       {
         "type": "Duration",
@@ -1178,7 +1219,10 @@
       },
       {
         "type": "Judging Criteria",
-        "body": ["Clarity with visual appeal.", "Practically & usability."]
+        "body": [
+          "Clarity with visual appeal.",
+          "Practically & usability."
+        ]
       },
       {
         "type": "Duration",
@@ -1246,7 +1290,9 @@
     "rules": [
       {
         "type": "Rules",
-        "body": ["Content should be original not plagiarized."]
+        "body": [
+          "Content should be original not plagiarized."
+        ]
       },
       {
         "type": "Judging Criteria",
@@ -1287,7 +1333,14 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Akash Roy",
+        "contact": "+91 81024 22771"
+      },
+      {
+        "name": "Souvik Rana",
+        "contact": "+91 91631 61124"
+      }
     ],
     "destination": "AOT Campus"
   },
@@ -1318,7 +1371,14 @@
       }
     ],
     "coordinators": [
-      
+      {
+        "name": "Sowradeep Pal",
+        "contact": "+91 62978 97998"
+      },
+      {
+        "name": "Abir Kumar Nandi",
+        "contact": "+91 75860 02767"
+      }
     ],
     "prize": [
       {
