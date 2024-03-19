@@ -83,6 +83,34 @@ export default function TeamComponent() {
     }
   }
 
+  async function leaveTeam (){
+    try {
+      const res = await axiosInstance.post(`/team/leave`, undefined, {
+        headers: {
+          teamid: user.teamId,
+          userid: user.UUID
+        }
+      })
+      if (res.status == 200) {
+        Cookies.remove('teamId')
+        setUser((user) => ({
+          ...user,
+          teamId: undefined
+        }));
+        toast.success(`${res.data}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+      window.location.reload();
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   async function joinTeam() {
     try {
       const response = await axiosInstance.post(`/team/join/${joinTeamId}`,
@@ -150,8 +178,32 @@ export default function TeamComponent() {
     }
   }
 
-  async function leaveTeam() {
-    console.log("buri buri saimon 3");
+  async function leaveTeam (){
+    try {
+      const res = await axiosInstance.post(`/team/leave`, undefined, {
+        headers: {
+          teamid: user.teamId,
+          userid: user.UUID
+        }
+      })
+      if (res.status == 200) {
+        Cookies.remove('teamId')
+        setUser((user) => ({
+          ...user,
+          teamId: undefined
+        }));
+        toast.success(`${res.data}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
+      window.location.reload();
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   const clipboardText = async () => {
