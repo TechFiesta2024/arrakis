@@ -165,6 +165,7 @@ export default function TeamComponent() {
           ...user,
           teamId: undefined
         }));
+        const successMessage = typeof res.data === 'string' ? res.data : 'Team deleted successfully';
         toast.success(`${res.data}`, {
           style: {
             color: "#010100",
