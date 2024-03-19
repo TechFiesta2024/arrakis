@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
@@ -14,6 +14,8 @@ import { useAuthState } from "@/context/AuthContext";
 
 export default function EventWorkshopInfo({ params }) {
   const { isAuthenticated, user } = useAuthState()
+
+  const router = useRouter();
 
   const [data, setData] = useState({});
   const urlPathName = usePathname();
@@ -137,6 +139,7 @@ export default function EventWorkshopInfo({ params }) {
             backgroundColor: "#FFF3B0",
           },
         });
+        router.push('/dashboard')
       }
       if (err.response.status === 422) {
         toast.warning(`${err.response.data.message}`, {
