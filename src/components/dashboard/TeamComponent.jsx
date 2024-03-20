@@ -22,22 +22,16 @@ export default function TeamComponent() {
 
   const [joinTeamId, setJoinTeamId] = useState('');
 
-  const [showRemoveButton, setShowRemoveButton] = useState(user.email == leaderEmail)
-  console.log(showRemoveButton)
-
   useEffect(() => {
     async function getTeamDetails() {
       try {
         setLoading(true)
 
-        const {data} = await axiosInstance.get("/user", {
+        const { data } = await axiosInstance.get("/user", {
           headers: {
             email: user.email,
           },
         });
-
-        console.log(data)
-        
 
         const response = await axiosInstance.get(`/team/${data.team_id || joinTeamId}`)
 
@@ -46,8 +40,6 @@ export default function TeamComponent() {
           setLeaderEmail(response.data.leader_email)
           setTeamMembers(response.data.college_members.concat(response.data.school_members))
         }
-
-
       }
       catch (err) {
         if (err.response.status === 404 || 400) {
@@ -162,16 +154,7 @@ export default function TeamComponent() {
         });
       }
     } catch (error) {
-      if (error.response.status === 400) {
-        toast.warning(`${error.response.data.message}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-        return
-      }
-      if (error.response.status === 404) {
+      if (error.response.status === 400 || 404) {
         toast.warning(`${error.response.data.message}`, {
           style: {
             color: "#010100",
@@ -355,15 +338,6 @@ export default function TeamComponent() {
                         )
                       }
                     </div>
-                    {/* <div className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
-                      <div className="flex justify-between items-center w-full px-8">
-                        <div className="flex justify-center items-center gap-4">
-                          <Image src={Images.profile} className='h-6 w-6' alt='profile' />
-                          <p className=' font-generalsans text-yellowish text-md md:text-lg'>{yourTeam.leader_email}</p>
-                        </div>
-                        <div className=" bg-yellowishopc text-yellowish px-2 py-2 rounded-full text-sm">Lead Mail</div>
-                      </div>
-                    </div> */}
                     {teamMembers.map((t, idx) => (
                       <div key={idx} className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
                         <div className="flex justify-between items-center w-full px-8">
@@ -379,6 +353,7 @@ export default function TeamComponent() {
                               src={Images.userminus}
                               className='cursor-pointer'
                               onClick={() => kickMember(t.email)}
+                              alt='userminus'
                             />
                           )}
                         </div>
