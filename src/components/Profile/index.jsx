@@ -27,8 +27,8 @@ export default function Profile() {
 		values: userDetails
 	});
 
-	const year = ["Select year", "1st", "2nd", "3rd", "4th"];
-	const standard = ["Select standard", "9th", "10th", "11th", "12th"];
+	const year = ["1st", "2nd", "3rd", "4th"];
+	const standard = ["9th", "10th", "11th", "12th"];
 	const userType = ["school", "college"];
 
 	const { user, setUser } = useAuthState();
@@ -368,7 +368,7 @@ export default function Profile() {
 								<label className="text-[24px] pb-4">Year</label>
 								<select
 									className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
-									{...register("year", { required: true })}
+									{...register("year", { required: "Year is required" })}
 								>
 									{year.map((option) => (
 										<option
