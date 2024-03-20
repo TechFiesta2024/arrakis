@@ -22,7 +22,7 @@ export default function Footer() {
 			</div>
 			<div className="footer__right flex items-center justify-evenly w-full md:w-1/2 h-full">
 				<Link
-					href=""
+					href="https://chat.whatsapp.com/F6Vt4gyx5BYLuy8OqPrbE9"
 					className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4"
 				>
 					<Image
@@ -32,7 +32,7 @@ export default function Footer() {
 					/>
 				</Link>
 				<Link
-					href=""
+					href="https://www.instagram.com/aotxtechfiesta24"
 					className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4"
 				>
 					<Image
@@ -42,19 +42,20 @@ export default function Footer() {
 					/>
 				</Link>
 				<Link
-					href=""
+					href="https://twitter.com/AOTxTechFiesta"
 					className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4"
 				>
 					<Image src={Images.logoX} className="h-8 w-8" alt="x-logo" />
 				</Link>
 				<Link
-					href=""
+					href="https://www.linkedin.com/company/aot-x-techfiesta24/"
 					className="border-x-[0.5px] border-b-[0.5px] flex items-center justify-center border-yellowish h-full w-1/4"
 				>
 					<Image
 						src={Images.logoLinkedIn}
 						className="h-8 w-8"
 						alt="linkedin-logo"
+						
 					/>
 				</Link>
 			</div>
