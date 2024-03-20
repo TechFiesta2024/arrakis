@@ -304,11 +304,15 @@ export default function TeamComponent() {
                   <div className='w-full'>
                     <div className="w-full bg-yellowish h-24 flex flex-col justify-center items-center">
                       <p className=' font-anton text-black text-3xl'>{yourTeam.name}</p>
-                      <div className='flex items-center gap-2 my-2'>
-                        <p className=' text-black font-generalsans text-md'>{yourTeam.code}</p>
-                        <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={() => clipboardText(yourTeam.code)} alt="clipboard" />
-                        <span className='text-black font-generalsans text-xs'>{clipboardCheck}</span>
-                      </div>
+                        {
+                          leaderEmail === user.email && (
+                            <div className='flex items-center gap-2 my-2'>
+                              <p className=' text-black font-generalsans text-md'>{yourTeam.code}</p>
+                              <Image src={Images.copy} className='h-6 w-6 cursor-pointer' onClick={() => clipboardText(yourTeam.code)} alt="clipboard" />
+                              <span className='text-black font-generalsans text-xs'>{clipboardCheck}</span>
+                            </div>
+                          )
+                      }
                     </div>
                     <div className="w-full bg-black border-b border-yellowish h-20 flex justify-center items-center">
                       <div className="flex justify-between items-center w-full px-8">

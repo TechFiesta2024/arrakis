@@ -70,9 +70,7 @@ export default function Dashboard() {
 			<ProfileUpdateReminder />
 			{
 				loading ? <Preloader width='6rem' height='6rem' color='red' /> :
-
 					<div className="flex justify-center items-start min-h-screen px-[1px] md:mx-20 border-x-[0.5px] border-yellowish text-white">
-
 							<DataState workshopArray={workshop} eventArray={event} />
 					</div>
 			}
