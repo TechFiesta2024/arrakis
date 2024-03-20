@@ -140,6 +140,14 @@ export default function EventWorkshopInfo({ params }) {
           },
         });
       }
+      if (err.response.status === 404) {
+        toast.warning(`${err.response.data.message}`, {
+          style: {
+            color: "#010100",
+            backgroundColor: "#FFF3B0",
+          },
+        });
+      }
       if (err.response.status === 422) {
         toast.warning(`${err.response.data.message}`, {
           style: {
