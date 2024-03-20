@@ -11,7 +11,7 @@
       "ClashDevs",
       "Eureka"
     ],
-    "date": "Mar 20-22",
+    "date": "Mar 22-24",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -36,7 +36,7 @@
     "relatedEvents": [
       "ClashDevs"
     ],
-    "date": "Mar 24",
+    "date": "Mar 31",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -154,7 +154,7 @@
       "Cynox",
       "TraceIt"
     ],
-    "date": "Mar 21-Apr 05",
+    "date": "Mar 22-Apr 05",
     "time": "8:00 PM - 9:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -184,7 +184,7 @@
       "EdrenaLine",
       "Entangled"
     ],
-    "date": "Mar 29-30",
+    "date": "Mar 30-31",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -195,6 +195,10 @@
       {
         "name": "Soham Sarkar",
         "contact": "+91 62961 97485"
+      },
+      {
+        "name": "Abhishek Singh",
+        "contact": "+91 98310 79865"
       },
       {
         "name": "Debarghya Debnath",
@@ -213,7 +217,7 @@
     "relatedEvents": [
       "Connectify"
     ],
-    "date": "Mar 21",
+    "date": "Mar 22, Apr 2",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -227,7 +231,7 @@
       },
       {
         "name": "Sagnik Ray",
-        "contact": "+91 89108 34699"
+        "contact": "+91 97488 03807"
       },
       {
         "name": "Krishanu Bandyopadhyay",
@@ -246,7 +250,7 @@
     "relatedEvents": [
       "SymbIoT"
     ],
-    "date": "Mar 24, 31",
+    "date": "Mar 29, Apr 1",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -270,12 +274,12 @@
     "type": "Hardware",
     "name": "Intro to FPGA",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/fpga.jpeg",
-    "description": "lLearn about the FPGA and how to use it in the embedded systems",
+    "description": "Learn about the FPGA and how to use it in the embedded systems",
     "body": "Embark on FPGA exploration! Learn deterministic state machines, parallelism, and I/O concepts. Dive into HDL, Verilog, and practical applications like blinking LEDs with Rust. Delve deeper into FFT implementation, FPGA architecture, programming paradigms, and low-latency programming, uncovering the vast potential of FPGA technology in various domains.",
     "relatedEvents": [
       "SymbIoT"
     ],
-    "date": "Apr 04-05",
+    "date": "Apr 4-5",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
@@ -297,7 +301,7 @@
       "SymbIoT",
       "Connectify"
     ],
-    "date": "Mar 22-23",
+    "date": "Mar 23-24",
     "time": "9:00 PM - 10:00 PM",
     "mode": "Online",
     "coordinators": [
