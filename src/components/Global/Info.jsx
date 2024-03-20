@@ -4,18 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Images from "../../../public/assets";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { toast } from "react-toastify";
 import { rgbDataURL } from "@/utils/blurryImage";
 import events from "/public/data/events.json";
 import workshops from "/public/data/workshop.json";
 import Preloader from "./Preloader";
 import { useAuthState } from "@/context/AuthContext";
+import { ConfirmModal } from "../index ";
 
 export default function EventWorkshopInfo({ params }) {
   const { isAuthenticated, user } = useAuthState()
-
-  const router = useRouter();
 
   const [data, setData] = useState({});
   const urlPathName = usePathname();
@@ -242,33 +241,38 @@ export default function EventWorkshopInfo({ params }) {
                   </div>
                 </div>
               </div>
-              <button
-                className={`col-span-2 md:col-span-1 flex justify-center items-center ${registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
-                onClick={
-                  !checkRoute ? workshopRegister : eventRegister
-                }
-                disabled={registering}
+              <ConfirmModal
+                title="confirm"
+                description="Are you sure to proceed?"
               >
-                <div className="inline-flex gap-2 py-4">
-                  {!registering ?
-                    <>
-                      <div className="flex justify-center items-center">
-                        <Image
-                          src={Images.register}
-                          alt="register"
-                          className="h-10"
-                        />
-                      </div>
-                      <div className="flex justify-center items-center">
-                        <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
-                          Register
-                        </h1>
-                      </div>
-                    </>
-                    : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />
-                  }
-                </div>
-              </button>
+                {(confirm) => (
+                  <button
+                    className={`col-span-2 md:col-span-1 flex justify-center items-center ${registering ? 'bg-red-faded cursor-not-allowed' : 'bg-red'}`}
+                    disabled={registering}
+                    onClick={!checkRoute ? confirm(workshopRegister) : confirm(eventRegister)}
+                  >
+                    <div className="inline-flex gap-2 py-4">
+                      {!registering ?
+                        <>
+                          <div className="flex justify-center items-center">
+                            <Image
+                              src={Images.register}
+                              alt="register"
+                              className="h-10"
+                            />
+                          </div>
+                          <div className="flex justify-center items-center">
+                            <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
+                              Register
+                            </h1>
+                          </div>
+                        </>
+                        : <Preloader width="2.5rem" height="2.5rem" bgWidth="2.5rem" bgHeight="2.5rem" color='#FEFAE0' />
+                      }
+                    </div>
+                  </button>
+                )}
+              </ConfirmModal>
             </div>
           </div>
           <div>
