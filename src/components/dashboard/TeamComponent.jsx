@@ -333,7 +333,7 @@ export default function TeamComponent() {
                         </div>
                       </div>
                     ))}
-                    {
+                    {/* {
                       leaderEmail === user.email ?
                         <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={deleteTeam} disabled={submitting}>
                           {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> : 'Delete'}
@@ -342,7 +342,7 @@ export default function TeamComponent() {
                         <button className='p-4 bg-red text-yellowish flex justify-center w-full' onClick={leaveTeam} disabled={submitting}>
                           {submitting ? <Preloader bgHeight='100%' width="1rem" height="1rem" color="white" /> : 'Leave'}
                         </button>
-                    }
+                    } */}
                   </div>
                 ))}
         </div>
