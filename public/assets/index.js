@@ -74,6 +74,9 @@ import copy from './content_copy.svg'
 import check from './done_all.svg'
 import launch from './rocket_launch.svg'
 
+import trash from './trash.svg'
+import userminus from './userminus.svg'
+
 const Images = {
     logoAot,
     logoWhatsapp,
@@ -141,7 +144,9 @@ const Images = {
     addteam,
     copy,
     check,
-    launch
+    launch,
+    trash,
+    userminus
 };
 
 export default Images;
