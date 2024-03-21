@@ -76,6 +76,7 @@ import launch from './rocket_launch.svg'
 
 import trash from './trash.svg'
 import userminus from './userminus.svg'
+import warning from './warning.svg'
 
 const Images = {
     logoAot,
@@ -146,7 +147,8 @@ const Images = {
     check,
     launch,
     trash,
-    userminus
+    userminus,
+    warning
 };
 
 export default Images;
