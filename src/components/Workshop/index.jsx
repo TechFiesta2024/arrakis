@@ -1,4 +1,7 @@
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import Image from "next/image";
+import Images from "../../../public/assets";
 import workshops from "/public/data/workshop.json";
 import Preloader from "../Global/Preloader";
 
@@ -30,6 +33,11 @@ export default function Workshop() {
 
 				<WorkshopPage data={workshops} types={workshopType} />
 
+				<div className="fixed bottom-6 right-6 md:right-12 z-30">
+					<Link href="https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/routine_workshop_new_email.png" className="flex items-center justify-center w-16 h-16 bg-yellowish text-white rounded-full border-[1px] border-black">
+						<Image src={Images.save} alt="save" className="h-6 w-6" />
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
