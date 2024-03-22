@@ -136,7 +136,7 @@ export default function EventComponent({ eventArray }) {
                                                 <p className='text-yellowish sm:text-md'>{event.concept}</p>
                                             </div>
                                             <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
-                                                {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'WordCraftique', 'Junkraft'].includes(event.name) ?
+                                                {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'Junkraft'].includes(event.name) ?
                                                     <div className="flex justify-center items-center gap-3">
                                                         <Image src={Images.money} className='h-8 w-8' alt='money' />
                                                         <p className='text-yellowish sm:text-xl'>₹50/member</p>
@@ -147,7 +147,7 @@ export default function EventComponent({ eventArray }) {
                                                         <p className='text-yellowish sm:text-md'>Free Participation</p>
                                                     </div>
                                                 }
-                                                {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'WordCraftique', 'Junkraft'].includes(event.name) ?
+                                                {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'WordCraftique', 'Junkraft', 'XpreXive', 'Artistix'].includes(event.name) ?
                                                     <div className="text-grey text-sm">offline submission</div>
                                                     : null
                                                 }
