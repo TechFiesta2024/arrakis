@@ -1342,6 +1342,20 @@
         "contact": "+91 91631 61124"
       }
     ],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
