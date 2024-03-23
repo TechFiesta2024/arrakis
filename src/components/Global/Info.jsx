@@ -243,7 +243,7 @@ export default function EventWorkshopInfo({ params }) {
               </div>
               <ConfirmModal
                 title="confirm"
-                description="Are you sure to proceed?"
+                description="Are you sure to register?"
               >
                 {(confirm) => (
                   <button

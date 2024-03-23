@@ -285,6 +285,20 @@
         "contact": "+91 96419 62719"
       }
     ],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
+      }
+    ],
     "destination": "AOT Campus"
   },
   {
@@ -566,7 +580,7 @@
         "contact": "+91 62897 15257"
       },
       {
-        "name": "Bisakh Neogi",
+        "name": "Bishakh Neogi",
         "contact": "+91 96747 76719"
       },
       {
@@ -689,7 +703,7 @@
     "concept": "Startup Pitch Deck",
     "type": "College",
     "name": "Eureka",
-    "alt_name": "Hackathon",
+    "alt_name": "Startup Pitch Deck",
     "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/new_banner/webathon_banner.jpeg",
     "description": "Exclusively For College Students | Registration Rs. 50 [per person]",
     "body": "Tech Expo transforms the conventional webathon into an immersive experience featuring a product building boot camp. Participants will engage in workshops and a thrilling Product Pitch Deck Battle where teams will present innovative product demos and pitches.",
@@ -1340,6 +1354,20 @@
       {
         "name": "Souvik Rana",
         "contact": "+91 91631 61124"
+      }
+    ],
+    "prize": [
+      {
+        "position": "1st",
+        "amount": "₹2000"
+      },
+      {
+        "position": "2nd",
+        "amount": "₹1000"
+      },
+      {
+        "position": "",
+        "amount": ""
       }
     ],
     "destination": "AOT Campus"
