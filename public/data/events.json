@@ -215,15 +215,15 @@
     "prize": [
       {
         "position": "1st",
-        "amount": "₹2000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "₹1000"
+        "amount": "₹2000"
       },
       {
-        "position": "",
-        "amount": ""
+        "position": "3rd",
+        "amount": "₹1000"
       }
     ],
     "destination": "AOT Campus"
@@ -288,15 +288,15 @@
     "prize": [
       {
         "position": "1st",
-        "amount": "₹2000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "₹1000"
+        "amount": "₹2000"
       },
       {
-        "position": "",
-        "amount": ""
+        "position": "3rd",
+        "amount": "₹1000"
       }
     ],
     "destination": "AOT Campus"
