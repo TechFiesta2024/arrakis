@@ -215,15 +215,15 @@
     "prize": [
       {
         "position": "1st",
-        "amount": "₹2000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "₹1000"
+        "amount": "₹2000"
       },
       {
-        "position": "",
-        "amount": ""
+        "position": "3rd",
+        "amount": "₹1000"
       }
     ],
     "destination": "AOT Campus"
@@ -288,15 +288,15 @@
     "prize": [
       {
         "position": "1st",
-        "amount": "₹2000"
+        "amount": "₹3000"
       },
       {
         "position": "2nd",
-        "amount": "₹1000"
+        "amount": "₹2000"
       },
       {
-        "position": "",
-        "amount": ""
+        "position": "3rd",
+        "amount": "₹1000"
       }
     ],
     "destination": "AOT Campus"
@@ -891,10 +891,13 @@
       {
         "type": "Rules",
         "body": [
-          "The robot must follow the design specifications provided. Any deviation from the mentioned specifications will lead to disqualification.",
+          "The robot must follow the design specifications. Any deviation from the mentioned specifications will lead to disqualification.",
+          "The maze gap is 24cm and the robot should be able to pass through it.",
+          "The robot must be autonomous and should not be controlled by any external source.",
+          "Both infrared and ultrasonic sensors are allowed.",
+          "Total maze dimensions are 9ft x 9ft. The robot should be able to navigate through the maze.",
           "Robots that cause deliberate interference with other robots or damage to the field will be disqualified.",
           "Humans that cause deliberate interference with robots or damage to the field will be disqualified.",
-          "The coach should not be involved in the launching of the robots as this may lead to disqualification.",
           "It is expected that the aim of all teams is to play a fair and clean game.",
           "All decisions about scoring, game play and timing are made by the juries. Teams should completely respect their vote and decisions. Members of the jury will be from different fields of the robotic science."
         ]
@@ -973,6 +976,12 @@
         "type": "Rules",
         "body": [
           "This is a Circuit Racing event.",
+          "The Car must be able to complete multiple laps of the track.",
+          "The dimensions of the track will be 15ft x 12ft.",
+          "The car must be able to navigate through the track.",
+          "In the qualifying round, the car must complete a minimum of 2 laps. And the average time of the 2 laps will be taken.",
+          "In the final round, the car must complete a minimum of 3 laps. And the average time of the 3 laps will be taken.",
+          "Car's dimensions must be 20cm(length) x 15cm(breadth).",
           "Only the marshal for that round is permitted to lift the vehicle and deposit it at the closest checkpoint behind that point in the event that it tumbles, stops, or exits the arena.",
           "They will need to be completely remote controlled the entire time the race is running, until and until it becomes necessary to touch the vehicle.",
           "Every time the machine needs to be lifted by the marshal, a time penalty will be imposed. There will also be a time-penalty for reverse gearing (all the details regarding the time-penalties will be disclosed on the day of the event)",
