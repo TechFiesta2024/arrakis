@@ -111,7 +111,7 @@ export default function EventWorkshopInfo({ params }) {
     else if (userType === 'school' && noModal) body.school_user_id = user.UUID
 
     //team event for school college
-    else if (teamModal) body.team_id = user.teamId
+    else if (teamModal) body.team_id = user.teamId === null ? "null" : user.teamId 
 
     try {
       setRegistering(true);
