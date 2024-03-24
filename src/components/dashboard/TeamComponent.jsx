@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Images from '../../../public/assets'
@@ -13,16 +14,18 @@ export default function TeamComponent() {
 
   const [submitting, setSubmitting] = useState(false)
   const [loading, setLoading] = useState(false)
+
   const [yourTeam, setYourTeam] = useState({})
   const [leaderEmail, setLeaderEmail] = useState();
   const [teamMembers, setTeamMembers] = useState([])
 
   const [clipboardCheck, setClipboardCheck] = useState(null);
-  const [teamName, setTeamName] = useState('');
 
+  const [teamName, setTeamName] = useState('');
   const [joinTeamId, setJoinTeamId] = useState('');
 
   useEffect(() => {
+    const source = axios.CancelToken.source();
     async function getTeamDetails() {
       try {
         setLoading(true)
@@ -33,6 +36,12 @@ export default function TeamComponent() {
           },
         });
 
+        setUser((user) => ({
+          ...user,
+          teamId: data.team_id
+        }));
+        Cookies.set("teamId", data.team_id, { expires: 7 });
+
         const response = await axiosInstance.get(`/team/${data.team_id || joinTeamId}`)
 
         if (response.status === 200) {
@@ -42,7 +51,10 @@ export default function TeamComponent() {
         }
       }
       catch (err) {
-        if (err.response.status === 404 || 400) {
+        if (axios.isCancel(err)) {
+          console.error("Axios error: ", err.message);
+        }
+        else if (err.response.status === 404 || 400) {
           setYourTeam({})
           setLeaderEmail()
           setTeamMembers([])
@@ -53,20 +65,25 @@ export default function TeamComponent() {
       }
     }
     getTeamDetails()
+
+    return () => {
+      source.cancel("Request Cancelled.");
+    }
   }, [user.teamId])
 
 
   async function createTeam() {
+    if (teamName.trim().length < 4) {
+      toast.warning(`Teamname must be at least 4 letters`, {
+        style: {
+          color: "#010100",
+          backgroundColor: "#FFF3B0",
+        },
+      });
+      return
+    }
+
     try {
-      if (teamName.trim().length < 4) {
-        toast.warning(`Teamname must be at least 4 letters`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-        return
-      }
       setSubmitting(true)
       const response = await axiosInstance.post(`/team/create`,
         {
@@ -85,7 +102,7 @@ export default function TeamComponent() {
           ...user,
           teamId: response.data.code
         }));
-        Cookies.set("teamId", response.data.code, { expires: 7 });
+
         toast.success(`${response.data.message}`, {
           icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
@@ -95,7 +112,8 @@ export default function TeamComponent() {
         });
       }
       setTeamName('')
-    } catch (error) {
+    }
+    catch (error) {
       if (error.response.status === 400) {
         toast.warning(`${error.response.data.message}`, {
           style: {
@@ -128,6 +146,7 @@ export default function TeamComponent() {
       });
       return
     }
+
     try {
       setSubmitting(true)
       const response = await axiosInstance.post(`/team/join/${joinTeamId.trim()}`,
@@ -144,7 +163,7 @@ export default function TeamComponent() {
           ...user,
           teamId: response.data.code
         }));
-        Cookies.set("teamId", response.data.code, { expires: 7 });
+
         toast.success(`${response.data.message}`, {
           icon: <Image src={Images.logoVerify} alt="verify_logo" />,
           style: {
@@ -189,7 +208,7 @@ export default function TeamComponent() {
           ...user,
           teamId: null
         }));
-        Cookies.set("teamId", null, { expires: 7 });
+
         const successMessage = typeof res.data === 'string' ? res.data : 'Team deleted successfully';
         toast.success(successMessage, {
           style: {
@@ -223,7 +242,6 @@ export default function TeamComponent() {
 
   async function kickMember(email) {
     try {
-      setSubmitting(true)
       const res = await axiosInstance.post(`/team/kick`, undefined, {
         headers: {
           teamid: user.teamId,
@@ -239,9 +257,8 @@ export default function TeamComponent() {
             backgroundColor: "#FFF3B0",
           },
         });
+        window.location.reload();
       }
-
-      window.location.reload();
     }
     catch (err) {
       toast.warning(`Please logout and login again`, {
@@ -250,9 +267,6 @@ export default function TeamComponent() {
           backgroundColor: "#FFF3B0",
         },
       });
-    }
-    finally {
-      setSubmitting(false)
     }
   }
 
@@ -344,7 +358,7 @@ export default function TeamComponent() {
                           <div className="flex justify-center items-center gap-4">
                             <Image src={Images.profile} className='h-6 w-6' alt='profile' />
                             <div className='flex flex-col'>
-                              <p className=' font-generalsans text-yellowish text-md md:text-lg'>{t.name} {leaderEmail === t.email && '| Leader' }</p> 
+                              <p className=' font-generalsans text-yellowish text-md md:text-lg'>{t.name} {leaderEmail === t.email && '| Leader'}</p>
                               <p className=' font-generalsans text-grey text-md md:text-xs'>{t.email}</p>
                             </div>
                           </div>
@@ -372,5 +386,3 @@ export default function TeamComponent() {
     </>
   )
 }
-
-
