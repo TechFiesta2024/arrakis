@@ -36,7 +36,7 @@ export default function CollaboratePage() {
 	};
 
 	const validateLinkedInURL = (linkedinURL) => {
-		const linkedinURLRegex = /^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\/(pub|in|profile)/;
+		const linkedinURLRegex = /^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\*/;
 		return linkedinURLRegex.test(linkedinURL);
 	};
 
