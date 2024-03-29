@@ -375,10 +375,10 @@ export default function CollaboratePage() {
 										placeholder="https://linkedin.com/username"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{!validateLinkedInURL(ambassorDetails.ambassador_linkedin) &&
+									{/* {!validateLinkedInURL(ambassorDetails.ambassador_linkedin) &&
 										<span className="text-red pt-2 font-generalsans text-sm">
 											*Please enter a valid LinkedIn URL
-										</span>}
+										</span>} */}
 								</div>
 								<button
 									className="bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0"
@@ -458,12 +458,12 @@ export default function CollaboratePage() {
 										placeholder="https://linkedin.com/username"
 										className="bg-black border-yellowish border-[0.5px] p-4 text-[20px] rounded-[12px]"
 									/>
-									{
+									{/* {
 										!validateLinkedInURL(communityPartnerDetails.community_linkedin) &&
 										<span className="text-red pt-2 font-generalsans text-sm">
 											*Please enter a valid LinkedIn URL
 										</span>
-									}
+									} */}
 								</div>
 								<button
 									className="bg-red p-4 text-white rounded-[8px] mb-8 md:mb-0"
