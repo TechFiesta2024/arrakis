@@ -897,7 +897,7 @@
           "In case of two or more ties the average time will be taken to decide the winner.",
           "The robot must follow the design specifications. Any deviation from the mentioned specifications will lead to disqualification.",
           "Total maze dimensions are 9ft x 9ft. The robot should be able to navigate through the maze.",
-          "Maze is completely mase with wood.",
+          "Maze is completely made with wood.",
           "The maze gap is 24cm and the robot should be able to pass through it.",
           "The robot must be autonomous and should not be controlled by any external source.",
           "Robots that cause deliberate interference with other robots or damage to the field will be disqualified.",
