@@ -987,6 +987,7 @@
           "The Car must be able to complete multiple laps of the track.",
           "The dimensions of the track will be 15ft x 12ft.",
           "The car must be able to navigate through the track.",
+          "Only Bluetooth and WiFi communication is allowed for the race",
           "In the qualifying round, the car must complete a minimum of 2 laps. And the average time of the 2 laps will be taken.",
           "In the final round, the car must complete a minimum of 3 laps. And the average time of the 3 laps will be taken.",
           "Car's dimensions must be within 21cm(length) x 15cm(breadth).",
