@@ -119,24 +119,13 @@ export default function EventComponent() {
                                                     <p className='text-yellowish sm:text-md'>{event.concept}</p>
                                                 </div>
                                                 <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
-                                                    {/* {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm'].includes(event.name) ? */}
-                                                        {/* <div className="flex justify-center items-center gap-3">
-                                                            <Image src={Images.money} className='h-8 w-8' alt='money' />
-                                                            <p className='text-yellowish sm:text-xl'>₹50/member</p>
-                                                        </div>
-                                                        : */}
-                                                        <div className="flex justify-center items-center gap-3">
-                                                            <Image src={Images.celebration} className='h-8 w-8' alt='celebration' />
-                                                            <p className='text-yellowish sm:text-md'>Free Participation</p>
-                                                        </div>
-                                                    {/* } */}
-                                                    {/* {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm', 'WordCraftique', 'Junkraft', 'XpreXive', 'Artistix'].includes(event.name) ?
-                                                        <div className="text-grey text-sm">offline submission</div>
-                                                        : null
-                                                    } */}
-                                                        <div className="bg-yellowish px-4 text-black font-generalsans rounded-2xl">
-                                                            solo
-                                                        </div>
+                                                    <div className="flex justify-center items-center gap-3">
+                                                        <Image src={Images.celebration} className='h-8 w-8' alt='celebration' />
+                                                        <p className='text-yellowish sm:text-md'>Free Participation</p>
+                                                    </div>
+                                                    <div className="bg-yellowish px-4 text-black font-generalsans rounded-2xl">
+                                                        solo
+                                                    </div>
                                                 </div>
                                                 <div className="col-span-3  md:col-span-1 flex justify-between items-center gap-6 px-6">
                                                     <p className='text-yellowish sm:text-md'>Entry ticket will be sent later</p>
@@ -157,17 +146,19 @@ export default function EventComponent() {
                                                 <div className="col-span-3 md:col-span-1 flex justify-between items-center gap-6 px-4 md:px-0">
                                                     <div className="flex flex-col items-start">
                                                         <div className="flex justify-center items-center gap-3">
-                                                            {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm'].includes(event.name) ? 
-                                                            <>
-                                                                <Image src={Images.money} className='h-8 w-8' alt='money' />
-                                                                <p className='text-yellowish sm:text-xl'>₹{memberLength * 50}</p>
-                                                            </>
-                                                            : <p className='text-yellowish sm:text-md'>Free Participation</p>
+                                                            {['UXplore', 'ClashDevs', 'Cynox', 'Eureka', 'TraceIt', 'Entangled', 'EdrenaLine', 'SymbIoT', 'Connectify', 'FreeForm'].includes(event.name) ?
+                                                                <>
+                                                                    <Image src={Images.money} className='h-8 w-8' alt='money' />
+                                                                    <p className='text-yellowish sm:text-xl'>₹{memberLength * 50}</p>
+                                                                </>
+                                                                :
+                                                                <>
+                                                                    <Image src={Images.celebration} className='h-8 w-8' alt='celebration' />
+                                                                    <p className='text-yellowish sm:text-md'>Free Participation</p>
+                                                                </>
                                                             }
                                                         </div>
-                                                        <div className="text-grey">offline submission</div>
                                                     </div>
-
                                                 </div>
                                                 <div className="col-span-3  md:col-span-1 flex justify-between items-center gap-6 px-6">
                                                     <p className='text-yellowish sm:text-md'>Entry ticket will be sent later</p>

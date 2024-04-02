@@ -1,5 +1,5 @@
 "use client";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import EventWorkshopCard from "./Card";
 
 export default function EventWorkshopPage({ data, types }) {
