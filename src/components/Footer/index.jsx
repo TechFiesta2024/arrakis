@@ -14,11 +14,11 @@ export default function Footer() {
 						Contact
 					</div>
 				</Link>
-				<div className="border-x-[0.5px] cursor-pointer flex items-center justify-center border-yellowish h-full w-1/2 bg-red">
-					<Link href="/collaborate" className="text-sm md:text-lg">
+				<Link href="/collaborate" className="border-x-[0.5px] flex items-center justify-center border-yellowish h-full w-1/2 bg-red">
+					<div className="text-sm md:text-lg">
 						Collaborate
-					</Link>
-				</div>
+					</div>
+				</Link>
 			</div>
 			<div className="footer__right flex items-center justify-evenly w-full md:w-1/2 h-full">
 				<Link
@@ -55,7 +55,7 @@ export default function Footer() {
 						src={Images.logoLinkedIn}
 						className="h-8 w-8"
 						alt="linkedin-logo"
-						
+
 					/>
 				</Link>
 			</div>
