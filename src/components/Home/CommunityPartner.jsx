@@ -2,12 +2,15 @@ import Image from "next/image";
 import Images from "/public/assets";
 
 const partnersData = [
-	{ name: "Partner 1", description: "Description of Partner 1" },
-	{ name: "Partner 2", description: "Description of Partner 2" },
-	{ name: "Partner 2", description: "Description of Partner 2" },
-	{ name: "Partner 2", description: "Description of Partner 2" },
-	{ name: "Partner 2", description: "Description of Partner 2" },
-	{ name: "Partner 2", description: "Description of Partner 2" },
+	{ img: "/assets/gdsc_logo.svg", linkedIn: "" },
+	{ img: "/assets/cncf_logo.svg", linkedIn: "" },
+	{ img: "/assets/ieeesbaot_logo.svg", linkedIn: "" },
+	{ img: "/assets/resourcio_logo.svg", linkedIn: "" },
+	{ img: "/assets/scece_logo.svg", linkedIn: "" },
+	{ img: "/assets/sccse_logo.svg", linkedIn: "" },
+	{ img: "/assets/sccsbs_logo.svg", linkedIn: "" },
+	{ img: "/assets/sceee_logo.svg", linkedIn: "" },
+	{ img: "/assets/scme_logo.svg", linkedIn: "" },
 ];
 
 export default function CommunityPartner() {
@@ -32,13 +35,13 @@ export default function CommunityPartner() {
 								{partnersData.map((item, index) => (
 									<div
 										key={index}
-										className="partners col-span-1 flex justify-center py-16 md:py-20 border-x-[0.5px] border-b-[0.5px] text-yellowish"
+										className="partners col-span-1 flex justify-center py-16 md:py-14 border-x-[0.5px] border-b-[0.5px] text-yellowish"
 									>
 										<Image
-											src={Images.CommImg}
-											alt={index}
-											width={64}
-											height={64}
+											src={item.img}
+											alt="community_partners"
+											width={180}
+											height={200}
 										/>
 									</div>
 								))}
