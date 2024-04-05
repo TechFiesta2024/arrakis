@@ -471,7 +471,8 @@
         "type": "Rules",
         "body": [
           "No usage of components from figma community",
-          "You can take inspiration from dribble or behance but no copying of designs"
+          "You can take inspiration from dribble or behance but no copying of designs",
+          "Try to make well organised visuals with component, variable properties in figma"
         ]
       },
       {
