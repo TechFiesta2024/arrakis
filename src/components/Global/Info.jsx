@@ -28,138 +28,153 @@ export default function EventWorkshopInfo({ params }) {
   const [registering, setRegistering] = useState(false);
 
   async function workshopRegister() {
-    if (!isAuthenticated) {
-      toast.warning(`User not logged in`, {
-        style: {
-          color: "#010100",
-          backgroundColor: "#FFF3B0",
-        }
-      })
-      return
-    }
 
-    try {
-      setRegistering(true);
-      const response = await axiosInstance.post(
-        `/workshop/join/${params.id}`,
-        undefined,
-        {
-          headers: {
-            userid: user.UUID
-          },
-        }
-      );
+    toast.warning(`Registration is closed`, {
+      style: {
+        color: "#010100",
+        backgroundColor: "#FFF3B0",
+      }
+    })
 
-      if (response.status === 200) {
-        toast.success(`${response.data.message}`, {
-          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-    }
-    catch (err) {
-      if (err.response.status === 400) {
-        toast.warning(`Complete your profile`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-      if (err.response.status === 401) {
-        toast.warning(`${err.response.data.message}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-    }
-    finally {
-      setRegistering(false);
-    }
+    // if (!isAuthenticated) {
+    //   toast.warning(`User not logged in`, {
+    //     style: {
+    //       color: "#010100",
+    //       backgroundColor: "#FFF3B0",
+    //     }
+    //   })
+    //   return
+    // }
+
+    // try {
+    //   setRegistering(true);
+    //   const response = await axiosInstance.post(
+    //     `/workshop/join/${params.id}`,
+    //     undefined,
+    //     {
+    //       headers: {
+    //         userid: user.UUID
+    //       },
+    //     }
+    //   );
+
+    //   if (response.status === 200) {
+    //     toast.success(`${response.data.message}`, {
+    //       icon: <Image src={Images.logoVerify} alt="verify_logo" />,
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    // }
+    // catch (err) {
+    //   if (err.response.status === 400) {
+    //     toast.warning(`Complete your profile`, {
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    //   if (err.response.status === 401) {
+    //     toast.warning(`${err.response.data.message}`, {
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    // }
+    // finally {
+    //   setRegistering(false);
+    // }
   }
 
   async function eventRegister() {
 
-    if (!isAuthenticated) {
-      toast.warning(`User not logged in`, {
-        style: {
-          color: "#010100",
-          backgroundColor: "#FFF3B0",
-        }
-      })
-      return
-    }
-
-    const noModal = data.teamSize === ""; //solo
-    const teamModal = parseInt(data.teamSize.charAt(0)) > 1; //only team
-
-    const userType = user.userType;
-
-    const body = {
-      team_id: "",
-      college_user_id: "",
-      school_user_id: ""
-    }
-
-    //solo event for school college
-    if (userType === 'college' && noModal) body.college_user_id = user.UUID
-    else if (userType === 'school' && noModal) body.school_user_id = user.UUID
-
-    //team event for school college
-    else if (teamModal) body.team_id = user.teamId === null ? "null" : user.teamId 
-
-    try {
-      setRegistering(true);
-      const response = await axiosInstance.post(
-        `/events/join/${params.id}`, body
-      );
-
-
-      if (response.status === 200) {
-        toast.success(`${response.data.message}`, {
-          icon: <Image src={Images.logoVerify} alt="verify_logo" />,
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
+    toast.warning(`Registration is closed`, {
+      style: {
+        color: "#010100",
+        backgroundColor: "#FFF3B0",
       }
-    }
-    catch (err) {
-      if (err.response.status === 400) {
-        toast.warning(`${err.response.data.message}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-      if (err.response.status === 404) {
-        toast.warning(`${err.response.data.message}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-          },
-        });
-      }
-      if (err.response.status === 422) {
-        toast.warning(`${err.response.data.message}`, {
-          style: {
-            color: "#010100",
-            backgroundColor: "#FFF3B0",
-            border: "2px solid red",
-          },
-        });
-      }
-    }
-    finally {
-      setRegistering(false);
-    }
+    })
+
+    // if (!isAuthenticated) {
+    //   toast.warning(`User not logged in`, {
+    //     style: {
+    //       color: "#010100",
+    //       backgroundColor: "#FFF3B0",
+    //     }
+    //   })
+    //   return
+    // }
+
+    // const noModal = data.teamSize === ""; //solo
+    // const teamModal = parseInt(data.teamSize.charAt(0)) > 1; //only team
+
+    // const userType = user.userType;
+
+    // const body = {
+    //   team_id: "",
+    //   college_user_id: "",
+    //   school_user_id: ""
+    // }
+
+    // //solo event for school college
+    // if (userType === 'college' && noModal) body.college_user_id = user.UUID
+    // else if (userType === 'school' && noModal) body.school_user_id = user.UUID
+
+    // //team event for school college
+    // else if (teamModal) body.team_id = user.teamId === null ? "null" : user.teamId 
+
+    // try {
+    //   setRegistering(true);
+    //   const response = await axiosInstance.post(
+    //     `/events/join/${params.id}`, body
+    //   );
+
+
+    //   if (response.status === 200) {
+    //     toast.success(`${response.data.message}`, {
+    //       icon: <Image src={Images.logoVerify} alt="verify_logo" />,
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    // }
+    // catch (err) {
+    //   if (err.response.status === 400) {
+    //     toast.warning(`${err.response.data.message}`, {
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    //   if (err.response.status === 404) {
+    //     toast.warning(`${err.response.data.message}`, {
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //       },
+    //     });
+    //   }
+    //   if (err.response.status === 422) {
+    //     toast.warning(`${err.response.data.message}`, {
+    //       style: {
+    //         color: "#010100",
+    //         backgroundColor: "#FFF3B0",
+    //         border: "2px solid red",
+    //       },
+    //     });
+    //   }
+    // }
+    // finally {
+    //   setRegistering(false);
+    // }
   }
 
 
@@ -241,7 +256,28 @@ export default function EventWorkshopInfo({ params }) {
                   </div>
                 </div>
               </div>
-              <ConfirmModal
+
+              <button
+                className={`col-span-2 md:col-span-1 flex justify-center items-center bg-red`}
+                onClick={!checkRoute ? workshopRegister : eventRegister}
+              >
+                <div className="inline-flex gap-2 py-4">
+                  <div className="flex justify-center items-center">
+                    <Image
+                      src={Images.register}
+                      alt="register"
+                      className="h-10"
+                    />
+                  </div>
+                  <div className="flex justify-center items-center">
+                    <h1 className="text-yellowish md:text-xl font-generalsans font-semibold">
+                      Register
+                    </h1>
+                  </div>
+                </div>
+              </button>
+
+              {/* <ConfirmModal
                 title="confirm"
                 description="Are you sure to register?"
               >
@@ -272,7 +308,7 @@ export default function EventWorkshopInfo({ params }) {
                     </div>
                   </button>
                 )}
-              </ConfirmModal>
+              </ConfirmModal> */}
             </div>
           </div>
           <div>
