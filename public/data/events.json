@@ -891,38 +891,47 @@
       {
         "type": "Rules",
         "body": [
-          "First 30 teams will be allowed to participate.",
-          "Every team will get only 2 chances and maximum of 10 minutes in total",
-          "The minumum time required to solve the maze will be taken as final time.",
-          "In case of two or more ties the average time will be taken to decide the winner.",
-          "The robot must follow the design specifications. Any deviation from the mentioned specifications will lead to disqualification.",
-          "Total maze dimensions are 9ft x 9ft. The robot should be able to navigate through the maze.",
-          "Maze is completely made with wood.",
-          "The maze gap is 24cm and the robot should be able to pass through it.",
-          "The robot must be autonomous and should not be controlled by any external source.",
-          "Robots that cause deliberate interference with other robots or damage to the field will be disqualified.",
-          "Humans that cause deliberate interference with robots or damage to the field will be disqualified.",
-          "It is expected that the aim of all teams is to play a fair and clean game.",
-          "All decisions about scoring, game play and timing are made by the juries. Teams should completely respect their vote and decisions. Members of the jury will be from different fields of the robotic science."
+          "The first 30 teams to register will participate.",
+          "During each team's chance, only team members and coordinators will be present, no other members.",
+          "Each team will have a total of 10 minutes.",
+          "The 10 minutes will be divided into two chances: the first chance for scanning and the second chance for optimal path solution.",
+          "The maze is made of wood and has a gap of 24 cm with a total area of 9 x 9 feet.",
+          "The height of the maze is approximately 8 inches.",
+          "The operating maze solver should be autonomous (self-driving).",
+          "There will be provision for execution using all types of sensors (IR, Ultrasonic, CAM).",
+          "The timing for the optimal solution will be taken and recorded for each team.",
+          "There will be stoppers who will record the time once the robot comes out of the maze, and this timing will be recorded for the team.",
+          "The registered teams must report by 10:30 am.",
+          "The sequence of the teams will be generated randomly.",
+          "Each team must be present in front of the maze room while their previous team's second chance is taking place.",
+          "The judgment taken by the judge will be final, and no changes will be made.",
+          "In case of a power supply loss, a team will be given a second chance (only for DC power supply, not for battery-powered).",
+          "The maze will also have checkpoints."
         ]
       },
       {
         "type": "Judging Criteria",
         "body": [
-          "Based on the time which will be taken to complete the maze by the robot."
+          "Based on the lowest time recorded by all the teams."
+        ]
+      },
+      {
+        "type": "Tie Breaker Rule",
+        "body": [
+          "Maximum number of checkpoints covered by a team."
+        ]
+      },
+      {
+        "type": "Disqualifying Criteria",
+        "body": [
+          "If the robot is made in such a way that it cannot traverse the path.",
+          "Maximum chances of correcting the robot, if it gets flipped due to weight imbalance, is 3, after which it will be considered as disqualified.",
+          "In case of any directional error where the robot moves a little bit shifted from the desired path (tilted towards one side)."
         ]
       },
       {
         "type": "Duration",
         "body": "6.30 hours"
-      },
-      {
-        "type": "Requirements",
-        "body": "Maze-solving robot according to our Constraints."
-      },
-      {
-        "type": "Number of Rounds",
-        "body": "1"
       },
       {
         "type": "Registration Fees",
