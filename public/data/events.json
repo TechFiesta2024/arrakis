@@ -806,13 +806,13 @@
       {
         "type": "Rules",
         "body": [
-          "A trail of clues leads from one to the next in the Treasure Hunt.",
-          "There is a specific order in which you must find the clues. No team can ignore a clue.",
-          "Avoid looking for hints in restricted places.",
-          "In the unlikely event that players discover a clue belonging to a different team, they are not allowed to alter it. If this regulation is broken, the team may be disqualified.",
-          "Please put anything back if participants move something while looking for the clue.",
-          "Although each team's clues are unique and placed in various locations, they always lead to the same place—the treasure. Whichever team locates the treasure wins.",
-          "The judges' decisions are final and will be regarded as fair."
+          "➖ A trail of clues leads from one to the next in the Treasure Hunt.",
+          "🔴➖🔴 There is a specific order in which you must find the clues. No team can ignore a clue.",
+          "🔴➖ Avoid looking for hints in restricted places.",
+          "➖🔴➖🔴 In the unlikely event that players discover a clue belonging to a different team, they are not allowed to alter it. If this regulation is broken, the team may be disqualified.",
+          "🔴 Please put anything back if participants move something while looking for the clue.",
+          "🔴🔴 Although each team's clues are unique and placed in various locations, they always lead to the same place—the treasure. Whichever team locates the treasure wins.",
+          "➖ The judges' decisions are final and will be regarded as fair."
         ]
       },
       {
