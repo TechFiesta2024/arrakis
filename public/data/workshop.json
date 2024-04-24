@@ -3,7 +3,7 @@
     "id": "product_design_lifecycle",
     "type": "Software",
     "name": "Product Design Lifecycle",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/product_design_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/product_design_workshop.jpeg",
     "description": "Join us with deep dive into the product design & UX laws",
     "body": "Discover Figma basics, color theory, design systems, wireframing, prototyping, essential animations, and UX principles. Learn to synchronize design with SDLC, delve into design thinking, ideation, persona creation, brand development, and MVP creation. This comprehensive workshop equips you with essential design skills and insights for product development.",
     "relatedEvents": [
@@ -30,7 +30,7 @@
     "id": "git",
     "type": "Software",
     "name": "Git & Github",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/git_github.jpeg",
+    "image_url": "/assets/banner_workshop/git_github.jpeg",
     "description": "Mastering Git & GitHub: Unleash the Power of Version Control!",
     "body": "Explore fundamental Git commands, branch management, and resolving merge conflicts. Learn Git operations via command line or GitHub Desktop, gaining essential skills for efficient collaboration and version control in software development projects.",
     "relatedEvents": [
@@ -59,7 +59,7 @@
     "id": "business_logic",
     "type": "Software",
     "name": "Business Logic in Frontend",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/business_logic.jpeg",
+    "image_url": "/assets/banner_workshop/business_logic.jpeg",
     "description": "Streamlining user experiences through intuitive frontend design and functionality.",
     "body": "Learn business logic implementation through real-life examples using ReactJs. Explore coding conventions, code reuse, and flow segregation for efficient development. Gain practical skills in crafting compact, reusable code for robust applications. Dive into hands-on exercises to solidify understanding and enhance your React development expertise.",
     "relatedEvents": [
@@ -93,7 +93,7 @@
     "id": "backend_deploy",
     "type": "Software",
     "name": "Backend Deployment",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/backend_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/backend_workshop.jpeg",
     "description": "Powering your platform with seamless backend solutions.",
     "body": "Learn essential backend concepts including REST API, HTTP requests, and CRUD operations. Explore Node.js with Express and various database types. Dive into deployment with basics of containerization, static frontend deployment, and managing environments and secrets. Equip yourself with skills for robust backend development and deployment strategies.",
     "relatedEvents": [
@@ -122,7 +122,7 @@
     "id": "cad",
     "type": "Software",
     "name": "Cad Design Workshop",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/cad_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/cad_workshop.jpeg",
     "description": "Unleashing CAD's Creative Potential",
     "body": "Discover CAD essentials: industry relevance, software options, and pros/cons. Explore student requirements, limitations, event dynamics, problem solving, drawing demos, and Q&A sessions. Gain insights and practical skills for success in CAD across various industries.",
     "relatedEvents": [
@@ -147,7 +147,7 @@
     "id": "ctf",
     "type": "Software",
     "name": "Capture The Flag Workshop",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/ctf_workshop_final.png",
+    "image_url": "/assets/banner_workshop/ctf_workshop_final.png",
     "description": "A Cyber Odyssey into Security Challenges",
     "body": "Embark on a comprehensive journey through cybersecurity with this workshop. Over two days, cover Linux basics, terminal commands, and Python programming. Explore cryptographic techniques like RSA and XOR, tackle web exploits including XSS and SQL injection, delve into reverse engineering with C cracking and APK exploits, master binary exploits such as buffer overflow, and conclude with steganography techniques involving image and file manipulation",
     "relatedEvents": [
@@ -177,7 +177,7 @@
     "id": "robotics",
     "type": "Hardware",
     "name": "Robotics",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/robotics_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/robotics_workshop.jpeg",
     "description": "Navigate the twists and turns: A labyrinthine race for victory!",
     "body": "Discover hardware fundamentals in this workshop featuring maze-solving and race car demonstrations. Get introduced to hardware, follow the roadmap, and understand the workshop outcomes. Witness maze solver and race car demos, learn basic algorithms, and explore control schemes. Dive into practical applications of hardware in an engaging and hands-on environment.",
     "relatedEvents": [
@@ -211,7 +211,7 @@
     "id": "circuits",
     "type": "Hardware",
     "name": "Circuit Basics",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/circuit_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/circuit_workshop.jpeg",
     "description": "Exploring the Currents: A Journey Through Circuitry",
     "body": "Join our Basic Circuits workshop for a foundational understanding of logic gates, adders, subtractors, muxes, encoders, and latches. Explore practical applications such as timers, gaining essential skills in digital circuit design. Dive into hands-on activities to solidify concepts and kickstart your journey into the world of circuitry.",
     "relatedEvents": [
@@ -244,7 +244,7 @@
     "id": "iot",
     "type": "Hardware",
     "name": "Internet of Things Workshop",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/iot_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/iot_workshop.jpeg",
     "description": "Unlocking the Power of IoT: Connecting Devices, Empowering Lives.",
     "body": "Explore Basic IoT essentials in our workshop. Witness demos using Raspberry Pi & Pico, delve into IoT infrastructure, protocols, and communication layers. Learn about cloud integration and security. Discover real-world applications like industrial automation, smart homes, and agriculture. Gain insights into IoT's transformative potential across diverse industries.",
     "relatedEvents": [
@@ -273,7 +273,7 @@
     "id": "fpga",
     "type": "Hardware",
     "name": "Intro to FPGA",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/fpga.jpeg",
+    "image_url": "/assets/banner_workshop/fpga.jpeg",
     "description": "Learn about the FPGA and how to use it in the embedded systems",
     "body": "Embark on FPGA exploration! Learn deterministic state machines, parallelism, and I/O concepts. Dive into HDL, Verilog, and practical applications like blinking LEDs with Rust. Delve deeper into FFT implementation, FPGA architecture, programming paradigms, and low-latency programming, uncovering the vast potential of FPGA technology in various domains.",
     "relatedEvents": [
@@ -294,7 +294,7 @@
     "id": "embedded",
     "type": "Hardware",
     "name": "Intro to Embedded Systems",
-    "image_url": "https://storage-techfiesta24.blr1.cdn.digitaloceanspaces.com/banner_workshop/embedded_workshop.jpeg",
+    "image_url": "/assets/banner_workshop/embedded_workshop.jpeg",
     "description": "Explore about the Embedded systems and IOT",
     "body": "Delve into Embedded Systems and Microcontrollers in this workshop. Understand the significance of embedded computing and its distinctions from general-purpose computing. Explore basic architecture, Arduino Uno's microcontroller, and learn the fundamentals of blink and I/O interfacing techniques. Additionally, delve into microcontroller interfacing, communication protocols, ARM architecture, and Real-Time Operating Systems (RTOS). Gain insights into embedded C and Python for enhanced learning.",
     "relatedEvents": [

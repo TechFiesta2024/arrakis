@@ -63,11 +63,12 @@ export default function TimerMockup() {
 					<div className={`mt-16 ${flexStylesCenter}`}>
 						<div>
 							<p className="text-3xl font-generalsans-semibold  text-black ">
-								{`${formatTimeValue(timeRemaining.days)}:${formatTimeValue(
+								{/* {`${formatTimeValue(timeRemaining.days)}:${formatTimeValue(
 									timeRemaining.hours,
 								)}:${formatTimeValue(timeRemaining.minutes)}:${formatTimeValue(
 									timeRemaining.seconds,
-								)}`}
+								)}`} */}
+								A lot of
 							</p>
 							<p className="font-generalsans text-md text-center text-black">
 								Days left

@@ -138,7 +138,7 @@ export default function Navbar() {
 					{!isAuthenticated ? (
 						<div
 							className="border-r-[0.5px] bg-red h-full w-1/3 flex justify-center items-center hover:cursor-pointer"
-							onClick={signIn}
+							// onClick={signIn}
 						>
 							Register
 						</div>
@@ -201,7 +201,7 @@ export default function Navbar() {
 									{!isAuthenticated ? (
 										<div
 											className={`${flexStylesCenter} bg-red py-2.5 gap-x-5 rounded-[8px] transition-transform hover:scale-x-110`}
-											onClick={signIn}
+											// onClick={signIn}
 										>
 											<p className="text-yellowish font-generalsans font-medium">
 												Register

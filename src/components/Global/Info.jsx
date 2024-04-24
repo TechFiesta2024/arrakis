@@ -29,7 +29,7 @@ export default function EventWorkshopInfo({ params }) {
 
   async function workshopRegister() {
 
-    toast.warning(`Registration is closed`, {
+    toast.warning(`Registration are closed, try again next year 💖`, {
       style: {
         color: "#010100",
         backgroundColor: "#FFF3B0",
@@ -93,7 +93,7 @@ export default function EventWorkshopInfo({ params }) {
 
   async function eventRegister() {
 
-    toast.warning(`Registration is closed`, {
+    toast.warning(`Registration are closed, try again next year 💖`, {
       style: {
         color: "#010100",
         backgroundColor: "#FFF3B0",
